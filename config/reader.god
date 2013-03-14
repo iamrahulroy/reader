@@ -8,19 +8,19 @@ God.watch do |w|
   w.log = "#{File.expand_path('../../', __FILE__)}/log/sidekiq.log"
   w.keepalive
 
-  w.restart_if do |restart|
-    restart.condition(:memory_usage) do |c|
-      c.interval = 5.seconds
-      c.above = 350.megabytes
-      c.times = [3, 5] # 3 out of 5 intervals
-    end
-
-    restart.condition(:cpu_usage) do |c|
-      c.interval = 30.seconds
-      c.above = 90.percent
-      c.times = 10
-    end
-  end
+  #w.restart_if do |restart|
+  #  restart.condition(:memory_usage) do |c|
+  #    c.interval = 5.seconds
+  #    c.above = 350.megabytes
+  #    c.times = [3, 5] # 3 out of 5 intervals
+  #  end
+  #
+  #  restart.condition(:cpu_usage) do |c|
+  #    c.interval = 30.seconds
+  #    c.above = 90.percent
+  #    c.times = 10
+  #  end
+  #end
 
 end
 
