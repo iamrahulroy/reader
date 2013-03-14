@@ -1,0 +1,12 @@
+%div.row-fluid
+  - if object[:authorized]
+    %span.span2
+      = object[:service_name]
+    %span.span4
+      %label.checkbox{:for => "share-to-#{object[:service_name].downcase}"}
+        %input{:id => "share-to-#{object[:service_name].downcase}", :type => "checkbox", :value => :true, :checked => object[:sharing_to]}
+          Send shared items to #{object[:service_name]}
+  - else
+    %span.span4
+      %a{:href => user_auth_url(object[:service_name].downcase)}
+        Connect to #{object[:service_name]}

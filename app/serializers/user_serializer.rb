@@ -1,0 +1,48 @@
+
+class UserSerializer < ActiveModel::Serializer
+
+  attributes :id, :name, :anonymous
+
+  attribute :all_count
+  attribute :unread_count
+  attribute :starred_count
+  attribute :shared_count
+  attribute :commented_count
+  attribute :success
+  attribute :share_to_twitter
+  attribute :share_to_facebook
+
+  def anonymous
+    object.id == 1
+  end
+
+  def all_count
+    Item.where(user_id: scope.id, from_id: object.id).count
+  end
+
+  def unread_count
+    Item.where(user_id: scope.id, from_id: object.id, unread: true).count
+  end
+
+  def starred_count
+    Item.where(user_id: scope.id, from_id: object.id, starred: true).count
+  end
+
+  def shared_count
+    if object == scope
+      Item.where(user_id: scope.id, from_id: object.id, shared: true).count
+    else
+      Item.where(user_id: scope.id, from_id: object.id, shared: true).count
+    end
+  end
+
+  def commented_count
+    Item.where(user_id: scope.id, from_id: object.id, commented: true).count
+  end
+
+  def success
+    object.persisted?
+  end
+
+end
+

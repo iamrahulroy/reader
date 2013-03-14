@@ -1,0 +1,13 @@
+%div#login-buttons
+
+  %a#login-with-facebook.btn{:href => user_auth_url(:facebook)}
+    %i{:class => "icon-signin"}
+    Sign in with Facebook.
+
+  %a#login-with-twitter.btn{:href => user_auth_url(:twitter)}
+    %i{:class => "icon-signin"}
+    Sign in with Twitter.
+
+  %a#login-with-email.btn{:href => "/login"}
+    %i{:class => "icon-signin"}
+    Sign in with Email.

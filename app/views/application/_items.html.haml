@@ -1,0 +1,9 @@
+%div.headlines
+  %ul
+    - items.each do |item|
+      %li{"data-item-id" => item.id}
+        - if item.starred?
+          %i.summary-starred-icon.icon-star
+        - else
+          %i.summary-starred-icon.icon-star-empty
+        = link_to item.title.truncate(50), "/items/#{item.id}/show.html", :class => "single-item-link"

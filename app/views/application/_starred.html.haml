@@ -1,0 +1,5 @@
+%div.subscription-summary-container
+  %h1.source
+    = link_to "Recently starred", "/starred"
+
+  = render :partial => "items", :object => starred

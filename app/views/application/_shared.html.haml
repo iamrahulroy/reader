@@ -1,0 +1,5 @@
+%div.subscription-summary-container
+  %h1.source
+    = link_to "Recently shared", "/shared"
+
+  = render :partial => "items", :object => shared

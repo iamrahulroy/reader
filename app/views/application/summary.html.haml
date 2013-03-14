@@ -1,0 +1,9 @@
+%div#summary-content
+  -#%h3 At a glance:
+
+  %div
+    = render :partial => "subscription_summary", :collection => @favorites
+    = render :partial => "subscription_summary", :collection => @subscriptions
+
+    = render(:partial => "starred", :object => @starred) unless @starred.empty?
+    = render(:partial => "shared", :object => @shared) unless @shared.empty?

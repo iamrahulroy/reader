@@ -1,0 +1,34 @@
+
+%div#register-modal.modal.hide.fade
+  = form_for("user", :url => registration_path(:user), :html => {:id => "register_form"}, :class => 'form-horizontal', :remote => true) do |f|
+    %div.modal-header
+      %h3 Create account
+    %div.modal-body
+
+      %div#user_register_box
+
+      %fieldset
+        .control-group
+          %label.control-label{:for => "user_name"}
+            Name:
+            .controls
+              %input#user_name.input-xlarge{:type => "text", :name => 'user[name]'}
+
+          %label.control-label{:for => "email"}
+            E-mail:
+            .controls
+              %input#email.input-xlarge{:type => "text", :name => 'user[email]'}
+
+          %label.control-label{:for => "password"}
+            Password:
+            .controls
+              %input#password.input-xlarge{:type => "password", :name => 'user[password]'}
+
+          %label.control-label{:for => "password_confirmation"}
+            Password Confirmation:
+            .controls
+              %input#password_confirmation.input-xlarge{:type => "password", :name => 'user[password_confirmation]'}
+
+    %div.modal-footer
+      %input#register-submit-link-btn.btn.btn-primary{:type => "submit", :value => "Register"}
+      %a#register-close-link-btn.btn{:href => "/"} Close

@@ -1,0 +1,161 @@
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+	<channel>
+		<title>Macworld</title>
+		<link>http://www.macworld.com</link>
+		<description></description>
+		<language>en-us</language>
+		<pubDate>Sat, 16 Feb 2013 14:46:46 -0800</pubDate>
+		<lastBuildDate>Sat, 16 Feb 2013 14:46:46 -0800</lastBuildDate>
+		<item>
+	<title>Mac Gems: Email Pro for Gmail brings email seamlessly to your desktop</title>
+	<description><![CDATA[
+<div>
+	<section class="page">
+<figure class="right medium"><a href="http://images.techhive.com/images/article/2013/02/emailpro_screenshot1-100025175-orig.png" class="zoom"><img src="http://images.techhive.com/images/article/2013/02/emailpro_screenshot1-100025175-medium.png" border="0" alt="" width="300" height="380"/></a><figcaption>Colorful icons with helpful tooltips make Email Pro for Gmail’s interface a pleasure to use.</figcaption></figure>
+<p>
+The only clunky thing about <strong>Email Pro for Gmail</strong> <strong>2.1</strong> (<a href="https://itunes.apple.com/us/app/email-pro-for-gmail/id529538737">Mac App Store</a> only) is its name. This slender app provides a convenient way to get to your Gmail messages directly from your desktop.
+</p>
+<p>
+Essentially a site-specific-browser, Email Pro leans on the mobile version of Gmail’s website for its main interface, though you have the option to use Gmail’s desktop layout instead. Though this Web-view approach can occasionally make retrieving mail slow, it also has several distinct advantages. Since you’re using Gmail directly, rather than importing its mail into an app, you don’t have to create an application-specific password, even if you’ve heightened your Gmail security settings. (Indeed, setting up Email Pro proved painless; after entering my Gmail username and password, I was off to the proverbial races.) And you can start working with your mail instantly, rather than waiting for a POP or IMAP client to download hundreds or thousands of messages.
+</p>
+<figure class="right medium"><a href="http://images.techhive.com/images/article/2013/02/emailpro_screenshot2-100025174-orig.png" class="zoom"><img src="http://images.techhive.com/images/article/2013/02/emailpro_screenshot2-100025174-medium.png" border="0" alt="" width="300" height="377"/></a><figcaption>Email Pro can use either a popover or standalone window.</figcaption></figure>
+<p>
+You can use Email Pro either in a standard window, as a more-convenient popover (accessed by clicking a systemwide menu-bar item), or as an app that replaces your desktop background and sits behind your other open windows. While I preferred the discreet functionality of the popover, the desktop option may prove preferable if you can’t bear to be separated from your email for even an instant. It’s also an option that many of Email Pro’s rivals in the Gmail-front-end market lack.
+</p>
+<p>
+Email Pro gets additional points for its friendly, colorful interface. While the icons that run down the left-hand toolbar may not be immediately comprehensible, the program includes explanatory help tags, which appear when you hover the pointer over interface elements, to quickly orient you. The search works just fine and dandy on both the desktop and popup mode.
+</p><p class="jumpTag"><a href="/article/2027905/mac-gems-email-pro-for-gmail-brings-email-seamlessly-to-your-desktop.html#jump">To read this article in full or to leave a comment, please click here</a></p></section></article>]]></description>
+		<link>http://www.macworld.com/article/2027905/mac-gems-email-pro-for-gmail-brings-email-seamlessly-to-your-desktop.html</link>
+	<media:thumbnail url="http://zapt2.staticworld.net/images/article/2013/02/emailpro_icon-100025170-small.png"/>
+		<media:content url="http://zapt2.staticworld.net/images/article/2013/02/emailpro_icon-100025170-small.png"/>
+	<pubDate>Fri, 15 Feb 2013 04:00:00 -0800</pubDate>
+</item><item>
+	<title>Mac Gems: Shush gives you a systemwide mic mute</title>
+	<description><![CDATA[
+<div>
+	<section class="page">
+<p>
+Between Google Hangout video conferences for work, Skype videos and calls for podcasts, and FaceTime chats with family and friends, I use AV-chat apps several times each week. But I’m not always an active audio participant: I’m a heavy user of the Mute button in every one of those apps and services. Sometimes it’s because I’m typing and I don’t want the clickety-clack of my keyboard to be audible on a podcast recording or to others in a meeting. Other times the maintenance folks are performing the day’s noisiest tasks at the same time as my chat, right outside my office window. And it’s not uncommon for family members to come into my home office while I’m chatting or recording.
+</p>
+<p>
+The problem with using so many different apps for chats and recordings is that each of those apps has a different way to mute the microphone. Which isn’t a huge hassle, but it does mean that whenever I want to mute my mic, I need to stop and think about <em>which</em> app I’m using, and then remember where the mute control is. And if for some reason I use a different microphone-enabled app—for example, GarageBand for a podcast recording—I have to learn a new mic-mute control.
+</p>
+<figure class="right medium"><a href="http://images.techhive.com/images/article/2013/02/shushprefs-100025009-orig.png" class="zoom"><img src="http://images.techhive.com/images/article/2013/02/shushprefs-100025009-medium.png" height="302" width="300" align="right" alt=""/></a><figcaption>Shush's hotkey settings</figcaption></figure>
+<p>
+At least, that’s how it used to be. But I recently started using <strong><a href="http://mizage.com/shush/">Shush</a></strong> ($3; <a href="https://itunes.apple.com/us/app/shush-microphone-manager/id496437906">Mac App Store link</a>), and muting is now much simpler. When Shush is running, I can mute and unmute my mic using a systemwide hotkey—no matter which app or service I’m using, the mute action is the same. (Hotkey choices are currently limited to modifier keys. I’ve chosen Shift+Control, but I’d like to be able to assign any key combination.)
+</p>
+<p>
+By default, Shush mutes your microphone unless you press and hold your hotkey(s). In other words, Shush gives you a push-to-talk microphone. But you can reverse this behavior so that your mic is generally live; you hold down your keyboard shortcut only when you want to mute. A useful option lets you quickly double-press your shortcut to toggle mute without having to hold down any keys—this is the way I end up using Shush most of the time.
+</p><p class="jumpTag"><a href="/article/2027822/mac-gems-shush-gives-you-a-systemwide-mic-mute.html#jump">To read this article in full or to leave a comment, please click here</a></p></section></article>]]></description>
+		<link>http://www.macworld.com/article/2027822/mac-gems-shush-gives-you-a-systemwide-mic-mute.html</link>
+	<media:thumbnail url="http://zapt2.staticworld.net/images/article/2013/02/shushicon-580-100025008-small.png"/>
+		<media:content url="http://zapt2.staticworld.net/images/article/2013/02/shushicon-580-100025008-small.png"/>
+	<pubDate>Wed, 13 Feb 2013 04:00:00 -0800</pubDate>
+</item><item>
+	<title>Mac Gems: Inky offers a fresh, human take on email</title>
+	<description><![CDATA[
+<div>
+	<section class="page">
+<p>
+I’d never found an email client that might woo me away from Apple’s <a href="http://www.macworld.com/article/2011636/review-apple-mail-6-features-better-search-vip-email-treatment.html">Mail</a> (<img src="http://images.macworld.com/images/layout/bluemouse45.gif" border="0" alt="4.5-mouse rating"/>) until I came across Arcode’s free <strong><a href="http://inky.com">Inky</a></strong>. This cleverly designed app seems built around the way most people use email every day.
+</p>
+<p>
+On startup, Inky prompts you to set up an account for Arcode’s cloud-based service. You can then add details for any email accounts you own: IMAP, POP, or webmail. With only an email address and password for each, Inky set up two different email accounts in seconds. I appreciated how the program kept me informed as it figured out how to configure itself appropriately.
+</p>
+<figure class=" large"><a href="http://images.techhive.com/images/article/2013/01/inky_screenshot1-100023543-orig.png" class="zoom"><img src="http://images.techhive.com/images/article/2013/01/inky_screenshot1-100023543-large.png" height="343" width="580" align="" alt=""/></a><figcaption>Inky learns to predict how much each message might mean to you.</figcaption></figure>
+<p>
+An email client that processes your mail through a third-party cloud service could understandably raise privacy concerns. The company takes pains, on its website, to dispel such worries. According to Arcode, Inky lets your computer connect to your email provider(s) and store messages—Inky doesn’t store or transmit your mail through the Arcode servers. It does hold your email accounts’ details and passwords, but they’re stored encrypted, with the only key being your Inky account password. Arcode says that as a result, none of its employees could ever gain access to your email.
+</p>
+<p>
+On the plus side, Inky’s cloud-based approach offers considerable convenience. You can install Inky on as many different computers as you like, accessing multiple email accounts through a single convenient login. Inky even integrates seamlessly with OS X Mountain Lion’s Notifications Center feature to let you know when new mail arrives.
+</p><p class="jumpTag"><a href="/article/2026667/mac-gems-inky-offers-a-fresh-human-take-on-email.html#jump">To read this article in full or to leave a comment, please click here</a></p></section></article>]]></description>
+		<link>http://www.macworld.com/article/2026667/mac-gems-inky-offers-a-fresh-human-take-on-email.html</link>
+	<media:thumbnail url="http://zapt3.staticworld.net/images/article/2013/01/inky_logo-100023541-small.png"/>
+		<media:content url="http://zapt3.staticworld.net/images/article/2013/01/inky_logo-100023541-small.png"/>
+	<pubDate>Fri, 01 Feb 2013 03:30:00 -0800</pubDate>
+</item><item>
+	<title>Mac Gems: TextExpander 4 extends its fill-in functionality</title>
+	<description><![CDATA[
+<div>
+	<section class="page">
+<p>
+Back in 2010, I <a href="http://www.macworld.com/article/1150864/textexpander30.html">reviewed version 3</a> of Smile’s <a href="http://smilesoftware.com/TextExpander/index.html">TextExpander</a>. The company recently updated its venerable text-expansion utility to version 4 ($35; $15 for owners of older versions), and though the latest version will be quite familiar to anyone who has used earlier iterations, Smile has added some notable new features.
+</p>
+<p>
+For the uninitiated, TextExpander lets you create abbreviations for bits of text that you frequently type—the program calls these bits <em>snippets</em>. You type an abbreviation in any document or text field, and TextExpander instantly replaces the abbreviation with the corresponding snippet. For example, I’ve created simple snippets for my name (<em>kmc</em>), my address (<em>ad1</em>), and my telephone numbers (<em>ttel</em> and <em>tmob</em>). I also have a number of more-complex snippets that I use when writing in HTML that take advantage of special TextExpander features. For example, <em>hrf</em> types an <code>&lt;a href&gt;&lt;/a&gt;</code>-tagged link and inserts the contents of the clipboard as the URL.
+</p>
+<p>
+The program also automates the tasks of filling out online forms, inserting email signatures, and even correcting typos (instantly replacing <em>teh</em> with <em>the</em>, for example). Suffice it to say that these snippets are so useful, and so ingrained in my workflow, that I could scarcely work without them.
+</p>
+<p>
+You don’t need to remember all of your snippet abbreviations, as TextExpander’s systemwide menu provides quick access to your snippets. You just choose one from the menu to paste it immediately. This menu is especially useful for snippets for things such as HTML and CCS—TextExpander lets you create an entire library of snippets for this type of coding. Creating a snippet group within TextExpander puts that group in a separate submenu in the TextExpander menu for more-precise organization and easier access.
+</p><p class="jumpTag"><a href="/article/2026096/mac-gems-textexpander-4-extends-its-fill-in-functionality.html#jump">To read this article in full or to leave a comment, please click here</a></p></section></article>]]></description>
+		<link>http://www.macworld.com/article/2026096/mac-gems-textexpander-4-extends-its-fill-in-functionality.html</link>
+	<media:thumbnail url="http://zapt1.staticworld.net/images/article/2013/01/textexpander-icon-100022753-small.png"/>
+		<media:content url="http://zapt1.staticworld.net/images/article/2013/01/textexpander-icon-100022753-small.png"/>
+	<pubDate>Fri, 25 Jan 2013 03:30:00 -0800</pubDate>
+</item><item>
+	<title>Mac Gems: KidsMotion lets kids create fun, animated presentations</title>
+	<description><![CDATA[
+<div>
+	<section class="page">
+<p>
+It’s tough to beat old-fashioned arts and crafts: There’s something magical about being able to make something out of nothing more than paper, paste, and scissors. Except for the ensuing cleanup—seemingly endless and somehow futile—they’re still among the best activities for kids of all ages.
+</p>
+<p>
+Still, these days kids sometimes want to set aside old-fashioned tools and explore their creativity using the family Mac. The results are often amazing and satisfying—and <em>much</em> easier to clean up.
+</p>
+<p>
+Enter Aquafadas's $25 <strong><a href="http://www.aquafadas.com/en/kidsmotion/">KidsMotion</a></strong> (<a href="https://itunes.apple.com/us/app/kidsmotion/id402584637?mt=12">Mac App Store link</a>), an OS X app that helps kids use their photos, videos, and music to create high-quality slideshows with minimal effort. KidsMotion takes many cues from its more-advanced cousin, <a href="http://www.aquafadas.com/en/pulpmotion/">PulpMotion</a>, but features a simpler interface that’s designed to minimize the frustration that goes into building a complex slideshow.
+</p>
+<p>
+The app comes with a selection of fifty templates designed specifically for a young audience, with themes that range from sports to cartoons, from holiday cheer to artistic landscapes. Cute animations accompany the transitions between slides and photos. Thanks to the simplified design of the app, templates can be swapped in and out at any time, making the process fun and stress-free—something that, frankly, is not all that bad for adults, too.
+</p><p class="jumpTag"><a href="/article/2025175/mac-gems-kidsmotion-lets-kids-create-fun-animated-presentations.html#jump">To read this article in full or to leave a comment, please click here</a></p></section></article>]]></description>
+		<link>http://www.macworld.com/article/2025175/mac-gems-kidsmotion-lets-kids-create-fun-animated-presentations.html</link>
+	<media:thumbnail url="http://zapt4.staticworld.net/images/article/2013/01/icone-100021364-small.jpg"/>
+		<media:content url="http://zapt4.staticworld.net/images/article/2013/01/icone-100021364-small.jpg"/>
+	<pubDate>Wed, 23 Jan 2013 11:00:00 -0800</pubDate>
+</item><item>
+	<title>Mac Gems: Vimari brings more keyboard control to Safari</title>
+	<description><![CDATA[
+<div>
+	<section class="page">
+<p>
+Longtime readers of the Mac Gems column know that I’m a keyboard person. With few exceptions, I prefer to keep my fingers on the keyboard and off my mouse, trackpad, or trackball—sticking to the keyboard is better ergonomically, and it’s often faster, as well.
+</p>
+<p>
+But there’s one app where it’s been difficult for me to go keyboard-only: my Web browser. There’s no easy—or fast—way to use the keyboard to navigate websites, open links, and the like. OS X includes some special accessibility features that let you use the keyboard for these tasks, but those features were designed with accessibility, not productivity, in mind.
+</p>
+<p>
+So I was happy to discover <strong><a href="http://guyht.github.com/vimari/">Vimari</a></strong>, an extension for Safari, based on the nifty <a href="http://vimium.github.com">Vimium extension for Chrome</a>, that lets you open links and more using the keyboard. (Vimari is much more limited than Vimium, focusing on links; Vimium provides a slew of additional navigation shortcuts.)
+</p>
+<figure class="right medium"><a href="http://images.techhive.com/images/article/2013/01/vimariwebpage-100021820-orig.png" class="zoom"><img src="http://images.techhive.com/images/article/2013/01/vimariwebpage-100021820-medium.png" height="320" width="300" align="right" alt=""/></a><figcaption>Vimari gives every link a keyboard shortcut.</figcaption></figure>
+<p>
+Once you’ve installed the Vimari extension in Safari, pressing Vimari’s Link Hint shortcut (by default, Control+F) places a two-letter keyboard shortcut, highlighted in yellow, over every link on the current webpage. Shortcuts for links in particular areas of the screen tend to start with the same letter: For example, as you can see in the screenshot to the right, links in the navigation bar at the top of the webpage have shortcuts beginning with D; shortcuts for links in the middle of the page start with K.
+</p><p class="jumpTag"><a href="/article/2025387/mac-gems-vimari-brings-more-keyboard-control-to-safari.html#jump">To read this article in full or to leave a comment, please click here</a></p></section></article>]]></description>
+		<link>http://www.macworld.com/article/2025387/mac-gems-vimari-brings-more-keyboard-control-to-safari.html</link>
+	<media:thumbnail url="http://zapt3.staticworld.net/images/article/2013/01/safariextension-580-100021819-small.png"/>
+		<media:content url="http://zapt3.staticworld.net/images/article/2013/01/safariextension-580-100021819-small.png"/>
+	<pubDate>Wed, 16 Jan 2013 08:00:00 -0800</pubDate>
+</item><item>
+	<title>Mac Gems: ForgetMeNot keeps you from forgetting email attachments</title>
+	<description><![CDATA[
+<div>
+	<section class="page">
+<p>We’ve all experienced the embarrassment of sending someone an email referencing an attached file or document, only to receive a reply that, despite our claims, nothing was attached. It’s a frequent-enough problem that a few years back, Google added a feature to Gmail that would alert you if you forgot to attach a file referenced in your message.</p>
+
+<figure class="right medium"><a href="http://images.techhive.com/images/article/2013/01/forgetmenotalert-100019764-orig.png" class="zoom"><img src="http://images.techhive.com/images/article/2013/01/forgetmenotalert-100019764-medium.png" height="80" width="300" align="right" alt=""/></a><figcaption>ForgetMeNot alerts you if you've forgotten to attach files.</figcaption></figure>
+
+<p>Though OS X’s Mail app doesn’t include this convenient feature, ChungwaSoft’s $6 <strong><a href="http://www.chungwasoft.com/forgetmenot/">ForgetMeNot </a></strong> is a nifty mail plug-in that seamlessly adds it. Install ForgetMeNot, and whenever you attempt to send a message using Mail, the plug-in first scans the text of that email for specific words indicating that you meant to include an attachment. If ForgetMeNot detects one of those words and the message indeed includes an attachment, the message goes through; if the message is missing attachments, you see an alert. You can then choose to cancel sending, add the attachment, or send sans attachment.</p>
+
+<p>ForgetMeNot includes default keywords for each of seven languages: Dutch, English, French, German, Italian, Portuguese, and Spanish. For example, for English, the plug-in watches for the words <em>attachment</em>, <em>attaching</em>, <em>attached</em>, and <em>attach</em>. You can also add your own words to a language’s list—I’ve added <em>image</em>, <em>images</em>, <em>file</em>, and <em>files</em> to the English group—and you can disable languages you don’t use. However, you can’t add new languages: To add a list of keywords in a different language, you must add those words to one of the supported languages (which means ForgetMeNot will use that language’s stock keywords in addition to the keywords you add).</p>
+
+<figure class="right medium"><a href="http://images.techhive.com/images/article/2013/01/forgetmenotsettings-100019766-orig.png" class="zoom"><img src="http://images.techhive.com/images/article/2013/01/forgetmenotsettings-100019766-medium.png" height="180" width="300" align="right" alt=""/></a><figcaption>ForgetMeNot's word lists</figcaption></figure>
+
+<p>ForgetMeNot’s keyword-based intervention generally works well, although it’s of course limited by the list of words it watches for. If your message says “Check out this hilarious photo of Nancy!” and you haven’t added <em>photo</em> to the list of keywords, ForgetMeNot won’t alert you if you forget to include a hilarious photo of Nancy.</p><p class="jumpTag"><a href="/article/2023733/mac-gems-forgetmenot-keeps-you-from-forgetting-email-attachments.html#jump">To read this article in full or to leave a comment, please click here</a></p></section></article>]]></description>
+		<link>http://www.macworld.com/article/2023733/mac-gems-forgetmenot-keeps-you-from-forgetting-email-attachments.html</link>
+	<media:thumbnail url="http://zapt4.staticworld.net/images/article/2013/01/forgetmenoticon-100019765-small.png"/>
+		<media:content url="http://zapt4.staticworld.net/images/article/2013/01/forgetmenoticon-100019765-small.png"/>
+	<pubDate>Fri, 04 Jan 2013 10:45:00 -0800</pubDate>
+</item></channel>
+</rss>

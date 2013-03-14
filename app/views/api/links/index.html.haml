@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %title
+      1kpl.us - an rss reader
+
+  %body
+    = @links.each do |link|
+      %a{:href => link[:url]}
+        = link[:title]
+      %br

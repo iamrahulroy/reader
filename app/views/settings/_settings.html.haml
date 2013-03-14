@@ -1,0 +1,78 @@
+%ul.nav.nav-tabs
+  %li.active
+    %a{"data-toggle" => "tab", :href => "#tab-options", :id => "account-tab"} Options
+  %li
+    %a{"data-toggle" => "tab", :href => "#tab-feeds", :id => "feeds-tab"} Feeds
+  %li
+    %a{"data-toggle" => "tab", :href => "#tab-friends", :id => "friends-tab"} Friends
+
+.tab-content
+  #tab-options.tab-pane.active
+
+
+  #tab-feeds.tab-pane
+    %h3 Add Feeds
+
+    = form_tag "/subscriptions", :id => 'add_feed_form', :multipart => true, :class => 'form-horizontal', :remote => true do
+      %div#opml_result
+      %fieldset
+        #feed-url-field-control-group.control-group
+          %label.control-label{:for => "feed_url"} Add a feed:
+          .controls
+            = text_field_tag :feed_url
+            %span.help-inline
+        #feed-select-found-feed.control-group.hide
+          %label.control-label Available feeds:
+          .controls
+
+      %div.btn-container
+        %a#add-feed-btn.btn.btn-primary Add Feed
+
+    %hr
+
+    %h3 Import Feeds from other readers
+
+    = form_tag "/opml", :id => 'opml_form', :multipart => true, :class => 'form-horizontal' do
+
+      %fieldset
+        .control-group
+          %label.control-label{:for => "name"} Import OPML File:
+          .controls
+            -#%input#opml_file.input-xlarge{:type => "file"}
+            = file_field_tag :opml_file
+            %p.help-block If you are switching from another feed reader, you can import your OPML file here.
+      %div.btn-container
+        %a#import-btn.btn.btn-primary Import
+
+    %h3 Your feeds
+    = render :partial => "your_feeds"
+
+    %h3 Suggested feeds
+    = render :partial => "suggested_feeds"
+
+
+  #tab-friends.tab-pane
+    = render :partial => "follow_requests", :locals => {:follow_requests => @follow_requests}
+    %p
+
+    %div#people-you-may-know-container
+
+    %div#invite-person-form-container
+      %h3 Send invite
+      = form_tag "/people/invite", :id => 'invite_form', :remote => true, :class => 'form-horizontal' do
+        %fieldset
+          .control-group
+            %label.control-label{:for => :invite_email} E-mail:
+            .controls
+              = text_field_tag :invite_email
+              %span#invite_result.help-inline
+
+        %div.btn-container
+          %button#send-invite-btn.btn.btn-primary Send invite
+
+    %div#people-you-follow-container
+
+    %div#people-following-you-container
+
+
+

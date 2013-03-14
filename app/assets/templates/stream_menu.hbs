@@ -1,0 +1,25 @@
+{{#if stream}}
+  <div class="nav pull-right">
+    <li><a class="go-item-next"><i class="icon-dark icon-arrow-down"></i> Next</a></li>
+    <li><a class="go-item-previous"><i class="icon-dark icon-arrow-up"></i> Previous</a></li>
+    {{#unless anonymous}}
+      <li><a class="go-mark-all-read"><i class="icon-dark icon-bolt"></i> Mark all as read</a></li>
+      {{#if subscription}}
+        <li><a class="view-items-collapsed"><i class="icon-dark icon-list"></i></a></li>
+        <li><a class="favorite"><i class="icon-dark icon-heart{{#unless favorite}}-empty{{/unless}}"></i></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle choose-group-menu" data-toggle="dropdown" href="#"><i class="icon-dark icon-folder-open"></i></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            {{#each groups}}
+              <li class=""><a tabindex="-1" data-group-key="{{key}}" class="group-menu-group">
+                <i class="icon-dark {{#if current}}icon-ok{{/if}}"></i>
+                {{name}}
+              </a></li>
+            {{/each}}
+
+          </ul>
+        </li>
+      {{/if}}
+    {{/unless}}
+  </div>
+{{/if}}

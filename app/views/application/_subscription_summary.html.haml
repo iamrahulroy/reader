@@ -1,0 +1,18 @@
+%div.subscription-summary-container{"data-subscription-id" => subscription_summary.id}
+  %h1.source
+    = link_to subscription_summary.name, "/subscription/unread/#{subscription_summary.id}", :class => "subscription-link"
+    - if real_user
+      - if subscription_summary.favorite?
+        %i.summary-favorite-icon.pull-right.icon-heart
+      - else
+        %i.summary-favorite-icon.pull-right.icon-heart-empty
+
+  %div.headlines
+    %ul
+      - subscription_summary.all_items.last(8).reverse.each do |item|
+        %li{"data-item-id" => item.id}
+          - if item.starred?
+            %i.summary-starred-icon.icon-star
+          - else
+            %i.summary-starred-icon.icon-star-empty
+          = link_to item.title.truncate(50), "/subscription/#{item_state(item)}/#{subscription_summary.id}/item/#{item.id}", :class => "summary-item-link"
