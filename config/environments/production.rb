@@ -75,6 +75,6 @@ ActionMailer::Base.smtp_settings = {
     :domain         => '1kpl.us',
     :port           => 587,
     :user_name      => 'team@1kpl.us',
-    :password       => Reader::Keys::SMTP_PASS,
+    :password       => ENV['SMTP_PASS'],
     :authentication => :plain
 }
