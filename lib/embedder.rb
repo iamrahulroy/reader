@@ -15,7 +15,7 @@ module Embedder
         end
       end
       unless urls.empty?
-        embedly_api = Embedly::API.new :user_agent => 'Mozilla/5.0 (compatible; 1kplus/1.0; team@1kpl.us)', :key => '1294316ebbf54647985e969e842cc530'
+        embedly_api = Embedly::API.new :user_agent => 'Mozilla/5.0 (compatible; 1kplus/1.0; team@1kpl.us)', :key => ENV['EMBEDLY_KEY']
         objs = embedly_api.oembed(
           :urls => urls.dup,
           :maxwidth => 850,
