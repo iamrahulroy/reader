@@ -1,7 +1,7 @@
 Sidekiq.configure_server do |config|
 
   if Rails.env.production?
-    database_url = "postgres://#{ENV['PG_USER']}:#{ENV['PG_PASS']}@#{ENV['PG_HOST']}/reader_production"
+    database_url = ENV['READER_DATABASE_URL']
   elsif Rails.env.development?
     database_url = "postgres://reader@localhost/reader_development"
   end
