@@ -23,14 +23,14 @@ module Reader
 
         u = User.new
         u.name = "Charlie Wilkins"
-        u.email = "charliewilkins@gmail.com"
+        u.email = "charlie@example.com"
         u.password = '12345'
         u.password_confirmation = '12345'
         u.save :validate => false
 
         u = User.new
         u.name = "Loren Spector"
-        u.email = "loren.spector@gmail.com"
+        u.email = "loren@example.com"
         u.password = '12345'
         u.password_confirmation = '12345'
         u.save :validate => false
