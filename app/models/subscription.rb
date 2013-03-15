@@ -14,8 +14,6 @@ class Subscription < ActiveRecord::Base
 
   after_save :deliver, :if => :persisted?
 
-  after_validation :destroy_invalid_subscriptions
-
   default_scope {
     where(deleted: false)
   }
