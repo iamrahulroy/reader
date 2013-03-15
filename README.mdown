@@ -1,7 +1,7 @@
 Reader
 =====
 
-Reader is a fun little feeder.
+Reader is a fun little rss reader with some social features.
 
 Setup
 =====
@@ -18,3 +18,8 @@ To setup the app just type (ignore the `$`):
 $ ./script/setup
 ```
 
+## This sucks. How can I make it better?
+
+1. Fork it.
+2. Make it better.
+3. Send me a pull request.
