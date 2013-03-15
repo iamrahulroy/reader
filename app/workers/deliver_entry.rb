@@ -5,8 +5,8 @@ class DeliverEntry
   def perform(id)
     entry = Entry.find(id)
     entry.deliver
-  ensure
-    #ActiveRecord::Base.connection.flush
+  rescue ActiveRecord::RecordNotFound => e
+    # sometimes jobs get queued for records that don't exist. WHY?
   end
 
   add_transaction_tracer :perform, :category => :task
