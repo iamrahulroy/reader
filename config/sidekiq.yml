@@ -1,7 +1,7 @@
 ---
 :verbose: true
 :pidfile: /tmp/sidekiq.pid
-:concurrency: 200
+:concurrency: 80
 :queues:
   - [critical, 100]
   - [opml,12]
@@ -18,14 +18,14 @@
   - [background,1]
 :limits:
   opml: 10
-  clients: 80
-  users: 80
-  entry: 80
-  subscriptions: 80
-  comments: 80
-  contacts: 80
-  feeds: 80
-  items: 80
-  poll: 175
-  icons: 80
+  clients: 70
+  users: 70
+  entry: 15
+  subscriptions: 70
+  comments: 70
+  contacts: 70
+  feeds: 70
+  items: 70
+  poll: 15
+  icons: 15
   background: 10
