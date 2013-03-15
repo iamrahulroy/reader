@@ -14,9 +14,11 @@ namespace :config do
     end
   end
 
-  def ask_for(variable)
-    puts "What is your #{variable}? (Enter to skip)"
-    STDIN.gets.chomp!
+  def ask_for(variable, mode = "global")
+    if mode == ENV["RAILS_ENV"] || mode == "global"
+      puts "What is your #{variable}? (Enter to skip)"
+      STDIN.gets.chomp!
+    end
   end
 
   def secret_token
