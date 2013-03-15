@@ -1,7 +1,7 @@
 class ProcessFeed
   include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
   include Sidekiq::Worker
-  sidekiq_options :queue => :feeds
+  sidekiq_options :queue => :poll
   def perform(feed_id, file_path, first_polling = false)
     body = File.open(file_path, "r").read
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
