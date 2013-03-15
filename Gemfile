@@ -38,9 +38,7 @@ gem "carrierwave", "~> 0.8"
 gem "capistrano", "~> 2.0"
 gem "rvm-capistrano", "~> 1.2"
 
-group :production do
-  gem "newrelic_rpm", "~> 3.5"
-end
+gem "newrelic_rpm", "~> 3.5"
 
 group :development do
   gem "better_errors", "~> 0.6"
