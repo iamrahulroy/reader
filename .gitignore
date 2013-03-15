@@ -32,3 +32,4 @@ prep
 db-prep
 deploy
 noko
+secret_token.rb
