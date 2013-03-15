@@ -1,0 +1,3 @@
+bundle install
+createuser reader --createdb
+bundle exec rake db:setup
