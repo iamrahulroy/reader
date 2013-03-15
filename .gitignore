@@ -33,3 +33,5 @@ db-prep
 deploy
 noko
 secret_token.rb
+
+config/application.yml
