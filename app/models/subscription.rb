@@ -14,6 +14,8 @@ class Subscription < ActiveRecord::Base
 
   after_save :deliver, :if => :persisted?
 
+  after_validation :destroy_invalid_subscriptions
+
   default_scope {
     where(deleted: false)
   }
@@ -75,6 +77,8 @@ class Subscription < ActiveRecord::Base
     self.commented_count = Item.unscoped.where(user_id: user_id, subscription_id: id, commented: true).count
     self.all_count = Item.unscoped.where(user_id: user_id, subscription_id: id).count
     self.save!
+  rescue ActiveRecord::RecordInvalid => e
+    self.destroy
   end
 
   # TODO: test this method more thoroughly
