@@ -7,6 +7,8 @@ class ImportOpml
     import_opml filetext, user_id
     user = User.find(user_id)
     PlusMailer.opml_imported(user).deliver
+  rescue LibXML::XML::Error => e
+
   end
 
   add_transaction_tracer :perform, :category => :task
