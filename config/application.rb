@@ -65,8 +65,8 @@ module Reader
     config.action_view.sanitized_allowed_tags = 'table', 'tr', 'td', 'iframe', 'embed'
   end
 
-  UPDATE_FREQUENCY = 20
-  GET_ITEM_BATCH_COUNT = 20
+  UPDATE_FREQUENCY = ENV["UPDATE_FREQUENCY"].to_i
+  GET_ITEM_BATCH_COUNT = ENV["BATCH_COUNT_MAX"].to_i
 end
 
 if RUBY_VERSION =~ /1.9/
