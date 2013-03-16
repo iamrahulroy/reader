@@ -1,31 +1,22 @@
 ---
 :verbose: true
 :pidfile: /tmp/sidekiq.pid
-:concurrency: 80
+:concurrency: 140
 :queues:
   - [critical, 100]
   - [opml,12]
   - [clients,11]
   - [users,10]
-  - [entry,9]
-  - [subscriptions,8]
-  - [comments,7]
-  - [contacts,6]
-  - [items,5]
+  - [subscriptions,9]
+  - [comments,8]
+  - [contacts,7]
+  - [items,6]
+  - [poll,5]
   - [feeds,4]
-  - [poll,3]
+  - [entry,3]
   - [icons,2]
   - [background,1]
 :limits:
   opml: 10
-  clients: 70
-  users: 70
-  entry: 15
-  subscriptions: 70
-  comments: 70
-  contacts: 70
-  feeds: 70
-  items: 70
-  poll: 75
-  icons: 15
+  icons: 30
   background: 10

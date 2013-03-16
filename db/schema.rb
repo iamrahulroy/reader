@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223145840) do
+ActiveRecord::Schema.define(:version => 20130316174111) do
 
   create_table "categories", :force => true do |t|
     t.string    "name"
@@ -51,14 +51,18 @@ ActiveRecord::Schema.define(:version => 20130223145840) do
     t.string    "guid",              :limit => 4096
     t.integer   "feed_id"
     t.string    "title",             :limit => 4096
-    t.string    "url",               :limit => 4096, :null => false
+    t.string    "url",               :limit => 4096,                    :null => false
     t.string    "author",            :limit => 4096
     t.string    "summary",           :limit => 4096
     t.text      "content"
     t.timestamp "published_at",      :limit => 6
-    t.timestamp "created_at",        :limit => 6,    :null => false
-    t.timestamp "updated_at",        :limit => 6,    :null => false
-    t.text      "sanitized_content"
+    t.timestamp "created_at",        :limit => 6,                       :null => false
+    t.timestamp "updated_at",        :limit => 6,                       :null => false
+    t.boolean   "processed",                         :default => false
+    t.boolean   "delivered",                         :default => false
+    t.boolean   "content_inlined",                   :default => false
+    t.boolean   "content_embedded",                  :default => false
+    t.boolean   "content_sanitized",                 :default => false
   end
 
   add_index "entries", ["feed_id"], :name => "index_entries_on_feed_id"

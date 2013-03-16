@@ -82,9 +82,11 @@ module Reader
         user = User.charlie
 
         feed_urls = File.readlines("spec/good_urls.txt").collect {|line| line}
-        feed_urls = feed_urls.sample 100
+        feed_urls = feed_urls.sample 500
 
-        feed_urls.each {|fu| Subscription.find_or_create_from_url_for_user(fu,user)}
+        feed_urls.each {|fu|
+          Subscription.find_or_create_from_url_for_user(fu,user)
+        }
 
         subscriptions = Subscription.where(:user_id => user.id).all
         subscriptions.each do |sub|

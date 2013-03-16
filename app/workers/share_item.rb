@@ -20,7 +20,6 @@ class ShareItem
 
 
     item.update_column :share_delivered, true
-
   rescue ActiveRecord::RecordNotUnique => e
 
   end

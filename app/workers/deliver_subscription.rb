@@ -3,7 +3,6 @@ class DeliverSubscription
   sidekiq_options :queue => :subscriptions
   include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
   def perform(id, user_id)
-
     Client.where(:user_id => user_id).each do |client|
       sub = Subscription.where(:id => id).first
       unless sub.nil?

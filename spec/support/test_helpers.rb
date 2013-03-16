@@ -87,10 +87,13 @@ module TestHelpers
     ActionMailer::Base.deliveries.last
   end
 
-  def run_jobs
+  def run_jobs(count = 5)
     sleep 1
-    PollFeed.stub(:perform_in)
-    5.times do
+    #PollFeed.stub(:perform_in)
+    #PollFeed.stub(:perform_async)
+    #PollFeed.stub(:perform_with_newrelic_transaction_trace)
+
+    count.times do
       Dir["#{Rails.root.to_s}/app/workers/*"].each do |f|
         File.basename(f,'.rb').classify.constantize.drain
         PollFeed.drain

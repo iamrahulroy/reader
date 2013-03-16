@@ -9,7 +9,6 @@ class UnshareItem
       child.destroy
     end
     item.update_column :share_delivered, false
-
   end
 
   add_transaction_tracer :perform, :category => :task

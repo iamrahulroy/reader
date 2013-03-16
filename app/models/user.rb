@@ -209,10 +209,10 @@ class User < ActiveRecord::Base
     User.find_by_email('anonymous@1kpl.com')
   end
   def self.charlie
-    User.find_by_email("charliewilkins@gmail.com")
+    User.find_by_email("charlie@example.com")
   end
   def self.loren
-    User.find_by_email("loren.spector@gmail.com")
+    User.find_by_email("loren@example.com")
   end
   def self.josh
     User.find_by_email("josh@example.com")

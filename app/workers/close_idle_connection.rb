@@ -1,4 +1,4 @@
-class CloseIdleConnections
+class CloseIdleConnection
   include Sidekiq::Worker
   sidekiq_options :queue => :critical
   include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation

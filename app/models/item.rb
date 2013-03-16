@@ -96,7 +96,7 @@ class Item < ActiveRecord::Base
   end
 
   def update_subscription_count
-    subscription.update_counts if subscription && subscription.user == self.user
+    UpdateSubscriptionCount.perform_async(subscription_id) if subscription && subscription.user == self.user
   end
 
 end

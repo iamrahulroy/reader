@@ -27,7 +27,7 @@ class ItemSerializer < ActiveModel::Serializer
   end
 
   def content
-    object.entry.sanitized_content
+    object.entry.content
   end
 
   def comments

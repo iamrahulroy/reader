@@ -23,14 +23,45 @@ END
 
   describe "#sanitize_content" do
     it "should fix img srcs" do
+      pending
       entry.content = <<END
 <img class="img-rounded" src="/assets/pages/2662/michael_tubbs_truman_scholar_2011.jpg" alt="michael_tubbs_truman_scholar_2011.jpg" width="200">
 
 <img src="http://boingboing.net/wp-content/uploads/2013/01/Is3uy1.jpg" alt="" title="lockdown" class="size-full wp-image-138212">
 END
 
-      entry.sanitize_content
-      puts entry.sanitized_content
+      puts entry.content
+    end
+  end
+
+  describe "#save" do
+    before :each do
+      class PollFeed
+        def perform(*args)
+
+        end
+      end
+    end
+    it "should run through the entry post processing steps" do
+      PollFeed.stub(:perform => nil)
+      entry.save!
+      entry.reload.content_inlined.should be_false
+      entry.reload.content_embedded.should be_false
+      entry.reload.content_sanitized.should be_false
+      entry.reload.delivered.should be_false
+      entry.reload.processed.should be_false
+
+      run_jobs 1
+
+      entry.reload.content_inlined.should be_true
+      run_jobs 1
+      entry.reload.content_embedded.should be_true
+      run_jobs 1
+      entry.reload.content_sanitized.should be_true
+      run_jobs 1
+      entry.reload.delivered.should be_true
+      #run_jobs 1
+      entry.reload.processed.should be_true
     end
   end
 

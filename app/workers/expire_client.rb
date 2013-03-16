@@ -3,7 +3,6 @@ class ExpireClient
   sidekiq_options :queue => :clients
   include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
   def perform(id)
-
     Client.where(:id => id).each do |client|
       client.destroy
     end

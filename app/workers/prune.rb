@@ -32,7 +32,6 @@ class Prune
     entries.each do |e|
       e.destroy
     end
-
   end
 
   add_transaction_tracer :perform, :category => :task

@@ -20,7 +20,7 @@
           %textarea#content.input-xlarge{:type => "textarea", :name => 'body', :cols => 30, :rows => 4, :width => "100%"}
 
         %div.well
-          = raw @item.entry.sanitized_content
+          = raw @item.entry.content
 
   %div.modal-footer
     %button#send-email-modal-submit-link-btn.btn.btn-primary Send

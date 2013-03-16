@@ -5,6 +5,9 @@ class DeliverEntry
   def perform(id)
     entry = Entry.find(id)
     entry.deliver
+    entry.processed = true
+    entry.delivered = true
+    entry.save!
   rescue ActiveRecord::RecordNotFound => e
     # sometimes jobs get queued for records that don't exist. WHY?
   end

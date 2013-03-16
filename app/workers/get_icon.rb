@@ -9,6 +9,7 @@ class GetIcon
   sidekiq_options :queue => :icons
   include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
   def perform(id)
+
     feed = Feed.where(id: id).first
     return unless feed
     icon_url = get_favicon feed.site_url
