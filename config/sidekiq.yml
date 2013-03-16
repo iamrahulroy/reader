@@ -11,8 +11,8 @@
   - [subscriptions,8]
   - [comments,7]
   - [contacts,6]
-  - [feeds,5]
-  - [items,4]
+  - [items,5]
+  - [feeds,4]
   - [poll,3]
   - [icons,2]
   - [background,1]
@@ -26,6 +26,6 @@
   contacts: 70
   feeds: 70
   items: 70
-  poll: 15
+  poll: 75
   icons: 15
   background: 10
