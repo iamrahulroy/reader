@@ -16,12 +16,6 @@ class Item < ActiveRecord::Base
   belongs_to :subscription
   has_many :comments, :dependent => :destroy
 
-  after_update :update_children
-  after_update :share_item, :unless => :share_delivered?
-  after_update :unshare_item, :if => :share_delivered?
-
-  after_save :update_subscription_count
-
   belongs_to :parent, :class_name => "Item"
   has_many :children, :class_name => "Item", :foreign_key => :parent_id
   has_one :feed, :through => :subscription
@@ -43,6 +37,16 @@ class Item < ActiveRecord::Base
       where("#{filter} = ?", true)
     end
   }
+
+  def after_user_item_update
+    update_children
+    share_item unless share_delivered?
+    unshare_item if share_delivered?
+  end
+
+  def update_subscription_count
+    UpdateSubscriptionCount.perform_async(subscription_id) if subscription && subscription.user == self.user
+  end
 
   def active_model_serializer
     ItemSerializer
@@ -95,9 +99,7 @@ class Item < ActiveRecord::Base
     end
   end
 
-  def update_subscription_count
-    UpdateSubscriptionCount.perform_async(subscription_id) if subscription && subscription.user == self.user
-  end
+
 
 end
 

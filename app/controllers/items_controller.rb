@@ -92,6 +92,8 @@ class ItemsController < ApplicationController
     item.has_new_comments = params[:has_new_comments]
 
     item.save!
+    item.after_user_item_update
+    item.update_subscription_count
     head :ok
   end
 

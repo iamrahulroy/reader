@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-
+gem "nokogiri", "~> 1.5"
 gem "rails", "~> 3.2"
 gem "unicorn", "~> 4.4"
 gem "god", "~> 0.13"
@@ -16,9 +16,10 @@ gem "devise", "~> 2.2"
 gem "acts_as_follower", "~> 0.1"
 gem "fb_graph", "~> 2.6"
 gem "feeder", git: "git@github.com:1kplus/feeder.git"
+#gem "feeder", :path => "/Users/charlie/Workspace/feeder"
 gem "feedzirra", git: "git@github.com:1kplus/feedzirra.git"
 gem "muck-feedbag", git: "git@github.com:1kplus/feedbag.git"
-gem "nokogiri", "~> 1.5"
+
 gem "hpricot", "~> 0.8"
 gem "private_pub", "~> 1.0"
 gem "libxml-ruby", "~> 2.3"

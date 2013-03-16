@@ -9,13 +9,13 @@ class Entry < ActiveRecord::Base
 
   after_save do |entry|
     if !entry.content_inlined?
-      InlineContent.perform_async(entry.id)
+      InlineContent.perform_in(1.second, entry.id)
     elsif !entry.content_embedded?
-      EmbedContent.perform_async(entry.id)
+      EmbedContent.perform_in(1.second, entry.id)
     elsif !entry.content_sanitized?
-      SanitizeContent.perform_async(entry.id)
+      SanitizeContent.perform_in(1.second, entry.id)
     elsif !entry.delivered?
-      DeliverEntry.perform_async(entry.id)
+      DeliverEntry.perform_in(1.second, entry.id)
     end
   end
 
@@ -73,6 +73,7 @@ class Entry < ActiveRecord::Base
         item = Item.new(:user_id => sub.user_id, :entry => self, :subscription => sub)
         if item.valid?
           item.save!
+          item.update_subscription_count
         end
       end
 
@@ -85,6 +86,7 @@ class Entry < ActiveRecord::Base
         i.user = feed.user
         i.from = feed.user
         i.save!
+        item.update_subscription_count
       end
     end
   end

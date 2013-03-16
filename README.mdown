@@ -1,7 +1,7 @@
 Reader
 =====
 
-Reader is a fun little rss reader with some social features.
+Reader is a fun little rss reader with some social features. This is the primary codebase for [http://1kpl.us/](http://1kpl.us/)
 
 Setup
 =====
