@@ -25,12 +25,13 @@ class App.Stream extends Backbone.Model
       App.stream = @
       App.viewStream(@.get('name'), @.get('site_url'))
 
-  loadItems: (cb) =>
+  loadItems: (cb) ->
     App.itemLoaderXHR?.abort()
-    url = @.items_url()
+    url = @items_url()
     if App.itemIdClickedFromSummary?
       url = url.replace "items.json", "item/#{App.itemIdClickedFromSummary}/items.json"
       App.itemIdClickedFromSummary = null
+    console.log url
     App.itemLoaderXHR = $.post(url, {ids: @ids()})
       .done((data) ->
         cb(data))
@@ -42,11 +43,9 @@ class App.Stream extends Backbone.Model
   ids: =>
     App.items?.pluck("id")
 
-  items_url: =>
-    @.get("items_url")
 
   count_url: =>
-    "#{@.get("items_url")}?count=true"
+    "#{@get("items_url")}?count=true"
 
   prev: () =>
     links = $(".#{@streamType}-link")
