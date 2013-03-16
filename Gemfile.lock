@@ -1,5 +1,12 @@
-PATH
-  remote: feeder
+GIT
+  remote: git@github.com:1kplus/feedbag.git
+  revision: fd3aeab9e842ddfdcd1a1deb0e841082259e490a
+  specs:
+    muck-feedbag (0.7.1)
+
+GIT
+  remote: git@github.com:1kplus/feeder.git
+  revision: d81938e9ada8a56332dd3d802e6185b6b1c3549f
   specs:
     feeder (0.0.1)
       ensure-encoding
@@ -8,13 +15,9 @@ PATH
       rails (~> 3.2.8)
       sidekiq
 
-PATH
-  remote: vendor/feedbag
-  specs:
-    muck-feedbag (0.7.1)
-
-PATH
-  remote: vendor/feedzirra
+GIT
+  remote: git@github.com:1kplus/feedzirra.git
+  revision: 5f3d145413bd46813bb562fea874b5e214aa0544
   specs:
     feedzirra (0.2.0.rc2)
       curb (~> 0.8.0)
@@ -177,7 +180,7 @@ GEM
       execjs (>= 1.2.9)
       sprockets (>= 2.0.3)
       tilt
-    highline (1.6.15)
+    highline (1.6.16)
     hike (1.2.1)
     hpricot (0.8.6)
     http_parser.rb (0.5.3)
@@ -348,7 +351,7 @@ GEM
       sprockets
     sidekiq-limit_fetch (1.2)
       sidekiq (>= 2.6.5, < 3)
-    sinatra (1.3.5)
+    sinatra (1.3.6)
       rack (~> 1.4)
       rack-protection (~> 1.3)
       tilt (~> 1.3, >= 1.3.3)
