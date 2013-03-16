@@ -1,14 +1,4 @@
 module Reader
-  module Keys
-    SMTP_PASS = ENV['SMTP_PASS']
-
-    FACEBOOK_API_KEY = ENV['FACEBOOK_API_KEY']
-    FACEBOOK_SECRET  = ENV['FACEBOOK_API_SECRET']
-
-    GOOGLE_API_KEY = ENV['GOOGLE_API_KEY']
-    GOOGLE_SECRET  = ENV['GOOGLE_API_SECRET']
-  end
-
   class Setup
     def self.users
       users = User.count
