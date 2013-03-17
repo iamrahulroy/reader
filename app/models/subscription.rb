@@ -12,7 +12,7 @@ class Subscription < ActiveRecord::Base
   validates :feed_id, :uniqueness => { :scope => :user_id,
     :message => "one sub per user per feed" }
 
-  after_save :deliver, :if => :persisted?
+  after_update :deliver, :if => :persisted?
 
   default_scope {
     where(deleted: false)
@@ -27,9 +27,16 @@ class Subscription < ActiveRecord::Base
   end
 
   def deliver
-    if Client.where(:user_id => user_id).count > 0
-      DeliverSubscription.perform_async id, user_id
+    if Client.where(:user_id => self.user_id).count > 0
+      unless delivery_in_queue?
+        DeliverSubscription.perform_async(id, user_id)
+      end
     end
+  end
+
+  def delivery_in_queue?
+    queue = Sidekiq::Queue.new("subscriptions")
+    queue.detect {|job| job.args == [id, user_id] }
   end
 
   def group_key
@@ -74,7 +81,7 @@ class Subscription < ActiveRecord::Base
     self.shared_count = Item.unscoped.where(user_id: user_id, subscription_id: id, shared: true).count
     self.commented_count = Item.unscoped.where(user_id: user_id, subscription_id: id, commented: true).count
     self.all_count = Item.unscoped.where(user_id: user_id, subscription_id: id).count
-    self.save!
+    self.save! if self.changed?
   rescue ActiveRecord::RecordInvalid => e
     self.destroy
   end

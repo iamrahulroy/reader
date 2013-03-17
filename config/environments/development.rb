@@ -56,6 +56,8 @@ Reader::Application.configure do
   #end
 end
 
+ActiveRecord::Base.logger = nil
+
 ActionMailer::Base.delivery_method = :file
 
 

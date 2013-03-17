@@ -22,7 +22,7 @@ class Item < ActiveRecord::Base
 
   validates_with ItemValidator
 
-  after_save :after_user_item_update
+  after_update :after_user_item_update
 
   delegate :url, :title, :to => :entry, :allow_nil => true
 

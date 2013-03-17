@@ -6,8 +6,6 @@ class DeliverSubscription
       sub = Subscription.where(:id => id).first
       unless sub.nil?
         json = sub.active_model_serializer.new(sub).to_json(:root => false)
-
-        ap "Deliver subscription #{id} to user #{user_id} via #{client.client_id}:#{client.channel}"
         begin
           PrivatePub.publish_to client.channel, "App.receiver.addSubscription(#{json})"
         rescue Errno::ECONNREFUSED
