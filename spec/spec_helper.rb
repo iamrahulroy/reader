@@ -14,7 +14,7 @@ require 'sidekiq/testing'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |c|
-  c.fail_fast = true
+  #c.fail_fast = true
 end
 
 VCR.configure do |config|
@@ -37,8 +37,8 @@ end
 
 RSpec.configure do |config|
   #Capybara.default_driver = :poltergeist
-  Capybara.javascript_driver = :chrome
-  #Capybara.javascript_driver = :poltergeist
+  #Capybara.javascript_driver = :chrome
+  Capybara.javascript_driver = :firefox
 
   config.include Devise::TestHelpers, :type => :controller
 
@@ -81,7 +81,7 @@ RSpec.configure do |config|
 
     create_anon_user
 
-
+    puts "config before done"
     #page.driver.resize 1600, 1400 if page.driver.respond_to? :resize
   end
 
@@ -94,5 +94,6 @@ RSpec.configure do |config|
     #   ActiveRecord::Base.connection.rollback_db_transaction
     #   ActiveRecord::Base.connection.decrement_open_transactions
     # end
+    puts "config after done"
   end
 end

@@ -5,21 +5,14 @@ class Entry < ActiveRecord::Base
   validates_presence_of :guid, :url, :published_at
   validates_uniqueness_of :guid, :scope => :feed_id
 
-  before_save :ensure_pubdate
-
-  after_save do |entry|
-    if !entry.content_inlined?
-      InlineContent.perform_in(1.second, entry.id)
-    elsif !entry.content_embedded?
-      EmbedContent.perform_in(1.second, entry.id)
-    elsif !entry.content_sanitized?
-      SanitizeContent.perform_in(1.second, entry.id)
-    elsif !entry.delivered?
-      DeliverEntry.perform_in(1.second, entry.id)
-    end
-  end
-
+  before_save :inline_reddit, :embed_content, :ensure_pubdate, :sanitize_content
   has_many :items, :dependent => :destroy
+
+  after_create do |entry|
+    entry.deliver
+    entry.delivered = true
+    entry.save!
+  end
 
   def self.share(user, title, body)
     e = Entry.new
@@ -45,8 +38,70 @@ class Entry < ActiveRecord::Base
     self.content.gsub! /\n/, repl
   end
 
-  def embed_content
+  def inline_reddit
+    ap "inline reddit"
+    return unless self.feed_id
+    feed_url = self.feed.try(:feed_url)
+    if feed_url && feed_url =~ /reddit\.com/
+      content = self.content
+      url = self.content.match /<a href="([^"]*)">\[link\]/
 
+      imgmatch = url[1].match(/\.(gif|jpg|png|jpeg)(\?|#)*/i) unless url.nil?
+      unless imgmatch.nil?
+        unless url[1].nil?
+          img = "<img src=\"#{url[1]}\" style=\"max-width:95%\"><br/>"
+          content = img + self.content
+        end
+      end
+      self.url = url[1]
+      self.content = content
+    end
+
+    if self.url =~ /\/imgur\.com/
+      inline_imgur
+    end
+
+    if self.url =~ /\/qkme\.me/
+      inline_quickmeme
+    end
+    if self.url =~ /\/quickmeme\.com/
+      inline_quickmeme
+    end
+  end
+
+  def embed_content
+    ap "embed_content"
+    if Rails.env.production?
+      if self.feed.feed_url =~ /reddit\.com/ || self.feed.feed_url =~ /news\.ycombinator\.com\/rss/
+        unless url =~ /reddit\.com/ || url =~ /imgur\.com/ || url =~ /qkme\.me/
+          self.content = "#{embed_urls(url.dup, false)}<p/>#{self.content}"
+        end
+      end
+    end
+  end
+
+  def inline_imgur
+    ap "inline_imgur"
+    doc = Nokogiri::HTML(open(self.url))
+    images = doc.css(".image img")
+    chunk = ""
+    images.each do |node|
+      node.remove_attribute('class')
+      chunk += node.to_s.gsub('data-src', 'src')
+    end
+    self.content = chunk + self.content
+  end
+
+  def inline_quickmeme
+    ap "inline_quickmeme"
+    doc = Nokogiri::HTML(open(self.url))
+    images = doc.css("#img")
+    chunk = ""
+    images.each do |node|
+      node.remove_attribute('class')
+      chunk += node.to_s.gsub('data-src', 'src')
+    end
+    self.content = chunk + self.content
   end
 
   def ensure_pubdate
@@ -66,6 +121,7 @@ class Entry < ActiveRecord::Base
   end
 
   def deliver
+    ap "deliver"
     feed = self.feed
     if feed
       subscriptions = feed.subscriptions
@@ -73,7 +129,6 @@ class Entry < ActiveRecord::Base
         item = Item.new(:user_id => sub.user_id, :entry => self, :subscription => sub)
         if item.valid?
           item.save!
-          item.update_subscription_count
         end
       end
 
@@ -86,7 +141,6 @@ class Entry < ActiveRecord::Base
         i.user = feed.user
         i.from = feed.user
         i.save!
-        item.update_subscription_count
       end
     end
   end
@@ -115,6 +169,7 @@ class Entry < ActiveRecord::Base
   end
 
   def sanitize_content
+    ap "sanitize_content"
     # TODO: Fix broken images with site base uri if possible
     subject = content || ""
     self.title ||= ""
@@ -150,6 +205,7 @@ class Entry < ActiveRecord::Base
     self.content = f
 
     self.title = self.title.force_encoding("UTF-8")
+    self.processed = true
   end
 
 end

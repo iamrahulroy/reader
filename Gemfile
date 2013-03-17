@@ -11,6 +11,9 @@ gem "sinatra", "~> 1.3", :require => false
 gem "slim", "~> 1.3", :require => false
 gem "thin", "~> 1.5", :require => false
 
+gem 'resque'
+gem 'sucker_punch'
+
 gem "pg", "~> 0.14"
 gem "devise", "~> 2.2"
 gem "acts_as_follower", "~> 0.1"
@@ -63,7 +66,7 @@ group :test do
   gem "database_cleaner", "~> 0.9"
   gem "capybara", "~> 1.0"
   gem "vcr", "~> 2.4"
-  gem "webmock", "~> 1.9"
+  gem "webmock", "1.9"
   gem "launchy", "~> 2.2"
 end
 

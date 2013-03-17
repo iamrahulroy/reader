@@ -4,6 +4,7 @@ feature "Anonymous user visits site", :js => true do
   scenario "default feeds are visible" do
     VCR.use_cassette('anonymous user visits in chrome', :record => :new_episodes) do
       create_anon_feeds
+      binding.pry
       visit "/"
       page.should have_content "Latest Movie Trailers"
       page.should have_content "Comics"
@@ -13,6 +14,7 @@ feature "Anonymous user visits site", :js => true do
       #page.should have_content "chainsawsuit by kris straub"
       page.source.scan("favicon").length.should >= 5
     end
+    binding.pry
   end
 end
 

@@ -3,11 +3,12 @@
 Reader::Application.routes.draw do
 
   require 'sidekiq/web'
+  require 'resque/server'
 
   constraint = lambda { |request| request.env["warden"].authenticate? and request.env['warden'].user.admin? }
   constraints constraint do
-    #mount Sidekiq::Web => '/sidekiq'
-    mount Sidekiq::Web => '/qweorqweoiurpsojfklsdklfjasldkfj'
+    mount Sidekiq::Web => '/sidekiq'
+    mount Resque::Server, :at => "/resque"
   end
 
   mount JasmineRails::Engine => "/specs" unless Rails.env.production?

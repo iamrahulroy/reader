@@ -206,13 +206,13 @@ class User < ActiveRecord::Base
   end
 
   def self.anonymous
-    User.find_by_email('anonymous@1kpl.com')
+    User.find 1
   end
   def self.charlie
-    User.find_by_email("charlie@example.com")
+    User.find 2
   end
   def self.loren
-    User.find_by_email("loren@example.com")
+    User.find 3
   end
   def self.josh
     User.find_by_email("josh@example.com")

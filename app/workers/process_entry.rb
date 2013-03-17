@@ -3,6 +3,7 @@ class ProcessEntry
   sidekiq_options :queue => :entry
   include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
   def perform(feed_id, content, summary, entry_id, url, published, updated, title, author)
+    raise "deprecated"
     Feeder::EntryProcessor.process_entry(feed_id, content, summary, entry_id, url, published, updated, title, author)
   end
 

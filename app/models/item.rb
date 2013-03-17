@@ -22,6 +22,8 @@ class Item < ActiveRecord::Base
 
   validates_with ItemValidator
 
+  after_save :after_user_item_update
+
   delegate :url, :title, :to => :entry, :allow_nil => true
 
   default_scope {
@@ -42,10 +44,11 @@ class Item < ActiveRecord::Base
     update_children
     share_item unless share_delivered?
     unshare_item if share_delivered?
+    update_subscription_count
   end
 
   def update_subscription_count
-    UpdateSubscriptionCount.perform_async(subscription_id) if subscription && subscription.user == self.user
+    subscription.update_counts if subscription && subscription.user == self.user
   end
 
   def active_model_serializer
