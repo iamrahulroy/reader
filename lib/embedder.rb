@@ -1,6 +1,5 @@
 module Embedder
   def embed_urls(content, include_titles=true)
-    ap "Embed content"
     if content
       urls = URI.extract(ActionView::Base.full_sanitizer.sanitize(content))
       unless urls.empty?
