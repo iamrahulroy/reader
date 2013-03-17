@@ -11,6 +11,8 @@ Reader::Application.routes.draw do
     mount Resque::Server, :at => "/resque"
   end
 
+  devise_for :users, :controllers => { :sessions => 'users/sessions', :registrations => "users/registrations", :passwords => "users/passwords" }
+
   mount JasmineRails::Engine => "/specs" unless Rails.env.production?
   mount Feeder::Engine => "/feeder", :as => "feeder_engine"
 
@@ -68,7 +70,7 @@ Reader::Application.routes.draw do
 
   post "share" => "share#create"
 
-  devise_for :users, :controllers => { :sessions => 'users/sessions', :registrations => "users/registrations", :passwords => "users/passwords" }
+
 
   root :to => "application#index"
   get "items/:id/show.html" => "application#index"
