@@ -1,7 +1,6 @@
 class UpdateComment
   include Sidekiq::Worker
   sidekiq_options :queue => :comments
-  include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
   def perform(comment_id)
     puts "update comment - #{comment_id}"
     comment = Comment.find comment_id
@@ -23,5 +22,4 @@ class UpdateComment
     end
   end
 
-  add_transaction_tracer :perform, :category => :task
 end

@@ -1,7 +1,6 @@
 class SubscribeClient
   include Sidekiq::Worker
   sidekiq_options :queue => :clients
-  include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
   def perform(client_id, channel)
     puts "subscribe client - #{client_id}, #{channel}"
     token = channel.split('/').last
@@ -11,5 +10,4 @@ class SubscribeClient
     Client.create(:user_id => user.id, :client_id => client_id, :channel => channel) if user
   end
 
-  add_transaction_tracer :perform, :category => :task
 end

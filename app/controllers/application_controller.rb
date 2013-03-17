@@ -85,8 +85,6 @@ class ApplicationController < ActionController::Base
   def update_sub_counts
     if real_user
       UpdateUserSubscriptionCount.perform_async(current_user.id)
-      #SuckerPunch::Queue[:ui].async.perform("update_user_subscription_count")
-      #current_user.subscriptions.each {|sub| sub.update_counts }
     end
   end
 

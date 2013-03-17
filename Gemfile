@@ -40,8 +40,11 @@ gem "pismo", "~> 0.7"
 gem "carrierwave", "~> 0.8"
 gem "capistrano", "~> 2.0"
 gem "rvm-capistrano", "~> 1.2"
-gem "newrelic_rpm", "~> 3.5"
 gem "figaro", "~> 0.6"
+
+group :production do
+  gem "newrelic_rpm", "~> 3.5"
+end
 
 group :development do
   gem "better_errors", "~> 0.6"

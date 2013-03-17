@@ -1,7 +1,6 @@
 class Prune
   include Sidekiq::Worker
   sidekiq_options :queue => :background
-  include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
 
   def perform
     items = Item.where("unread = false AND starred = false AND shared = false AND has_new_comments = false").where("created_at < ?", Date.current - 3.months)
@@ -34,6 +33,5 @@ class Prune
     end
   end
 
-  add_transaction_tracer :perform, :category => :task
 end
 

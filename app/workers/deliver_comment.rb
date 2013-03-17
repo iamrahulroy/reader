@@ -1,7 +1,6 @@
 class DeliverComment
   include Sidekiq::Worker
   sidekiq_options :queue => :comments
-  include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
   def perform(comment_id)
     comment = Comment.find comment_id
     item = comment.item
@@ -26,5 +25,4 @@ class DeliverComment
     end
   end
 
-  add_transaction_tracer :perform, :category => :task
 end

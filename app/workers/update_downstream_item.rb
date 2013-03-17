@@ -1,7 +1,6 @@
 class UpdateDownstreamItem
   include Sidekiq::Worker
   sidekiq_options :queue => :items
-  include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
   def perform(id)
     item = Item.find id
 
@@ -17,5 +16,4 @@ class UpdateDownstreamItem
 
   end
 
-  add_transaction_tracer :perform, :category => :task
 end

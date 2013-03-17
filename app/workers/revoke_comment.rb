@@ -1,7 +1,6 @@
 class RevokeComment
   include Sidekiq::Worker
   sidekiq_options :queue => :comments
-  include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
   def perform(comment_id, user_id)
     puts "revoke comment - #{comment_id}"
 
@@ -21,5 +20,4 @@ class RevokeComment
 
   end
 
-  add_transaction_tracer :perform, :category => :task
 end

@@ -1,7 +1,6 @@
 class NewUserSetup
   include Sidekiq::Worker
   sidekiq_options :queue => :users
-  include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
   def perform(id)
     user = User.find id
 
@@ -15,5 +14,4 @@ class NewUserSetup
     end
   end
 
-  add_transaction_tracer :perform, :category => :task
 end
