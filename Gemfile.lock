@@ -6,13 +6,14 @@ GIT
 
 GIT
   remote: git@github.com:1kplus/feeder.git
-  revision: 52f620fce007b6139a20e46b4e40996ef25ecd99
+  revision: 7f7b55e808c758d26df4508c1f7952d7d883b5f5
   specs:
     feeder (0.0.1)
       ensure-encoding
       faraday
       faraday_middleware
       rails (~> 3.2)
+      resque
       sidekiq
 
 GIT
@@ -224,7 +225,7 @@ GEM
       railties
     method_source (0.8.1)
     mime-types (1.21)
-    multi_json (1.6.1)
+    multi_json (1.7.0)
     multipart-post (1.2.0)
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
