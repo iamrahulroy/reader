@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :check_reader_user, :get_follower_requests, :do_not_cache, :touch_user, :except => :newrelic
+  before_filter :do_not_cache, :except => :newrelic
   include ApplicationHelper
 
   def newrelic
@@ -8,17 +8,18 @@ class ApplicationController < ActionController::Base
   end
 
   def stats
-    redirect_to "/" unless current_user == User.charlie
+    redirect_to "/" unless current_user.admin?
     @user_count = User.unscoped.count - 1 # anonymous user
     @item_count = Item.unscoped.count
     @sub_count  = Subscription.unscoped.count
     @feed_count = Feed.unscoped.count
     @client_count = Client.unscoped.count
+    index_setup
+    render :content_type => "text/html"
   end
 
   def index
-    @user_json = render_to_string :json => current_user, :serializer => UserSerializer, :root => false
-    set_weights
+    index_setup
     render :content_type => "text/html"
   end
 
@@ -54,31 +55,54 @@ class ApplicationController < ActionController::Base
     head :ok
   end
 
-  def check_reader_user
-    unless user_signed_in?
-      sign_in(:user, User.where(:anonymous => true).first)
+  def icon_check
+    icon = FeedIcon.where(id: params[:id]).first
+    if icon
+      unless File.exists?("#{Rails.root}/public#{request.path}")
+        icon.destroy
+      end
     end
+    head :ok
   end
 
-  def get_follower_requests
-    unless real_user.nil?
-      @follow_requests = current_user.follow_requests
+  private
+
+    def index_setup
+      @user_json = render_to_string :json => current_user, :serializer => UserSerializer, :root => false
+      check_reader_user
+      if real_user
+        get_follower_requests
+        set_weights
+        touch_user
+        UpdateUserSubscriptionCount.perform_async(current_user.id)
+      end
     end
-  end
 
-  def do_not_cache
-    response.headers["Pragma"] = "no-cache"
-    response.headers["Cache-Control"] = "no-cache"
-  end
-
-  def set_weights
-    current_user.set_weights if real_user
-  end
-
-  def touch_user
-    if real_user
-      current_user.touch(:last_seen_at)
+    def check_reader_user
+      unless user_signed_in?
+        sign_in(:user, User.where(:anonymous => true).first)
+      end
     end
-  end
+
+    def get_follower_requests
+      unless real_user.nil?
+        @follow_requests = current_user.follow_requests
+      end
+    end
+
+    def do_not_cache
+      response.headers["Pragma"] = "no-cache"
+      response.headers["Cache-Control"] = "no-cache"
+    end
+
+    def set_weights
+      current_user.set_weights if real_user
+    end
+
+    def touch_user
+      if real_user
+        current_user.touch(:last_seen_at)
+      end
+    end
 
 end
