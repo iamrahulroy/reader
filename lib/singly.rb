@@ -3,7 +3,9 @@ class Singly
 
   class << self
     def authentication_url_for(service)
-      "https://api.singly.com/oauth/authenticate?client_id=#{ENV['SINGLY_CLIENT_ID']}&service=#{service}&redirect_uri=http://1kpl.us/auth/callback"
+      scopes = ""
+      scopes = "&scope=email,publish_actions" if service == "facebook"
+      "https://api.singly.com/oauth/authenticate?client_id=#{ENV['SINGLY_CLIENT_ID']}&service=#{service}#{scopes}&redirect_uri=http://1kpl.us/auth/callback"
     end
 
     def singly_profile_for(user)
