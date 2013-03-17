@@ -19,7 +19,6 @@ class ApplicationController < ActionController::Base
   def index
     @user_json = render_to_string :json => current_user, :serializer => UserSerializer, :root => false
     set_weights
-    update_sub_counts
     render :content_type => "text/html"
   end
 
@@ -79,12 +78,6 @@ class ApplicationController < ActionController::Base
   def touch_user
     if real_user
       current_user.touch(:last_seen_at)
-    end
-  end
-
-  def update_sub_counts
-    if real_user
-      UpdateUserSubscriptionCount.perform_async(current_user.id)
     end
   end
 
