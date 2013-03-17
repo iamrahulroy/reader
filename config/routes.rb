@@ -17,6 +17,8 @@ Reader::Application.routes.draw do
   get '/nr', :to => "application#newrelic"
   get '/stats', :to => "application#stats"
 
+  get '/uploads/feed_icon/feed_icon/:id/favicon.ico', :to => "application#icon_check"
+
   get '/summary', :to => "application#summary"
 
   get '/items/counts', :to => "items#counts"
