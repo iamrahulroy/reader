@@ -1,25 +1,13 @@
 # config/unicorn.rb
-# Set environment to development unless something else is specified
-env = ENV["RAILS_ENV"] || "development"
-
-# See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete
-# documentation.
-worker_processes 10
-
-# listen on both a Unix domain socket and a TCP port,
-# we use a shorter backlog for quicker failover when busy
-listen "/tmp/unicorn.reader.sock", :backlog => 64
-
-# Preload our app for more speed
+ENV["RAILS_ENV"] ||= "development"
+worker_processes Integer(ENV["UNICORN_WORKERS"] || 3)
+timeout Integer(ENV["UNICORN_TIMEOUT"] || 30)
 preload_app true
-
-# nuke workers after 30 seconds instead of 60 seconds (the default)
-timeout 30
-
+listen "/tmp/unicorn.reader.sock", :backlog => 64
 pid "/tmp/unicorn.reader.pid"
 
 # Production specific settings
-if env == "production"
+if ENV["RAILS_ENV"] == "production"
   # Help ensure your application will always spawn in the symlinked
   # "current" directory that Capistrano sets up.
   working_directory "/home/charlie/apps/reader/current"
@@ -33,43 +21,26 @@ if env == "production"
 end
 
 before_fork do |server, worker|
-  # the following is highly recomended for Rails + "preload_app true"
-  # as there's no need for the master process to hold a connection
-  if defined?(ActiveRecord::Base)
-    ap "FORKIE: disconnect!"
-    ActiveRecord::Base.connection.disconnect!
+  Signal.trap 'TERM' do
+    puts 'Unicorn master intercepting TERM and sending myself QUIT instead'
+    Process.kill 'QUIT', Process.pid
   end
 
-  # Before forking, kill the master process that belongs to the .oldbin PID.
-  # This enables 0 downtime deploys.
-  old_pid = "/tmp/unicorn.reader.pid.oldbin"
-  if File.exists?(old_pid) && server.pid != old_pid
-    begin
-      Process.kill("QUIT", File.read(old_pid).to_i)
-    rescue Errno::ENOENT, Errno::ESRCH
-      # someone else did our job for us
-    end
-  end
+  defined?(ActiveRecord::Base) and ActiveRecord::Base.connection.disconnect!
 end
 
 after_fork do |server, worker|
-
-  Sidekiq.configure_client do |config|
-    rails_root = Rails.root || File.dirname(__FILE__) + '/../..'
-    redis_config = YAML.load_file(rails_root.to_s + '/config/redis.yml')
-    rails_env = Rails.env || 'production'
-    config.redis = { :url => redis_config[rails_env], :namespace => 'reader' }
+  Signal.trap 'TERM' do
+    puts 'Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT'
   end
 
-  # the following is *required* for Rails + "preload_app true",
-  if defined?(ActiveRecord::Base)
-    ap "FORKIE: connect!"
-    ActiveRecord::Base.establish_connection
-  end
+  defined?(ActiveRecord::Base) and ActiveRecord::Base.establish_connection
 
-  # if preload_app is true, then you may also want to check and
-  # restart any other shared sockets/descriptors such as Memcached,
-  # and Redis.  TokyoCabinet file handles are safe to reuse
-  # between any number of forked children (assuming your kernel
-  # correctly implements pread()/pwrite() system calls)
+  if defined?(Sidekiq)
+    Sidekiq.configure_client do |config|
+      rails_root = Rails.root || File.join(File.dirname(__FILE__), "..", "..")
+      redis_config = YAML.load_file(File.join(rails_root, "config", "redis.yml")
+      config.redis = { url: redis_config[ENV["RAILS_ENV"]], namespace: 'reader', size: 1 }
+    end
+  end
 end
