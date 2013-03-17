@@ -1,6 +1,7 @@
 
 namespace :reader do
 
+
   namespace :feeder do
     desc "reset feed error counts"
     task :reset => :environment do
@@ -34,19 +35,15 @@ namespace :reader do
 
   end
 
-  desc "test jobs"
-  task :test_jobs => :environment do
-    ActiveRecord::Base.connection.execute <<HERESTR
-delete from test_records;
-HERESTR
-
-    100000.times { TestJob.perform_async }
+  namespace :redis do
+    desc "redis - remove all keys from all databases"
+    task :flushall => :environment do
+      Sidekiq.redis do |r|
+        r.flushall
+      end
+    end
   end
 
-  desc "test embed.ly"
-  task :test_embedly => :environment do
-    TestEmbedly.new
-  end
 
   desc "fix entries without published_at dates"
   task :fix_entry_published_dates => :environment do
