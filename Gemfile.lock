@@ -337,6 +337,7 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
+    ruby_gntp (0.3.4)
     ruby_parser (3.1.1)
       sexp_processor (~> 4.1)
     rubyzip (0.9.9)
@@ -479,6 +480,7 @@ DEPENDENCIES
   rails (~> 3.2)
   resque
   rspec-rails (~> 2.12)
+  ruby_gntp
   rvm-capistrano (~> 1.2)
   sass-rails (~> 3.2)
   sextant (~> 0.2)

@@ -63,6 +63,7 @@ group :development do
 end
 
 group :test, :development do
+  gem "ruby_gntp"
   gem "awesome_print", "~> 1.1"
 
   gem "sextant", "~> 0.2"
