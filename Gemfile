@@ -42,6 +42,13 @@ gem "capistrano", "~> 2.0"
 gem "rvm-capistrano", "~> 1.2"
 gem "figaro", "~> 0.6"
 
+gem "pry-rails", "~> 0.2"
+gem "pry-debugger"
+gem "pry-coolline"
+gem "pry-remote"
+
+
+
 group :production do
   gem "newrelic_rpm", "~> 3.5"
 end
@@ -57,8 +64,7 @@ end
 
 group :test, :development do
   gem "awesome_print", "~> 1.1"
-  gem "pry-rails", "~> 0.2"
-  gem "pry-nav", "~> 0.2"
+
   gem "sextant", "~> 0.2"
   gem "rspec-rails", "~> 2.12"
   gem "quiet_assets", "~> 1.0"

@@ -37,7 +37,6 @@ class SubscriptionsController < ApplicationController
     end
     @items = @items.all
 
-    #binding.pry
     item = @items.shift if item_id
     @items.sort! {|a,b| b.entry.published_at <=> a.entry.published_at }
     @items.unshift item if item_id
