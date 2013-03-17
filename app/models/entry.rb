@@ -39,7 +39,6 @@ class Entry < ActiveRecord::Base
   end
 
   def inline_reddit
-    ap "inline reddit"
     return unless self.feed_id
     feed_url = self.feed.try(:feed_url)
     if feed_url && feed_url =~ /reddit\.com/
@@ -70,7 +69,6 @@ class Entry < ActiveRecord::Base
   end
 
   def embed_content
-    ap "embed_content"
     if Rails.env.production?
       if self.feed.feed_url =~ /reddit\.com/ || self.feed.feed_url =~ /news\.ycombinator\.com\/rss/
         unless url =~ /reddit\.com/ || url =~ /imgur\.com/ || url =~ /qkme\.me/
@@ -81,7 +79,6 @@ class Entry < ActiveRecord::Base
   end
 
   def inline_imgur
-    ap "inline_imgur"
     doc = Nokogiri::HTML(open(self.url))
     images = doc.css(".image img")
     chunk = ""
@@ -93,7 +90,6 @@ class Entry < ActiveRecord::Base
   end
 
   def inline_quickmeme
-    ap "inline_quickmeme"
     doc = Nokogiri::HTML(open(self.url))
     images = doc.css("#img")
     chunk = ""
@@ -121,7 +117,6 @@ class Entry < ActiveRecord::Base
   end
 
   def deliver
-    ap "deliver"
     feed = self.feed
     if feed
       subscriptions = feed.subscriptions
@@ -169,7 +164,6 @@ class Entry < ActiveRecord::Base
   end
 
   def sanitize_content
-    ap "sanitize_content"
     # TODO: Fix broken images with site base uri if possible
     subject = content || ""
     self.title ||= ""
@@ -185,13 +179,16 @@ class Entry < ActiveRecord::Base
       subject = subject.sub /^<p><\/p>/,''
     end
 
-    while subject.match /<img.* src=['"]\// do
-      subject = subject.sub /(<img.* )src=(['"])\//, "\\1src=\\2#{site_root}/"
+    if site_root.present?
+      while subject.match /<img.* src=['"]\// do
+        subject = subject.sub /(<img.* )src=(['"])\//, "\\1src=\\2#{site_root}/"
+      end
+
+      while subject.match /<a.* src=['"]\// do
+        subject = subject.sub /(<a.* )src=(['"])\//, "\\1src=\\2#{site_root}/"
+      end
     end
 
-    while subject.match /<a.* src=['"]\// do
-      subject = subject.sub /(<a.* )src=(['"])\//, "\\1src=\\2#{site_root}/"
-    end
 
     subject = subject.gsub /float:\s*(left|right);/,''
 
