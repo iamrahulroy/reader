@@ -19,7 +19,6 @@ gem "devise", "~> 2.2"
 gem "acts_as_follower", "~> 0.1"
 gem "fb_graph", "~> 2.6"
 gem "feeder", git: "git@github.com:1kplus/feeder.git"
-#gem "feeder", :path => "/Users/charlie/Workspace/feeder"
 gem "feedzirra", git: "git@github.com:1kplus/feedzirra.git"
 gem "muck-feedbag", git: "git@github.com:1kplus/feedbag.git"
 
