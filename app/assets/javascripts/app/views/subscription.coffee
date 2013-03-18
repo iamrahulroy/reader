@@ -17,10 +17,13 @@ class App.SubscriptionView extends Backbone.View
 
   html: null
   render: ->
+
+
     count = this.model.count()
     short_name = this.model.get("short_name")
     id    = this.model.id
     show = ((count > 0) || App.showAllSubscriptions)
+    console.log "View: #{short_name}; show: #{show}; count: #{count}"
     this.ctx = this.model.toJSON()
     this.ctx.count = count
     if this.html?

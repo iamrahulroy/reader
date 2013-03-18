@@ -11,10 +11,8 @@
   - [subscriptions,5]
   - [comments,4]
   - [items,3]
-  - [poll,2]
   - [icons,1]
 :limits:
   clients: 10
-  poll: 10
   opml: 10
   icons: 10

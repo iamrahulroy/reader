@@ -37,12 +37,18 @@ class App.Receiver
     App.comments.get(id)
 
   addSubscription: (sub_json) =>
-    sub = @.findSub(sub_json)
-    if sub
-      sub.set sub_json
+    if App.subscriptions?
+      sub = @.findSub(sub_json)
+      if sub
+        console.log "updating sub: #{sub.get("name")}"
+        sub.set sub_json
+#        sub.render()
+      else
+        sub = new App.Subscription(sub_json)
+        App.subscriptions.add(sub)
     else
-      sub = App.Subscription(sub_json)
-      App.subscriptions.add(sub)
+      console.log "delay addSubscription"
+      _.delay(@addSubscription, 50, sub_json)
 
 
 $(document).ready ->

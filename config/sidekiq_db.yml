@@ -1,0 +1,7 @@
+---
+:timeout: 60
+:verbose: true
+:pidfile: /tmp/sidekiq.pid
+:concurrency: 150
+:queues:
+  - [poll,1]

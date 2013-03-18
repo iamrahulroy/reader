@@ -3,7 +3,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 
 require 'rspec/rails'
-require 'rspec/autorun'
+#require 'rspec/autorun'
 #require 'capybara/poltergeist'
 require 'webmock/rspec'
 require 'vcr'
@@ -23,22 +23,22 @@ VCR.configure do |config|
   config.ignore_localhost = true
 end
 
-Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, {:window_size => [1280, 1024]})
-end
+#Capybara.register_driver :poltergeist do |app|
+#  Capybara::Poltergeist::Driver.new(app, {:window_size => [1280, 1024]})
+#end
 
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
 
-Capybara.register_driver :firefox do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :firefox)
-end
+#Capybara.register_driver :firefox do |app|
+#  Capybara::Selenium::Driver.new(app, :browser => :firefox)
+#end
 
 RSpec.configure do |config|
   #Capybara.default_driver = :poltergeist
-  #Capybara.javascript_driver = :chrome
-  Capybara.javascript_driver = :firefox
+  Capybara.javascript_driver = :chrome
+  #Capybara.javascript_driver = :firefox
 
   config.include Devise::TestHelpers, :type => :controller
 
