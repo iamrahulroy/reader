@@ -202,6 +202,7 @@ class Entry < ActiveRecord::Base
     self.content = f
 
     self.title = self.title.force_encoding("UTF-8")
+    self.content_sanitized = true
     self.processed = true
   end
 
