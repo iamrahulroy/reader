@@ -9,7 +9,6 @@ God.watch do |w|
   w.name = "sidekiq"
   w.dir = "#{rails_root}"
   w.start = "bundle exec sidekiq -e #{rails_env} -C #{rails_root}/config/sidekiq_app.yml"
-  w.stop  = "bundle exec sidekiqctl stop `cat /tmp/sidekiq/pid` 120"
   w.log = "#{rails_root}/log/sidekiq.log"
   w.keepalive
 end
