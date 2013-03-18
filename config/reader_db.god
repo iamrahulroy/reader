@@ -1,6 +1,6 @@
 God.pid_file_directory = "/tmp/"
 
-rails_env   = ENV['RAILS_ENV'] || "development"
+rails_env   = ENV['RAILS_ENV'] || "production"
 rails_root  = ENV['RAILS_ROOT'] || File.expand_path('../../', __FILE__).to_s
 
 God.watch do |w|
@@ -16,7 +16,7 @@ end
 God.watch do |w|
   w.group = "reader"
   w.name = "resque"
-  w.env = { 'COUNT' => "3",
+  w.env = { 'COUNT' => "5",
             'INTERVAL' => "1",
             'QUEUE' => "*",
             'RAILS_ENV' => rails_env}
