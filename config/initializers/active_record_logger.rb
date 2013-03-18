@@ -1,1 +1,1 @@
-ActiveRecord::Base.logger = nil
+#ActiveRecord::Base.logger = nil
