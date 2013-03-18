@@ -1,11 +1,11 @@
 GIT
-  remote: git@github.com:1kplus/feedbag.git
+  remote: https://github.com/1kplus/feedbag.git
   revision: fd3aeab9e842ddfdcd1a1deb0e841082259e490a
   specs:
     muck-feedbag (0.7.1)
 
 GIT
-  remote: git@github.com:1kplus/feeder.git
+  remote: https://github.com/1kplus/feeder.git
   revision: c38915bba0b3ae51139201590a3ac180243b23f9
   specs:
     feeder (0.0.1)
@@ -17,7 +17,7 @@ GIT
       sidekiq
 
 GIT
-  remote: git@github.com:1kplus/feedzirra.git
+  remote: https://github.com/1kplus/feedzirra.git
   revision: 5f3d145413bd46813bb562fea874b5e214aa0544
   specs:
     feedzirra (0.2.0.rc2)
