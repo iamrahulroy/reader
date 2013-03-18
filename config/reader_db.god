@@ -16,7 +16,7 @@ God.watch do |w|
   w.restart_if do |restart|
     restart.condition(:cpu_usage) do |c|
       c.above = 90.percent
-      c.times = 10
+      c.times = 15
     end
   end
 end
@@ -35,6 +35,14 @@ God.watch do |w|
   w.stop_timeout = 120.seconds
   w.log = "#{rails_root}/log/resque.log"
   w.keepalive
+  w.interval = 10.seconds
+
+  w.restart_if do |restart|
+    restart.condition(:cpu_usage) do |c|
+      c.above = 90.percent
+      c.times = 15
+    end
+  end
 end
 
 
