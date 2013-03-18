@@ -31,7 +31,7 @@ class App.Receiver
     items
 
   findSub: (sub_json) =>
-    sub = App.subscriptions.get(sub_json.id)
+    App.subscriptions.get(sub_json.id)
 
   findComment: (id) =>
     App.comments.get(id)
@@ -40,14 +40,11 @@ class App.Receiver
     if App.subscriptions?
       sub = @.findSub(sub_json)
       if sub
-        console.log "updating sub: #{sub.get("name")}"
         sub.set sub_json
-#        sub.render()
       else
         sub = new App.Subscription(sub_json)
         App.subscriptions.add(sub)
     else
-      console.log "delay addSubscription"
       _.delay(@addSubscription, 50, sub_json)
 
 
