@@ -11,7 +11,4 @@ end
 
 Sidekiq.configure_client do |config|
   config.redis = { :url => redis_config[rails_env], :namespace => 'reader' }
-  if ENV["DATABASE_URL"]
-    ActiveRecord::Base.establish_connection "#{ENV["DATABASE_URL"]}?pool=150"
-  end
 end
