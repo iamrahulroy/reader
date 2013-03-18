@@ -1,7 +1,5 @@
 
 namespace :reader do
-
-
   namespace :feeder do
     desc "reset feed error counts"
     task :reset => :environment do
@@ -44,6 +42,13 @@ namespace :reader do
     end
   end
 
+  desc "sanitize all entries"
+  task :sanitize_entries => :environment do
+    Entry.find_each do |e|
+      puts "Sanitizing #{e.id} - #{e.title}"
+      e.save!
+    end
+  end
 
   desc "fix entries without published_at dates"
   task :fix_entry_published_dates => :environment do
