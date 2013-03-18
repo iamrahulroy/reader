@@ -142,27 +142,6 @@ class User < ActiveRecord::Base
     self.update_column :name, clean_name
   end
 
-  def self.find_for_developer_oauth(access_token, signed_in_resource=nil)
-    return unless Rails.env.development?
-
-    data = access_token.info
-    if user = User.where(:email => data.email).first
-      user
-    else # Create a user with a stub password.
-      User.create!(:email => data.email, :name => data.name, :password => Devise.friendly_token[0,20])
-    end
-  end
-
-  def self.find_for_facebook_oauth(access_token)
-    data = access_token.extra.raw_info
-    if user = User.where(:email => data.email).first
-      user
-    else # Create a user with a stub password.
-      User.create!(:name => data.name, :email => data.email, :password => Devise.friendly_token[0,20])
-    end
-  end
-
-
   def followed_people
     self.all_follows.collect do |f|
       {:id => f.followable_id, :name => User.find(f.followable_id).name}
@@ -172,7 +151,6 @@ class User < ActiveRecord::Base
   def friends
     self.all_following
   end
-
 
   def unblock(user)
     Follow.where(:followable_id => self.id).where(:follower_id => user.id).each do |f|
