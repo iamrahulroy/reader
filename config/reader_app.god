@@ -1,6 +1,6 @@
 God.pid_file_directory = "/tmp/"
 
-rails_env   = ENV['RAILS_ENV'] || "production"
+rails_env   = "production"
 rails_root  = ENV['RAILS_ROOT'] || File.expand_path('../../', __FILE__).to_s
 
 
