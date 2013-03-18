@@ -39,7 +39,7 @@ after_fork do |server, worker|
   if defined?(Sidekiq)
     Sidekiq.configure_client do |config|
       rails_root = Rails.root || File.join(File.dirname(__FILE__), "..", "..")
-      redis_config = YAML.load_file(File.join(rails_root, "config", "redis.yml")
+      redis_config = YAML.load_file(File.join(rails_root, "config", "redis.yml"))
       config.redis = { url: redis_config[ENV["RAILS_ENV"]], namespace: 'reader', size: 1 }
     end
   end
