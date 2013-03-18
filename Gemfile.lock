@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: https://github.com/1kplus/feeder.git
-  revision: f635bebb46605e93b4e791dc47424a92616905e7
+  revision: a1ffbf21627b7df0185897015b711590dae800dd
   specs:
     feeder (0.0.1)
       ensure-encoding
