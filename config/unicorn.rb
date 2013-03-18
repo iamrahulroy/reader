@@ -55,7 +55,10 @@ end
 after_fork do |server, worker|
 
   Sidekiq.configure_client do |config|
-    config.redis = { :size => 1 }
+    rails_root = Rails.root || File.dirname(__FILE__) + '/../..'
+    redis_config = YAML.load_file(rails_root.to_s + '/config/redis.yml')
+    rails_env = Rails.env || 'production'
+    config.redis = { :url => redis_config[rails_env], :namespace => 'reader' }
   end
 
   # the following is *required* for Rails + "preload_app true",
