@@ -25,7 +25,6 @@ class GetIcon
       fi.feed_icon = file
       fi.save!
     end
-  rescue
   end
 
   def get_favicon(site_url)

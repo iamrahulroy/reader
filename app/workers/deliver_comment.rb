@@ -23,6 +23,8 @@ class DeliverComment
         end
       end
     end
+  rescue ActiveRecord::RecordNotFound => e
+    ap "Comment not found - #{comment_id}: #{e}"
   end
 
 end
