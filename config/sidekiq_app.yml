@@ -12,5 +12,4 @@
   - [items,3]
   - [icons,1]
 :limits:
-  clients: 10
-  icons: 10
+  icons: 80

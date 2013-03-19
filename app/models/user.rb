@@ -55,7 +55,7 @@ class User < ActiveRecord::Base
       sub2 = Subscription.new(:user_id => self.id, :feed_id => sub.feed.id, :group => grp, :name => sub.feed.name)
       sub2.save
     end
-    NewUserSetup.perform_in(2.seconds, id)
+    NewUserSetup.perform_in(2.seconds, self.id)
   end
 
   def set_weights
