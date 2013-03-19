@@ -1,6 +1,6 @@
 # config/unicorn.rb
 ENV["RAILS_ENV"] ||= "development"
-worker_processes Integer(ENV["UNICORN_WORKERS"] || 20)
+worker_processes Integer(ENV["UNICORN_WORKERS"] || 10)
 timeout Integer(ENV["UNICORN_TIMEOUT"] || 60)
 preload_app true
 listen "/tmp/unicorn.reader.sock", :backlog => 364
