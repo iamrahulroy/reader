@@ -11,14 +11,6 @@ God.watch do |w|
   w.start = "bundle exec sidekiq -e #{rails_env} -C #{rails_root}/config/sidekiq_app.yml"
   w.log = "#{rails_root}/log/sidekiq.log"
   w.keepalive
-  w.interval = 10.seconds
-
-  w.restart_if do |restart|
-    restart.condition(:cpu_usage) do |c|
-      c.above = 90.percent
-      c.times = 15
-    end
-  end
 end
 
 # For some reason private_pub needs to think it's in production env.
@@ -30,14 +22,6 @@ God.watch do |w|
   w.start = "bundle exec rackup -s thin -E production #{rails_root}/private_pub.ru"
   w.log = "#{rails_root}/log/private_pub.log"
   w.keepalive
-  w.interval = 10.seconds
-
-  w.restart_if do |restart|
-    restart.condition(:cpu_usage) do |c|
-      c.above = 90.percent
-      c.times = 15
-    end
-  end
 end
 
 

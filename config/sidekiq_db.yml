@@ -9,5 +9,5 @@
   - [poll,1]
 :limits:
   process: 90
-  opml: 90
+  opml: 20
   poll: 90
