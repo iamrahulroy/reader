@@ -19,7 +19,8 @@ God.watch do |w|
   w.group = "reader"
   w.name = "private_pub"
   w.dir = "#{rails_root}"
-  w.start = "bundle exec rackup -s thin -E production #{rails_root}/private_pub.ru"
+  #w.start = "bundle exec rackup -s thin -E production #{rails_root}/private_pub.ru"
+  w.start = "thin -C #{rails_root}/config/private_pub_thin.yml start"
   w.log = "#{rails_root}/log/private_pub.log"
   w.keepalive
 end

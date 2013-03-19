@@ -1,8 +1,10 @@
+puts "private_pub.ruy $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+
 require File.expand_path("../config/environment", __FILE__)
 require "faye"
 Faye::WebSocket.load_adapter('thin')
 
-PrivatePub.load_config(File.expand_path("../config/private_pub.yml", __FILE__), ENV["RAILS_ENV"] || "development")
+PrivatePub.load_config(File.expand_path("../config/private_pub_thin.yml", __FILE__), "production")
 
 app = PrivatePub.faye_app
 
