@@ -4,13 +4,18 @@ module Embedder
       urls = URI.extract(ActionView::Base.full_sanitizer.sanitize(content))
       unless urls.empty?
         urls.each do |url|
-          uri = URI.parse url
-          if uri.path =~ /(\.png|\.jpg|\.gif)$/
+          begin
+            uri = URI.parse url
+            if uri.path =~ /(\.png|\.jpg|\.gif)$/
 
-            repl = '<img src="\1" class="embed-urls"/>'
-            content.gsub! /[^"'=](http[s]*:\/\/\S+(\.png|\.jpg|\.gif))/, repl
-            urls.delete url
+              repl = '<img src="\1" class="embed-urls"/>'
+              content.gsub! /[^"'=](http[s]*:\/\/\S+(\.png|\.jpg|\.gif))/, repl
+              urls.delete url
+            end
+          rescue URI::InvalidURIError => e
+            ap "invalid uri: '#{url}'"
           end
+
         end
       end
       unless urls.empty?

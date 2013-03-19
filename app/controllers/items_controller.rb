@@ -114,7 +114,7 @@ class ItemsController < ApplicationController
     email = {:item => item,:user => user,:to => to, :subject => subject, :body => body}
     ItemMailer.item(email).deliver
 
-    render :layout => nil
+    render :json => {:success => "sent!"}
   end
 
   def toggle_star
