@@ -5,18 +5,6 @@ GIT
     muck-feedbag (0.7.1)
 
 GIT
-  remote: https://github.com/1kplus/feeder.git
-  revision: 9bfc2adfc9db807a1e210dbbadc80c80b6d87ce6
-  specs:
-    feeder (0.0.1)
-      ensure-encoding
-      faraday
-      faraday_middleware
-      rails (~> 3.2)
-      resque
-      sidekiq
-
-GIT
   remote: https://github.com/1kplus/feedzirra.git
   revision: 5f3d145413bd46813bb562fea874b5e214aa0544
   specs:
@@ -25,6 +13,17 @@ GIT
       loofah (~> 1.2.1)
       nokogiri (~> 1.5.3)
       sax-machine (~> 0.2.0.rc1)
+
+PATH
+  remote: /Users/charlie/Workspace/feeder
+  specs:
+    feeder (0.0.1)
+      ensure-encoding
+      faraday
+      faraday_middleware
+      rails (~> 3.2)
+      resque
+      sidekiq
 
 GEM
   remote: https://rubygems.org/
