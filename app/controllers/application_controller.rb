@@ -56,12 +56,6 @@ class ApplicationController < ActionController::Base
   end
 
   def icon_check
-    icon = FeedIcon.where(id: params[:id]).first
-    if icon
-      unless File.exists?("#{Rails.root}/public#{request.path}")
-        icon.destroy
-      end
-    end
     head :ok
   end
 

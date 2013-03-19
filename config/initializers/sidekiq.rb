@@ -5,7 +5,7 @@ rails_env = Rails.env || 'production'
 Sidekiq.configure_server do |config|
   config.redis = { :url => redis_config[rails_env], :namespace => 'reader' }
   if ENV["DATABASE_URL"]
-    ActiveRecord::Base.establish_connection "#{ENV["DATABASE_URL"]}?pool=105"
+    ActiveRecord::Base.establish_connection "#{ENV["DATABASE_URL"]}?pool=305"
   end
 end
 
