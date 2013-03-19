@@ -5,17 +5,8 @@ GIT
     muck-feedbag (0.7.1)
 
 GIT
-  remote: https://github.com/1kplus/feedzirra.git
-  revision: 5f3d145413bd46813bb562fea874b5e214aa0544
-  specs:
-    feedzirra (0.2.0.rc2)
-      curb (~> 0.8.0)
-      loofah (~> 1.2.1)
-      nokogiri (~> 1.5.3)
-      sax-machine (~> 0.2.0.rc1)
-
-PATH
-  remote: /Users/charlie/Workspace/feeder
+  remote: https://github.com/1kplus/feeder.git
+  revision: 8c58aca67eddfe95b2410e2aafcf129856d78933
   specs:
     feeder (0.0.1)
       ensure-encoding
@@ -24,6 +15,16 @@ PATH
       rails (~> 3.2)
       resque
       sidekiq
+
+GIT
+  remote: https://github.com/1kplus/feedzirra.git
+  revision: 5f3d145413bd46813bb562fea874b5e214aa0544
+  specs:
+    feedzirra (0.2.0.rc2)
+      curb (~> 0.8.0)
+      loofah (~> 1.2.1)
+      nokogiri (~> 1.5.3)
+      sax-machine (~> 0.2.0.rc1)
 
 GEM
   remote: https://rubygems.org/
