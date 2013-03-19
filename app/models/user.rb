@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   acts_as_follower
 
 
-  after_create :make_root_group, :copy_anonymous_feeds #, :send_welcome_email
+  after_create :make_root_group, :copy_anonymous_feeds, :send_welcome_email
   before_create :create_websocket_token, :create_public_token
   after_create :create_starred_item_feed, :create_shared_item_feed
 
