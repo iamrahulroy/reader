@@ -1,0 +1,23 @@
+---
+:timeout: 60
+:verbose: true
+:pidfile: /tmp/sidekiq.pid
+:concurrency: 100
+:queues:
+  - [critical, 9]
+  - [clients,8]
+  - [users,7]
+  - [subscriptions,6]
+  - [comments,5]
+  - [items,4]
+  - [icons,3]
+  - [process,2]
+  - [opml,1]
+  - [poll,1]
+:limits:
+  clients: 10
+  process: 90
+  opml: 20
+  poll: 90
+  clients: 10
+  icons: 10

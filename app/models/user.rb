@@ -67,7 +67,7 @@ class User < ActiveRecord::Base
     weight = 0
     self.subscriptions.order("weight ASC").each do |sub|
       weight = weight + 100
-      sub.update_column :weight, weight
+      sub.update_column(:weight, weight) unless sub.weight == weight
     end
   end
 
@@ -75,11 +75,11 @@ class User < ActiveRecord::Base
     weight = 0
     self.groups.order("weight ASC").each do |grp|
       weight = weight + 100
-      grp.update_column :weight, weight
+      grp.update_column(:weight, weight) unless grp.weight == weight
     end
     self.groups.where("label = ''").each do |grp|
       weight = weight + 100
-      grp.update_column :weight, weight
+      grp.update_column(:weight, weight) unless grp.weight == weight
     end
   end
 

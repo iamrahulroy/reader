@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def stats
-    redirect_to "/" unless current_user.admin?
+    redirect_to "/login" unless current_user && current_user.admin?
     @user_count = User.unscoped.count - 1 # anonymous user
     @item_count = Item.unscoped.count
     @sub_count  = Subscription.unscoped.count

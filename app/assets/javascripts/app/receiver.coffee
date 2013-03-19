@@ -37,6 +37,8 @@ class App.Receiver
     App.comments.get(id)
 
   addSubscription: (sub_json) =>
+    console.log "addSubscription"
+    console.log sub_json
     if App.subscriptions?
       sub = @.findSub(sub_json)
       if sub
