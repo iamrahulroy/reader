@@ -15,6 +15,8 @@ class Entry < ActiveRecord::Base
   def ensure_entry_guid_exists
     create_entry_guid unless self.entry_guid
     self.update_column(:entry_guid_id, self.entry_guid_id)
+  rescue PG::Error => e
+    self.destroy if e.message.include? 'duplicate key value violates unique constraint'
   end
 
   def self.share(user, title, body)

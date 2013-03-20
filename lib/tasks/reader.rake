@@ -48,6 +48,7 @@ namespace :reader do
     desc "fix entries without entry_guids"
     task :entry_guids => :environment do
       Entry.where(entry_guid_id: nil).find_each do |e|
+        puts "ensure_entry_guid_exists: #{e.id} - #{e.title}"
         e.ensure_entry_guid_exists
       end
     end
