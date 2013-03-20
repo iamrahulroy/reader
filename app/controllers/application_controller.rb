@@ -74,7 +74,7 @@ class ApplicationController < ActionController::Base
 
     def check_reader_user
       unless user_signed_in?
-        sign_in(:user, User.where(:anonymous => true).first)
+        sign_in(:user, User.anonymous)
       end
     end
 
