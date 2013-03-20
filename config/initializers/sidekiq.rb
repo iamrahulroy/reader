@@ -1,11 +1,12 @@
 rails_root = Rails.root || File.dirname(__FILE__) + '/../..'
 redis_config = YAML.load_file(rails_root.to_s + '/config/redis.yml')
 rails_env = Rails.env || 'production'
+pool_size = Integer(ENV["SIDEKIQ_CONNECTION_POOL_SIZE"] || 15)
 
 Sidekiq.configure_server do |config|
   config.redis = { :url => redis_config[rails_env], :namespace => 'reader' }
   if ENV["DATABASE_URL"]
-    ActiveRecord::Base.establish_connection "#{ENV["DATABASE_URL"]}?pool=305"
+    ActiveRecord::Base.establish_connection "#{ENV["DATABASE_URL"]}?pool=#{pool_size}"
   end
 end
 

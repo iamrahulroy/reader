@@ -3,7 +3,7 @@ ENV["RAILS_ENV"] ||= "development"
 worker_processes Integer(ENV["UNICORN_WORKERS"] || 15)
 timeout Integer(ENV["UNICORN_TIMEOUT"] || 60)
 preload_app true
-listen "/tmp/unicorn.reader.sock", :backlog => 364
+listen "/tmp/unicorn.reader.sock", :backlog => 64
 pid "/tmp/unicorn.reader.pid"
 
 # Production specific settings
