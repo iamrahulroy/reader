@@ -184,18 +184,19 @@ class User < ActiveRecord::Base
   end
 
   def self.anonymous
-    User.find 1
+    User.where(email: 'anonymous@1kpl.com').first_or_create!(name: 'none', password: SecureRandom.hex)
   end
   def self.charlie
-    User.find 2
+    User.find_by_email("charliewilkins@gmail.com").first_or_create!(name: 'none', password: SecureRandom.hex)
   end
   def self.loren
-    User.find 3
+    User.find_by_email("loren.spector@gmail.com").first_or_create!(name: 'none', password: SecureRandom.hex)
   end
   def self.josh
-    User.find_by_email("josh@example.com")
+    User.find_by_email("josh@example.com").first_or_create!(name: 'none', password: SecureRandom.hex)
   end
   def self.steve
-    User.find_by_email("steve@example.com")
+    User.find_by_email("steve@example.com").first_or_create!(name: 'none', password: SecureRandom.hex)
   end
+
 end
