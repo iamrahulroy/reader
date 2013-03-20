@@ -6,7 +6,7 @@ defaults: &defaults
   timeout: 5000
   database: reader_development
   username: reader
-  password:
+  password: <%= ENV['READER_PASSWORD'] %>
 
 development:
   <<: *defaults
