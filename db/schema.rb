@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130316174111) do
+ActiveRecord::Schema.define(:version => 20130320125348) do
 
   create_table "categories", :force => true do |t|
     t.string    "name"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20130316174111) do
     t.boolean   "content_inlined",                   :default => false
     t.boolean   "content_embedded",                  :default => false
     t.boolean   "content_sanitized",                 :default => false
+    t.integer   "entry_guid_id"
   end
 
   add_index "entries", ["feed_id"], :name => "index_entries_on_feed_id"

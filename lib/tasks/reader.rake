@@ -16,17 +16,11 @@ namespace :reader do
       Feeder::Base.unsubscribe_all!
     end
 
-    desc "clear sidekiq queue"
+    desc "clear sidekiq polling queue"
     task :clear => :environment do
       Sidekiq.redis do |r|
         r.del("queue:poll")
         r.srem("queues", "poll")
-        r.del("queue:feeds")
-        r.srem("queues", "feeds")
-        r.del("queue:entry")
-        r.srem("queues", "entry")
-        r.del("queue:items")
-        r.srem("queues", "items")
         r.zremrangebyrank("schedule", 0, -1)
       end
     end
@@ -42,27 +36,34 @@ namespace :reader do
     end
   end
 
-  desc "sanitize all entries"
-  task :sanitize_entries => :environment do
-    Entry.find_each do |e|
-      puts "Sanitizing #{e.id} - #{e.title}"
-      e.save!
+  namespace :fix do
+    desc "fix entries without published_at dates"
+    task :entry_published_dates => :environment do
+      Entry.where(published_at: nil).find_each do |e|
+        e.published_at = e.created_at
+        e.save!
+      end
     end
-  end
 
-  desc "fix entries without published_at dates"
-  task :fix_entry_published_dates => :environment do
-    Entry.where(published_at: nil).find_each do |e|
-      e.published_at = e.created_at
-      e.save!
+    desc "fix entries without entry_guids"
+    task :entry_guids => :environment do
+      Entry.where(entry_guid_id: nil).find_each do |e|
+        e.ensure_entry_guid_exists
+      end
+    end
+
+    desc "sanitize all entries"
+    task :entry_sanitization => :environment do
+      Entry.find_each do |e|
+        puts "Sanitizing #{e.id} - #{e.title}"
+        e.save!
+      end
     end
   end
 
   desc "fetch feed favicons"
   task :icons => :environment do
-    Feed.all.each do |f|
-      f.get_icon
-    end
+    Feed.get_icons
   end
 
   desc "prune old entries and items that are no longer needed"

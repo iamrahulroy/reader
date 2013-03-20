@@ -50,9 +50,7 @@ END
       entry.reload.content_sanitized.should be_false
       entry.reload.delivered.should be_false
       entry.reload.processed.should be_false
-
       run_jobs 1
-
       entry.reload.content_inlined.should be_true
       run_jobs 1
       entry.reload.content_embedded.should be_true
@@ -62,6 +60,18 @@ END
       entry.reload.delivered.should be_true
       #run_jobs 1
       entry.reload.processed.should be_true
+    end
+
+    it "creates an entry guid model and updates the reference" do
+      entry.save!
+      entry.reload.entry_guid.should_not be_nil
+      entry_guid = EntryGuid.last
+      entry.reload.entry_guid.should == entry_guid
+      entry_guid.destroy
+      entry.reload.entry_guid.should == nil
+      entry.ensure_entry_guid_exists
+      entry_guid = EntryGuid.last
+      entry.reload.entry_guid.should == entry_guid
     end
   end
 

@@ -7,11 +7,14 @@ class Entry < ActiveRecord::Base
 
   before_save :inline_reddit, :embed_content, :ensure_pubdate, :sanitize_content
   has_many :items, :dependent => :destroy
+  belongs_to :entry_guid
 
-  after_create do |entry|
-    entry.deliver
-    entry.delivered = true
-    entry.save!
+  before_create :create_entry_guid
+  after_create :deliver
+
+  def ensure_entry_guid_exists
+    create_entry_guid unless self.entry_guid
+    self.update_column(:entry_guid_id, self.entry_guid_id)
   end
 
   def self.share(user, title, body)
@@ -138,6 +141,7 @@ class Entry < ActiveRecord::Base
         i.save!
       end
     end
+    self.update_column(:delivered, true)
   end
 
   def deliver_to(user)
@@ -205,5 +209,11 @@ class Entry < ActiveRecord::Base
     self.content_sanitized = true
     self.processed = true
   end
+
+  protected
+    def create_entry_guid
+      entry_guid = EntryGuid.create!(feed_id: self.feed_id, guid: guid)
+      self.entry_guid_id = entry_guid.id
+    end
 
 end
