@@ -18,6 +18,13 @@ class Subscription < ActiveRecord::Base
     where(deleted: false)
   }
 
+  def unsubscribe
+    self.update_column :deleted, true
+    self.items.all.each do |item|
+      item.update_column :unread, false
+    end
+  end
+
   def all_items
     Item.unscoped.where(subscription_id: self.id)
   end

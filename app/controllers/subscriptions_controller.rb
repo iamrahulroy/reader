@@ -87,10 +87,7 @@ class SubscriptionsController < ApplicationController
     return if anonymous_user
     sub = Subscription.where(:user_id => current_user.id).find(params[:id])
     return unless current_user.id == sub.user_id
-    sub.update_column :deleted, true
-    sub.items.all.each do |item|
-      item.update_column :unread, false
-    end
+    sub.unsubscribe
     render :text => "Sub #{sub.name} deleted"
   end
 
