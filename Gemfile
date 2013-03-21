@@ -11,9 +11,6 @@ gem "sinatra", "~> 1.3", :require => false
 gem "slim", "~> 1.3", :require => false
 gem "thin", "~> 1.5", :require => false
 
-gem 'resque'
-gem 'sucker_punch'
-
 gem "pg", "~> 0.14"
 gem "devise", "~> 2.2"
 gem "acts_as_follower", "~> 0.1"
@@ -44,7 +41,6 @@ gem "rvm-capistrano", "~> 1.2"
 gem "figaro", "~> 0.6"
 
 gem "pry-rails", "~> 0.2"
-gem "pry-debugger"
 gem "pry-coolline"
 gem "pry-remote"
 
@@ -82,6 +78,7 @@ group :test do
 end
 
 group :assets do
+  gem "visibilityjs"
   gem "jquery-rails", "~> 2.2"
   gem "sass-rails", "~> 3.2"
   gem "bootstrap-sass", "~> 2.3"
