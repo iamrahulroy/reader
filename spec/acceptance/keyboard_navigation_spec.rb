@@ -2,25 +2,33 @@ require 'acceptance/spec_acceptance_helper'
 
 feature "Keyboard navigation", :js => true do
   scenario "keystrokes" do
+    pending
     VCR.use_cassette('keyboard navigation', :record => :new_episodes) do
       user = setup_and_sign_in_user
       sleep 1
 
-      find("#nav-settings-link").click
-      sleep 1
-      find("#feeds-tab").click
-      sleep 1
-      attach_file("opml_file", "spec/support/fixtures/less-subscriptions.xml")
-      sleep 1
-      find('#import-btn').click
+      opml = File.open("spec/support/fixtures/less-subscriptions.xml").read
+      ImportOpml.new.perform(opml, user.id)
+      run_jobs
+      #find("#nav-settings-link").click
+      #sleep 1
+      #find("#feeds-tab").click
+      #sleep 1
+      #attach_file("opml_file", "spec/support/fixtures/less-subscriptions.xml")
+      #sleep 1
+      #find('#import-btn').click
 
       Feed.fetchable.each do |f|
-        PollFeed.perform_async f.id, f.feed_url, nil, true
+        PollFeed.new.perform f.id, f.feed_url, nil, true
       end
 
+
+
       run_jobs
+
+      binding.pry
       visit "/"
-      sleep 1
+      sleep 30
       click_link "diy"
 
       unread_item_count = user.items.filter(:unread).count

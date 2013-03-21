@@ -3822,4 +3822,541 @@ http_interactions:
         150}]'
     http_version: 
   recorded_at: Wed, 19 Dec 2012 21:22:29 GMT
-recorded_with: VCR 2.3.0
+- request:
+    method: get
+    uri: https://news.ycombinator.com/rss
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.7
+      Date:
+      - Thu, 21 Mar 2013 11:55:52 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=90
+      - private
+      X-Frame-Options:
+      - DENY
+      Strict-Transport-Security:
+      - max-age=31556900; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '<rss version="2.0"><channel><title>Hacker News</title><link>https://news.ycombinator.com/</link><description>Links
+        for the intellectually curious, ranked by readers.</description><item><title>How
+        Gorilla glass works</title><link>http://www.wired.com/wiredscience/2012/09/ff-corning-gorilla-glass/all/</link><comments>https://news.ycombinator.com/item?id=5413890</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5413890">Comments</a>]]></description></item><item><title>GCC
+        and C vs C++ Speed, Measured.</title><link>http://rusty.ozlabs.org/?p=330</link><comments>https://news.ycombinator.com/item?id=5413528</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5413528">Comments</a>]]></description></item><item><title>Tizen
+        2.0 Magnolia SDK and Source Code Release</title><link>https://www.tizen.org/blogs/tsg/2013/tizen-2.0-magnolia-sdk-and-source-code-release</link><comments>https://news.ycombinator.com/item?id=5414152</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5414152">Comments</a>]]></description></item><item><title>You
+        just went to the Google homepage. What actually happened?</title><link>https://plus.google.com/112218872649456413744/posts/dfydM2Cnepe?</link><comments>https://news.ycombinator.com/item?id=5408597</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5408597">Comments</a>]]></description></item><item><title>The
+        Y Combinator Startup Index</title><link>http://www.daniellemorrill.com/2013/03/the-y-combinator-index/</link><comments>https://news.ycombinator.com/item?id=5413153</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5413153">Comments</a>]]></description></item><item><title>PyCon
+        2013 Videos</title><link>http://pyvideo.org/category/33/pycon-us-2013</link><comments>https://news.ycombinator.com/item?id=5412114</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5412114">Comments</a>]]></description></item><item><title>Users
+        don&#39;t like social login</title><link>http://identity.mozilla.com/post/45842909320/users-dont-like-social-login</link><comments>https://news.ycombinator.com/item?id=5408735</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5408735">Comments</a>]]></description></item><item><title>EBay
+        is about to increase its seller fees to 10%</title><link>http://pages.ebay.com/sellerinformation/news/springupdate2013/springfeesimplification.html#feesataglance</link><comments>https://news.ycombinator.com/item?id=5413300</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5413300">Comments</a>]]></description></item><item><title>Show
+        HN: Webflow - Design responsive websites visually</title><link>http://playground.webflow.com?s=hn</link><comments>https://news.ycombinator.com/item?id=5407499</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5407499">Comments</a>]]></description></item><item><title>The
+        Ruby on Rails Tutorial for Rails 4.0 (beta)</title><link>http://news.railstutorial.org/ruby-on-rails-tutorial-rails-4-beta/</link><comments>https://news.ycombinator.com/item?id=5411230</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5411230">Comments</a>]]></description></item><item><title>Put
+        Down Your Forks - Introducing Protected Branches</title><link>http://blog.assembla.com/assemblablog/tabid/12618/bid/96330/Put-Down-Your-Forks-Introducing-Protected-Branches.aspx</link><comments>https://news.ycombinator.com/item?id=5413684</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5413684">Comments</a>]]></description></item><item><title>See
+        No Evil: The Case of Alfred Anaya</title><link>http://www.wired.com/threatlevel/2013/03/alfred-anaya/all/&#38;src=longreads</link><comments>https://news.ycombinator.com/item?id=5413127</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5413127">Comments</a>]]></description></item><item><title>Chrome
+        World Wide Maze</title><link>http://chrome.com/maze/</link><comments>https://news.ycombinator.com/item?id=5414235</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5414235">Comments</a>]]></description></item><item><title>Just
+        Use Sublime Text</title><link>http://delvarworld.github.com/blog/2013/03/16/just-use-sublime-text/</link><comments>https://news.ycombinator.com/item?id=5411811</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5411811">Comments</a>]]></description></item><item><title>The
+        PyCon Incident</title><link>http://pastebin.com/JaNh0w5F</link><comments>https://news.ycombinator.com/item?id=5410515</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5410515">Comments</a>]]></description></item><item><title>Voyager
+        1 has left the solar system</title><link>http://www.agu.org/news/press/pr_archives/2013/2013-11.shtml</link><comments>https://news.ycombinator.com/item?id=5408038</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5408038">Comments</a>]]></description></item><item><title>Sorry
+        Google; you can Keep it to yourself</title><link>http://gigaom.com/2013/03/20/sorry-google-you-can-keep-it-to-yourself/</link><comments>https://news.ycombinator.com/item?id=5412231</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5412231">Comments</a>]]></description></item><item><title>Diamonds
+        Are Bullshit</title><link>http://blog.priceonomics.com/post/45768546804/diamonds-are-bullshit</link><comments>https://news.ycombinator.com/item?id=5403988</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5403988">Comments</a>]]></description></item><item><title>Box&#39;s
+        65-Year-Old Android Engineer Gives Your Startup Some Unsentimental Advice</title><link>http://www.fastcolabs.com/3007250/open-company/boxs-65-year-old-android-engineer-gives-your-startup-some-unsentimental-advice#</link><comments>https://news.ycombinator.com/item?id=5408767</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5408767">Comments</a>]]></description></item><item><title>&#34;Getting
+        started with Ember.Js is easy.&#34; - No it isn&#39;t</title><link>http://discuss.emberjs.com/t/getting-started-with-ember-js-is-easy-no-it-isn-t/559</link><comments>https://news.ycombinator.com/item?id=5406857</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5406857">Comments</a>]]></description></item><item><title>Announcing
+        Backbone.js 1.0</title><link>http://ashkenas.com/backbonejs-1.0/</link><comments>https://news.ycombinator.com/item?id=5406732</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5406732">Comments</a>]]></description></item><item><title>An
+        Open Letter to Google: Google Alerts Now Useless</title><link>http://thefinancialbrand.com/28346/google-alerts-broken/</link><comments>https://news.ycombinator.com/item?id=5409247</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5409247">Comments</a>]]></description></item><item><title>Rails
+        3.2.13 - Performance regressions and major bugs</title><link>http://blog.bugsnag.com/2013/03/20/rails-3-2-13-performance-regressions-major-bugs/</link><comments>https://news.ycombinator.com/item?id=5409978</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5409978">Comments</a>]]></description></item><item><title>Docker
+        - the Linux container runtime</title><link>http://docker.io/</link><comments>https://news.ycombinator.com/item?id=5408002</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5408002">Comments</a>]]></description></item><item><title>Build
+        a Twilio Hard Phone with SIP from Twilio, Raspberry Pi, and Asterisk</title><link>http://www.twilio.com/blog/2013/03/build-a-twilio-hard-phone-with-sip-from-twilio-raspberry-pi-asterisk-freepbx-and-the-obihai-obi100.html</link><comments>https://news.ycombinator.com/item?id=5409914</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5409914">Comments</a>]]></description></item><item><title>DigitalRev.com
+        served with DMCA takedown notice by GoPro for review</title><link>http://www.digitalrev.com/article/gopro-hero-3-vs-sony/Njk3MDQ3MDg_A</link><comments>https://news.ycombinator.com/item?id=5408834</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5408834">Comments</a>]]></description></item><item><title>Chinese
+        solar producer Suntech declares bankruptcy</title><link>http://bostonherald.com/business/business_markets/2013/03/chinese_solar_producer_suntech_declares_bankruptcy?</link><comments>https://news.ycombinator.com/item?id=5412379</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5412379">Comments</a>]]></description></item><item><title>A
+        gel that can stop severe bleeding instantly</title><link>http://www.humansinvent.com/#!/11409/the-gel-that-stops-bleeding-instantly/</link><comments>https://news.ycombinator.com/item?id=5407184</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5407184">Comments</a>]]></description></item><item><title>Benefits
+        matter, or why I won&#39;t work for your Y Combinator startup</title><link>http://mhalligan.com/benefits-matter-or-why-i-wont-work-for-your-y</link><comments>https://news.ycombinator.com/item?id=5409273</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5409273">Comments</a>]]></description></item><item><title>When
+        TED Lost Control of Its Crowd</title><link>http://hbr.org/2013/04/when-ted-lost-control-of-its-crowd/ar/1</link><comments>https://news.ycombinator.com/item?id=5408481</comments><description><![CDATA[<a
+        href="https://news.ycombinator.com/item?id=5408481">Comments</a>]]></description></item></channel></rss>'
+    http_version: 
+  recorded_at: Thu, 21 Mar 2013 11:55:53 GMT
+- request:
+    method: get
+    uri: https://news.ycombinator.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.7
+      Date:
+      - Thu, 21 Mar 2013 11:55:52 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0
+      - private
+      X-Frame-Options:
+      - DENY
+      Strict-Transport-Security:
+      - max-age=31556900; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! "<html><head><link rel=\"stylesheet\" type=\"text/css\" href=\"news.css\">\n<link
+        rel=\"shortcut icon\" href=\"favicon.ico\">\n<script type=\"text/javascript\">\nfunction
+        byId(id) {\n  return document.getElementById(id);\n}\n\nfunction vote(node)
+        {\n  var v = node.id.split(/_/);   // {'up', '123'}\n  var item = v[1]; \n\n
+        \ // hide arrows\n  byId('up_'   + item).style.visibility = 'hidden';\n  byId('down_'
+        + item).style.visibility = 'hidden';\n\n  // ping server\n  var ping = new
+        Image();\n  ping.src = node.href;\n\n  return false; // cancel browser nav\n}
+        </script><title>Hacker News</title></head><body><center><table border=0 cellpadding=0
+        cellspacing=0 width=\"85%\" bgcolor=#f6f6ef><tr><td bgcolor=#ff6600><table
+        border=0 cellpadding=0 cellspacing=0 width=\"100%\" style=\"padding:2px\"><tr><td
+        style=\"width:18px;padding-right:4px\"><a href=\"http://ycombinator.com\"><img
+        src=\"y18.gif\" width=18 height=18 style=\"border:1px #ffffff solid;\"></img></a></td><td
+        style=\"line-height:12pt; height:10px;\"><span class=\"pagetop\"><b><a href=\"news\">Hacker
+        News</a></b><img src=\"s.gif\" height=1 width=10><a href=\"newest\">new</a>
+        | <a href=\"newcomments\">comments</a> | <a href=\"ask\">ask</a> | <a href=\"jobs\">jobs</a>
+        | <a href=\"submit\">submit</a></span></td><td style=\"text-align:right;padding-right:4px;\"><span
+        class=\"pagetop\"><a href=\"newslogin?whence=%6e%65%77%73\">login</a></span></td></tr></table></td></tr><tr
+        style=\"height:10px\"></tr><tr><td><table border=0 cellpadding=0 cellspacing=0><tr><td
+        align=right valign=top class=\"title\">1.</td><td><center><a id=up_5413890
+        href=\"vote?for=5413890&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5413890></span></center></td><td
+        class=\"title\"><a href=\"http://www.wired.com/wiredscience/2012/09/ff-corning-gorilla-glass/all/\">How
+        Gorilla glass works</a><span class=\"comhead\"> (wired.com) </span></td></tr><tr><td
+        colspan=2></td><td class=\"subtext\"><span id=score_5413890>32 points</span>
+        by <a href=\"user?id=pooma\">pooma</a> 2 hours ago  | <a href=\"item?id=5413890\">5
+        comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td align=right valign=top
+        class=\"title\">2.</td><td><center><a id=up_5413528 href=\"vote?for=5413528&dir=up&whence=%6e%65%77%73\"><img
+        src=\"grayarrow.gif\" border=0 vspace=3 hspace=2></a><span id=down_5413528></span></center></td><td
+        class=\"title\"><a href=\"http://rusty.ozlabs.org/?p=330\">GCC and C vs C++
+        Speed, Measured.</a><span class=\"comhead\"> (ozlabs.org) </span></td></tr><tr><td
+        colspan=2></td><td class=\"subtext\"><span id=score_5413528>55 points</span>
+        by <a href=\"user?id=zorlem\">zorlem</a> 4 hours ago  | <a href=\"item?id=5413528\">36
+        comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td align=right valign=top
+        class=\"title\">3.</td><td><center><a id=up_5414152 href=\"vote?for=5414152&dir=up&whence=%6e%65%77%73\"><img
+        src=\"grayarrow.gif\" border=0 vspace=3 hspace=2></a><span id=down_5414152></span></center></td><td
+        class=\"title\"><a href=\"https://www.tizen.org/blogs/tsg/2013/tizen-2.0-magnolia-sdk-and-source-code-release\">Tizen
+        2.0 Magnolia SDK and Source Code Release</a><span class=\"comhead\"> (tizen.org)
+        </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span id=score_5414152>11
+        points</span> by <a href=\"user?id=kumarshantanu\">kumarshantanu</a> 1 hour
+        ago  | <a href=\"item?id=5414152\">1 comment</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">4.</td><td><center><a id=up_5408597
+        href=\"vote?for=5408597&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5408597></span></center></td><td
+        class=\"title\"><a href=\"https://plus.google.com/112218872649456413744/posts/dfydM2Cnepe?\">You
+        just went to the Google homepage. What actually happened?</a><span class=\"comhead\">
+        (plus.google.com) </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span
+        id=score_5408597>689 points</span> by <a href=\"user?id=jmonegro\">jmonegro</a>
+        18 hours ago  | <a href=\"item?id=5408597\">127 comments</a></td></tr><tr
+        style=\"height:5px\"></tr><tr><td align=right valign=top class=\"title\">5.</td><td><center><a
+        id=up_5413153 href=\"vote?for=5413153&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5413153></span></center></td><td
+        class=\"title\"><a href=\"http://www.daniellemorrill.com/2013/03/the-y-combinator-index/\">The
+        Y Combinator Startup Index</a><span class=\"comhead\"> (daniellemorrill.com)
+        </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span id=score_5413153>71
+        points</span> by <a href=\"user?id=dmor\">dmor</a> 6 hours ago  | <a href=\"item?id=5413153\">43
+        comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td align=right valign=top
+        class=\"title\">6.</td><td><center><a id=up_5412114 href=\"vote?for=5412114&dir=up&whence=%6e%65%77%73\"><img
+        src=\"grayarrow.gif\" border=0 vspace=3 hspace=2></a><span id=down_5412114></span></center></td><td
+        class=\"title\"><a href=\"http://pyvideo.org/category/33/pycon-us-2013\">PyCon
+        2013 Videos</a><span class=\"comhead\"> (pyvideo.org) </span></td></tr><tr><td
+        colspan=2></td><td class=\"subtext\"><span id=score_5412114>167 points</span>
+        by <a href=\"user?id=mace\">mace</a> 10 hours ago  | <a href=\"item?id=5412114\">31
+        comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td align=right valign=top
+        class=\"title\">7.</td><td><center><a id=up_5408735 href=\"vote?for=5408735&dir=up&whence=%6e%65%77%73\"><img
+        src=\"grayarrow.gif\" border=0 vspace=3 hspace=2></a><span id=down_5408735></span></center></td><td
+        class=\"title\"><a href=\"http://identity.mozilla.com/post/45842909320/users-dont-like-social-login\">Users
+        don't like social login</a><span class=\"comhead\"> (mozilla.com) </span></td></tr><tr><td
+        colspan=2></td><td class=\"subtext\"><span id=score_5408735>463 points</span>
+        by <a href=\"user?id=AndrewDucker\">AndrewDucker</a> 18 hours ago  | <a href=\"item?id=5408735\">163
+        comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td align=right valign=top
+        class=\"title\">8.</td><td><center><a id=up_5413300 href=\"vote?for=5413300&dir=up&whence=%6e%65%77%73\"><img
+        src=\"grayarrow.gif\" border=0 vspace=3 hspace=2></a><span id=down_5413300></span></center></td><td
+        class=\"title\"><a href=\"http://pages.ebay.com/sellerinformation/news/springupdate2013/springfeesimplification.html#feesataglance\">EBay
+        is about to increase its seller fees to 10%</a><span class=\"comhead\"> (ebay.com)
+        </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span id=score_5413300>67
+        points</span> by <a href=\"user?id=anigbrowl\">anigbrowl</a> 5 hours ago  |
+        <a href=\"item?id=5413300\">58 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">9.</td><td><center><a id=up_5407499
+        href=\"vote?for=5407499&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5407499></span></center></td><td
+        class=\"title\"><a href=\"http://playground.webflow.com?s=hn\">Show HN: Webflow
+        - Design responsive websites visually</a><span class=\"comhead\"> (webflow.com)
+        </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span id=score_5407499>463
+        points</span> by <a href=\"user?id=callmevlad\">callmevlad</a> 21 hours ago
+        \ | <a href=\"item?id=5407499\">122 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">10.</td><td><center><a id=up_5411230
+        href=\"vote?for=5411230&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5411230></span></center></td><td
+        class=\"title\"><a href=\"http://news.railstutorial.org/ruby-on-rails-tutorial-rails-4-beta/\">The
+        Ruby on Rails Tutorial for Rails 4.0 (beta)</a><span class=\"comhead\"> (railstutorial.org)
+        </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span id=score_5411230>162
+        points</span> by <a href=\"user?id=mhartl\">mhartl</a> 12 hours ago  | <a
+        href=\"item?id=5411230\">40 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">11.</td><td><center><a id=up_5413684
+        href=\"vote?for=5413684&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5413684></span></center></td><td
+        class=\"title\"><a href=\"http://blog.assembla.com/assemblablog/tabid/12618/bid/96330/Put-Down-Your-Forks-Introducing-Protected-Branches.aspx\">Put
+        Down Your Forks - Introducing Protected Branches</a><span class=\"comhead\">
+        (assembla.com) </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span
+        id=score_5413684>19 points</span> by <a href=\"user?id=varsketiz\">varsketiz</a>
+        3 hours ago  | <a href=\"item?id=5413684\">9 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">12.</td><td><center><a id=up_5413127
+        href=\"vote?for=5413127&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5413127></span></center></td><td
+        class=\"title\"><a href=\"http://www.wired.com/threatlevel/2013/03/alfred-anaya/all/&src=longreads\">See
+        No Evil: The Case of Alfred Anaya</a><span class=\"comhead\"> (wired.com)
+        </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span id=score_5413127>39
+        points</span> by <a href=\"user?id=jayzee\">jayzee</a> 6 hours ago  | <a href=\"item?id=5413127\">17
+        comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td align=right valign=top
+        class=\"title\">13.</td><td><center><a id=up_5414235 href=\"vote?for=5414235&dir=up&whence=%6e%65%77%73\"><img
+        src=\"grayarrow.gif\" border=0 vspace=3 hspace=2></a><span id=down_5414235></span></center></td><td
+        class=\"title\"><a href=\"http://chrome.com/maze/\" rel=\"nofollow\">Chrome
+        World Wide Maze</a><span class=\"comhead\"> (chrome.com) </span></td></tr><tr><td
+        colspan=2></td><td class=\"subtext\"><span id=score_5414235>4 points</span>
+        by <a href=\"user?id=pytrin\">pytrin</a> 47 minutes ago  | <a href=\"item?id=5414235\">discuss</a></td></tr><tr
+        style=\"height:5px\"></tr><tr><td align=right valign=top class=\"title\">14.</td><td><center><a
+        id=up_5411811 href=\"vote?for=5411811&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5411811></span></center></td><td
+        class=\"title\"><a href=\"http://delvarworld.github.com/blog/2013/03/16/just-use-sublime-text/\">Just
+        Use Sublime Text</a><span class=\"comhead\"> (github.com) </span></td></tr><tr><td
+        colspan=2></td><td class=\"subtext\"><span id=score_5411811>175 points</span>
+        by <a href=\"user?id=throughnothing\">throughnothing</a> 11 hours ago  | <a
+        href=\"item?id=5411811\">161 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">15.</td><td><center><a id=up_5410515
+        href=\"vote?for=5410515&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5410515></span></center></td><td
+        class=\"title\"><a href=\"http://pastebin.com/JaNh0w5F\">The PyCon Incident</a><span
+        class=\"comhead\"> (pastebin.com) </span></td></tr><tr><td colspan=2></td><td
+        class=\"subtext\"><span id=score_5410515>1011 points</span> by <a href=\"user?id=afraidofadria\">afraidofadria</a>
+        14 hours ago  | <a href=\"item?id=5410515\">840 comments</a></td></tr><tr
+        style=\"height:5px\"></tr><tr><td align=right valign=top class=\"title\">16.</td><td><center><a
+        id=up_5408038 href=\"vote?for=5408038&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5408038></span></center></td><td
+        class=\"title\"><a href=\"http://www.agu.org/news/press/pr_archives/2013/2013-11.shtml\">Voyager
+        1 has left the solar system</a><span class=\"comhead\"> (agu.org) </span></td></tr><tr><td
+        colspan=2></td><td class=\"subtext\"><span id=score_5408038>290 points</span>
+        by <a href=\"user?id=j4mie\">j4mie</a> 19 hours ago  | <a href=\"item?id=5408038\">62
+        comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td align=right valign=top
+        class=\"title\">17.</td><td><center><a id=up_5412231 href=\"vote?for=5412231&dir=up&whence=%6e%65%77%73\"><img
+        src=\"grayarrow.gif\" border=0 vspace=3 hspace=2></a><span id=down_5412231></span></center></td><td
+        class=\"title\"><a href=\"http://gigaom.com/2013/03/20/sorry-google-you-can-keep-it-to-yourself/\">Sorry
+        Google; you can Keep it to yourself</a><span class=\"comhead\"> (gigaom.com)
+        </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span id=score_5412231>338
+        points</span> by <a href=\"user?id=iProject\">iProject</a> 10 hours ago  |
+        <a href=\"item?id=5412231\">187 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">18.</td><td><center><a id=up_5403988
+        href=\"vote?for=5403988&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5403988></span></center></td><td
+        class=\"title\"><a href=\"http://blog.priceonomics.com/post/45768546804/diamonds-are-bullshit\">Diamonds
+        Are Bullshit</a><span class=\"comhead\"> (priceonomics.com) </span></td></tr><tr><td
+        colspan=2></td><td class=\"subtext\"><span id=score_5403988>993 points</span>
+        by <a href=\"user?id=danielpal\">danielpal</a> 1 day ago  | <a href=\"item?id=5403988\">706
+        comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td align=right valign=top
+        class=\"title\">19.</td><td><center><a id=up_5408767 href=\"vote?for=5408767&dir=up&whence=%6e%65%77%73\"><img
+        src=\"grayarrow.gif\" border=0 vspace=3 hspace=2></a><span id=down_5408767></span></center></td><td
+        class=\"title\"><a href=\"http://www.fastcolabs.com/3007250/open-company/boxs-65-year-old-android-engineer-gives-your-startup-some-unsentimental-advice#\">Box's
+        65-Year-Old Android Engineer Gives Your Startup Some Unsentimental Advice</a><span
+        class=\"comhead\"> (fastcolabs.com) </span></td></tr><tr><td colspan=2></td><td
+        class=\"subtext\"><span id=score_5408767>214 points</span> by <a href=\"user?id=goronbjorn\">goronbjorn</a>
+        18 hours ago  | <a href=\"item?id=5408767\">86 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">20.</td><td><center><a id=up_5406857
+        href=\"vote?for=5406857&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5406857></span></center></td><td
+        class=\"title\"><a href=\"http://discuss.emberjs.com/t/getting-started-with-ember-js-is-easy-no-it-isn-t/559\">\"Getting
+        started with Ember.Js is easy.\" - No it isn't</a><span class=\"comhead\">
+        (emberjs.com) </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span
+        id=score_5406857>353 points</span> by <a href=\"user?id=floydpink\">floydpink</a>
+        23 hours ago  | <a href=\"item?id=5406857\">240 comments</a></td></tr><tr
+        style=\"height:5px\"></tr><tr><td align=right valign=top class=\"title\">21.</td><td><center><a
+        id=up_5406732 href=\"vote?for=5406732&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5406732></span></center></td><td
+        class=\"title\"><a href=\"http://ashkenas.com/backbonejs-1.0/\">Announcing
+        Backbone.js 1.0</a><span class=\"comhead\"> (ashkenas.com) </span></td></tr><tr><td
+        colspan=2></td><td class=\"subtext\"><span id=score_5406732>356 points</span>
+        by <a href=\"user?id=jashkenas\">jashkenas</a> 23 hours ago  | <a href=\"item?id=5406732\">59
+        comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td align=right valign=top
+        class=\"title\">22.</td><td><center><a id=up_5409247 href=\"vote?for=5409247&dir=up&whence=%6e%65%77%73\"><img
+        src=\"grayarrow.gif\" border=0 vspace=3 hspace=2></a><span id=down_5409247></span></center></td><td
+        class=\"title\"><a href=\"http://thefinancialbrand.com/28346/google-alerts-broken/\">An
+        Open Letter to Google: Google Alerts Now Useless</a><span class=\"comhead\">
+        (thefinancialbrand.com) </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span
+        id=score_5409247>167 points</span> by <a href=\"user?id=scholia\">scholia</a>
+        17 hours ago  | <a href=\"item?id=5409247\">79 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">23.</td><td><center><a id=up_5409978
+        href=\"vote?for=5409978&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5409978></span></center></td><td
+        class=\"title\"><a href=\"http://blog.bugsnag.com/2013/03/20/rails-3-2-13-performance-regressions-major-bugs/\">Rails
+        3.2.13 - Performance regressions and major bugs</a><span class=\"comhead\">
+        (bugsnag.com) </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span
+        id=score_5409978>117 points</span> by <a href=\"user?id=sephine\">sephine</a>
+        15 hours ago  | <a href=\"item?id=5409978\">70 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">24.</td><td><center><a id=up_5408002
+        href=\"vote?for=5408002&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5408002></span></center></td><td
+        class=\"title\"><a href=\"http://docker.io/\">Docker - the Linux container
+        runtime</a><span class=\"comhead\"> (docker.io) </span></td></tr><tr><td colspan=2></td><td
+        class=\"subtext\"><span id=score_5408002>228 points</span> by <a href=\"user?id=radimm\">radimm</a>
+        20 hours ago  | <a href=\"item?id=5408002\">189 comments</a></td></tr><tr
+        style=\"height:5px\"></tr><tr><td align=right valign=top class=\"title\">25.</td><td><center><a
+        id=up_5409914 href=\"vote?for=5409914&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5409914></span></center></td><td
+        class=\"title\"><a href=\"http://www.twilio.com/blog/2013/03/build-a-twilio-hard-phone-with-sip-from-twilio-raspberry-pi-asterisk-freepbx-and-the-obihai-obi100.html\">Build
+        a Twilio Hard Phone with SIP from Twilio, Raspberry Pi, and Asterisk</a><span
+        class=\"comhead\"> (twilio.com) </span></td></tr><tr><td colspan=2></td><td
+        class=\"subtext\"><span id=score_5409914>108 points</span> by <a href=\"user?id=jonmarkgo\">jonmarkgo</a>
+        15 hours ago  | <a href=\"item?id=5409914\">40 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">26.</td><td><center><a id=up_5408834
+        href=\"vote?for=5408834&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5408834></span></center></td><td
+        class=\"title\"><a href=\"http://www.digitalrev.com/article/gopro-hero-3-vs-sony/Njk3MDQ3MDg_A\">DigitalRev.com
+        served with DMCA takedown notice by GoPro for review</a><span class=\"comhead\">
+        (digitalrev.com) </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span
+        id=score_5408834>142 points</span> by <a href=\"user?id=choult\">choult</a>
+        18 hours ago  | <a href=\"item?id=5408834\">57 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">27.</td><td><center><a id=up_5412379
+        href=\"vote?for=5412379&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5412379></span></center></td><td
+        class=\"title\"><a href=\"http://bostonherald.com/business/business_markets/2013/03/chinese_solar_producer_suntech_declares_bankruptcy?\">Chinese
+        solar producer Suntech declares bankruptcy</a><span class=\"comhead\"> (bostonherald.com)
+        </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span id=score_5412379>39
+        points</span> by <a href=\"user?id=memoryfailure\">memoryfailure</a> 9 hours
+        ago  | <a href=\"item?id=5412379\">29 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">28.</td><td><center><a id=up_5407184
+        href=\"vote?for=5407184&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5407184></span></center></td><td
+        class=\"title\"><a href=\"http://www.humansinvent.com/#!/11409/the-gel-that-stops-bleeding-instantly/\">A
+        gel that can stop severe bleeding instantly</a><span class=\"comhead\"> (humansinvent.com)
+        </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span id=score_5407184>207
+        points</span> by <a href=\"user?id=leojkent\">leojkent</a> 22 hours ago  |
+        <a href=\"item?id=5407184\">53 comments</a></td></tr><tr style=\"height:5px\"></tr><tr><td
+        align=right valign=top class=\"title\">29.</td><td><center><a id=up_5409273
+        href=\"vote?for=5409273&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5409273></span></center></td><td
+        class=\"title\"><a href=\"http://mhalligan.com/benefits-matter-or-why-i-wont-work-for-your-y\">Benefits
+        matter, or why I won't work for your Y Combinator startup</a><span class=\"comhead\">
+        (mhalligan.com) </span></td></tr><tr><td colspan=2></td><td class=\"subtext\"><span
+        id=score_5409273>503 points</span> by <a href=\"user?id=angryasian\">angryasian</a>
+        17 hours ago  | <a href=\"item?id=5409273\">329 comments</a></td></tr><tr
+        style=\"height:5px\"></tr><tr><td align=right valign=top class=\"title\">30.</td><td><center><a
+        id=up_5408481 href=\"vote?for=5408481&dir=up&whence=%6e%65%77%73\"><img src=\"grayarrow.gif\"
+        border=0 vspace=3 hspace=2></a><span id=down_5408481></span></center></td><td
+        class=\"title\"><a href=\"http://hbr.org/2013/04/when-ted-lost-control-of-its-crowd/ar/1\">When
+        TED Lost Control of Its Crowd</a><span class=\"comhead\"> (hbr.org) </span></td></tr><tr><td
+        colspan=2></td><td class=\"subtext\"><span id=score_5408481>131 points</span>
+        by <a href=\"user?id=jnazario\">jnazario</a> 19 hours ago  | <a href=\"item?id=5408481\">77
+        comments</a></td></tr><tr style=\"height:5px\"></tr><tr style=\"height:10px\"></tr><tr><td
+        colspan=2></td><td class=\"title\"><a href=\"news2\">More</a></td></tr></table></td></tr><tr><td><img
+        src=\"s.gif\" height=10 width=0><table width=\"100%\" cellspacing=0 cellpadding=1><tr><td
+        bgcolor=#ff6600></td></tr></table><br>\n<center><span class=\"yclinks\"><a
+        href=\"lists\">Lists</a> | <a href=\"rss\">RSS</a> | <a href=\"http://ycombinator.com/bookmarklet.html\">Bookmarklet</a>
+        | <a href=\"http://ycombinator.com/newsguidelines.html\">Guidelines</a> |
+        <a href=\"http://ycombinator.com/newsfaq.html\">FAQ</a> | <a href=\"dmca.html\">DMCA</a>
+        | <a href=\"http://ycombinator.com/newsnews.html\">News News</a> | <a href=\"item?id=363\">Feature
+        Requests</a> | <a href=\"http://ycombinator.com\">Y Combinator</a> | <a href=\"http://ycombinator.com/apply.html\">Apply</a>
+        | <a href=\"http://ycombinator.com/lib.html\">Library</a></span><br><br>\n<form
+        method=get action=\"//www.hnsearch.com/search#request/all\">Search: <input
+        type=text name=\"q\" value=\"\" size=17></form><br>\n</center></td></tr></table></center></body></html>"
+    http_version: 
+  recorded_at: Thu, 21 Mar 2013 11:55:54 GMT
+- request:
+    method: get
+    uri: https://news.ycombinator.com/favicon.ico
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS4yLjc=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        VGh1LCAyMSBNYXIgMjAxMyAxMTo1NTo1MyBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        aW1hZ2UveC1pY29u
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        ODk0
+      !binary "TGFzdC1Nb2RpZmllZA==":
+      - !binary |-
+        VGh1LCAyMSBNYXIgMjAxMyAwMjoxNjowMyBHTVQ=
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        U3VuLCAxOSBNYXIgMjAyMyAwMjoxNjowMyBHTVQ=
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bWF4LWFnZT0zMTUzMjUyMTA=
+      - !binary |-
+        cHVibGlj
+      !binary "QWNjZXB0LVJhbmdlcw==":
+      - !binary |-
+        Ynl0ZXM=
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAAA
+        AEgAAABIAAAAAAAAAAAAAAAAZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv////////8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv////////8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv////////8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv////////8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv9zsfn///////9zsfkAZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv/K4//////////K4/8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv9Xofj///9zsflzsfn///9XofgAZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv/////K4/8AZv8AZv/K4/////8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv9zsfn///9zsfkAZv8AZv9zsfn///9zsfkAZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv////////8tivYAZv8AZv8AZv////////8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    http_version: 
+  recorded_at: Thu, 21 Mar 2013 11:55:54 GMT
+- request:
+    method: get
+    uri: https://news.ycombinator.com/favicon.ico
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS4yLjc=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        VGh1LCAyMSBNYXIgMjAxMyAxMTo1NTo1MyBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        aW1hZ2UveC1pY29u
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        ODk0
+      !binary "TGFzdC1Nb2RpZmllZA==":
+      - !binary |-
+        VGh1LCAyMSBNYXIgMjAxMyAwMjoxNjowMyBHTVQ=
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        U3VuLCAxOSBNYXIgMjAyMyAwMjoxNjowMyBHTVQ=
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bWF4LWFnZT0zMTUzMjUyMTA=
+      - !binary |-
+        cHVibGlj
+      !binary "QWNjZXB0LVJhbmdlcw==":
+      - !binary |-
+        Ynl0ZXM=
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAAA
+        AEgAAABIAAAAAAAAAAAAAAAAZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv////////8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv////////8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv////////8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv////////8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv9zsfn///////9zsfkAZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv/K4//////////K4/8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv9Xofj///9zsflzsfn///9XofgAZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv/////K4/8AZv8AZv/K4/////8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv9zsfn///9zsfkAZv8AZv9zsfn///9zsfkAZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv////////8tivYAZv8AZv8AZv////////8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8AZv8A
+        Zv8AZv8AZv8AZv8AZv8AZv8AZv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    http_version: 
+  recorded_at: Thu, 21 Mar 2013 11:55:54 GMT
+recorded_with: VCR 2.4.0

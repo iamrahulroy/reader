@@ -8,7 +8,7 @@ describe ImportOpml do
   describe ".perform" do
     it "doesn't explode" do
       VCR.use_cassette('import opml worker', :record => :new_episodes) do
-        ImportOpml.perform(filetext, user.id)
+        ImportOpml.new.perform(filetext, user.id)
       end
       Feed.count.should == 101 # Includes the shared & starred feeds for anon and bob (4 feeds).
       Subscription.count.should == 97

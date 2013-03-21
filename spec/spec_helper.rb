@@ -11,7 +11,7 @@ require 'sidekiq/testing'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
-Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f }
 
 RSpec.configure do |c|
   #c.fail_fast = true
@@ -80,8 +80,6 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
 
     create_anon_user
-
-    Rails.logger.debug "config before done"
     #page.driver.resize 1600, 1400 if page.driver.respond_to? :resize
   end
 
@@ -94,7 +92,6 @@ RSpec.configure do |config|
     #   ActiveRecord::Base.connection.rollback_db_transaction
     #   ActiveRecord::Base.connection.decrement_open_transactions
     # end
-    Rails.logger.debug "config after done"
   end
 
 end

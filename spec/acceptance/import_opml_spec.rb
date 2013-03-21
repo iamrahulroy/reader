@@ -2,6 +2,7 @@ require 'acceptance/spec_acceptance_helper'
 
 feature "User imports opml", :js => true do
   scenario "User imports opml" do
+    pending
     user = setup_and_sign_in_user
     sleep 1
 

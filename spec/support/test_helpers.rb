@@ -92,10 +92,9 @@ module TestHelpers
     #PollFeed.stub(:perform_in)
     #PollFeed.stub(:perform_async)
     #PollFeed.stub(:perform_with_newrelic_transaction_trace)
-
     count.times do
       Dir["#{Rails.root.to_s}/app/workers/*"].each do |f|
-        File.basename(f,'.rb').classify.constantize.drain
+        File.basename(f,'.rb').camelize.constantize.drain
         PollFeed.drain
       end
     end
