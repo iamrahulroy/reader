@@ -41,10 +41,10 @@
                   %li
                     - if real_user
                       %a#sign-out-link{:href => destroy_user_session_path, "data-method" => :delete}
-                        %i{:class => "reader-icon-large icon-light icon-signout"}
+                        %i{:class => "reader-icon-large icon-light icon-signout", "data-placement" => "left", :title => 'Sign out'}
                     - else
                       %a#login-link{:href => "/login"}
-                        %i{:class => "reader-icon-large icon-light icon-signin"}
+                        %i{:class => "reader-icon-large icon-light icon-signin", "data-placement" => "left", :title => 'Login'}
 
     #stream-header.hide
       #stream-header-inner
@@ -56,19 +56,19 @@
 
     #nav
       %div
-        %a#nav-unread-link.nav-icon{"data-placement" => "right", :href => "/unread", :rel => "tooltip"}
+        %a#nav-unread-link.nav-icon{"data-placement" => "right", :href => "/unread", :rel => "tooltip", :title => 'Unread items'}
           %i{:class => "reader-icon-large icon-light icon-inbox"}
       %div
-        %a#nav-starred-link.nav-icon{"data-placement" => "right", :href => "/starred", :rel => "tooltip"}
+        %a#nav-starred-link.nav-icon{"data-placement" => "right", :href => "/starred", :rel => "tooltip", :title => 'Starred items'}
           %i{:class => "reader-icon-large icon-light icon-star"}
       %div
-        %a#nav-shared-link.nav-icon{"data-placement" => "right", :href => "/shared", :rel => "tooltip"}
+        %a#nav-shared-link.nav-icon{"data-placement" => "right", :href => "/shared", :rel => "tooltip", :title => 'Shared items'}
           %i{:class => "reader-icon-large icon-light icon-share"}
       %div
         %a#nav-comments-link.nav-icon{"data-placement" => "right", :href => "/commented", :rel => "tooltip", :title => "Discussions"}
           %i{:class => "reader-icon-large icon-light icon-comments-alt"}
       %div
-        %a#nav-all-link.nav-icon{"data-placement" => "right", :href => "/all", :rel => "tooltip"}
+        %a#nav-all-link.nav-icon{"data-placement" => "right", :href => "/all", :rel => "tooltip", :title => "All items"}
           %i{:class => "reader-icon-large icon-light icon-asterisk"}
       %div
         %a#nav-note-link.nav-icon{"data-placement" => "right", :href => "/share", :rel => "tooltip", :title => "Share something!"}
