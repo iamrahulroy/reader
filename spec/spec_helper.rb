@@ -81,7 +81,7 @@ RSpec.configure do |config|
 
     create_anon_user
 
-    puts "config before done"
+    Rails.logger.debug "config before done"
     #page.driver.resize 1600, 1400 if page.driver.respond_to? :resize
   end
 
@@ -94,6 +94,7 @@ RSpec.configure do |config|
     #   ActiveRecord::Base.connection.rollback_db_transaction
     #   ActiveRecord::Base.connection.decrement_open_transactions
     # end
-    puts "config after done"
+    Rails.logger.debug "config after done"
   end
+
 end
