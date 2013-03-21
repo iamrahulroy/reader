@@ -154,7 +154,7 @@ class Entry < ActiveRecord::Base
         item = Item.new(:user_id => sub.user_id, :entry => self, :subscription => sub)
 
         if item.valid?
-          puts "save item"
+          logger.debug "save item"
           item.save
         end
       end
