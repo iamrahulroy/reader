@@ -1,33 +1,39 @@
 App.updateTooltips = ->
-  $("#nav-unread-link").tooltip
-    placement: "right"
-    title: "Unread items"
+  $('[data-placement]').each (index, el) ->
+    $el = $(el)
+    $el.tooltip
+      placement: $el.data('placement')
+      title: $el.attr('title')
 
-  $("#nav-all-link").tooltip
-    placement: "right"
-    title:     "All items"
+  # $("#nav-unread-link").tooltip
+  #   placement: "right"
+  #   title: "Unread items"
 
-  $("#nav-starred-link").tooltip
-    placement: "right"
-    title: "Starred items"
+  # $("#nav-all-link").tooltip
+  #   placement: "right"
+  #   title:     "All items"
 
-  $("#nav-shared-link").tooltip
-    placement: "right"
-    title: "Shared items"
+  # $("#nav-starred-link").tooltip
+  #   placement: "right"
+  #   title: "Starred items"
 
-  $("#nav-comments-link").tooltip
-    placement: "right"
-    title: "Discussions"
+  # $("#nav-shared-link").tooltip
+  #   placement: "right"
+  #   title: "Shared items"
+
+  # $("#nav-comments-link").tooltip
+  #   placement: "right"
+  #   title: "Discussions"
 
 
-  $("#nav-note-link").tooltip
-    placement: "right"
-    title:     "Share something!"
+  # $("#nav-note-link").tooltip
+  #   placement: "right"
+  #   title:     "Share something!"
 
-  $("#nav-settings-link").tooltip
-    placement: "right"
-    title:     "Settings"
+  # $("#nav-settings-link").tooltip
+  #   placement: "right"
+  #   title:     "Settings"
 
-  $("#nav-add-link").tooltip
-    placement: "right"
-    title:     "Add new group/feed"
+  # $("#nav-add-link").tooltip
+  #   placement: "right"
+  #   title:     "Add new group/feed"
