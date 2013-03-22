@@ -33,7 +33,8 @@ feature "Users share items with each other", :js => true do
       visit('/')
       # Now make sure it has items.
       within("#list") do
-        page.should have_content "(5)"
+        items = user_a.subscriptions.order(:id).last.items.count
+        page.should have_content "(#{items})"
         click_link "Ember Blog"
       end
 
@@ -47,6 +48,7 @@ feature "Users share items with each other", :js => true do
       sleep 2
 
       within("#list") do
+
         page.should have_content "User A (1)"
         click_link "User A (1)"
       end
@@ -67,6 +69,7 @@ feature "Users share items with each other", :js => true do
         find(".comment-form-body").set "user a comment 2"
         click_button "Add Comment"
       end
+      run_jobs
 
       Comment.count.should == 2
 

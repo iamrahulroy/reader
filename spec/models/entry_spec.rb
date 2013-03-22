@@ -42,25 +42,6 @@ END
         end
       end
     end
-    it "should run through the entry post processing steps" do
-      PollFeed.stub(:perform => nil)
-      entry.save!
-      entry.reload.content_inlined.should be_false
-      entry.reload.content_embedded.should be_false
-      entry.reload.content_sanitized.should be_false
-      entry.reload.delivered.should be_false
-      entry.reload.processed.should be_false
-      run_jobs 1
-      entry.reload.content_inlined.should be_true
-      run_jobs 1
-      entry.reload.content_embedded.should be_true
-      run_jobs 1
-      entry.reload.content_sanitized.should be_true
-      run_jobs 1
-      entry.reload.delivered.should be_true
-      #run_jobs 1
-      entry.reload.processed.should be_true
-    end
 
     it "creates an entry guid model and updates the reference" do
       entry.save!
