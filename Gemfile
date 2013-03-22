@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 gem "nokogiri", "~> 1.5"
 gem "rails", "~> 3.2"
-gem "unicorn", "~> 4.4"
+gem "puma"
 gem "god", "~> 0.13"
 
 gem "sidekiq", "~> 2.6"
