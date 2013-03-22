@@ -8,7 +8,6 @@ Reader::Application.routes.draw do
   constraint = lambda { |request| request.env["warden"].authenticate? and request.env['warden'].user.admin? }
   constraints constraint do
     mount Sidekiq::Web => '/sidekiq'
-    mount Resque::Server, :at => "/resque"
   end
 
   devise_for :users, :controllers => { :sessions => 'users/sessions', :registrations => "users/registrations", :passwords => "users/passwords" }

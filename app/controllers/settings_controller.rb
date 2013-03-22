@@ -2,8 +2,6 @@ class SettingsController < ApplicationController
   def options
     singly_profile = Singly.singly_profile_for current_user
 
-    ap singly_profile
-
     if singly_profile && singly_profile["services"]
       @twitter = singly_profile["services"]["twitter"]
       @facebook = singly_profile["services"]["facebook"]

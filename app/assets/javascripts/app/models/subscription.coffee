@@ -5,7 +5,6 @@ class App.Subscription extends App.Stream
     @.set('short_name', App.truncate(@.get('name'), 26, '...'))
 
     @.set('count', 0)
-    console.log "Initialize sub #{@get("name")}"
     @.render()
     @.on "change", @.render
     @.on "change", =>
@@ -17,13 +16,10 @@ class App.Subscription extends App.Stream
 
 
   render: =>
-    console.log "Render sub #{@get("name")}"
     if @.renderer?
-      console.log "re-render"
       @.set('short_name', App.truncate(@.get('name'), 26, '...'))
       @.renderer.render()
     else
-      console.log "first render"
       @.renderer = new App.SubscriptionView
         model: @
         id: 'subscription-' + @.get('id')

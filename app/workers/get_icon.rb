@@ -12,7 +12,6 @@ class GetIcon
     feed = Feed.where(id: id).first
     return unless feed
     return if feed.feed_icon.present?
-    ap "FETCHING ICON for #{feed.name}"
     icon_url = get_favicon feed.site_url
 
     unless icon_url.nil?
