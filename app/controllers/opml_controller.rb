@@ -8,8 +8,8 @@ class OpmlController < ApplicationController
     if file.nil?
       render :inline => "No OPML File uploaded", :status => 500 and return
     end
-    filetext = file.respond_to?(:read) ? file.read : file.to_s
-    Resque.enqueue(ImportOpml, filetext, current_user.id)
+    file_text = file.respond_to?(:read) ? file.read : file.to_s
+    ImportOpml.perform_async(file_text, current_user.id)
     redirect_to "/opml_submitted"
   end
 

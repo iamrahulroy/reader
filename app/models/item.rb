@@ -23,6 +23,7 @@ class Item < ActiveRecord::Base
   validates_with ItemValidator
 
   after_update :after_user_item_update
+  after_save :update_subscription_count
 
   delegate :url, :title, :to => :entry, :allow_nil => true
 
@@ -69,7 +70,7 @@ class Item < ActiveRecord::Base
 
   def update_children
     if self.has_new_comments?
-      UpdateDownstreamItem.perform_async self.id
+      UpdateDownstreamItems.perform_async self.id
     end
   end
 

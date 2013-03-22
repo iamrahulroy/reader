@@ -68,7 +68,7 @@ class ApplicationController < ActionController::Base
         get_follower_requests
         set_weights
         touch_user
-        UpdateUserSubscriptionCount.perform_async(current_user.id)
+        UpdateUserSubscriptionCounts.perform_async(current_user.id)
       end
     end
 
