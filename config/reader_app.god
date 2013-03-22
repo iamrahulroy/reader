@@ -8,7 +8,7 @@ God.watch do |w|
   w.name = "puma"
   w.dir = "#{rails_root}"
   w.start = "bundle exec puma -e #{rails_env} --config config/puma.rb"
-  w.log = "#{rails_root}/log/sidekiq.log"
+  w.log = "#{rails_root}/log/puma.log"
   w.keepalive
 end
 
