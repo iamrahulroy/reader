@@ -3,10 +3,6 @@ class App.Subscriptions extends Backbone.Collection
     this.fetch
       success: _.bind(this.readyHandler, this)
 
-    window.setInterval(->
-      App.subscriptions.each (sub) -> sub.fetch()
-    , 1000*60*5)
-
   readyHandler: () ->
     App.startRouter()
     App.groups.each (group) =>

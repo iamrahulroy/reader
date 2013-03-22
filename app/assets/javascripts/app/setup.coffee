@@ -30,6 +30,8 @@ App.boot = ->
 
   App.updateTooltips()
 
+  new App.SubscriptionCountUpdate
+
 #  $("#summary-container").load("/summary")
 
 App.highlightNavByFilter = ->

@@ -21,6 +21,7 @@
 //= require private_pub
 //= require backbone
 //= require bootstrap
+//= require visibility
 
 //= require_tree ../templates
 
