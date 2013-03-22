@@ -30,7 +30,12 @@ class UsersController < ApplicationController
     email        = obj[:profile][:email]
     name         = obj[:profile][:name]
 
-    @user = User.find_or_initialize_by_email(email)
+    if email
+      @user = User.find_or_initialize_by_email(email)
+    else
+      @user = User.new
+    end
+
 
     if @user.persisted?
       @user.singly_access_token = access_token
@@ -43,12 +48,36 @@ class UsersController < ApplicationController
       @user.singly_access_token = access_token
       @user.singly_account_id   = account
       @user.password = @user.password_confirmation = rand(36**7..36**16).to_s(36)
-      if @user.save
-        sign_in_and_redirect @user, :event => :authentication
+
+      if @user.email.present?
+        if @user.save
+          sign_in_and_redirect @user, :event => :authentication
+        else
+          flash[:error] = "Authentication failed"
+          redirect_to root_path
+        end
       else
-        flash[:error] = "Authentication failed"
-        render "application/index"
+        @user.save(validate: false)
+        session[:incomplete_user_id] = @user.id
+        redirect_to :complete_registration
       end
+    end
+  end
+
+  def complete_registration
+    id = session[:incomplete_user_id]
+    @user = User.find(id)
+    render "complete_registration", :layout => false
+  end
+
+  def finalize
+    id = session[:incomplete_user_id]
+    @user = User.find(id)
+    @user.email = params[:email]
+    if @user.valid? && @user.save!
+      redirect_to "/settings"
+    else
+      render "complete_registration", :layout => false
     end
   end
 

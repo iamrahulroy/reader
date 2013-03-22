@@ -9,8 +9,10 @@ class Singly
     end
 
     def singly_profile_for(user)
-      response = get("https://api.singly.com/profile?access_token=#{user.singly_access_token}")
-      Oj.load(response.body)
+      if user.singly_access_token
+        response = get("https://api.singly.com/profile?access_token=#{user.singly_access_token}")
+        Oj.load(response.body)
+      end
     end
 
     def facebook_home_for(user)

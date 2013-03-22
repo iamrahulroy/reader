@@ -1,0 +1,51 @@
+!!!
+%html
+  %head
+    %title 1kpl.us - an rss reader
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "app/defer/mp"
+    = javascript_include_tag "app/defer/ga"
+    = javascript_include_tag "application"
+    = stylesheet_link_tag    "wide", :media => "screen and (min-width: 1310px)"
+    = csrf_meta_tags
+
+
+  %body
+    #new-user-account-container
+      #new-user-account.well
+        %h1 Almost there!
+
+        = form_for @user, :url => "/finalize", :html => {:id => 'new-user-account-form', :multipart => true, :class => 'form-horizontal'} do |f|
+          %fieldset
+            #feed-url-field-control-group.control-group
+              %label.control-label{:for => "email"} Email:
+              .controls
+                = f.text_field :email
+                %span.help-inline
+
+            #feed-url-field-control-group.control-group
+              %label.control-label{:for => "password"} Password:
+              .controls
+                = f.password_field :password
+                %span.help-inline
+
+            #feed-url-field-control-group.control-group
+              %label.control-label{:for => "password_confirmation"} Password Confirmation:
+              .controls
+                = f.password_field :password_confirmation
+                %span.help-inline
+
+          %div.btn-container.pull-right
+            %input#new-user-account-btn.btn.btn-primary{:type => "submit", :value => "Continue"}
+
+    #site-header
+      #site-header-inner
+        .navbar
+          .navbar-inner
+            .container
+              %a.brand{:href => "/"} 1kpl.us - a news reader
+
+
+    %div{:style => "display: none;"}
+      nr2131235634445621234nr
+

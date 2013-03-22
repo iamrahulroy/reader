@@ -92,6 +92,8 @@ class Entry < ActiveRecord::Base
       chunk += node.to_s.gsub('data-src', 'src')
     end
     self.content = chunk + self.content
+  rescue OpenURI::HTTPError => e
+
   end
 
   def inline_quickmeme
@@ -103,6 +105,8 @@ class Entry < ActiveRecord::Base
       chunk += node.to_s.gsub('data-src', 'src')
     end
     self.content = chunk + self.content
+  rescue OpenURI::HTTPError => e
+
   end
 
   def ensure_pubdate
@@ -214,8 +218,13 @@ class Entry < ActiveRecord::Base
 
   protected
     def create_entry_guid
-      entry_guid = EntryGuid.create!(feed_id: self.feed_id, guid: guid)
-      self.entry_guid_id = entry_guid.id
+      entry_guid = EntryGuid.find_or_initialize_by_feed_id_and_guid(self.feed_id, guid)
+      if entry_guid.save
+        self.entry_guid_id = entry_guid.id
+      else
+        self.destroy if self.persisted?
+      end
+
     end
 
 end

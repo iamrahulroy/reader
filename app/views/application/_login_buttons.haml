@@ -4,9 +4,10 @@
     %i{:class => "icon-signin"}
     Sign in with Facebook.
 
-  %a#login-with-twitter.btn{:href => user_auth_url(:twitter)}
-    %i{:class => "icon-signin"}
-    Sign in with Twitter.
+  - if Rails.env.development?
+    %a#login-with-twitter.btn{:href => user_auth_url(:twitter)}
+      %i{:class => "icon-signin"}
+      Sign in with Twitter.
 
   %a#login-with-email.btn{:href => "/login"}
     %i{:class => "icon-signin"}

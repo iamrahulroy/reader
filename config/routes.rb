@@ -41,6 +41,8 @@ Reader::Application.routes.draw do
 
   get "/auth/callback" => "users#callback", :as => "user_auth_callback"
   get "/auth/:service" => "users#authorize", :as => "user_auth"
+  get "/complete-registration" => "users#complete_registration", :as => "complete_registration"
+  put "/finalize" => "users#finalize"
 
 
   put "/users/:id(.json)" => "users#update"

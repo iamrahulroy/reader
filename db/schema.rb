@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320125348) do
+ActiveRecord::Schema.define(:version => 20130320140421) do
 
   create_table "categories", :force => true do |t|
     t.string    "name"
@@ -251,6 +251,7 @@ ActiveRecord::Schema.define(:version => 20130320125348) do
     t.string    "singly_access_token"
     t.boolean   "share_to_twitter"
     t.boolean   "share_to_facebook"
+    t.boolean   "registration_complete",               :default => false
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

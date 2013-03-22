@@ -15,9 +15,10 @@ class User < ActiveRecord::Base
   acts_as_follower
 
 
-  after_create :make_root_group, :copy_anonymous_feeds, :send_welcome_email
+
   before_create :create_websocket_token, :create_public_token
-  after_create :create_starred_item_feed, :create_shared_item_feed
+
+  after_save :check_user_registration_state
 
   after_save :sanitize_name
 
@@ -36,6 +37,21 @@ class User < ActiveRecord::Base
   has_many :comments, :dependent => :destroy
 
   has_many :groups, :dependent => :destroy
+
+  validates_presence_of :email
+
+  def check_user_registration_state
+    self.update_attribute(:registration_complete, true) if self.valid? && !registration_complete?
+    if registration_complete?
+      if self.groups.count == 0 # they need to get the default feed set and the welcome email
+        make_root_group
+        copy_anonymous_feeds
+        send_welcome_email
+        create_starred_item_feed
+        create_shared_item_feed
+      end
+    end
+  end
 
   def recent_starred_items
     items.where(starred: true).order("updated_at DESC").limit(8).all
@@ -84,29 +100,12 @@ class User < ActiveRecord::Base
   end
 
   def create_shared_item_feed
-    f = Feed.new
-    f.name = "Posts shared by #{self.name}"
-    f.feed_url = "http://1kpl.us/user/#{self.public_token}/shared"
-    f.site_url = "http://1kpl.us/"
-    f.user = self
-    f.private = true
-    f.fetchable = false
-    f.save!
-    self.update_column :shared_feed_id, f.id
+    create_user_item_feed :shared
   end
 
   def create_starred_item_feed
-    f = Feed.new
-    f.name = "Posts starred by #{self.name}"
-    f.feed_url = "http://1kpl.us/user/#{self.public_token}/starred"
-    f.site_url = "http://1kpl.us/"
-    f.user = self
-    f.private = true
-    f.fetchable = false
-    f.save!
-    self.update_column :starred_feed_id, f.id
+    create_user_item_feed :starred
   end
-
 
   def make_root_group
     Group.create(:user_id => self.id, :label => "")
@@ -198,5 +197,19 @@ class User < ActiveRecord::Base
   def self.steve
     User.find_by_email("steve@example.com").first_or_create!(name: 'none', password: SecureRandom.hex)
   end
+
+  protected
+
+    def create_user_item_feed(type)
+      f = Feed.new
+      f.name = "Posts #{type} by #{self.name}"
+      f.feed_url = "http://1kpl.us/user/#{self.public_token}/#{type}"
+      f.site_url = "http://1kpl.us/"
+      f.user = self
+      f.private = true
+      f.fetchable = false
+      f.save!
+      self.update_column "#{type}_feed_id", f.id
+    end
 
 end
