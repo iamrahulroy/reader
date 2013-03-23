@@ -125,7 +125,11 @@ class UsersController < ApplicationController
   end
 
   def private_pub_sign_on
-    render :layout => nil
+    if real_user
+      render :layout => nil
+    else
+      head :ok
+    end
   end
 
   def update
