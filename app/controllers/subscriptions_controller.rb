@@ -88,7 +88,7 @@ class SubscriptionsController < ApplicationController
     sub = Subscription.where(:user_id => current_user.id).find(params[:id])
     return unless current_user.id == sub.user_id
     sub.unsubscribe
-    render :text => "Sub #{sub.name} deleted"
+    render :json => {:success => true}
   end
 
   def update

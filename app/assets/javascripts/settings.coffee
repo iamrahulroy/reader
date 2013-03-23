@@ -61,10 +61,10 @@ App.loadOptions = ->
 App.loadFollowerTables = ->
   $('#people-you-follow-container').load('/people/following')
   $('#people-following-you-container').load('/people/followers')
-  $('#people-you-may-know-container').load('/people/may_know')
+#  $('#people-you-may-know-container').load('/people/may_know')
 
 
-$(document).on 'ajax:complete', '.unsubscribe-link', (event, xhr, settings) ->
+$(document).on 'ajax:success', '.unsubscribe-link', (event, xhr, settings) ->
   $(this).closest('.subscription-table-row').remove()
 
 $(document).on 'ajax:complete', '.subscribe-link', (event, xhr, settings) ->
