@@ -52,4 +52,4 @@ class App.Receiver
 
 $(document).ready ->
   App.receiver = new App.Receiver()
-  App.receiver.startPrivatePubSub() unless App.user.anonymous()
+  App.receiver.startPrivatePubSub()
