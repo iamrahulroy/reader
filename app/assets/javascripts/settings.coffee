@@ -78,6 +78,7 @@ $(document).on "click", ".follow-person-link", (evt) ->
   options =
     title: "Follow " + username + "?"
     trigger: "manual"
+    html: true
   options.content = HandlebarsTemplates["request_follow"]
     id: userid
     username: username
@@ -93,6 +94,7 @@ $(document).on "click", ".unfollow-person-link", (evt) ->
   options =
     title: "Stop following " + username + "?"
     trigger: "manual"
+    html: true
   options.content = HandlebarsTemplates["stop_following"]
     id: userid
     username: username
@@ -108,6 +110,7 @@ $(document).on "click", ".block-person-link", (evt) ->
   options =
     title: "Stop sharing with " + username + "?"
     trigger: "manual"
+    html: true
   options.content = HandlebarsTemplates["block"]
     id: userid
     username: username
