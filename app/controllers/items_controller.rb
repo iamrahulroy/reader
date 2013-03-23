@@ -83,9 +83,9 @@ class ItemsController < ApplicationController
   end
 
   def update
-    return if current_user.anonymous
+    head(:ok) and return if current_user.anonymous
     item = Item.find(params[:id])
-    return unless item.user == current_user
+    head(:ok) and return unless item.user == current_user
     item.unread = params[:unread]
     item.starred = params[:starred]
     item.shared = params[:shared]
