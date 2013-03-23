@@ -3,14 +3,14 @@ God.pid_file_directory = "/tmp/"
 rails_env   = "production"
 rails_root  = ENV['RAILS_ROOT'] || File.expand_path('../../', __FILE__).to_s
 
-God.watch do |w|
-  w.group = "reader"
-  w.name = "puma"
-  w.dir = "#{rails_root}"
-  w.start = "bundle exec puma -e #{rails_env} --config config/puma.rb"
-  w.log = "#{rails_root}/log/puma.log"
-  w.keepalive
-end
+#God.watch do |w|
+#  w.group = "reader"
+#  w.name = "puma"
+#  w.dir = "#{rails_root}"
+#  w.start = "bundle exec puma -e #{rails_env} --config config/puma.rb"
+#  w.log = "#{rails_root}/log/puma.log"
+#  w.keepalive
+#end
 
 God.watch do |w|
   w.group = "reader"
