@@ -1,8 +1,7 @@
 source "https://rubygems.org"
 gem "nokogiri", "~> 1.5"
 gem "rails", "~> 3.2"
-gem "unicorn", "~> 4.4"
-gem "puma"
+gem "unicorn", "~> 4.4", :require => false
 gem "god", "~> 0.13"
 
 gem "sidekiq", "~> 2.6"
@@ -15,7 +14,6 @@ gem "thin", "~> 1.5", :require => false
 gem "pg", "~> 0.14"
 gem "devise", "~> 2.2"
 gem "acts_as_follower", "~> 0.1"
-gem "fb_graph", "~> 2.6"
 gem "feeder", git: "https://github.com/1kplus/feeder.git"
 #gem "feeder", path: "/Users/charlie/Workspace/feeder"
 
@@ -45,8 +43,6 @@ gem "pry-rails", "~> 0.2"
 gem "pry-coolline"
 gem "pry-remote"
 
-
-
 group :production do
   gem "newrelic_rpm", "~> 3.5"
 end
@@ -62,20 +58,18 @@ end
 
 group :test, :development do
   gem "ruby_gntp"
-  gem "awesome_print", "~> 1.1"
-
-  gem "sextant", "~> 0.2"
-  gem "rspec-rails", "~> 2.12"
-  gem "quiet_assets", "~> 1.0"
-  gem "jasmine-rails", "~> 0.3"
+  gem "awesome_print" #, "~> 1.1"
+  gem "rspec-rails" #, "~> 2.12"
+  gem "quiet_assets" #, "~> 1.0"
+  gem "jasmine-rails" #, "~> 0.3"
 end
 
 group :test do
-  gem "database_cleaner", "~> 0.9"
-  gem "capybara", "~> 1.0"
-  gem "vcr", "~> 2.4"
-  gem "webmock", "1.9"
-  gem "launchy", "~> 2.2"
+  gem "selenium-webdriver"
+  gem "database_cleaner" #, "~> 0.9"
+  gem "capybara" #, "~> 2.0"
+  gem "vcr" #, "~> 2.4"
+  gem "launchy" #, "~> 2.2"
 end
 
 group :assets do

@@ -8,7 +8,6 @@ class GetIcon
   include Sidekiq::Worker
   sidekiq_options :queue => :icons
   def perform(id)
-
     feed = Feed.where(id: id).first
     return unless feed
     return if feed.feed_icon.present?
@@ -92,5 +91,9 @@ class GetIcon
       false
     end
   end
+
+  #def open(url)
+  #  Faraday.get(url)
+  #end
 
 end

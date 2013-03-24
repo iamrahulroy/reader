@@ -1,8 +1,9 @@
 class ItemValidator < ActiveModel::Validator
   def validate(record)
-    user_id = record.user_id
-    entry_id = record.entry_id
-    c = Item.where(:user_id => user_id).where(:entry_id => entry_id).count
+    user_id         = record.user_id
+    entry_id        = record.entry_id
+    subscription_id = record.subscription_id
+    c = Item.where(:user_id => user_id).where(:entry_id => entry_id).where(:subscription_id => subscription_id).count
     if c >= 1 && record.id.nil?
       record.errors[:base] = "Already delivered"
     end

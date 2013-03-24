@@ -156,7 +156,7 @@ App.viewPreviousStream = () ->
     pc = prev.count()
     while pc == 0 && prev != strm
       prev = prev.prev()
-      pc = prev.count()
+      pc = if prev then prev.count() else -1
     if prev?
       prev.view()
       App.router.navigate(prev.path())
@@ -172,11 +172,13 @@ App.viewNextStream = () ->
   strm = App.stream
   if strm?
     next = strm.next()
-    nc = next.count()
+    nc = if !next? then -1 else next.count()
+
     while nc == 0 && next != strm
       next = next.next()
-      nc = next.count()
-    if next?
+      nc = if next then next.count() else -1
+      next = null if nc == -1
+    if next? && next.path?
       next.view()
       App.router.navigate(next.path())
       window.setTimeout(() ->

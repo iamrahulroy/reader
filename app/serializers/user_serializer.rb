@@ -12,9 +12,6 @@ class UserSerializer < ActiveModel::Serializer
   attribute :share_to_twitter
   attribute :share_to_facebook
 
-  def anonymous
-    object.id == 1
-  end
 
   def all_count
     Item.where(user_id: scope.id, from_id: object.id).count

@@ -75,6 +75,7 @@ class UsersController < ApplicationController
     @user = User.find(id)
     @user.email = params[:email]
     if @user.valid? && @user.save!
+      send_welcome_email
       redirect_to "/settings"
     else
       render "complete_registration", :layout => false

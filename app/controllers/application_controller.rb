@@ -73,7 +73,7 @@ class ApplicationController < ActionController::Base
     end
 
     def check_reader_user
-      unless user_signed_in?
+      unless real_user
         sign_in(:user, User.anonymous)
       end
     end

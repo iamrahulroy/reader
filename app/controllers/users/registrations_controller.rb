@@ -6,6 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if resource.save
       if resource.active_for_authentication?
         sign_in(resource_name, resource)
+        resource.send_welcome_email
         render_user
       else
         expire_session_data_after_sign_in!

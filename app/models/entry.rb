@@ -74,17 +74,18 @@ class Entry < ActiveRecord::Base
   end
 
   def embed_content
-    if Rails.env.production?
-      if self.feed.feed_url =~ /reddit\.com/ || self.feed.feed_url =~ /news\.ycombinator\.com\/rss/
-        unless url =~ /reddit\.com/ || url =~ /imgur\.com/ || url =~ /qkme\.me/
-          self.content = "#{embed_urls(url.dup, false)}<p/>#{self.content}"
-        end
-      end
-    end
+    #if Rails.env.production?
+    #  if self.feed.feed_url =~ /reddit\.com/ || self.feed.feed_url =~ /news\.ycombinator\.com\/rss/
+    #    unless url =~ /reddit\.com/ || url =~ /imgur\.com/ || url =~ /qkme\.me/
+    #      self.content = "#{embed_urls(url.dup, false)}<p/>#{self.content}"
+    #    end
+    #  end
+    #end
   end
 
   def inline_imgur
-    doc = Nokogiri::HTML(open(self.url))
+    body = Faraday.get(self.url).body
+    doc = Nokogiri::HTML(body)
     images = doc.css(".image img")
     chunk = ""
     images.each do |node|
@@ -97,7 +98,8 @@ class Entry < ActiveRecord::Base
   end
 
   def inline_quickmeme
-    doc = Nokogiri::HTML(open(self.url))
+    body = Faraday.get(self.url).body
+    doc = Nokogiri::HTML(body)
     images = doc.css("#img")
     chunk = ""
     images.each do |node|

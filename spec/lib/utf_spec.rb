@@ -6,6 +6,5 @@ describe "utf crashyness" do
   it "shouldn't crash" do
     (/\<rss|\<rdf/ =~ body) && (/feedburner/ =~ body)
     parsed_feed = Feedzirra::Feed.parse(body)
-    ap parsed_feed
   end
 end

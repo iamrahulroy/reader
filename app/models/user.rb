@@ -9,20 +9,16 @@ class User < ActiveRecord::Base
     :recoverable, :rememberable, :trackable, :validatable, :remember_for => 3.months
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :name, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :name, :password, :password_confirmation, :remember_me, :anonymous, :registration_complete
 
   acts_as_followable
   acts_as_follower
-
-
-
-  before_create :create_websocket_token, :create_public_token
 
   after_save :check_user_registration_state
 
   after_save :sanitize_name
 
-  before_save :ensure_websocket_token
+  before_save :ensure_websocket_token, :ensure_public_token
   has_one :facebook_authorization, :dependent => :destroy
 
   belongs_to :shared_feed, :class_name => "Feed"
@@ -42,14 +38,14 @@ class User < ActiveRecord::Base
 
   def check_user_registration_state
     self.update_attribute(:registration_complete, true) if self.valid? && !registration_complete?
-    if registration_complete?
+
+    if self.registration_complete? && !self.anonymous? && self.valid?
       if self.groups.count == 0 # they need to get the default feed set and the welcome email
         make_root_group
         copy_anonymous_feeds
-        send_welcome_email
-        create_starred_item_feed
-        create_shared_item_feed
       end
+      create_starred_item_feed unless self.starred_feed.present?
+      create_shared_item_feed unless self.shared_feed.present?
     end
   end
 
@@ -115,11 +111,10 @@ class User < ActiveRecord::Base
     self.groups.where(:label => "").first
   end
 
-  def create_public_token
-    self.public_token = rand(36**16).to_s(36)
-  end
-  def create_websocket_token
-    self.websocket_token = rand(36**16).to_s(36)
+  def ensure_public_token
+    if self.public_token.nil?
+      self.public_token = rand(36**8).to_s(36)
+    end
   end
 
   def ensure_websocket_token
@@ -183,19 +178,19 @@ class User < ActiveRecord::Base
   end
 
   def self.anonymous
-    User.where(email: 'anonymous@1kpl.com').first_or_create!(name: 'none', password: SecureRandom.hex)
+    User.where(email: 'anonymous@1kpl.us').first_or_create!(name: 'none', password: SecureRandom.hex, anonymous: true, registration_complete: true)
   end
   def self.charlie
-    User.find_by_email("charliewilkins@gmail.com").first_or_create!(name: 'none', password: SecureRandom.hex)
+    User.where(email: "charliewilkins@gmail.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
   end
   def self.loren
-    User.find_by_email("loren.spector@gmail.com").first_or_create!(name: 'none', password: SecureRandom.hex)
+    User.where(email: "loren.spector@gmail.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
   end
   def self.josh
-    User.find_by_email("josh@example.com").first_or_create!(name: 'none', password: SecureRandom.hex)
+    User.where(email: "josh@example.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
   end
   def self.steve
-    User.find_by_email("steve@example.com").first_or_create!(name: 'none', password: SecureRandom.hex)
+    User.where(email: "steve@example.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
   end
 
   protected
