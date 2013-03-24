@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :do_not_cache, :except => :newrelic
+  before_filter :check_reader_user, :do_not_cache, :except => :newrelic
   include ApplicationHelper
 
   def newrelic
@@ -62,8 +62,7 @@ class ApplicationController < ActionController::Base
   private
 
     def index_setup
-
-      check_reader_user
+      #check_reader_user
       @user_json = render_to_string :json => current_user, :serializer => UserSerializer, :root => false
       if real_user
         get_follower_requests
