@@ -16,6 +16,10 @@
         %h1 Almost there!
 
         = form_for @user, :url => "/finalize", :html => {:id => 'new-user-account-form', :multipart => true, :class => 'form-horizontal'} do |f|
+          %div#user_register_box
+            - @user.errors.full_messages.each do |message|
+              = message
+              %br
           %fieldset
             #feed-url-field-control-group.control-group
               %label.control-label{:for => "email"} Email:
