@@ -62,8 +62,9 @@ class ApplicationController < ActionController::Base
   private
 
     def index_setup
-      @user_json = render_to_string :json => current_user, :serializer => UserSerializer, :root => false
+
       check_reader_user
+      @user_json = render_to_string :json => current_user, :serializer => UserSerializer, :root => false
       if real_user
         get_follower_requests
         set_weights
