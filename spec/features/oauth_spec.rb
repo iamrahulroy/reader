@@ -38,6 +38,8 @@ describe "when a user tries to register with an oauth provider that does not sup
     user.singly_account_id.should eq account
     user.name.should eq name
     user.email.should eq email
+
+    page.should have_css("#sign-out-link")
   end
 
   it "they will be required to enter a password and password confirmation", :js => true, :vcr => true do

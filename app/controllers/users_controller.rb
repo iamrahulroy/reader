@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_filter :check_reader_user, :only => [:callback, :complete_registration, :finalize]
+
   def authorize
     return unless Singly::SINGLY_SERVICES.include? params[:service].to_s
     redirect_to Singly.authentication_url_for(params[:service])
@@ -68,6 +70,7 @@ class UsersController < ApplicationController
     @user.password              = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
     if @user.valid? && @user.save!
+      sign_in('user', @user)
       @user.send_welcome_email
       redirect_to "/settings"
     else
