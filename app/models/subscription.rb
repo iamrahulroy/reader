@@ -122,11 +122,6 @@ class Subscription < ActiveRecord::Base
                 :user => user
         )
 
-        unless feed.hub.nil?
-          feed_model.hub = feed.hub.to_s
-          feed_model.topic = feed.self.to_s
-        end
-
         if feed_model.valid?
           feed_model.save
           sub = Subscription.create(:user_id => user.id, :feed_id => feed_model.id, :group => group, :name => feed_model.name)

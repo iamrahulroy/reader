@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: https://github.com/1kplus/feeder.git
-  revision: a754ef462e0846711cef5b9d4ec9adffa865cabe
+  revision: 8a476b6b8b04c91586ba241ebb4df43419061331
   specs:
     feeder (0.0.1)
       ensure-encoding
@@ -17,11 +17,11 @@ GIT
       sidekiq
 
 GIT
-  remote: https://github.com/1kplus/feedzirra.git
-  revision: 5f3d145413bd46813bb562fea874b5e214aa0544
+  remote: https://github.com/pauldix/feedzirra.git
+  revision: 80cd35766e40ee3058db1c5c0c25448baeea4212
   specs:
     feedzirra (0.2.0.rc2)
-      curb (~> 0.8.0)
+      curb (~> 0.8.1)
       loofah (~> 1.2.1)
       nokogiri (~> 1.5.3)
       sax-machine (~> 0.2.0.rc1)
@@ -147,7 +147,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     facter (1.6.18)
-    faraday (0.8.6)
+    faraday (0.8.7)
       multipart-post (~> 1.1)
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)

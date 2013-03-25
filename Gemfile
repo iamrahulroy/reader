@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+gem "feedzirra", git: "https://github.com/pauldix/feedzirra.git"
 gem "nokogiri", "~> 1.5"
 gem "rails", "~> 3.2"
 gem "unicorn", "~> 4.4", :require => false
@@ -17,7 +18,6 @@ gem "acts_as_follower", "~> 0.1"
 gem "feeder", git: "https://github.com/1kplus/feeder.git"
 #gem "feeder", path: "/Users/charlie/Workspace/feeder"
 
-gem "feedzirra", git: "https://github.com/1kplus/feedzirra.git"
 gem "muck-feedbag", git: "https://github.com/1kplus/feedbag.git"
 
 gem "hpricot", "~> 0.8"
