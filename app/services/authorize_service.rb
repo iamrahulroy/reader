@@ -12,8 +12,9 @@ class AuthorizeService
     auth_obj = get_authorization
     @access_token = auth_obj[:access_token]
     @account      = auth_obj[:account]
-    @email        = auth_obj[:profile][:email]
-    @name         = auth_obj[:profile][:name]
+    #@email        = auth_obj[:profile].try(:email)
+    #@name         = auth_obj[:profile].try(:name)
+
     self
   end
 
@@ -26,12 +27,25 @@ class AuthorizeService
 
     response = conn.post do |request|
       request.headers['Content-Type'] = 'application/json'
-      request.body = '{"client_id":"'+ENV['SINGLY_CLIENT_ID']+'","client_secret":"'+ENV['SINGLY_CLIENT_SECRET']+'","code":"'+auth_code+'","profile":"all"}'
+      request.body = '{"client_id":"'+ENV['SINGLY_CLIENT_ID']+'","client_secret":"'+ENV['SINGLY_CLIENT_SECRET']+'","code":"'+@auth_code+'","profile":"all"}'
     end
 
-    obj = JSON.parse(response.body, {symbolize_names: true})
+    obj = get_profile
     ap obj
     obj
+  end
+
+  def get_profile
+    response = get("https://api.singly.com/profile?access_token=#{@access_token}")
+    Oj.load(response.body)
+  end
+
+  def get(url)
+    conn = Faraday.new(:url => url) do |c|
+      c.adapter Faraday.default_adapter
+    end
+    response = conn.get
+    response
   end
 
 end

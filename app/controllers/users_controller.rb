@@ -13,24 +13,33 @@ class UsersController < ApplicationController
     end
 
     code = params[:code]
-    obj = AuthorizeService.new(code)
 
+    conn = Faraday.new(:url => "https://api.singly.com/oauth/access_token") do |c|
+      c.response :follow_redirects
+      c.adapter Faraday.default_adapter
+    end
+    response = conn.post do |request|
+      request.headers['Content-Type'] = 'application/json'
+      request.body = '{"client_id":"'+ENV['SINGLY_CLIENT_ID']+'","client_secret":"'+ENV['SINGLY_CLIENT_SECRET']+'","code":"'+code+'","profile":"all"}'
+    end
+
+    obj = JSON.parse(response.body, {symbolize_names: true})
     # todo: finish the singly.
     # todo: create or lookup user then save account, other token ???,
 
-    access_token = obj.access_token
-    account      = obj.account
-    email        = obj.email
-    name         = obj.name
+    access_token = obj[:access_token]
+    account      = obj[:account]
+    email        = obj[:profile][:email]
+    name         = obj[:profile][:name]
 
-    if email
-      @user = User.find_or_initialize_by_email(email)
+    if account
+      @user = User.find_or_initialize_by_singly_account_id(account)
     else
       @user = User.new
     end
 
 
-    if @user.persisted? && @user.email == email
+    if @user.persisted? && @user.email == email && email
       @user.singly_access_token = access_token
       @user.singly_account_id   = account
       @user.save!
