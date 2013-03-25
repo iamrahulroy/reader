@@ -25,6 +25,8 @@ class UsersController < ApplicationController
 
     if account
       @user = User.find_or_initialize_by_singly_account_id(account)
+    else
+      @user = User.new
     end
 
 
