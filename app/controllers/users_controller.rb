@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     end
 
 
-    if @user.persisted?
+    if @user.persisted? && @user.email == email
       @user.singly_access_token = access_token
       @user.singly_account_id   = account
       @user.save!

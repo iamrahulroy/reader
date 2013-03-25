@@ -6,8 +6,10 @@ pool_size = Integer(ENV["SIDEKIQ_CONNECTION_POOL_SIZE"].to_i || 15)
 Sidekiq.configure_server do |config|
   config.redis = { :url => redis_config[rails_env], :namespace => 'reader' }
   if ENV["DATABASE_URL"]
-    ActiveRecord::Base.establish_connection "#{ENV["DATABASE_URL"]}?pool=#{pool_size}"
+    ENV["DATABASE_URL"] = "#{ENV["DATABASE_URL"]}?pool=#{pool_size}"
+    ActiveRecord::Base.establish_connection
   end
+
 end
 
 Sidekiq.configure_client do |config|
