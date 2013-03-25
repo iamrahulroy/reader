@@ -23,8 +23,8 @@ class UsersController < ApplicationController
     email        = obj.email
     name         = obj.name
 
-    if account
-      @user = User.find_or_initialize_by_singly_account_id(account)
+    if email
+      @user = User.find_or_initialize_by_email(email)
     else
       @user = User.new
     end
