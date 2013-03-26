@@ -60,7 +60,6 @@ class RestartPollerService
     step = 5
     offset = 1
     self.feeds.find_in_batches do |group|
-      binding.pry
       group.each do |feed|
         puts "#{offset.seconds}"
         PollFeed.perform_in(offset.seconds, feed.id)
