@@ -21,8 +21,10 @@ class App.SubscriptionView extends Backbone.View
     short_name = this.model.get("short_name")
     id    = this.model.id
     show = ((count > 0) || App.showAllSubscriptions)
+
     this.ctx = this.model.toJSON()
     this.ctx.count = count
+    this.ctx.anonymous = App.user.anonymous()
     if this.html?
       this.$el.find(".stream-name").first().html("#{short_name}")
       this.$el.find(".count").first().html("(#{count})")

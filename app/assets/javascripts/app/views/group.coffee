@@ -25,6 +25,7 @@ class App.GroupView extends Backbone.View
 
     @.ctx = @.model.toJSON()
     @.ctx.count = count
+    @.ctx.anonymous = App.user.anonymous()
     key = @.model.get("key")
     if @.html?
       @.$el.find(".stream-name").first().html("#{short_name}")
