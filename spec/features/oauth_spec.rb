@@ -21,8 +21,16 @@ describe "when a user tries to register with an oauth provider that does not sup
 
 
   before :each do
-
-    AuthorizeService.should_receive(:new).and_return(auth)
+    profile_object = {
+      :access_token => access_token,
+      :account => account,
+      :profile => {
+        :name => name,
+        :email => nil
+      }
+    }
+    JSON.should_receive(:parse).and_return(profile_object)
+    #AuthorizeService.should_receive(:new).and_return(auth)
     visit "/auth/callback?code=123"
   end
 

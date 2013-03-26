@@ -26,7 +26,7 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 26 Mar 2013 13:06:59 GMT
+      - Mon, 25 Mar 2013 05:19:48 GMT
       x-powered-by:
       - Express
       content-length:
@@ -37,5 +37,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"error":"invalid code, perhaps it was used twice?"}'
     http_version: 
-  recorded_at: Tue, 26 Mar 2013 13:07:18 GMT
+  recorded_at: Mon, 25 Mar 2013 05:20:06 GMT
 recorded_with: VCR 2.4.0

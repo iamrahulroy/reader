@@ -1,3 +1,5 @@
+require 'active_record/base'
+
 rails_root = Rails.root || File.dirname(__FILE__) + '/../..'
 redis_config = YAML.load_file(rails_root.to_s + '/config/redis.yml')
 rails_env = Rails.env || 'production'

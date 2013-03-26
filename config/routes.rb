@@ -3,7 +3,6 @@
 Reader::Application.routes.draw do
 
   require 'sidekiq/web'
-  require 'resque/server'
 
   constraint = lambda { |request| request.env["warden"].authenticate? and request.env['warden'].user.admin? }
   constraints constraint do
@@ -13,7 +12,6 @@ Reader::Application.routes.draw do
   devise_for :users, :controllers => { :sessions => 'users/sessions', :registrations => "users/registrations", :passwords => "users/passwords" }
 
   mount JasmineRails::Engine => "/specs" unless Rails.env.production?
-  mount Feeder::Engine => "/feeder", :as => "feeder_engine"
 
   get '/nr', :to => "application#newrelic"
   get '/stats', :to => "application#stats"

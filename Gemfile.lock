@@ -5,18 +5,6 @@ GIT
     muck-feedbag (0.7.1)
 
 GIT
-  remote: https://github.com/1kplus/feeder.git
-  revision: b8da305652d4df4727964e00976359829a16f437
-  specs:
-    feeder (0.0.1)
-      ensure-encoding
-      faraday
-      faraday_middleware
-      rails (~> 3.2)
-      resque
-      sidekiq
-
-GIT
   remote: https://github.com/pauldix/feedzirra.git
   revision: 80cd35766e40ee3058db1c5c0c25448baeea4212
   specs:
@@ -223,7 +211,6 @@ GEM
       railties
     method_source (0.8.1)
     mime-types (1.21)
-    mono_logger (1.0.0)
     multi_json (1.7.2)
     multipart-post (1.2.0)
     net-scp (1.1.0)
@@ -297,12 +284,6 @@ GEM
     redis (3.0.3)
     redis-namespace (1.2.1)
       redis (~> 3.0.0)
-    resque (1.24.1)
-      mono_logger (~> 1.0)
-      multi_json (~> 1.0)
-      redis-namespace (~> 1.2)
-      sinatra (>= 0.9.2)
-      vegas (~> 0.1.2)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -390,8 +371,6 @@ GEM
       rack
       raindrops (~> 0.7)
     vcr (2.4.0)
-    vegas (0.1.11)
-      rack (>= 1.0.0)
     visibilityjs (0.6.2)
       sprockets (>= 2)
     warden (1.2.1)
@@ -424,7 +403,6 @@ DEPENDENCIES
   erb2haml (~> 0.1)
   faraday (~> 0.8)
   faraday_middleware (~> 0.9)
-  feeder!
   feedzirra!
   figaro (~> 0.6)
   foreman (~> 0.61)

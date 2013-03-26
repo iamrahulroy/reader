@@ -41,7 +41,7 @@ class Feed < ActiveRecord::Base
   end
 
   def poll_feed
-    PollFeed.perform_async(id, feed_url) if fetchable? && public?
+    PollFeed.perform_async(id) if fetchable? && public?
   end
 
   def push_enabled?

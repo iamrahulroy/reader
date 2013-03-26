@@ -89,14 +89,13 @@ module TestHelpers
 
   def run_jobs(count = 1)
     sleep 1
-    #PollFeed.stub(:perform_in)
+    PollFeed.stub(:perform_in)
     #PollFeed.stub(:perform_async)
     #PollFeed.stub(:perform_with_newrelic_transaction_trace)
     #GetIcon.stub(:perform_async)
     count.times do
       Dir["#{Rails.root.to_s}/app/workers/*"].each do |f|
         File.basename(f,'.rb').camelize.constantize.drain
-        PollFeed.drain
       end
     end
   end

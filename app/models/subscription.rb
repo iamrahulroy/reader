@@ -134,7 +134,7 @@ class Subscription < ActiveRecord::Base
       end
 
       unless feed_model.nil?
-        Feeder::EntryProcessor.process(feed_model.id, feed.entries)
+        ProcessFeed.process_entries(feed_model.id, feed.entries)
       end
     end
     sub
