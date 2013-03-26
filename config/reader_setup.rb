@@ -6,37 +6,37 @@ module Reader
         u = User.new
         u.name = "Anonymous 1kpl.us User"
         u.email = "anonymous@1kpl.com"
-        u.password = '12345'
-        u.password_confirmation = '12345'
+        u.password = '123456'
+        u.password_confirmation = '123456'
         u.anonymous = true
         u.save :validate => false
 
         u = User.new
         u.name = "Charlie Wilkins"
         u.email = "charlie@example.com"
-        u.password = '12345'
-        u.password_confirmation = '12345'
+        u.password = '123456'
+        u.password_confirmation = '123456'
         u.save :validate => false
 
         u = User.new
         u.name = "Loren Spector"
         u.email = "loren@example.com"
-        u.password = '12345'
-        u.password_confirmation = '12345'
+        u.password = '123456'
+        u.password_confirmation = '123456'
         u.save :validate => false
 
         u = User.new
         u.name = "Josh Rhoades"
         u.email = "josh@example.com"
-        u.password = '12345'
-        u.password_confirmation = '12345'
+        u.password = '123456'
+        u.password_confirmation = '123456'
         u.save :validate => false
 
         u = User.new
         u.name = "Steve Polk"
         u.email = "steve@example.com"
-        u.password = '12345'
-        u.password_confirmation = '12345'
+        u.password = '123456'
+        u.password_confirmation = '123456'
         u.save :validate => false
       end
     end
@@ -64,25 +64,25 @@ module Reader
 
       users = User.where(:anonymous => false).all
       users.each do |user|
-        #feed_urls = File.readlines("spec/good_urls.txt").collect {|line| line}
+        feed_urls = File.readlines("spec/anon_urls.txt").collect {|line| line}
         #feed_urls = feed_urls.sample 100
-        #
-        #feed_urls.each {|fu| Subscription.find_or_create_from_url_for_user(fu,user)}
-        #
-        #subscriptions = Subscription.where(:user_id => user.id).all
-        #subscriptions.each do |sub|
-        #  groups = Group.where(:user_id => user.id).all
-        #  group = groups.sample
-        #  sub.group = group
-        #  sub.save
-        #end
+
+        feed_urls.each {|fu| Subscription.find_or_create_from_url_for_user(fu,user)}
+
+        subscriptions = Subscription.where(:user_id => user.id).all
+        subscriptions.each do |sub|
+          groups = Group.where(:user_id => user.id).all
+          group = groups.sample
+          sub.group = group
+          sub.save
+        end
       end
 
       unless User.charlie.nil?
         user = User.charlie
 
         feed_urls = File.readlines("spec/good_urls.txt").collect {|line| line}
-        feed_urls = feed_urls.sample 500
+        feed_urls = feed_urls.sample 5
 
         feed_urls.each {|fu|
           Subscription.find_or_create_from_url_for_user(fu,user)
@@ -129,6 +129,7 @@ module Reader
       Client.delete_all
       Feed.delete_all
       Entry.delete_all
+      EntryGuid.delete_all
       Subscription.delete_all
       Category.delete_all
       CategoryEntryMapping.delete_all

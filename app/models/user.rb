@@ -181,10 +181,10 @@ class User < ActiveRecord::Base
     User.where(email: 'anonymous@1kpl.us').first_or_create!(name: 'none', password: SecureRandom.hex, anonymous: true, registration_complete: true)
   end
   def self.charlie
-    User.where(email: "charliewilkins@gmail.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
+    User.where(email: "charlie@example.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
   end
   def self.loren
-    User.where(email: "loren.spector@gmail.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
+    User.where(email: "loren@example.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
   end
   def self.josh
     User.where(email: "josh@example.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)

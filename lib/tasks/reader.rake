@@ -8,21 +8,7 @@ namespace :reader do
 
     desc "poll feeds for new posts"
     task :run => :environment do
-      Feeder::Base.run!
-    end
-
-    desc "poll feeds for new posts"
-    task :unsubscribe => :environment do
-      Feeder::Base.unsubscribe_all!
-    end
-
-    desc "clear sidekiq polling queue"
-    task :clear => :environment do
-      Sidekiq.redis do |r|
-        r.del("queue:poll")
-        r.srem("queues", "poll")
-        r.zremrangebyrank("schedule", 0, -1)
-      end
+      RestartPollerService.perform
     end
 
   end

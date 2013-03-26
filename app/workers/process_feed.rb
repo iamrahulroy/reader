@@ -22,58 +22,44 @@ class ProcessFeed
 
     cutoff = DateTime.now - 1.week
     parsed_feed.entries.each do |entry|
-      #if entry.published.nil? #|| cutoff < entry.published
-        ProcessFeed.process_entry(feed_id, (entry.try(:content) || entry.summary), entry.summary, entry.entry_id, entry.url, entry.published.to_s, entry.updated.to_s, entry.title, entry.author)
-      #end
+      if entry.published.nil? || cutoff < entry.published
+        ProcessFeed.process_entry(feed_id, entry)
+      end
     end
 
     # update the subscriptions
     feed = Feed.where(id: feed_id).first
     feed.subscriptions.each {|sub| sub.update_counts }
 
-    # check if feed is now push capable
-    #unless parsed_feed.hub.nil?
-    #  feed = Feed.find feed_id
-    #  feed.hub = parsed_feed.hub.to_s
-    #  feed.topic = parsed_feed.self.to_s
-    #  feed.save
-    #end
-
     File.delete file_path
-
-  rescue Feedzirra::NoParserAvailable => e
-    ap "No valid parser error: #{file_path}"
-  rescue Errno::ENOENT => e
-  rescue ArgumentError => e
-
   end
 
 
 
-  def self.process_entries(feed_id, entries, push=false)
+  def self.process_entries(feed_id, entries)
     entries.each do |entry|
-      process_entry(feed_id, entry.content, entry.summary, entry.entry_id, entry.url, entry.published.to_s, entry.updated.to_s, entry.title, entry.author)
+      process_entry(feed_id, entry)
     end
   end
 
-  def self.process_entry(feed_id, content, summary, entry_id, url, published, updated, title, author)
-    return if url.blank?
+  def self.process_entry(feed_id, entry)
+    content = entry.respond_to?(:content) ? entry.content : nil
+    content ||= entry.summary
 
-    content = content
-    content ||= summary
+    guid = entry.respond_to?(:guid) ? entry.guid : nil
+    guid ||= entry.respond_to?(:entry_id) ? entry.entry_id : nil
+    guid ||= entry.url
 
-    guid = entry_id
-    guid ||= url
+    url = entry.url || guid
 
-    #eg = EntryGuid.find_or_initialize_by_feed_id_and_guid(feed_id, guid)
     entry_model = Entry.find_or_initialize_by_feed_id_and_guid(feed_id, guid)
 
-    entry_date = published || updated
+    entry_date = entry.published || entry.updated
     entry_date = Time.current.to_formatted_s(:db) + " UTC" unless entry_date.present?
     if entry_model.new_record?
       entry_model.attributes= {:feed_id => feed_id,
-                               :title => title,
-                               :author => author,
+                               :title => entry.title,
+                               :author => entry.author,
                                :content => content,
                                :url => url,
                                :guid => guid,
@@ -83,18 +69,12 @@ class ProcessFeed
 
     else
       entry_model.update_attributes!(:feed_id => feed_id,
-                                     :title => title,
-                                     :author => author,
+                                     :title => entry.title,
+                                     :author => entry.author,
                                      :content => content,
                                      :url => url,
                                      :guid => guid,
                                      :published_at => entry_date)
     end
-
-
-  rescue ActiveRecord::RecordNotUnique => e
-    ap "ActiveRecord::RecordNotUnique #{e}"
-  rescue ActiveRecord::RecordInvalid => e
-    ap "ActiveRecord::RecordInvalid #{e}"
   end
 end
