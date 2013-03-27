@@ -32,6 +32,9 @@ class ProcessFeed
     feed.subscriptions.each {|sub| sub.update_counts }
 
     File.delete file_path
+    PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
+  rescue Feedzirra::NoParserAvailable => e
+
   end
 
 

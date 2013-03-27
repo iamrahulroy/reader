@@ -18,13 +18,15 @@ class PollFeed
             f.write response.body
           end
           ProcessFeed.perform_async(id, file_name)
-          PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
+
         end
       when 400..599, 304
         PollFeed.perform_in(6.hours, feed.id)
       else
         PollFeed.perform_in(6.hours, feed.id)
     end
+
+  rescue Faraday::Error::ConnectionFailed => e
 
   rescue ActiveRecord::RecordNotFound => e
     # do nothing
