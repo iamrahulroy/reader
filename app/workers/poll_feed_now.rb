@@ -1,3 +1,3 @@
 class PollFeedNow < PollFeed
-  sidekiq_options :queue => :clients
+  sidekiq_options :queue => :poll_now
 end
