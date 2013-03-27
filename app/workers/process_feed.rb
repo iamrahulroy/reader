@@ -57,8 +57,10 @@ class ProcessFeed
 
     entry_model = Entry.find_or_initialize_by_feed_id_and_guid(feed_id, guid)
 
-    entry_date = entry.published || entry.updated
-    entry_date = Time.current.to_formatted_s(:db) + " UTC" unless entry_date.present?
+    entry_date = entry.published
+    entry_date ||= (entry.respond_to?(:updated)) ? entry.updated : nil
+    entry_date ||= Time.current.to_formatted_s(:db) + " UTC"
+
     if entry_model.new_record?
       entry_model.attributes= {:feed_id => feed_id,
                                :title => entry.title,

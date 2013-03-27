@@ -35,7 +35,7 @@ class PollFeed
     ap "ERROR: #{e.class.name}: #{e.message}: #{id} - #{feed.try(:feed_url)}"
   rescue URI::InvalidURIError, SocketError, FaradayMiddleware::RedirectLimitReached, Faraday::Error::TimeoutError, Faraday::Error::ConnectionFailed => e
     ap "ERROR: #{e.class.name}: #{e.message}: #{id} - #{feed.try(:feed_url)}"
-  rescue ActiveRecord::RecordNotFound => e
-    # do nothing
+  rescue ActiveRecord::StatementInvalid, ActiveRecord::RecordNotFound => e
+    ap "ERROR: #{e.class.name}: #{e.message}: #{id} - #{feed.try(:feed_url)}"
   end
 end
