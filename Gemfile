@@ -39,6 +39,7 @@ gem "figaro", "~> 0.6"
 
 gem "pry-rails", "~> 0.2"
 gem "pry-coolline"
+gem "pry-debugger"
 gem "pry-remote"
 
 group :production do
