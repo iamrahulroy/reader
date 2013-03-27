@@ -2,13 +2,14 @@
 :timeout: 60
 :verbose: true
 :pidfile: /tmp/sidekiq.pid
-:concurrency: 100
+:concurrency: 120
 :queues:
   - [poll_now, 4]
   - [process,3]
   - [opml,2]
   - [poll,1]
 :limits:
-  process: 90
-  opml: 90
-  poll: 90
+  process: 80
+  opml: 80
+  poll_now: 80
+  poll: 80
