@@ -18,7 +18,8 @@ class User < ActiveRecord::Base
 
   after_save :sanitize_name
 
-  before_save :ensure_websocket_token, :ensure_public_token
+
+  before_save :ensure_websocket_token, :ensure_public_token, :touch_last_seen_at
   has_one :facebook_authorization, :dependent => :destroy
 
   belongs_to :shared_feed, :class_name => "Feed"
@@ -205,6 +206,14 @@ class User < ActiveRecord::Base
       f.fetchable = false
       f.save!
       self.update_column "#{type}_feed_id", f.id
+    end
+
+    def touch_last_seen_at
+      if self.new_record?
+        self.last_seen_at = DateTime.now
+      else
+        self.touch(:last_seen_at)
+      end
     end
 
 end

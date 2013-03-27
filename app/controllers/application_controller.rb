@@ -65,10 +65,11 @@ class ApplicationController < ActionController::Base
       #check_reader_user
       @user_json = render_to_string :json => current_user, :serializer => UserSerializer, :root => false
       if real_user
-        #get_follower_requests
-        #set_weights
+        get_follower_requests
+        if current_user.last_seen_at < 1.minutes.ago
+          UpdateUserSubscriptions.perform_async(current_user.id)
+        end
         touch_user
-        UpdateUserSubscriptionCounts.perform_async(current_user.id)
       end
     end
 
