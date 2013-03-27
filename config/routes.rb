@@ -13,6 +13,7 @@ Reader::Application.routes.draw do
 
   mount JasmineRails::Engine => "/specs" unless Rails.env.production?
 
+  get '/nr', :to => "application#newrelic"
   get '/ping', :to => "application#newrelic"
   get '/stats', :to => "application#stats"
 
