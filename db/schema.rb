@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(:version => 20130327134023) do
     t.integer   "entry_guid_id"
   end
 
-  add_index "entries", ["feed_id", "guid"], :name => "entries_feed_id_guid", :unique => true
+  add_index "entries", ["feed_id", "guid"], :name => "entries_feed_id_guid"
   add_index "entries", ["feed_id"], :name => "index_entries_on_feed_id"
   add_index "entries", ["guid"], :name => "index_entries_on_guid"
   add_index "entries", ["id"], :name => "entries_id"
