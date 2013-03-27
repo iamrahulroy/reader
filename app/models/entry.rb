@@ -55,24 +55,27 @@ class Entry < ActiveRecord::Base
         unless url[1].nil?
           img = "<img src=\"#{url[1]}\" style=\"max-width:95%\"><br/>"
           content = img + self.content
-
         end
       end
-      self.url = url[1] if url && url.length > 1
+      if url && url.length > 1
+        link = url[1]
+        if link =~ /\/imgur\.com/
+          inline_imgur link
+        end
+
+        if link =~ /\/qkme\.me/
+          inline_quickmeme link
+        end
+
+        if link =~ /\/quickmeme\.com/
+          inline_quickmeme link
+        end
+      end
 
       self.content = content
     end
 
-    if self.url =~ /\/imgur\.com/
-      inline_imgur
-    end
 
-    if self.url =~ /\/qkme\.me/
-      inline_quickmeme
-    end
-    if self.url =~ /\/quickmeme\.com/
-      inline_quickmeme
-    end
   end
 
   def embed_content
@@ -85,7 +88,7 @@ class Entry < ActiveRecord::Base
     end
   end
 
-  def inline_imgur
+  def inline_imgur(url)
     body = Faraday.get(self.url).body
     doc = Nokogiri::HTML(body)
     images = doc.css(".image img")
@@ -99,7 +102,7 @@ class Entry < ActiveRecord::Base
 
   end
 
-  def inline_quickmeme
+  def inline_quickmeme(url)
     body = Faraday.get(self.url).body
     doc = Nokogiri::HTML(body)
     images = doc.css("#img")
