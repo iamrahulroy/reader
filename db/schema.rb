@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130324210431) do
+ActiveRecord::Schema.define(:version => 20130327134023) do
 
   create_table "categories", :force => true do |t|
     t.string    "name"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(:version => 20130324210431) do
     t.integer   "entry_guid_id"
   end
 
+  add_index "entries", ["feed_id", "guid"], :name => "entries_feed_id_guid", :unique => true
   add_index "entries", ["feed_id"], :name => "index_entries_on_feed_id"
   add_index "entries", ["guid"], :name => "index_entries_on_guid"
   add_index "entries", ["id"], :name => "entries_id"
@@ -110,25 +111,27 @@ ActiveRecord::Schema.define(:version => 20130324210431) do
   add_index "feed_icons", ["feed_id"], :name => "index_feed_icons_on_feed_id"
 
   create_table "feeds", :force => true do |t|
-    t.string    "name",                                               :null => false
+    t.string    "name",                                                     :null => false
     t.integer   "user_id"
-    t.string    "feed_url",        :limit => 4096
-    t.string    "site_url",        :limit => 4096
+    t.string    "feed_url",              :limit => 4096
+    t.string    "site_url",              :limit => 4096
     t.text      "description"
-    t.boolean   "suggested",                       :default => false
-    t.boolean   "private",                         :default => false
-    t.timestamp "fetched_at",      :limit => 6
-    t.timestamp "created_at",      :limit => 6,                       :null => false
-    t.timestamp "updated_at",      :limit => 6,                       :null => false
-    t.boolean   "fetchable",                       :default => true
+    t.boolean   "suggested",                             :default => false
+    t.boolean   "private",                               :default => false
+    t.timestamp "fetched_at",            :limit => 6
+    t.timestamp "created_at",            :limit => 6,                       :null => false
+    t.timestamp "updated_at",            :limit => 6,                       :null => false
+    t.boolean   "fetchable",                             :default => true
     t.text      "hub"
     t.text      "topic"
     t.string    "token"
-    t.integer   "timeouts",                        :default => 0
-    t.integer   "parse_errors",                    :default => 0
-    t.boolean   "push_subscribed",                 :default => false
+    t.integer   "timeouts",                              :default => 0
+    t.integer   "parse_errors",                          :default => 0
+    t.boolean   "push_subscribed",                       :default => false
     t.string    "secret_token"
     t.string    "etag"
+    t.integer   "average_posts_per_day"
+    t.integer   "subscription_count"
   end
 
   add_index "feeds", ["feed_url"], :name => "index_feeds_on_feed_url"
@@ -213,6 +216,7 @@ ActiveRecord::Schema.define(:version => 20130324210431) do
     t.boolean   "deleted",                      :default => false
     t.string    "item_view"
     t.boolean   "favorite",                     :default => false
+    t.string    "sort"
   end
 
   add_index "subscriptions", ["id"], :name => "subscriptions_id"
@@ -228,7 +232,7 @@ ActiveRecord::Schema.define(:version => 20130324210431) do
 
   create_table "users", :force => true do |t|
     t.string    "email",                               :default => ""
-    t.string    "name",                                                   :null => false
+    t.string    "name"
     t.string    "encrypted_password",                  :default => "",    :null => false
     t.string    "reset_password_token"
     t.timestamp "reset_password_sent_at", :limit => 6
@@ -252,6 +256,11 @@ ActiveRecord::Schema.define(:version => 20130324210431) do
     t.boolean   "share_to_twitter"
     t.boolean   "share_to_facebook"
     t.boolean   "registration_complete",               :default => false
+    t.integer   "subscription_count"
+    t.integer   "unread_count"
+    t.integer   "starred_count"
+    t.integer   "shared_count"
+    t.integer   "all_count"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
