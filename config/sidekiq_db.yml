@@ -4,12 +4,11 @@
 :pidfile: /tmp/sidekiq.pid
 :concurrency: 120
 :queues:
-  - [poll_now, 4]
-  - [process,3]
+  - [process,4]
+  - [poll_now, 3]
   - [opml,2]
   - [poll,1]
 :limits:
-  process: 80
-  opml: 80
+  opml: 10
   poll_now: 80
   poll: 80
