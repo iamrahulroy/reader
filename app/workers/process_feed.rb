@@ -33,9 +33,8 @@ class ProcessFeed
 
     File.delete file_path
     PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
-  rescue ArgumentError, ActiveRecord::RecordInvalid, Feedzirra::NoParserAvailable => e
-
-    ap "#{e.class.name}: #{e.message}: #{feed_id} - #{feed.try(:feed_url)}"
+  rescue ArgumentError, ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid, Feedzirra::NoParserAvailable => e
+    ap "ERROR: #{e.class.name}: #{e.message}: #{feed_id} - #{feed.try(:feed_url)}"
   end
 
 
