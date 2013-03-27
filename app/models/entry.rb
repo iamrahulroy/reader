@@ -55,9 +55,11 @@ class Entry < ActiveRecord::Base
         unless url[1].nil?
           img = "<img src=\"#{url[1]}\" style=\"max-width:95%\"><br/>"
           content = img + self.content
+
         end
       end
-      self.url = url[1]
+      self.url = url[1] if url[1]
+
       self.content = content
     end
 
@@ -74,13 +76,13 @@ class Entry < ActiveRecord::Base
   end
 
   def embed_content
-    #if Rails.env.production?
-    #  if self.feed.feed_url =~ /reddit\.com/ || self.feed.feed_url =~ /news\.ycombinator\.com\/rss/
-    #    unless url =~ /reddit\.com/ || url =~ /imgur\.com/ || url =~ /qkme\.me/
-    #      self.content = "#{embed_urls(url.dup, false)}<p/>#{self.content}"
-    #    end
-    #  end
-    #end
+    if Rails.env.production?
+      if self.feed.feed_url =~ /reddit\.com/ || self.feed.feed_url =~ /news\.ycombinator\.com\/rss/
+        unless url =~ /reddit\.com/ || url =~ /imgur\.com/ || url =~ /qkme\.me/
+          self.content = "#{embed_urls(url.dup, false)}<p/>#{self.content}"
+        end
+      end
+    end
   end
 
   def inline_imgur
