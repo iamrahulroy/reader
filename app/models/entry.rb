@@ -58,7 +58,7 @@ class Entry < ActiveRecord::Base
 
         end
       end
-      self.url = url[1] if url[1]
+      self.url = url[1] if url && url.length > 1
 
       self.content = content
     end
