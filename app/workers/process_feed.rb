@@ -20,7 +20,7 @@ class ProcessFeed
       return
     end
 
-    cutoff = DateTime.now - 1.week
+    cutoff = DateTime.now - 1.days
     parsed_feed.entries.each do |entry|
       if entry.published.nil? || (entry.respond_to?(:published) && cutoff < entry.published)
         ProcessFeed.process_entry(feed_id, entry)
