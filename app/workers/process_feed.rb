@@ -22,7 +22,7 @@ class ProcessFeed
 
     cutoff = DateTime.now - 1.week
     parsed_feed.entries.each do |entry|
-      if entry.published.nil? || cutoff < entry.published
+      if entry.published.nil? || (entry.respond_to?(:published) && cutoff < entry.published)
         ProcessFeed.process_entry(feed_id, entry)
       end
     end
@@ -33,7 +33,7 @@ class ProcessFeed
 
     File.delete file_path
     PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
-  rescue Feedzirra::NoParserAvailable => e
+  rescue ActiveRecord::RecordInvalid, Feedzirra::NoParserAvailable => e
 
   end
 

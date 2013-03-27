@@ -27,9 +27,10 @@ class PollFeed
     end
 
 
+  rescue NoMethodError, ArgumentError => e
   rescue TypeError => e
-  rescue Errno::ETIMEDOUT => e
-  rescue Faraday::Error::ConnectionFailed => e
+  rescue Encoding::CompatibilityError, Zlib::DataError, Errno::EHOSTUNREACH, Errno::ETIMEDOUT => e
+  rescue URI::InvalidURIError, SocketError, FaradayMiddleware::RedirectLimitReached, Faraday::Error::TimeoutError, Faraday::Error::ConnectionFailed => e
   rescue ActiveRecord::RecordNotFound => e
     # do nothing
   end
