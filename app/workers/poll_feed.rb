@@ -26,8 +26,10 @@ class PollFeed
         PollFeed.perform_in(6.hours, feed.id)
     end
 
-  rescue Faraday::Error::ConnectionFailed => e
 
+  rescue TypeError => e
+  rescue Errno::ETIMEDOUT => e
+  rescue Faraday::Error::ConnectionFailed => e
   rescue ActiveRecord::RecordNotFound => e
     # do nothing
   end
