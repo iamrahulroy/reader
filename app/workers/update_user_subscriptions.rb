@@ -1,4 +1,4 @@
-class UpdateUserSubscriptionCounts
+class UpdateUserSubscriptions
   include Sidekiq::Worker
   sidekiq_options :queue => :clients
   def perform(user_id)
