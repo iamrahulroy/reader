@@ -100,5 +100,10 @@ module TestHelpers
     end
   end
 
+  def clear_jobs
+    Dir["#{Rails.root.to_s}/app/workers/*"].each do |f|
+      File.basename(f,'.rb').camelize.constantize.jobs.clear
+    end
+  end
 
 end

@@ -2,52 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.zefrank.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.7
-  response:
-    status:
-      code: 302
-      message: 
-    headers:
-      date:
-      - Mon, 25 Mar 2013 14:55:08 GMT
-      server:
-      - Apache/2.0.64 (Unix) mod_ssl/2.0.64 OpenSSL/0.9.7a mod_bwlimited/1.4 PHP/5.2.17
-        mod_perl/2.0.5 Perl/v5.8.8
-      location:
-      - http://feeds.feedburner.com/zefrank
-      content-length:
-      - '219'
-      connection:
-      - close
-      content-type:
-      - text/html; charset=iso-8859-1
-    body:
-      encoding: US-ASCII
-      string: ! '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-
-        <html><head>
-
-        <title>302 Found</title>
-
-        </head><body>
-
-        <h1>Found</h1>
-
-        <p>The document has moved <a href="http://feeds.feedburner.com/zefrank">here</a>.</p>
-
-        </body></html>
-
-'
-    http_version: 
-  recorded_at: Mon, 25 Mar 2013 14:55:12 GMT
-- request:
-    method: get
     uri: http://feeds.feedburner.com/zefrank
     body:
       encoding: US-ASCII
@@ -60,25 +14,25 @@ http_interactions:
       code: 200
       message: 
     headers:
-      content-type:
+      !binary "Y29udGVudC10eXBl":
       - text/xml; charset=UTF-8
-      etag:
+      !binary "ZXRhZw==":
       - Ay256cwFBVnRBAnf6A9vSxTt08w
-      last-modified:
-      - Mon, 25 Mar 2013 14:33:10 GMT
-      date:
-      - Mon, 25 Mar 2013 14:55:11 GMT
-      expires:
-      - Mon, 25 Mar 2013 14:55:11 GMT
-      cache-control:
+      !binary "bGFzdC1tb2RpZmllZA==":
+      - Thu, 28 Mar 2013 20:36:13 GMT
+      !binary "ZGF0ZQ==":
+      - Thu, 28 Mar 2013 21:07:33 GMT
+      !binary "ZXhwaXJlcw==":
+      - Thu, 28 Mar 2013 21:07:33 GMT
+      !binary "Y2FjaGUtY29udHJvbA==":
       - private, max-age=0
-      x-content-type-options:
+      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
       - nosniff
-      x-xss-protection:
+      !binary "eC14c3MtcHJvdGVjdGlvbg==":
       - 1; mode=block
-      server:
+      !binary "c2VydmVy":
       - GSE
-      connection:
+      !binary "Y29ubmVjdGlvbg==":
       - close
     body:
       encoding: US-ASCII
@@ -170,5 +124,5 @@ http_interactions:
         isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/10/the_cutest_hall.html</guid>\r\n<category
         />\r\n<pubDate>Wed, 24 Oct 2012 16:53:16 -0500</pubDate>\r\n</item>\r\n\r\n\r\n</channel>\r\n</rss>\r\n"
     http_version: 
-  recorded_at: Mon, 25 Mar 2013 14:55:12 GMT
+  recorded_at: Thu, 28 Mar 2013 21:07:33 GMT
 recorded_with: VCR 2.4.0

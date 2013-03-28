@@ -20,15 +20,17 @@ class ProcessFeed
       return
     end
 
+    feed = Feed.where(id: id).first
+
     cutoff = DateTime.now - 1.days
     parsed_feed.entries.each do |entry|
-      if entry.published.nil? || (entry.respond_to?(:published) && cutoff < entry.published) || feed.items.count < 25
+      if (entry.respond_to?(:published) && entry.published && cutoff < entry.published) || feed.entries.count < 100
         ProcessFeed.process_entry(id, entry)
       end
     end
 
     # update the subscriptions
-    feed = Feed.where(id: id).first
+
     feed.subscriptions.each {|sub| sub.update_counts }
 
     File.delete file_path
@@ -36,7 +38,9 @@ class ProcessFeed
   rescue
     feed = Feed.where(id: id).first
     feed.increment(:feed_errors) if feed
-    ap "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
+    em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
+    ap em
+    raise em if Rails.env.test?
   end
 
 

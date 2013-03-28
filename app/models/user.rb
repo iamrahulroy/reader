@@ -155,7 +155,7 @@ class User < ActiveRecord::Base
   end
 
   def follow_requests
-    Follow.where(:followable_id => self.id).where(:blocked => true).where(:ignored => false).all.map {|f| f.follower }
+    Follow.where(:followable_id => self.id).where(:blocked => true).where(:ignored => false).all.map(&:follower)
   end
 
   def follow_and_unblock(user)

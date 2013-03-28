@@ -10,7 +10,9 @@ class FetchFeedService
     @url = options[:url] || url
     @etag = options[:etag] || etag
 
+    ap "get #{@url}"
     response = get_response
+    ap "got #{@url}"
     @etag = response.headers[:etag]
     @status = response.status
 

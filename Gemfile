@@ -11,7 +11,7 @@ gem "sinatra", "~> 1.3", :require => false
 gem "slim", "~> 1.3", :require => false
 gem "thin", "~> 1.5", :require => false
 
-gem "pg", "~> 0.14"
+gem "pg", "~> 0.15"
 gem "devise", "~> 2.2"
 gem "acts_as_follower", "~> 0.1"
 
@@ -61,9 +61,11 @@ group :test, :development do
   gem "rspec-rails" #, "~> 2.12"
   gem "quiet_assets" #, "~> 1.0"
   gem "jasmine-rails" #, "~> 0.3"
+  gem "marginalia"
 end
 
 group :test do
+  gem "timecop"
   gem "selenium-webdriver"
   gem "database_cleaner" #, "~> 0.9"
   gem "capybara" #, "~> 2.0"

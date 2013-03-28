@@ -6,8 +6,8 @@ class PollFeed
   def perform(id)
 
     feed = Feed.find id
-    response = FetchFeedService.perform(:url => feed.feed_url, :etag => feed.etag)
 
+    response = FetchFeedService.perform(:url => feed.feed_url, :etag => feed.etag)
     feed.update_column(:etag, response.etag)
     feed.touch(:fetched_at)
 
@@ -18,7 +18,8 @@ class PollFeed
           File.open(file_name, "w") do |f|
             f.write response.body
           end
-          ProcessFeed.perform_async(id, file_name)
+          #ProcessFeed.perform_async(id, file_name)
+          ProcessFeed.new.perform(id, file_name)
 
         end
       when 400..599, 304
@@ -31,6 +32,8 @@ class PollFeed
   rescue
     feed = Feed.where(id: id).first
     feed.increment(:feed_errors) if feed
-    ap "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
+    em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
+    ap em
+    raise em if Rails.env.test?
   end
 end

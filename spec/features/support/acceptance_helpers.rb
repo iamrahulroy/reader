@@ -31,7 +31,6 @@ module AcceptanceHelpers
 
     find("#login-submit-link-btn").click
     sleep 1
-    visit "/"
     user.reload
   end
 

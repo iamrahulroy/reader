@@ -38,6 +38,8 @@ RSpec.configure do |config|
   end
 
   config.after :each do
+    rspec_reset
+    clear_jobs
     Capybara.reset_sessions!    # Forget the (simulated) browser state
     Capybara.use_default_driver # Revert Capybara.current_driver to Capybara.default_driver
   end

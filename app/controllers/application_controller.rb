@@ -63,14 +63,18 @@ class ApplicationController < ActionController::Base
   private
 
     def index_setup
-      #check_reader_user
+      check_reader_user
       @user_json = render_to_string :json => current_user, :serializer => UserSerializer, :root => false
       if real_user
-        #get_follower_requests
-        if current_user.last_seen_at < 1.minutes.ago
-          UpdateUserSubscriptions.perform_async(current_user.id)
-        end
+        get_follower_requests
+        update_user_subscriptions
         touch_user
+      end
+    end
+
+    def update_user_subscriptions
+      if current_user.last_seen_at < 5.minutes.ago
+        UpdateUserSubscriptions.perform_async(current_user.id)
       end
     end
 
@@ -81,7 +85,7 @@ class ApplicationController < ActionController::Base
     end
 
     def get_follower_requests
-      unless real_user.nil?
+      if real_user
         @follow_requests = current_user.follow_requests
       end
     end

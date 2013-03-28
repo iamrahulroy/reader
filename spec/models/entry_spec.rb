@@ -36,11 +36,11 @@ END
 
   describe "#save" do
     before :each do
-      class PollFeed
-        def perform(*args)
-
-        end
-      end
+      #class PollFeed
+      #  def perform(*args)
+      #
+      #  end
+      #end
     end
 
     it "creates an entry guid model and updates the reference" do
