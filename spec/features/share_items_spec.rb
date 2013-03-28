@@ -10,7 +10,6 @@ feature "Users share items with each other", :js => true, :vcr => true do
     user_b.follow_and_unblock(user_a)
 
     sign_in_as(user_a)
-    binding.pry
     click_link "Add feeds"
 
     fill_in "Add a feed", :with => "http://xkcd.com/atom.xml"
