@@ -1,6 +1,6 @@
 # Add application configuration variables here, as shown below.
 
-RAILS_SECRET: "123"
+RAILS_SECRET: "09a0375404693a3cf3ae6c37aba2ff93"
 PRIVATE_PUB_SECRET: '123'
 EMBEDLY_KEY: '123'
 UPDATE_FREQUENCY: "20"
