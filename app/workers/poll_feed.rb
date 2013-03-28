@@ -27,15 +27,8 @@ class PollFeed
     end
 
 
-  rescue NoMethodError, ArgumentError => e
-    ap "ERROR: #{e.class.name}: #{e.message}: #{id} - #{feed.try(:feed_url)}"
-  rescue TypeError => e
-    ap "ERROR: #{e.class.name}: #{e.message}: #{id} - #{feed.try(:feed_url)}"
-  rescue Encoding::CompatibilityError, Zlib::DataError, Errno::EHOSTUNREACH, Errno::ETIMEDOUT => e
-    ap "ERROR: #{e.class.name}: #{e.message}: #{id} - #{feed.try(:feed_url)}"
-  rescue URI::InvalidURIError, SocketError, FaradayMiddleware::RedirectLimitReached, Faraday::Error::TimeoutError, Faraday::Error::ConnectionFailed => e
-    ap "ERROR: #{e.class.name}: #{e.message}: #{id} - #{feed.try(:feed_url)}"
-  rescue ActiveRecord::StatementInvalid, ActiveRecord::RecordNotFound => e
-    ap "ERROR: #{e.class.name}: #{e.message}: #{id} - #{feed.try(:feed_url)}"
+  rescue
+    feed.increment(:errors) if feed
+    ap "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
   end
 end

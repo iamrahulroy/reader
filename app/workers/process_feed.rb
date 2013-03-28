@@ -33,8 +33,9 @@ class ProcessFeed
 
     File.delete file_path
     PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
-  rescue NoMethodError, ArgumentError, ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid, Feedzirra::NoParserAvailable => e
-    ap "ERROR: #{e.class.name}: #{e.message}: #{feed_id} - #{feed.try(:feed_url)}"
+  rescue
+    feed.increment(:errors) if feed
+    ap "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
   end
 
 
