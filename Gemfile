@@ -46,8 +46,8 @@ group :production do
 end
 
 group :development do
-
   gem "binding_of_caller", "~> 0.7"
+  gem "better_errors", "~> 0.6"
   gem "meta_request", "~> 0.2"
   gem "erb2haml", "~> 0.1"
   gem "mails_viewer", "~> 0.0"
@@ -55,7 +55,6 @@ group :development do
 end
 
 group :test, :development do
-  gem "better_errors", "~> 0.6"
   gem "ruby_gntp"
   gem "awesome_print" #, "~> 1.1"
   gem "rspec-rails" #, "~> 2.12"
