@@ -12,7 +12,10 @@ require 'faraday'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f }
 
+#Capybara.javascript_driver = :webkit
+
 RSpec.configure do |config|
+
   config.treat_symbols_as_metadata_keys_with_true_values = true
 end
 
@@ -35,6 +38,10 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
     ActionMailer::Base.deliveries = []
     Capybara.reset_sessions!
+    if page && page.respond_to?(:driver) && page.driver.respond_to?(:resize_window)
+      page.driver.resize_window(1500, 1500)
+    end
+
   end
 
   config.after :each do

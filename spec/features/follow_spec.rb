@@ -35,6 +35,7 @@ feature "User A can follow User B", :js => true do
 
     within "#home" do
       click_button "Accept & Follow User A"
+      sleep 1
     end
 
 
