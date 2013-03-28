@@ -28,7 +28,7 @@ class PollFeed
 
 
   rescue
-    feed.increment(:errors) if feed
+    feed.increment(:feed_errors) if feed
     ap "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
   end
 end

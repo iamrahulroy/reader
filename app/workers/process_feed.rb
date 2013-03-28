@@ -22,7 +22,7 @@ class ProcessFeed
 
     cutoff = DateTime.now - 1.days
     parsed_feed.entries.each do |entry|
-      if entry.published.nil? || (entry.respond_to?(:published) && cutoff < entry.published)
+      if entry.published.nil? || (entry.respond_to?(:published) && cutoff < entry.published) || feed.items.count < 25
         ProcessFeed.process_entry(feed_id, entry)
       end
     end
@@ -34,7 +34,7 @@ class ProcessFeed
     File.delete file_path
     PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
   rescue
-    feed.increment(:errors) if feed
+    feed.increment(:feed_errors) if feed
     ap "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
   end
 
