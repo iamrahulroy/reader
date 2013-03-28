@@ -36,7 +36,11 @@ class UsersController < ApplicationController
     @user = User.find_by_email(email)
     unless @user
       if account
-        @user = User.find_or_initialize_by_singly_account_id(account)
+        if real_user
+          @user = current_user
+        else
+          @user = User.find_or_initialize_by_singly_account_id(account)
+        end
       else
         @user = User.new
       end

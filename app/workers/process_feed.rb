@@ -1,3 +1,6 @@
+require 'rss'
+require 'open-uri'
+
 class ProcessFeed
   include Sidekiq::Worker
   sidekiq_options :queue => :process
@@ -19,6 +22,10 @@ class ProcessFeed
       ap "THIS BROKE"
       return
     end
+
+    #parsed_feed = RSS::Parser.parse(body)
+
+    #binding.pry
 
     feed = Feed.where(id: id).first
 
