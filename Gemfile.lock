@@ -341,8 +341,6 @@ GEM
       sinatra
       slim
       sprockets
-    sidekiq-limit_fetch (1.2)
-      sidekiq (>= 2.6.5, < 3)
     sinatra (1.3.6)
       rack (~> 1.4)
       rack-protection (~> 1.3)
@@ -447,7 +445,6 @@ DEPENDENCIES
   selenium-webdriver
   sidekiq (~> 2.6)
   sidekiq-failures (~> 0.1)
-  sidekiq-limit_fetch (~> 1.1)
   sinatra (~> 1.3)
   slim (~> 1.3)
   thin (~> 1.5)

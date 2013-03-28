@@ -8,7 +8,4 @@
   - [poll_now, 3]
   - [opml,2]
   - [poll,1]
-:limits:
-  opml: 10
-  poll_now: 80
-  poll: 80
+

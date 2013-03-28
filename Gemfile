@@ -7,7 +7,6 @@ gem "god", "~> 0.13"
 
 gem "sidekiq", "~> 2.6"
 gem "sidekiq-failures", "~> 0.1"
-gem "sidekiq-limit_fetch", "~> 1.1"
 gem "sinatra", "~> 1.3", :require => false
 gem "slim", "~> 1.3", :require => false
 gem "thin", "~> 1.5", :require => false
