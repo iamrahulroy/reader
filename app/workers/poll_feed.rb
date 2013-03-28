@@ -9,6 +9,7 @@ class PollFeed
     response = FetchFeedService.perform(:url => feed.feed_url, :etag => feed.etag)
 
     feed.update_column(:etag, response.etag)
+    feed.touch(:fetched_at)
 
     case response.status
       when 200

@@ -89,7 +89,7 @@ class Entry < ActiveRecord::Base
   end
 
   def inline_imgur(url)
-    body = Faraday.get(self.url).body
+    body = Faraday.get(url).body
     doc = Nokogiri::HTML(body)
     images = doc.css(".image img")
     chunk = ""
@@ -103,7 +103,7 @@ class Entry < ActiveRecord::Base
   end
 
   def inline_quickmeme(url)
-    body = Faraday.get(self.url).body
+    body = Faraday.get(url).body
     doc = Nokogiri::HTML(body)
     images = doc.css("#img")
     chunk = ""
