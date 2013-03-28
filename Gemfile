@@ -60,7 +60,7 @@ group :test, :development do
   gem "rspec-rails" #, "~> 2.12"
   gem "quiet_assets" #, "~> 1.0"
   gem "jasmine-rails" #, "~> 0.3"
-  gem "marginalia"
+  #gem "marginalia"
 end
 
 group :test do

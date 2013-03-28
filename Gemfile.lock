@@ -213,9 +213,6 @@ GEM
       jquery-datatables-rails
       jquery-rails (>= 2.0.1)
       rails (>= 3.1.0)
-    marginalia (1.1.2)
-      actionpack (>= 2.3, < 3.3)
-      activerecord (>= 2.3, < 3.3)
     meta_request (0.2.2)
       rack-contrib
       railties
@@ -428,7 +425,6 @@ DEPENDENCIES
   libxml-ruby (~> 2.3)
   loofah (~> 1.2)
   mails_viewer (~> 0.0)
-  marginalia
   meta_request (~> 0.2)
   muck-feedbag!
   newrelic_rpm (~> 3.5)
