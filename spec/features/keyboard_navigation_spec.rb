@@ -13,7 +13,8 @@ feature "Keyboard navigation", :js => true, :vcr => true do
     sleep 1
     page.driver.browser.execute_script "App.showList()"
     within "#list" do
-      click_link "MAKE"
+      find("#subscription-#{user.subscriptions.first.id} .subscription-link a").click
+      #click_link "MAKE"
     end
 
     unread_item_count = user.items.filter(:unread).count
