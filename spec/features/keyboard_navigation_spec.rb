@@ -11,12 +11,13 @@ feature "Keyboard navigation", :js => true, :vcr => true do
     run_jobs
     sign_in_as(user)
     sleep 1
+    page.driver.browser.execute_script "App.showList()"
     within "#list" do
       click_link "MAKE"
     end
 
     unread_item_count = user.items.filter(:unread).count
-    unread_item_count.should == 26
+    unread_item_count.should == 14
     unread_item_count.times do
       sleep 0.5
       page.driver.browser.execute_script "App.nextItem()"

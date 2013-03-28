@@ -32,11 +32,16 @@ class UsersController < ApplicationController
     email        = obj[:profile][:email]
     name         = obj[:profile][:name]
 
-    if account
-      @user = User.find_or_initialize_by_singly_account_id(account)
-    else
-      @user = User.new
+
+    @user = User.find_by_email(email)
+    unless @user
+      if account
+        @user = User.find_or_initialize_by_singly_account_id(account)
+      else
+        @user = User.new
+      end
     end
+
 
 
     if @user.persisted? && @user.email == email && email
