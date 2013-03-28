@@ -2,7 +2,7 @@ class ProcessFeed
   include Sidekiq::Worker
   sidekiq_options :queue => :process
 
-  def perform(feed_id, file_path)
+  def perform(id, file_path)
     body = File.open(file_path, "r").read
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
     body = body.encode('UTF-16', :invalid => :replace, :replace => '')
@@ -23,12 +23,12 @@ class ProcessFeed
     cutoff = DateTime.now - 1.days
     parsed_feed.entries.each do |entry|
       if entry.published.nil? || (entry.respond_to?(:published) && cutoff < entry.published) || feed.items.count < 25
-        ProcessFeed.process_entry(feed_id, entry)
+        ProcessFeed.process_entry(id, entry)
       end
     end
 
     # update the subscriptions
-    feed = Feed.where(id: feed_id).first
+    feed = Feed.where(id: id).first
     feed.subscriptions.each {|sub| sub.update_counts }
 
     File.delete file_path
