@@ -1,0 +1,16 @@
+# Add application configuration variables here, as shown below.
+
+RAILS_SECRET: "123"
+PRIVATE_PUB_SECRET: '123'
+EMBEDLY_KEY: '123'
+UPDATE_FREQUENCY: "20"
+BATCH_COUNT_MAX: "20"
+SINGLY_CLIENT_ID: '123'
+SINGLY_CLIENT_SECRET: '123'
+DATABASE_URL: "postgres://reader@localhost/reader_development"
+SIDEKIQ_CONNECTION_POOL_SIZE: "100"
+FACEBOOK_API_KEY: ""
+FACEBOOK_API_SECRET: ""
+GOOGLE_API_KEY: ""
+GOOGLE_API_SECRET: ""
+

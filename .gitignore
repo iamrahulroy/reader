@@ -32,8 +32,7 @@ prep
 db-prep
 deploy
 noko
-secret_token.rb
 
-config/application.yml
+
 private_pub_thin.yml
 public/feed_icon
