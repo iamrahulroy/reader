@@ -27,12 +27,10 @@
 .cap_task_cache
 deploy.rb
 newrelic.yml
-private_pub.yml
 prep
 db-prep
 deploy
 noko
 
 
-private_pub_thin.yml
 public/feed_icon
