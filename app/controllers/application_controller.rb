@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     redirect_to "/login" unless current_user && current_user.admin?
     @user_count = User.unscoped.count - 1 # anonymous user
     @item_count = Item.unscoped.count
+    @entry_count = Entry.count
     @comment_count = Comment.unscoped.count
     @sub_count  = Subscription.unscoped.count
     @feed_count = Feed.unscoped.count
