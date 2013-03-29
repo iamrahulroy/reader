@@ -74,14 +74,13 @@ class Entry < ActiveRecord::Base
 
       self.content = content
     end
-
-
   end
 
   def embed_content
     if Rails.env.production?
       if self.feed.feed_url =~ /reddit\.com/ || self.feed.feed_url =~ /news\.ycombinator\.com\/rss/
         unless url =~ /reddit\.com/ || url =~ /imgur\.com/ || url =~ /qkme\.me/
+          url = self.content.match /<a href="([^"]*)">\[link\]/ if url =~ /reddit\.com/
           self.content = "#{embed_urls(url.dup, false)}<p/>#{self.content}"
         end
       end

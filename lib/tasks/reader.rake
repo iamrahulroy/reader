@@ -22,6 +22,15 @@ namespace :reader do
     end
   end
 
+  desc "set subscription count on feeds"
+  task :update_feed_subscription_count => :environment do
+    Feed.find_each do |feed|
+      c = feed.subscriptions.count
+      puts "#{feed.name} - #{c} subscriptions"
+      feed.update_column :subscription_count, c
+    end
+  end
+
   namespace :fix do
     desc "fix entries without published_at dates"
     task :entry_published_dates => :environment do
