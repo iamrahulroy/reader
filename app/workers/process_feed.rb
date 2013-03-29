@@ -44,7 +44,6 @@ class ProcessFeed
     feed.increment!(:parse_errors) if feed
     em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
     ap em
-    binding.pry
   end
 
 
@@ -82,9 +81,7 @@ class ProcessFeed
                                  :guid => guid,
                                  :published_at => entry_date}
 
-        unless entry_model.save
-          binding.pry
-        end
+        entry_model.save!
 
       else
         entry_model.update_attributes!(:feed_id => feed_id,

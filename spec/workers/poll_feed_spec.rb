@@ -31,7 +31,6 @@ describe PollFeed do
       end
       PollFeed.drain
 
-      binding.pry
     end
 
   end
