@@ -21,6 +21,19 @@ describe PollFeed do
       feed.reload.etag.should == "Ay256cwFBVnRBAnf6A9vSxTt08w"
     end
 
+    it "polls bad feeds" do
+      pending "No need to run this anymore"
+      feed_urls = File.readlines("spec/failed_urls.txt").collect {|line| line}
+      feed_urls.each {|fu| Feed.create!(name: fu, feed_url: fu, site_url: fu) }
+
+      user.subscriptions.each do |sub|
+        PollFeed.perform_async(sub.feed_id)
+      end
+      PollFeed.drain
+
+      binding.pry
+    end
+
   end
 
 end

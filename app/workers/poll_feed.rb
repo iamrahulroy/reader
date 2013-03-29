@@ -8,11 +8,12 @@ class PollFeed
     feed = Feed.find id
 
     response = FetchFeedService.perform(:url => feed.feed_url, :etag => feed.etag)
+
     feed.update_column(:etag, response.etag)
     feed.touch(:fetched_at)
-
     case response.status
       when 200
+
         if response.body && response.body.present?
           file_name = "#{Rails.root}/tmp/xmls/#{id}-#{rand(0..9999)}.xml"
           File.open(file_name, "w") do |f|
@@ -28,12 +29,13 @@ class PollFeed
         PollFeed.perform_in(6.hours, feed.id)
     end
 
-
+  rescue Faraday::Error::ConnectionFailed => e
+    feed = Feed.where(id: id).first
+    feed.increment!(:parse_errors) if feed
   rescue
     feed = Feed.where(id: id).first
     feed.increment!(:feed_errors) if feed
     em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
     ap em
-    raise em if Rails.env.test?
   end
 end

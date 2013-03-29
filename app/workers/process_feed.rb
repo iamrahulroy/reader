@@ -23,10 +23,6 @@ class ProcessFeed
       return
     end
 
-    #parsed_feed = RSS::Parser.parse(body)
-
-    #binding.pry
-
     feed = Feed.where(id: id).first
 
     cutoff = DateTime.now - 1.days
@@ -42,12 +38,13 @@ class ProcessFeed
 
     File.delete file_path
     PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
+
   rescue
     feed = Feed.where(id: id).first
     feed.increment!(:parse_errors) if feed
     em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
     ap em
-    raise em if Rails.env.test?
+    binding.pry
   end
 
 
@@ -65,34 +62,39 @@ class ProcessFeed
     guid = entry.respond_to?(:guid) ? entry.guid : nil
     guid ||= entry.respond_to?(:entry_id) ? entry.entry_id : nil
     guid ||= entry.url
+    guid ||= entry.entry_id
+    guid ||= entry.title
 
     url = entry.url || guid
+    if url && guid
+      entry_model = Entry.find_or_initialize_by_feed_id_and_guid(feed_id, guid)
 
-    entry_model = Entry.find_or_initialize_by_feed_id_and_guid(feed_id, guid)
+      entry_date = entry.published
+      entry_date ||= (entry.respond_to?(:updated)) ? entry.updated : nil
+      entry_date ||= Time.current.to_formatted_s(:db) + " UTC"
 
-    entry_date = entry.published
-    entry_date ||= (entry.respond_to?(:updated)) ? entry.updated : nil
-    entry_date ||= Time.current.to_formatted_s(:db) + " UTC"
+      if entry_model.new_record?
+        entry_model.attributes= {:feed_id => feed_id,
+                                 :title => entry.title,
+                                 :author => entry.author,
+                                 :content => content,
+                                 :url => url,
+                                 :guid => guid,
+                                 :published_at => entry_date}
 
-    if entry_model.new_record?
-      entry_model.attributes= {:feed_id => feed_id,
-                               :title => entry.title,
-                               :author => entry.author,
-                               :content => content,
-                               :url => url,
-                               :guid => guid,
-                               :published_at => entry_date}
+        unless entry_model.save
+          binding.pry
+        end
 
-      entry_model.save!
-
-    else
-      entry_model.update_attributes!(:feed_id => feed_id,
-                                     :title => entry.title,
-                                     :author => entry.author,
-                                     :content => content,
-                                     :url => url,
-                                     :guid => guid,
-                                     :published_at => entry_date)
+      else
+        entry_model.update_attributes!(:feed_id => feed_id,
+                                       :title => entry.title,
+                                       :author => entry.author,
+                                       :content => content,
+                                       :url => url,
+                                       :guid => guid,
+                                       :published_at => entry_date)
+      end
     end
   end
 end
