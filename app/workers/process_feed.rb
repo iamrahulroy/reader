@@ -44,7 +44,7 @@ class ProcessFeed
     PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
   rescue
     feed = Feed.where(id: id).first
-    feed.increment(:feed_errors) if feed
+    feed.increment!(:parse_errors) if feed
     em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
     ap em
     raise em if Rails.env.test?
