@@ -2,7 +2,7 @@
 namespace :reader do
 
   task :fetch_test => :environment do
-    response = FetchFeedService.perform(:url => 'http://news.ycombinator.com/rss')
+    response = PollFeed.new.perform(:url => 'http://news.ycombinator.com/rss')
     ap response
     binding.pry
   end

@@ -20,14 +20,14 @@ class PollFeed
           File.open(file_name, "w") do |f|
             f.write response.body
           end
-          #ProcessFeed.perform_async(id, file_name)
+
           ProcessFeed.perform_async(id, file_name)
 
         end
       when 400..599, 304
-        PollFeed.perform_in(6.hours, feed.id)
+        #PollFeed.perform_in(6.hours, feed.id)
       else
-        PollFeed.perform_in(6.hours, feed.id)
+        #PollFeed.perform_in(6.hours, feed.id)
     end
 
   #rescue Faraday::Error::ConnectionFailed => e
