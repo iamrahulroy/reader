@@ -92,6 +92,6 @@ class ProcessFeed
       end
     end
   rescue ActiveRecord::RecordInvalid => e
-    ap "#{e} - #{e.message}"
+    ap "feed: #{feed_id} - guid: #{guid} - #{e} - #{e.message}"
   end
 end
