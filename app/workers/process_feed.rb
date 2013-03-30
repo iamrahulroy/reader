@@ -31,7 +31,7 @@ class ProcessFeed
     #PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
 
     feed = Feed.where(id: id).first
-    feed.subscriptions.each { |sub| sub.update_counts }
+    feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }
 
   rescue
 
