@@ -45,7 +45,6 @@ class Item < ActiveRecord::Base
     update_children
     share_item unless share_delivered?
     unshare_item if share_delivered?
-    update_subscription_count
   end
 
   def update_subscription_count
