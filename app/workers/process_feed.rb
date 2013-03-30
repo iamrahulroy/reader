@@ -81,7 +81,7 @@ class ProcessFeed
                                  :published_at => entry_date}
 
         entry_model.save!
-        ap "Added entry to #{feed.name}: #{entry.title}"
+        ap "Added entry to #{feed_id}: #{entry.title}"
       else
         entry_model.update_attributes!(:feed_id => feed_id,
                                        :title => entry.title,
