@@ -30,16 +30,33 @@ class FetchFeedService
 
   protected
 
-  def get_response
-    response = Curl::Easy.perform(@url) do |curl|
+  def perform_request
+    Curl::Easy.perform(@url) do |curl|
       curl.headers["User-Agent"] = "1kpl.us/ruby"
       curl.headers["If-None-Match"] = @etag if @etag
-      #curl.verbose = true
+      curl.verbose = true
       curl.max_redirects = 5
       curl.timeout = 30
-      curl.follow_location = true
+
+      curl.on_redirect {|easy,code|
+        @url = location_from_header(easy.header_str) if easy.response_code == 301
+      }
     end
-    OpenStruct.new(status: response.response_code, body: response.body_str, url: response.last_effective_url, etag: etag_from_header(response.header_str))
+  end
+
+  def get_response
+    response = perform_request
+
+    if response.response_code == 301
+      response = perform_request
+    end
+
+    OpenStruct.new(status: response.response_code, body: response.body_str, url: @url, etag: etag_from_header(response.header_str))
+  end
+
+  def location_from_header(header)
+    header =~ /.*Location:\s(.*)\r/
+    $1
   end
 
   def etag_from_header(header)

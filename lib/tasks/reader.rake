@@ -1,5 +1,12 @@
 
 namespace :reader do
+
+  task :fetch_test => :environment do
+    response = FetchFeedService.perform(:url => 'http://news.ycombinator.com/rss')
+    ap response
+    binding.pry
+  end
+
   namespace :feeder do
     desc "reset feed error counts"
     task :reset => :environment do

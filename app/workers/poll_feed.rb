@@ -6,21 +6,22 @@ class PollFeed
   def perform(id)
 
     feed = Feed.find id
+    url = feed.current_feed_url || feed.feed_url
+    response = FetchFeedService.perform(:url => url, :etag => feed.etag)
 
-    response = FetchFeedService.perform(:url => feed.feed_url, :etag => feed.etag)
-
+    feed.update_column(:current_feed_url, response.url)
     feed.update_column(:etag, response.etag)
     feed.touch(:fetched_at)
+
     case response.status
       when 200
-
         if response.body && response.body.present?
           file_name = "#{Rails.root}/tmp/xmls/#{id}-#{rand(0..9999)}.xml"
           File.open(file_name, "w") do |f|
             f.write response.body
           end
           #ProcessFeed.perform_async(id, file_name)
-          ProcessFeed.new.perform(id, file_name)
+          ProcessFeed.perform_async(id, file_name)
 
         end
       when 400..599, 304
@@ -31,7 +32,9 @@ class PollFeed
 
   #rescue Faraday::Error::ConnectionFailed => e
   #  feed = Feed.where(id: id).first
-  #  feed.increment!(:parse_errors) if feed
+  #  feed.increment!(:connection_errors) if feed
+  #  em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
+  #  ap em
   #rescue
   #  feed = Feed.where(id: id).first
   #  feed.increment!(:feed_errors) if feed
