@@ -46,8 +46,8 @@ feature "Users share items with each other", :js => true, :vcr => true do
     sign_in_as(user_b)
     sleep 1
     within("#list") do
-      page.should have_content "User A (1)"
-      click_link "User A (1)"
+      page.should have_content "User A"
+      click_link "User A"
     end
 
     find(".comment-form-body").set "user b comment 1"
