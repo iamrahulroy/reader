@@ -8,7 +8,7 @@ feature "Shared item notifications", :js => true do
     user_a.follow_and_unblock(user_b)
     user_b.follow_and_unblock(user_a)
 
-    user_a.subscribe_to_url("http://news.ycombinator.com/rss")
+    user_a.subscribe_to_url("http://allthingsd.com/feed/")
 
     run_jobs
 
