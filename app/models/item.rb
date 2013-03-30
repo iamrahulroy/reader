@@ -59,12 +59,14 @@ class Item < ActiveRecord::Base
 
   def share_item
     if self.shared and !self.share_delivered?
+      self.update_column :share_delivered, true
       ShareItem.perform_async self.id
     end
   end
 
   def unshare_item
     if !self.shared and self.share_delivered?
+      self.update_column :share_delivered, false
       UnshareItem.perform_async self.id
     end
   end
