@@ -11,12 +11,6 @@ class RestartPollerService
     @pushed_feeds = []
     @polled_feeds = []
 
-    puts "sleep for 1 minutes"
-    #10.times do |i|
-    #  puts "#{i}"
-    #  sleep 1
-    #end
-    puts "resuming..."
     poll_feeds
   end
 
@@ -40,7 +34,6 @@ class RestartPollerService
     end
 
     clear_poll_from_retries
-
   end
 
   def clear_poll_from_retries
@@ -57,14 +50,8 @@ class RestartPollerService
   end
 
   def poll_feeds
-    step = 5
-    offset = 1
-    self.feeds.find_in_batches do |group|
-      group.each do |feed|
-        puts "#{offset.seconds}"
-        PollFeed.perform_in(offset.seconds, feed.id)
-      end
-      offset = offset + step
+    self.feeds.find_each do |feed|
+      PollFeed.perform_async(feed.id)
     end
   end
 
