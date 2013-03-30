@@ -23,13 +23,8 @@ class ProcessFeed
       return
     end
 
-    feed = Feed.where(id: id).first
-
-    cutoff = DateTime.now - 1.days
     parsed_feed.entries.each do |entry|
-      if (entry.respond_to?(:published) && entry.published && cutoff < entry.published) || feed.entries.count < 100
-        ProcessFeed.process_entry(id, entry)
-      end
+      ProcessFeed.process_entry(id, entry)
     end
 
     File.delete file_path
