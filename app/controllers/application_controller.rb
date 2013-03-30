@@ -65,7 +65,7 @@ class ApplicationController < ActionController::Base
 
     def index_setup
       check_reader_user
-      @user_json = render_to_string :json => current_user, :serializer => UserSerializer, :root => false
+      @user_json = render_to_string :json => current_user, :serializer => FastUserSerializer, :root => false
       if real_user
         get_follower_requests
         update_user_subscriptions
