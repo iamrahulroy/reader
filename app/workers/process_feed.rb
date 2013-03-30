@@ -11,9 +11,6 @@ class ProcessFeed
     body = body.encode('UTF-16', :invalid => :replace, :replace => '')
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
 
-    ap file_path
-    ap body
-
     body = Nokogiri::XML.parse(body).to_s
     parsed_feed = Feedzirra::Feed.parse(body) do |t|
       # apparently, this block is an error handling block
@@ -84,7 +81,7 @@ class ProcessFeed
                                  :published_at => entry_date}
 
         entry_model.save!
-
+        ap "Added entry to #{feed.name}: #{entry.title}"
       else
         entry_model.update_attributes!(:feed_id => feed_id,
                                        :title => entry.title,
