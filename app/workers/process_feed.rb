@@ -11,6 +11,9 @@ class ProcessFeed
     body = body.encode('UTF-16', :invalid => :replace, :replace => '')
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
 
+    ap file_path
+    ap body
+
     body = Nokogiri::XML.parse(body).to_s
     parsed_feed = Feedzirra::Feed.parse(body) do |t|
       # apparently, this block is an error handling block

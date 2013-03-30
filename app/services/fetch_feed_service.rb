@@ -34,7 +34,7 @@ class FetchFeedService
     Curl::Easy.perform(@url) do |curl|
       curl.headers["User-Agent"] = "1kpl.us/ruby"
       curl.headers["If-None-Match"] = @etag if @etag
-      curl.verbose = true
+      #curl.verbose = true
       curl.max_redirects = 5
       curl.timeout = 30
       curl.follow_location = true if follow
