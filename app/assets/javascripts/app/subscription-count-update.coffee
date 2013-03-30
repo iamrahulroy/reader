@@ -5,4 +5,5 @@ class App.SubscriptionCountUpdate
     Visibility.every 5 * minutes, 60 * minutes, => update
   
   updateSubscriptionCountsFromServer: ->
+    $.post('/update-subscriptions')
     App.subscriptions.each (sub) -> sub.fetch()

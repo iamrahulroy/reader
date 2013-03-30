@@ -61,6 +61,10 @@ class ApplicationController < ActionController::Base
     head :ok
   end
 
+  def update_subscriptions
+    UpdateUserSubscriptions.perform_async(current_user.id)
+  end
+
   private
 
     def index_setup

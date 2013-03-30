@@ -20,6 +20,7 @@ Reader::Application.routes.draw do
   get '/uploads/feed_icon/feed_icon/:id/favicon.ico', :to => "application#icon_check"
 
   get '/summary', :to => "application#summary"
+  post '/update-subscriptions', :to => "application#update_subscriptions"
 
   get '/items/counts', :to => "items#counts"
   post '/items/:id/toggle-star', :to => "items#toggle_star"
