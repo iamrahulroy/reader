@@ -10,7 +10,7 @@ feature "Keyboard navigation", :js => true, :vcr => true do
     user.subscribe_to_url "http://xkcd.com/atom.xml"
     run_jobs
     sign_in_as(user)
-    sleep 30
+    sleep 1
     #page.driver.browser.execute_script "App.showList()"
     within "#list" do
       click_link "MAKE"

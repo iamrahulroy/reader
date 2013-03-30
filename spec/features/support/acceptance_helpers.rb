@@ -32,6 +32,7 @@ module AcceptanceHelpers
     find("#login-submit-link-btn").click
     sleep 1
     user.reload
+    visit "/"
   end
 
   def sign_out
