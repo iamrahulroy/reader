@@ -13,7 +13,6 @@ feature "Users share items with each other", :js => true, :vcr => true do
     click_link "Add feeds"
 
     fill_in "Add a feed", :with => "http://xkcd.com/atom.xml"
-
     find('#add-feed-btn').click
     sleep 1
     find('#feed_url').value.should == ""
