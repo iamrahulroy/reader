@@ -21,6 +21,7 @@ feature "Users share items with each other", :js => true, :vcr => true do
     page.should have_content "http://xkcd.com/atom.xml"
     user_a.subscriptions.length.should == 1
     run_jobs
+
     visit('/')
     find("#nav-all-link").click
 
@@ -41,7 +42,6 @@ feature "Users share items with each other", :js => true, :vcr => true do
       click_button "Share"
     end
     run_jobs
-
     sign_out
     sign_in_as(user_b)
     sleep 1

@@ -4,7 +4,7 @@
       {{#if icon}}
         <img src="{{icon}}" height="16" width="16"/>
       {{/if}}
-      <span class="stream-name">{{this.short_name}}</span>
+      <span class="stream-name"><a class="subscription-link" href="/subscription/{{filter}}/{{this.id}}" data-stream-id="{{this.id}}">{{this.short_name}}</a></span>
       <span class="count">({{count}})</span>
     </div>
   </a>
