@@ -20,7 +20,6 @@ class PollFeed
           File.open(file_name, "w") do |f|
             f.write response.body
           end
-
           ProcessFeed.perform_async(id, file_name)
 
         end

@@ -33,11 +33,10 @@ class ProcessFeed
     end
 
     # update the subscriptions
-
     feed.subscriptions.each {|sub| sub.update_counts }
 
     File.delete file_path
-    PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
+    #PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
 
   rescue
     feed = Feed.where(id: id).first

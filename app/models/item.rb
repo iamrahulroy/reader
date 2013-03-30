@@ -24,7 +24,6 @@ class Item < ActiveRecord::Base
   validates_with ItemValidator
 
   after_update :after_user_item_update
-  after_save :update_subscription_count
 
   delegate :url, :title, :to => :entry, :allow_nil => true
 
@@ -46,7 +45,7 @@ class Item < ActiveRecord::Base
     update_children
     share_item unless share_delivered?
     unshare_item if share_delivered?
-    #update_subscription_count
+    update_subscription_count
   end
 
   def update_subscription_count
