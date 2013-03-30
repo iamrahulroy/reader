@@ -58,9 +58,9 @@ class ProcessFeed
     content = entry.respond_to?(:content) ? entry.content : nil
     content ||= entry.summary
 
-    guid = entry.guid
+    guid = entry.respond_to?(:guid) ? entry.guid : nil
+    guid ||= entry.respond_to?(:entry_id) ? entry.entry_id : nil
     guid ||= entry.url
-    guid ||= entry.entry_id
     guid ||= entry.title
 
     url = entry.url || guid
