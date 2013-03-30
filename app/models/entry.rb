@@ -84,10 +84,10 @@ class Entry < ActiveRecord::Base
 
   def embed_content
     unless @embedded
-      if self.feed.feed_url =~ /news\.ycombinator\.com\/rss/
-        self.content = "#{self.url}<p/>#{self.content}"
-        self.content = "#{embed_urls(self.content, false)}"
-      end
+      #if self.feed.feed_url =~ /news\.ycombinator\.com\/rss/
+      #  self.content = "#{self.url}<p/>#{self.content}"
+      #  self.content = "#{embed_urls(self.content, false)}"
+      #end
 
       if self.feed.feed_url =~ /reddit\.com/
         content_url = self.content.match /<a href="([^"]*)">\[link\]/
