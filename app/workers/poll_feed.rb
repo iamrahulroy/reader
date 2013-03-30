@@ -35,10 +35,10 @@ class PollFeed
   #  feed.increment!(:connection_errors) if feed
   #  em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
   #  ap em
-  #rescue
-  #  feed = Feed.where(id: id).first
-  #  feed.increment!(:feed_errors) if feed
-  #  em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
-  #  ap em
+  rescue Curl::Err::CurlError => e
+    feed = Feed.where(id: id).first
+    feed.increment!(:feed_errors) if feed
+    em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
+    ap em
   end
 end

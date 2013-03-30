@@ -50,7 +50,7 @@ class FetchFeedService
     if response.response_code == 301
       response = perform_request
     end
-
+    response.close
     OpenStruct.new(status: response.response_code, body: response.body_str, url: @url, etag: etag_from_header(response.header_str))
   end
 
