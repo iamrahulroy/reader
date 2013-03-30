@@ -49,7 +49,7 @@ class GetIcon
           end
           return path
         end
-        
+
         if test_favicon(html.favicon)
           return html.favicon
         end

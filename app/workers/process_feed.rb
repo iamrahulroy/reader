@@ -92,5 +92,7 @@ class ProcessFeed
                                        :published_at => entry_date)
       end
     end
+  rescue ActiveRecord::RecordInvalid => e
+    ap "#{e} - #{e.message}"
   end
 end
