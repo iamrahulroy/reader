@@ -30,8 +30,11 @@ class ProcessFeed
     File.delete file_path
     #PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
 
-  rescue
     feed = Feed.where(id: id).first
+    feed.subscriptions.each { |sub| sub.update_counts }
+
+  rescue
+
     feed.increment!(:parse_errors) if feed
     em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
     ap em
