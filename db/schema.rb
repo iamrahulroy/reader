@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130328025337) do
+ActiveRecord::Schema.define(:version => 20130330121452) do
 
   create_table "categories", :force => true do |t|
     t.string    "name"
@@ -198,7 +198,7 @@ ActiveRecord::Schema.define(:version => 20130328025337) do
   add_index "items", ["entry_id"], :name => "index_items_on_entry_id"
   add_index "items", ["subscription_id"], :name => "index_items_on_subscription_id"
   add_index "items", ["unread", "starred", "shared", "has_new_comments"], :name => "items_flags"
-  add_index "items", ["user_id", "entry_id"], :name => "item_user_entry", :unique => true
+  add_index "items", ["user_id", "entry_id", "from_id"], :name => "item_user_from_entry", :unique => true
   add_index "items", ["user_id"], :name => "index_items_on_user_id"
 
   create_table "subscriptions", :force => true do |t|

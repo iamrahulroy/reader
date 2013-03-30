@@ -12,6 +12,8 @@ class Entry < ActiveRecord::Base
   before_create :create_entry_guid
   after_create :deliver
 
+  attr_accessor :embedded
+
   def ensure_entry_guid_exists
     create_entry_guid unless self.entry_guid
     self.update_column(:entry_guid_id, self.entry_guid_id)
@@ -55,8 +57,12 @@ class Entry < ActiveRecord::Base
         unless url[1].nil?
           img = "<img src=\"#{url[1]}\" style=\"max-width:95%\"><br/>"
           content = img + self.content
+          @embedded = true
         end
       end
+
+      self.content = content
+
       if url && url.length > 1
         link = url[1]
         if link =~ /\/imgur\.com/
@@ -72,17 +78,21 @@ class Entry < ActiveRecord::Base
         end
       end
 
-      self.content = content
+
     end
   end
 
   def embed_content
-    if Rails.env.production?
-      if self.feed.feed_url =~ /reddit\.com/ || self.feed.feed_url =~ /news\.ycombinator\.com\/rss/
-        unless url =~ /reddit\.com/ || url =~ /imgur\.com/ || url =~ /qkme\.me/
-          url = self.content.match /<a href="([^"]*)">\[link\]/ if url =~ /reddit\.com/
-          self.content = "#{embed_urls(url.dup, false)}<p/>#{self.content}"
-        end
+    unless @embedded
+      if self.feed.feed_url =~ /news\.ycombinator\.com\/rss/
+        self.content = "#{self.url}<p/>#{self.content}"
+        self.content = "#{embed_urls(self.content, false)}"
+      end
+
+      if self.feed.feed_url =~ /reddit\.com/
+        content_url = self.content.match /<a href="([^"]*)">\[link\]/
+        self.content = "#{content_url[1]}<p/>#{self.content}" if content_url.length > 1
+        self.content = "#{embed_urls(self.content, false)}"
       end
     end
   end
