@@ -30,14 +30,14 @@ class FetchFeedService
 
   protected
 
-  def perform_request
+  def perform_request(follow = false)
     Curl::Easy.perform(@url) do |curl|
       curl.headers["User-Agent"] = "1kpl.us/ruby"
       curl.headers["If-None-Match"] = @etag if @etag
       curl.verbose = true
       curl.max_redirects = 5
       curl.timeout = 30
-
+      curl.follow_location = true if follow
       curl.on_redirect {|easy,code|
         @url = location_from_header(easy.header_str) if easy.response_code == 301
       }
@@ -48,7 +48,7 @@ class FetchFeedService
     response = perform_request
 
     if response.response_code == 301
-      response = perform_request
+      response = perform_request(true)
     end
     response.close
     OpenStruct.new(status: response.response_code, body: response.body_str, url: @url, etag: etag_from_header(response.header_str))
