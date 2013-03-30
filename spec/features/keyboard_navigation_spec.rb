@@ -10,10 +10,9 @@ feature "Keyboard navigation", :js => true, :vcr => true do
     user.subscribe_to_url "http://xkcd.com/atom.xml"
     run_jobs
     sign_in_as(user)
-    sleep 1
-    page.driver.browser.execute_script "App.showList()"
+    sleep 30
+    #page.driver.browser.execute_script "App.showList()"
     within "#list" do
-      #find("#subscription-#{user.subscriptions.first.id} .subscription-link a").click
       click_link "MAKE"
     end
 
