@@ -7,7 +7,9 @@ end
 class GetIcon
   include Sidekiq::Worker
   sidekiq_options :queue => :icons
+  attr_accessor :id
   def perform(id)
+    @id = id
     feed = Feed.where(id: id).first
     return unless feed
     return if feed.feed_icon.present?
@@ -39,6 +41,15 @@ class GetIcon
         ap "pismo error - #{site_url}"
       end
       unless html.nil? || html.favicon.nil?
+        # is this a base64 encoded icon?
+        if html.favicon.start_with?("data:image/")
+          path = "tmp/icons/#{@id}"
+          File.open(path, 'wb') do|f|
+            f.write(Base64.decode64(html.favicon))
+          end
+          return path
+        end
+        
         if test_favicon(html.favicon)
           return html.favicon
         end
