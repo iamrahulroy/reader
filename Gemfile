@@ -36,6 +36,8 @@ gem "capistrano", "~> 2.0"
 gem "rvm-capistrano", "~> 1.2"
 gem "figaro", "~> 0.6"
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 gem "pry-rails", "~> 0.2"
 gem "pry-coolline"
 gem "pry-debugger"

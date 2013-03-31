@@ -53,6 +53,9 @@ module Reader
       return unless Rails.env.development?
 
       self.empty_tables
+      Sidekiq.redis do |r|
+        r.flushall
+      end
 
       self.reset_auto_increment
 
@@ -125,7 +128,7 @@ module Reader
     end
 
     def self.empty_tables
-      User.delete_all
+      #User.delete_all
       Client.delete_all
       Feed.delete_all
       Entry.delete_all
@@ -167,7 +170,7 @@ module Reader
 
     def self.prune
 
-      items = Item.where("unread = false AND starred = false AND shared = false AND has_new_comments = false").where("created_at < ?", Date.current - 3.months)
+      items = Item.where("starred = false AND shared = false AND has_new_comments = false").where("created_at < ?", Date.current - 1.week)
       puts "#{items.length} items to delete"
       items.find_each do |i|
         if i.comments.empty?

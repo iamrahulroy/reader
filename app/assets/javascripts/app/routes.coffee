@@ -41,6 +41,10 @@ class App.Router extends Backbone.Router
       App.loadOptions()
       App.loadFollowerTables()
 
+  help: =>
+    App.streamTitle.set('title', 'Using 1kpl.us')
+    App.showHelp()
+
   settingsFeeds: ->
     this.settings()
     $('#feeds-tab').click()
@@ -177,6 +181,10 @@ $(document).on "click", "a[href='/commented']", (evt) ->
 
 $(document).on "click", "a[href='/share']", (evt) ->
   App.router.openShare()
+  false
+
+$(document).on "click", "a[href='/help']", (evt) ->
+  App.router.help()
   false
 
 $(document).on "click", ".subscription-link", (evt) ->

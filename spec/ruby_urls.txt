@@ -8,3 +8,4 @@ http://afreshcup.com/home/rss.xml
 http://feeds.feedburner.com/rubyshow
 http://rubysource.com/feed/
 http://addcasts.com/feed/
+http://news.ycombinator.com/rss

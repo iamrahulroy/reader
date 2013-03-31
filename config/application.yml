@@ -2,15 +2,25 @@
 
 RAILS_SECRET: "09a0375404693a3cf3ae6c37aba2ff93"
 PRIVATE_PUB_SECRET: '123'
-EMBEDLY_KEY: '123'
+EMBEDLY_KEY: '073b1a8a0b2640d097f2579772abc121'
 UPDATE_FREQUENCY: "20"
 BATCH_COUNT_MAX: "20"
 SINGLY_CLIENT_ID: '123'
 SINGLY_CLIENT_SECRET: '123'
-DATABASE_URL: "postgres://reader@localhost/reader_development"
+
 SIDEKIQ_CONNECTION_POOL_SIZE: "100"
 FACEBOOK_API_KEY: ""
 FACEBOOK_API_SECRET: ""
 GOOGLE_API_KEY: ""
 GOOGLE_API_SECRET: ""
 
+# test keys
+STRIPE_PUBLIC_KEY: "pk_QOEgmcZ8Wytb69nHM3yB6rxx811sG"
+STRIPE_SECRET_KEY: "qY1lWyNurv8rEOD2WMto5MJ5G0YTAELB"
+
+
+development:
+  DATABASE_URL: "postgres://reader@localhost/reader_development"
+
+test:
+  DATABASE_URL: "postgres://reader@localhost/reader_test"

@@ -47,6 +47,10 @@ Reader::Application.routes.draw do
 
   put "/users/:id(.json)" => "users#update"
 
+  resource :charges
+
+
+
   resources :people do
     match ":filter/items.json" => "people#items"
   end

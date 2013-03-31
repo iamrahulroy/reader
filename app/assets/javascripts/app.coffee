@@ -24,11 +24,15 @@ window.App =
     $('#stream-header').removeClass('hide')
     $('#stream').removeClass('hide')
   showSettings: ->
-    tracker.track("View Settings");
     App.hideAllSwapAreas()
     $("#list").removeClass("out")
     $('#stream-header').removeClass('hide')
     $('#settings').removeClass('hide')
+  showHelp: ->
+    App.hideAllSwapAreas()
+    $("#list").removeClass("out")
+    $('#stream-header').removeClass('hide')
+    $('#help').removeClass('hide')
   hideAllSwapAreas: ->
     $('.swap-view-area').addClass('hide')
 

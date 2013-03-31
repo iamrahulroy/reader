@@ -11,76 +11,12 @@
   - else
     %h1 1kpl.us
     %p This is an RSS and Atom feed reader. Use it to subscribe to your favorite sites, and share and discuss news with friends.
+    -#%p With a free account you can follow up to 25 feeds. If you need to follow more than 25 feeds, you'll want to upgrade to a premium plan, for $5 a month. Your support will help to ensure this product is maintained and improved.
+
     = render "application/login_buttons"
 
     %div#summary-container.row
 
 
-  - if real_user
-    %h2 Bookmarklets
-    %p Subscribe and share while you browse. Drag these links to your browser's bookmarks toolbar.
-
-    %div
-      %button.btn.btn-mini
-        %a{:href => 'javascript:document.location=\'http://1kpl.us/api/feed/subscribe?url=\'+encodeURIComponent(document.location)'}
-          Subscribe in 1kpl.us
-      %button.btn.btn-mini
-        %a{:href => 'javascript:document.location=\'http://1kpl.us/api/share-url?url=\'+encodeURIComponent(document.location)'}
-          Share URL on 1kpl.us
-
-  %h2 Getting around
-  %p here's the keyboard shortcuts
-  %table#keyboard-shortcuts.table.table-bordered
-    %tr
-      %th{width: 100} Key
-      %th Action
-    %tr
-      %td
-        %code j
-      %td Next post
-    %tr
-      %td
-        %code k
-      %td Previous post
-    %tr
-      %td
-        %code n
-      %td Next subscription
-    %tr
-      %td
-        %code m
-      %td Previous subscription
-    %tr
-      %td
-        %code shift + J
-      %td Scroll down
-    %tr
-      %td
-        %code shift + K
-      %td Scroll up
-    %tr
-      %td
-        %code b
-      %td Browse selected post in new tab
-    %tr
-      %td
-        %code shift + A
-      %td Mark all posts in selected stream as read
-    %tr.narrow-hide
-      %td
-        %code h
-      %td Show/hide subscription list
-    %tr
-      %td
-        %code s
-      %td Star post for later reading
-    %tr
-      %td
-        %code shift + S
-      %td Share post with your followers
 
 
-
-
-  %h2 Organizing your feeds
-  %p Create subscription groups, then drag your subscriptions into the groups.

@@ -27,6 +27,8 @@
 
     #stream.swap-view-area.hide
 
+    #help.swap-view-area.hide
+      = render :template => "help/index"
     #settings.swap-view-area.hide
       = render :partial => "settings/settings" if real_user
 
@@ -92,6 +94,10 @@
               %a{:href => "#", :class => "add-subscription-link"}
                 %i{:class => "icon-dark icon-rss"}
                 New Feed
+
+      %div
+        %a#nav-settings-link.nav-icon{"data-placement" => "right", :href => "/help", :rel => "tooltip", :title => "Help"}
+          %span{:class => "reader-icon-large icon-light "} ?
 
 
     #list

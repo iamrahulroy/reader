@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130330172013) do
+ActiveRecord::Schema.define(:version => 20130331060107) do
 
   create_table "categories", :force => true do |t|
     t.string    "name"
@@ -234,36 +234,40 @@ ActiveRecord::Schema.define(:version => 20130330172013) do
   end
 
   create_table "users", :force => true do |t|
-    t.string    "email",                               :default => ""
+    t.string    "email",                                       :default => ""
     t.string    "name"
-    t.string    "encrypted_password",                  :default => "",    :null => false
+    t.string    "encrypted_password",                          :default => "",    :null => false
     t.string    "reset_password_token"
-    t.timestamp "reset_password_sent_at", :limit => 6
-    t.timestamp "remember_created_at",    :limit => 6
-    t.integer   "sign_in_count",                       :default => 0
-    t.timestamp "current_sign_in_at",     :limit => 6
-    t.timestamp "last_sign_in_at",        :limit => 6
-    t.timestamp "last_seen_at",           :limit => 6
+    t.timestamp "reset_password_sent_at",         :limit => 6
+    t.timestamp "remember_created_at",            :limit => 6
+    t.integer   "sign_in_count",                               :default => 0
+    t.timestamp "current_sign_in_at",             :limit => 6
+    t.timestamp "last_sign_in_at",                :limit => 6
+    t.timestamp "last_seen_at",                   :limit => 6
     t.string    "current_sign_in_ip"
     t.string    "last_sign_in_ip"
     t.string    "authentication_token"
-    t.timestamp "created_at",             :limit => 6,                    :null => false
-    t.timestamp "updated_at",             :limit => 6,                    :null => false
-    t.boolean   "anonymous",                           :default => false
-    t.string    "websocket_token",                                        :null => false
-    t.string    "public_token",                                           :null => false
+    t.timestamp "created_at",                     :limit => 6,                    :null => false
+    t.timestamp "updated_at",                     :limit => 6,                    :null => false
+    t.boolean   "anonymous",                                   :default => false
+    t.string    "websocket_token",                                                :null => false
+    t.string    "public_token",                                                   :null => false
     t.integer   "shared_feed_id"
     t.integer   "starred_feed_id"
     t.string    "singly_account_id"
     t.string    "singly_access_token"
     t.boolean   "share_to_twitter"
     t.boolean   "share_to_facebook"
-    t.boolean   "registration_complete",               :default => false
+    t.boolean   "registration_complete",                       :default => false
     t.integer   "subscription_count"
     t.integer   "unread_count"
     t.integer   "starred_count"
     t.integer   "shared_count"
     t.integer   "all_count"
+    t.text      "stripe_data"
+    t.boolean   "premium_account",                             :default => false
+    t.string    "stripe_customer_id"
+    t.boolean   "premium_account_cancel_pending",              :default => false
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

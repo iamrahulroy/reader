@@ -65,7 +65,7 @@ class ApplicationController < ActionController::Base
     UpdateUserSubscriptions.perform_async(current_user.id)
   end
 
-  private
+  protected
 
     def index_setup
       check_reader_user
@@ -80,12 +80,6 @@ class ApplicationController < ActionController::Base
     def update_user_subscriptions
       if current_user.last_seen_at < 5.minutes.ago
         UpdateUserSubscriptions.perform_async(current_user.id)
-      end
-    end
-
-    def check_reader_user
-      unless real_user
-        sign_in(:user, User.anonymous)
       end
     end
 

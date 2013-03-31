@@ -35,15 +35,8 @@ END
   end
 
   describe "#save" do
-    before :each do
-      #class PollFeed
-      #  def perform(*args)
-      #
-      #  end
-      #end
-    end
-
     it "creates an entry guid model and updates the reference" do
+      pending
       entry.save!
       entry.reload.entry_guid.should_not be_nil
       entry_guid = EntryGuid.last
@@ -54,6 +47,19 @@ END
       entry_guid = EntryGuid.last
       entry.reload.entry_guid.should == entry_guid
     end
+
+    it "should embed reddit links via embedly" do
+      feed  = Feed.create! name: "Feed 1", feed_url: "http://www.reddit.com/foo.rss",
+                           site_url: "http://www.reddit.com/"
+      entry = Entry.new(guid: "1", url: 'http://www.reddit.com/r/gifs/comments/1b8fgj/cat_asking_to_be_petted/', feed: feed, published_at: Date.current)
+      entry.content = <<END
+<table class="table"> <tr><td> <a href="http://www.reddit.com/r/technology/comments/1b8mct/survey_adults_text_more_than_teens_while_driving/"><img src="http://e.thumbs.redditmedia.com/994bIcMtHRkpOFKd.jpg" alt="Survey: Adults text more than teens while driving" title="Survey: Adults text more than teens while driving" /></a> </td><td> submitted by <a href="http://www.reddit.com/user/geordilaforge"> geordilaforge </a> to <a href="http://www.reddit.com/r/technology/"> technology</a> <br /> <a href="http://www.cnn.com/2013/03/28/tech/mobile/survey-texting-while-driving/index.html?hpt=hp_bn5">[link]</a> <a href="http://www.reddit.com/r/technology/comments/1b8mct/survey_adults_text_more_than_teens_while_driving/">[66 comments]</a> </td></tr></table>
+END
+
+      entry.save!
+      puts entry.content
+    end
+
   end
 
 end

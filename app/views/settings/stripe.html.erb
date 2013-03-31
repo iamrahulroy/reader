@@ -1,0 +1,22 @@
+<script src="https://checkout.stripe.com/v2/checkout.js"></script>
+
+<script>
+  $('#upgrade-button').click(function(){
+    var token = function(res){
+      var $input = $('<input type=hidden name=stripeToken />').val(res.id);
+      $('form#upgrade-form').append($input).submit();
+    };
+
+    StripeCheckout.open({
+      key:         'pk_QOEgmcZ8Wytb69nHM3yB6rxx811sG',
+      amount:      700,
+      name:        '1kpl.us premium',
+      description: 'Hosted RSS & Atom feed reader',
+      panelLabel:  'Upgrade account - ',
+      token:       token,
+      image:       "/favicon.png"
+    });
+
+    return false;
+  });
+</script>

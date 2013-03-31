@@ -18,6 +18,14 @@ class SettingsController < ApplicationController
 
     @twitter[:sharing_to] = current_user.share_to_twitter
     @facebook[:sharing_to] = current_user.share_to_facebook
+
+    stripe_data = JSON.load(current_user.stripe_data)
+
+    if stripe_data && stripe_data["canceled_at"]
+      @premium_account_expire_date = DateTime.strptime(stripe_data["current_period_end"].to_s,'%s').to_s(:long_ordinal)
+    end
+
+
     render :layout => nil, :template => 'settings/options'
   end
 

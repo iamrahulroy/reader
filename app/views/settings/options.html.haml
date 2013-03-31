@@ -1,20 +1,38 @@
-%div#integrated-services
-  = render "service", :object => @twitter
-  = render "service", :object => @facebook
+%div#plan
+  %h3 Your Plan
+  - if current_user.premium_account_cancel_pending?
+    %p You are on the premium account plan.
+    %p Your account will expire on #{@premium_account_expire_date}. You will not be billed again.
+  - elsif current_user.premium_account?
+    %p You are on the premium account plan. Your support makes this possible.
+    %p
+      Not getting your $7 worth?
+      = link_to "Click here to downgrade to the free plan", "/charges", :method => :delete, :confirm => "Click ok to downgrade your account to the free 25 feed plan.", :style => "text-decoration: underline;"
+  - else
+    %p You are currently using the free plan, limited to 25 feeds. Consider upgrading to a premium account if you would like to follow more than 25 feeds.
+    %button#upgrade-button.btn.btn-primary Upgrade to a premium account
+    = form_tag "/charges", :id => "upgrade-form" do
+      = render :template => "settings/stripe"
 
-%br
-%br
--#%div#account
--#  %form.form-horizontal
--#    %fieldset
--#      .control-group
--#        %label.control-label{:for => "name"} Your name:
--#        .controls
--#          %input#name{:type => "text", :value => current_user.name}/
--#          %p.help-block This name will be visible to people that follow you.
--#      .control-group
--#        %label.control-label{:for => "email"} Your e-mail:
--#        .controls
--#          %input#email.input-xlarge{:type => "text", :value => current_user.email}/
--#    %div.btn-container
--#      %a#save-account-info-btn.btn.btn-primary Save
+%hr
+%div#personal-info
+  %h3 About you
+  %p
+  %form.form-horizontal
+    %fieldset
+      .control-group
+        %label.control-label{:for => "name"} Your name:
+        .controls
+          %input#name{:type => "text", :value => current_user.name}/
+          %p.help-block This name will be visible to people that follow you.
+      .control-group
+        %label.control-label{:for => "email"} Your e-mail:
+        .controls
+          %input#email.input-xlarge{:type => "text", :value => current_user.email}/
+    %div.btn-container
+      %a#save-account-info-btn.btn.btn-primary Save
+%hr
+-#%div#integrated-services
+-#  %h3 Socialness
+-#  = render "settings/service", :object => @twitter
+-#  = render "settings/service", :object => @facebook
