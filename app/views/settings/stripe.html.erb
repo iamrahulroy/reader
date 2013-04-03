@@ -8,7 +8,7 @@
     };
 
     StripeCheckout.open({
-      key:         'pk_QOEgmcZ8Wytb69nHM3yB6rxx811sG',
+      key:         '<%= ENV['STRIPE_PUBLIC_KEY'] %>',
       amount:      700,
       name:        '1kpl.us premium',
       description: 'Hosted RSS & Atom feed reader',

@@ -28,7 +28,7 @@ class ProcessFeed
     end
 
     File.delete file_path
-    #PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, feed.id)
+    PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, id)
 
     feed = Feed.where(id: id).first
     feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }

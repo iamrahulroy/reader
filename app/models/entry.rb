@@ -91,8 +91,7 @@ class Entry < ActiveRecord::Base
 
       if self.feed.feed_url =~ /reddit\.com/
         content_url = self.content.match /<a href="([^"]*)">\[link\]/
-        self.content = "#{content_url[1]}\n<p/>#{self.content}" if content_url.try(:length) > 1
-        self.content = "#{embed_urls(self.content, false)}"
+        self.content = "#{embed_urls(content_url[1],false)}\n<p/>#{self.content}" if content_url.try(:length) > 1
       end
     end
   end
