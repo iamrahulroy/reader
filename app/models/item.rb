@@ -84,7 +84,9 @@ class Item < ActiveRecord::Base
   end
 
   def all_comments
-    parent_comments + comments
+    (parent_comments + comments).sort do |a,b|
+      a.created_at <=> b.created_at
+    end
   end
 
   def parent_comments
