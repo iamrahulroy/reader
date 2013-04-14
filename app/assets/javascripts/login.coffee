@@ -41,7 +41,7 @@ $(document).on 'ajax:success', 'form#password_form', (e, data, status, xhr) ->
     errors.push("Name " + data.errors.name[0]) if data.errors.name?
     $('#user_password_box').html(errors.join('<br />'))
 
-$(document).on 'click', '.btn-close, #login-close-link-btn', (evt) ->
+$(document).on 'click', '.btn-close, #login-close-link-btn, #register-close-link-btn', (evt) ->
   $(".modal").modal("hide")
 
 $(document).on 'click', '#login-link', (evt) ->
