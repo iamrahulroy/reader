@@ -2,7 +2,7 @@ require 'faraday_middleware'
 require 'faraday_middleware/response_middleware'
 class PollFeed
   include Sidekiq::Worker
-  sidekiq_options :queue => :poll, :unique => true, :unique_job_expiration => 60 * 60 * 24
+  sidekiq_options :queue => :poll
   def perform(id)
 
     feed = Feed.find id
