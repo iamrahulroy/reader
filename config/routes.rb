@@ -11,8 +11,6 @@ Reader::Application.routes.draw do
 
   devise_for :users, :controllers => { :sessions => 'users/sessions', :registrations => "users/registrations", :passwords => "users/passwords" }
 
-  mount JasmineRails::Engine => "/specs" unless Rails.env.production?
-
   get '/nr', :to => "application#newrelic"
   get '/ping', :to => "application#newrelic"
   get '/stats', :to => "application#stats"
