@@ -50,4 +50,18 @@ describe "User wants to create account", :type => :feature do
     last_email.body.should include "Change my password"
   end
 
+  it "User closes registration modal", :js => true, :vcr => true do
+    visit "/"
+    click_link "login-link"
+    sleep 1
+    click_link "Create new account"
+    sleep 1
+
+    find("#register-modal").should be_visible
+
+    click_link "Close"
+
+    find("#register-modal").should_not be_visible
+  end
+
 end
