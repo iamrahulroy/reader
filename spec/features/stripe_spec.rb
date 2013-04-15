@@ -2,6 +2,7 @@ require 'features/spec_acceptance_helper'
 
 feature "Pay with stripe", :js => true do
   scenario "user subscribes to a plan" do
+    pending "Needs attention"
     user_a = create_user_a
     run_jobs
 
