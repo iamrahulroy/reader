@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/1kplus/feedbag.git
+  revision: fd3aeab9e842ddfdcd1a1deb0e841082259e490a
+  specs:
+    muck-feedbag (0.7.1)
+
+GIT
   remote: https://github.com/pauldix/feedzirra.git
   revision: 80cd35766e40ee3058db1c5c0c25448baeea4212
   specs:
@@ -327,6 +333,8 @@ GEM
       sinatra
       slim
       sprockets
+    sidekiq-unique-jobs (2.6.5)
+      sidekiq (~> 2.6)
     sinatra (1.3.6)
       rack (~> 1.4)
       rack-protection (~> 1.3)
@@ -412,6 +420,7 @@ DEPENDENCIES
   mails_viewer (~> 0.0)
   marginalia
   meta_request (~> 0.2)
+  muck-feedbag!
   newrelic_rpm (~> 3.5)
   nokogiri (~> 1.5)
   oj (~> 2.0)
@@ -431,6 +440,7 @@ DEPENDENCIES
   selenium-webdriver
   sidekiq (~> 2.6)
   sidekiq-failures (~> 0.1)
+  sidekiq-unique-jobs
   sinatra (~> 1.3)
   slim (~> 1.3)
   stripe!
