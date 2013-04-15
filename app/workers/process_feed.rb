@@ -5,7 +5,7 @@ class ProcessFeed
   include Sidekiq::Worker
   sidekiq_options :queue => :process
 
-  def perform(id, file_path)
+  def perform(id, file_path, repeat)
     body = File.open(file_path, "r").read
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
     body = body.encode('UTF-16', :invalid => :replace, :replace => '')
@@ -28,7 +28,7 @@ class ProcessFeed
     end
 
     File.delete file_path
-    PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, id)
+    PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, id) if repeat
 
     feed = Feed.where(id: id).first
     feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }

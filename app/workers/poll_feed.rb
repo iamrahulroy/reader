@@ -20,7 +20,7 @@ class PollFeed
           File.open(file_name, "w") do |f|
             f.write response.body
           end
-          ProcessFeed.perform_async(id, file_name)
+          process_feed(id, file_name)
 
         end
       when 400..599, 304
@@ -39,5 +39,9 @@ class PollFeed
     feed.increment!(:feed_errors) if feed
     em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
     ap em
+  end
+
+  def process_feed(id, file_name, repeat=true)
+    ProcessFeed.perform_async(id, file_name, repeat)
   end
 end
