@@ -1,5 +1,3 @@
-require 'feedbag'
-
 class SubscriptionsController < ApplicationController
   before_filter :authenticate_user!
 
@@ -60,19 +58,11 @@ class SubscriptionsController < ApplicationController
       render :json => results, :layout => nil
     else
       feed_url = params[:feed_url]
-
-      u = URI.parse(feed_url)
-      if feed_url.include? "reddit.com/r/"
-        feed_url = "#{feed_url}/.rss"
-        feeds = [{title: feed_url, url: feed_url}]
-      else
-        feeds = Feedbag.find feed_url
-      end
-
+      feeds = Feediscovery::DiscoverFeedService.new(feed_url).result
       if feeds.length == 0
         result = {:error => "No RSS or Atom feeds found at #{feed_url}"}
       elsif feeds.length == 1
-        subscription = Subscription.find_or_create_from_url_for_user(feeds[0].url, current_user)
+        subscription = Subscription.find_or_create_from_url_for_user(feeds[0].href, current_user)
         subscription.save
         result = {:subscriptions => [subscription]}
       elsif feeds.length > 1

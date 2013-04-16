@@ -1,6 +1,6 @@
 require 'features/spec_acceptance_helper'
 
-feature "Settings", :js => true do
+feature "Settings", :js => true, :vcr => true do
   scenario "adds and removes feeds" do
 
     user_a = create_user_a
@@ -11,15 +11,19 @@ feature "Settings", :js => true do
 
     fill_in "Add a feed", :with => "http://xkcd.com/atom.xml"
     find('#add-feed-btn').click
-    sleep 1
+    page.should have_content "xkcd.com"
 
     fill_in "Add a feed", :with => "http://feeds.feedburner.com/amazingsuperpowers"
     find('#add-feed-btn').click
-    sleep 1
+    page.should have_content "AmazingSuperPowers"
 
     fill_in "Add a feed", :with => "http://feeds.feedburner.com/Chainsawsuit"
     find('#add-feed-btn').click
-    sleep 1
+    page.should have_content "chainsawsuit by kris straub"
+
+    fill_in "Add a feed", :with => "reddit"
+    find('#add-feed-btn').click
+    page.should have_content "reddit: the front page"
 
     all('a.unsubscribe-link').each do |link|
       link.click

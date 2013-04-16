@@ -15,7 +15,7 @@ gem "pg", "~> 0.15"
 gem "devise", "~> 2.2"
 gem "acts_as_follower", "~> 0.1"
 
-gem "muck-feedbag", git: "https://github.com/1kplus/feedbag.git"
+gem "feediscovery", git: "https://github.com/flingbob/feediscovery.git"
 
 gem "hpricot", "~> 0.8"
 gem "private_pub", "~> 1.0"

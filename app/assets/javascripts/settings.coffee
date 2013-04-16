@@ -37,7 +37,7 @@ $(document).on 'ajax:success', '#add_feed_form', (e, data, status, xhr) ->
     $("#add-feed-btn").html('Add Feeds')
     _(data.feeds).each (feed) ->
       row = "<label class='checkbox'>"
-      row += "<input name='feeds[]' type='checkbox' value='" + feed.url + "'> " + feed.title + ""
+      row += "<input name='feeds[]' type='checkbox' value='" + feed.href + "'> " + feed.title + ""
       row += "</label>"
       $("#feed-select-found-feed .controls").append(row)
   else

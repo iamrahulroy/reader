@@ -1,4 +1,3 @@
-require 'feedbag'
 class Api::FeedsController < ApplicationController
 
   def subscribe
@@ -8,12 +7,12 @@ class Api::FeedsController < ApplicationController
         url = "#{url}/.rss"
         feeds = [Struct.new(:url, :title, :human_url).new(url, nil, nil)]
       else
-        feeds = Feedbag.find url
+        feeds = Feediscovery::DiscoverFeedService.new(feed_url).result
       end
       if feeds.length == 0
         result = {:error => "No RSS or Atom feeds found at #{url}"}
       elsif feeds.length == 1
-        subscription = Subscription.find_or_create_from_url_for_user(feeds[0].url, current_user)
+        subscription = Subscription.find_or_create_from_url_for_user(feeds[0].href, current_user)
         subscription.save
         result = {:subscriptions => [subscription]}
       elsif feeds.length > 1

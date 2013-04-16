@@ -1,8 +1,10 @@
 GIT
-  remote: https://github.com/1kplus/feedbag.git
-  revision: fd3aeab9e842ddfdcd1a1deb0e841082259e490a
+  remote: https://github.com/flingbob/feediscovery.git
+  revision: 47748609867a3f411c64471d01675bd413ce4fb5
   specs:
-    muck-feedbag (0.7.1)
+    feediscovery (0.0.1)
+      curb
+      google-search
 
 GIT
   remote: https://github.com/pauldix/feedzirra.git
@@ -171,6 +173,8 @@ GEM
       thor (>= 0.13.6)
     fssm (0.2.10)
     god (0.13.2)
+    google-search (1.0.3)
+      json
     haml (4.0.2)
       tilt
     handlebars_assets (0.12.0)
@@ -404,6 +408,7 @@ DEPENDENCIES
   erb2haml (~> 0.1)
   faraday (~> 0.8)
   faraday_middleware (~> 0.9)
+  feediscovery!
   feedzirra!
   figaro (~> 0.6)
   foreman (~> 0.61)
@@ -418,7 +423,6 @@ DEPENDENCIES
   mails_viewer (~> 0.0)
   marginalia
   meta_request (~> 0.2)
-  muck-feedbag!
   newrelic_rpm (~> 3.5)
   nokogiri (~> 1.5)
   oj (~> 2.0)

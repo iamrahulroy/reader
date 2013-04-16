@@ -31,7 +31,7 @@ $(document).on 'ajax:success', 'form#modal_add_feed_form', (e, data, status, xhr
     $("#modal-feed-choices").show()
     $("#feed-modal-submit-link-btn").html('Add Feeds')
     _(data.feeds).each (feed) ->
-      row = "<input name='feeds[]' type='checkbox' value='" + feed.url + "'> " + feed.title + "<br/>"
+      row = "<input name='feeds[]' type='checkbox' value='" + feed.href + "'> " + feed.title + "<br/>"
       $("#modal-feed-choices .control-group").append(row)
   else
     $('#feed-url').val('')
