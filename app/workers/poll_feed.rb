@@ -29,12 +29,7 @@ class PollFeed
         #PollFeed.perform_in(6.hours, feed.id)
     end
 
-  #rescue Faraday::Error::ConnectionFailed => e
-  #  feed = Feed.where(id: id).first
-  #  feed.increment!(:connection_errors) if feed
-  #  em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
-  #  ap em
-  rescue Curl::Err::CurlError => e
+  rescue
     feed = Feed.where(id: id).first
     feed.increment!(:feed_errors) if feed
     em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
