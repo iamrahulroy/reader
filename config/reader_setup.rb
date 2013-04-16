@@ -168,29 +168,28 @@ module Reader
       end
     end
 
-    def self.prune
-
-      items = Item.where("starred = false AND shared = false AND has_new_comments = false").where("created_at < ?", Date.current - 1.week)
-      puts "#{items.length} items to delete"
+    def self.prune_items
+      items = Item.where("starred = false AND shared = false AND commented = false").where("created_at < ?", 2.weeks.ago)
+      puts "#{items.count} items to delete"
       items.find_each do |i|
-        if i.comments.empty?
-          #i.destroy
-        end
+        puts "deleting item #{i.id}"
+        i.delete
       end
+    end
 
-      #Item.find_each do |i|
-      #  i.destroy if i.entry.nil?
-      #end
-
+    def self.prune_feeds
+      puts "Find feeds without subscriptions"
       Feed.find_each do |f|
         unless f.private
           if f.subscriptions.empty?
-            puts "destroy #{f.name}"
+            puts "destroy feed #{f.name}"
             f.destroy
           end
         end
       end
+    end
 
+    def self.prune_entries
       entries = []
       Entry.find_each do |e|
         if e.items.empty?
@@ -202,15 +201,6 @@ module Reader
       entries.each do |e|
         e.destroy
       end
-
-      #Follow.find_each do |f|
-      #  if f.follower.nil?
-      #    puts "follower is nil"
-      #  end
-      #  if f.followable.nil?
-      #    puts "followable is nil"
-      #  end
-      #end
     end
 
   end

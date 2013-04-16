@@ -1,24 +1,16 @@
 
 namespace :reader do
 
-  task :fetch_test => :environment do
-    response = PollFeed.new.perform(:url => 'http://news.ycombinator.com/rss')
-    ap response
-    binding.pry
+  desc "reset feed error counts"
+  task :reset_feed_errors => :environment do
+    Feed.update_all parse_errors: 0, timeouts: 0, fetchable: true, etag: nil, hub: nil, topic: nil
   end
 
-  namespace :feeder do
-    desc "reset feed error counts"
-    task :reset => :environment do
-      Feed.update_all parse_errors: 0, timeouts: 0, fetchable: true, etag: nil, hub: nil, topic: nil
-    end
-
-    desc "poll feeds for new posts"
-    task :run => :environment do
-      RestartPollerService.perform
-    end
-
+  desc "poll feeds for new posts"
+  task :run_poller => :environment do
+    RestartPollerService.perform
   end
+
 
   namespace :redis do
     desc "redis - remove all keys from all databases"
@@ -69,9 +61,9 @@ namespace :reader do
     Feed.get_icons
   end
 
-  desc "prune old entries and items that are no longer needed"
-  task :prune => :environment do
-    Reader::Setup.prune
+  desc "prune old items that are no longer needed"
+  task :prune_items => :environment do
+    Reader::Setup.prune_items
   end
 
   desc "update anonymous user feeds"
