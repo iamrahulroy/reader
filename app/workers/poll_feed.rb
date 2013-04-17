@@ -39,4 +39,14 @@ class PollFeed
   def process_feed(id, file_name, repeat=true)
     ProcessFeed.perform_async(id, file_name, repeat)
   end
+
+  def self.requeue_polling(id)
+    PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, id) unless poll_scheduled?(id)
+  end
+
+  def self.poll_scheduled?(id)
+    r = Sidekiq::ScheduledSet.new
+    jobs = r.select { |job| job.item["class"] == "PollFeed" && job.item["args"][0] == id }
+    !jobs.empty?
+  end
 end

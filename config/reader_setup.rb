@@ -3,50 +3,16 @@ module Reader
     def self.users
       users = User.count
       if users == 0
-        u = User.new
-        u.name = "Anonymous 1kpl.us User"
-        u.email = "anonymous@1kpl.com"
-        u.password = '123456'
-        u.password_confirmation = '123456'
-        u.anonymous = true
-        u.save :validate => false
-
-        u = User.new
-        u.name = "Charlie Wilkins"
-        u.email = "charlie@example.com"
-        u.password = '123456'
-        u.password_confirmation = '123456'
-        u.save :validate => false
-
-        u = User.new
-        u.name = "Loren Spector"
-        u.email = "loren@example.com"
-        u.password = '123456'
-        u.password_confirmation = '123456'
-        u.save :validate => false
-
-        u = User.new
-        u.name = "Josh Rhoades"
-        u.email = "josh@example.com"
-        u.password = '123456'
-        u.password_confirmation = '123456'
-        u.save :validate => false
-
-        u = User.new
-        u.name = "Steve Polk"
-        u.email = "steve@example.com"
-        u.password = '123456'
-        u.password_confirmation = '123456'
-        u.save :validate => false
+        User.anonymous
+        User.charlie
+        User.loren
       end
     end
 
     def self.scrub
       return unless Rails.env.development?
       self.empty_tables
-
       self.reset_auto_increment
-
     end
 
     def self.seed
@@ -63,7 +29,6 @@ module Reader
         Reader::Setup.users
         Reader::Setup.update_anon_feeds
       end
-
 
       users = User.where(:anonymous => false).all
       users.each do |user|
@@ -128,7 +93,7 @@ module Reader
     end
 
     def self.empty_tables
-      #User.delete_all
+      User.delete_all
       Client.delete_all
       Feed.delete_all
       Entry.delete_all

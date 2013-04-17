@@ -28,7 +28,7 @@ class ProcessFeed
     end
 
     File.delete file_path
-    PollFeed.perform_in(Reader::UPDATE_FREQUENCY.minutes, id) if repeat
+    PollFeed.requeue_polling(id)
 
     feed = Feed.where(id: id).first
     feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }
@@ -39,7 +39,6 @@ class ProcessFeed
     em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
     ap em
   end
-
 
 
   def self.process_entries(feed_id, entries)

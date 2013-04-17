@@ -4,10 +4,15 @@ Reader::Application.routes.draw do
 
   require 'sidekiq/web'
 
-  constraint = lambda { |request| request.env["warden"].authenticate? and request.env['warden'].user.admin? }
-  constraints constraint do
+  if Rails.env.development?
     mount Sidekiq::Web => '/sidekiq'
+  else
+    constraint = lambda { |request| request.env["warden"].authenticate? and request.env['warden'].user.admin? }
+    constraints constraint do
+      mount Sidekiq::Web => '/sidekiq'
+    end
   end
+
 
   devise_for :users, :controllers => { :sessions => 'users/sessions', :registrations => "users/registrations", :passwords => "users/passwords" }
 

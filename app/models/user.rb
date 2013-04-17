@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
     self.update_attribute(:registration_complete, true) if self.valid? && !registration_complete?
 
     if self.registration_complete? && !self.anonymous? && self.valid?
-      if self.groups.count == 0 # they need to get the default feed set and the welcome email
+      unless has_root_group? # they need to get the default feed set and the welcome email
         make_root_group
         copy_anonymous_feeds
       end
@@ -104,8 +104,12 @@ class User < ActiveRecord::Base
     create_user_item_feed :starred
   end
 
+  def has_root_group?
+    Group.where(:user_id => self.id, :label => "").count > 0
+  end
+
   def make_root_group
-    Group.create(:user_id => self.id, :label => "")
+    Group.create!(:user_id => self.id, :label => "")
   end
 
   def root_group
@@ -179,19 +183,19 @@ class User < ActiveRecord::Base
   end
 
   def self.anonymous
-    User.where(email: 'anonymous@1kpl.us').first_or_create!(name: 'none', password: SecureRandom.hex, anonymous: true, registration_complete: true)
+    User.unscoped.where(email: 'anonymous@1kpl.us').first_or_create!(name: 'none', password: SecureRandom.hex, anonymous: true, registration_complete: true, email: 'anonymous@1kpl.us')
   end
   def self.charlie
-    User.where(email: "charlie@example.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
+    User.where(email: "charlie@example.com").first_or_create!(name: 'Charlie', password: '123123', registration_complete: true, email: "charlie@example.com")
   end
   def self.loren
-    User.where(email: "loren@example.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
+    User.where(email: "loren@example.com").first_or_create!(name: 'none', password: '123123', registration_complete: true, email: "loren@example.com")
   end
   def self.josh
-    User.where(email: "josh@example.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
+    User.where(email: "josh@example.com").first_or_create!(name: 'none', password: '123123', registration_complete: true, email: "josh@example.com")
   end
   def self.steve
-    User.where(email: "steve@example.com").first_or_create!(name: 'none', password: SecureRandom.hex, registration_complete: true)
+    User.where(email: "steve@example.com").first_or_create!(name: 'none', password: '123123', registration_complete: true, email: "steve@example.com")
   end
 
   protected

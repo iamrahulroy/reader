@@ -3,7 +3,6 @@ class ChargesController < ApplicationController
   include ApplicationHelper
 
   def new
-    binding.pry
   end
 
   def create
