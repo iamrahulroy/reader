@@ -39,8 +39,7 @@ gem "figaro", "~> 0.6"
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem "pry-rails", "~> 0.2"
-gem "pry-coolline"
-gem "pry-debugger"
+gem "pry-nav"
 gem "pry-remote"
 
 group :production do
