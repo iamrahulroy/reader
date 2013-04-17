@@ -82,6 +82,13 @@ class Subscription < ActiveRecord::Base
     end
   end
 
+  def update_unread_counts
+    self.unread_count = Item.unscoped.where(user_id: user_id, subscription_id: id, unread: true).count
+    self.save! if self.changed?
+  rescue ActiveRecord::RecordInvalid => e
+    self.destroy
+  end
+
   def update_counts
     self.unread_count = Item.unscoped.where(user_id: user_id, subscription_id: id, unread: true).count
     self.starred_count = Item.unscoped.where(user_id: user_id, subscription_id: id, starred: true).count

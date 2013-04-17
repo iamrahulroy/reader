@@ -3,7 +3,7 @@ class UpdateSubscriptionCount
   sidekiq_options :queue => :critical
   def perform(id)
     sub = Subscription.find(id)
-    sub.update_counts
+    sub.update_unread_counts
   end
 
 end
