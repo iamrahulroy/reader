@@ -5,7 +5,6 @@ describe "User wants to create account", :type => :feature do
   it "User creates account", :js => true, :vcr => true do
     visit "/"
     click_link "login-link"
-    sleep 1
     click_link "Create new account"
 
     within("#register_form") do
@@ -24,21 +23,13 @@ describe "User wants to create account", :type => :feature do
 
   it "User forgot password", :js => true, :vcr => true do
     u = User.steve
-
-
     visit "/"
     click_link "login-link"
-    sleep 0.5
-
     click_link "Forgot your password?"
     within("#password_form") do
       fill_in "E-mail:", :with => "test@1kpl.us"
     end
-
-    sleep 1
     find("#password-submit-link-btn").click
-    sleep 1
-
     page.should have_content "Email not found"
     within("#password_form") do
       fill_in "E-mail:", :with => "steve@example.com"
@@ -53,15 +44,11 @@ describe "User wants to create account", :type => :feature do
   it "User closes registration modal", :js => true, :vcr => true do
     visit "/"
     click_link "login-link"
-    sleep 1
     click_link "Create new account"
-    sleep 1
-
     find("#register-modal").should be_visible
-
     click_link "Close"
-
-    find("#register-modal").should_not be_visible
+    sleep 1
+    page.text.should_not include 'Password Confirmation'
   end
 
 end

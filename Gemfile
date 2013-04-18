@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem "feedzirra", git: "https://github.com/pauldix/feedzirra.git"
+gem "feedzirra", :git => "https://github.com/pauldix/feedzirra.git"
 gem "nokogiri", "~> 1.5"
 gem "rails", "~> 3.2"
 gem "unicorn", "~> 4.4", :require => false

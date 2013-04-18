@@ -8,14 +8,18 @@ describe FetchFeedService do
   end
 
   it 'returns a body' do
-    fetch = FetchFeedService.new(:url => "http://news.ycombinator.com/rss")
-    fetch.perform
-    expect(fetch.body).to include("<rss version=\"2.0\"><channel><title>Hacker News</title>")
+    VCR.use_cassette 'FetchFeedService returns a body' do
+      fetch = FetchFeedService.new(:url => "http://news.ycombinator.com/rss")
+      fetch.perform
+      expect(fetch.body).to include("<rss version=\"2.0\"><channel><title>Hacker News</title>")
+    end
   end
 
   it 'has the correct URL when redirected' do
-    fetch = FetchFeedService.new(:url => "http://news.ycombinator.com/rss")
-    fetch.perform
-    expect(fetch.url).to eq("https://news.ycombinator.com/rss")
+    VCR.use_cassette 'FetchFeedService has the correct URL when redirected' do
+      fetch = FetchFeedService.new(:url => "http://news.ycombinator.com/rss")
+      fetch.perform
+      expect(fetch.url).to eq("https://news.ycombinator.com/rss")
+    end
   end
 end
