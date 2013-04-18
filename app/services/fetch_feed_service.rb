@@ -23,6 +23,10 @@ class FetchFeedService
     self
   end
 
+  def self.perform(options)
+    self.new.perform(options)
+  end
+
   protected
 
   def options

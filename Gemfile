@@ -61,6 +61,7 @@ group :test, :development do
   gem "awesome_print" #, "~> 1.1"
   gem "rspec-rails" #, "~> 2.12"
   gem "quiet_assets" #, "~> 1.0"
+  gem "webmock"
   #gem "jasmine-rails" #, "~> 0.3"
   gem "marginalia"
 end
