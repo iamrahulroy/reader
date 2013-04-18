@@ -1,0 +1,194 @@
+---
+http_interactions:
+- request:
+    method: head
+    uri: http://feeds.feedburner.com/37signals/beMH
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Etag:
+      - dLr5PMvCeNsGevfiC2epZ7TIxQI
+      Last-Modified:
+      - Thu, 18 Apr 2013 14:31:33 GMT
+      Date:
+      - Thu, 18 Apr 2013 14:46:38 GMT
+      Expires:
+      - Thu, 18 Apr 2013 14:46:38 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Thu, 18 Apr 2013 14:46:38 GMT
+- request:
+    method: head
+    uri: http://notalwaysromantic.com/feed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - PHP/5.3.6
+      X-Pingback:
+      - http://notalwaysromantic.com/xmlrpc.php
+      Last-Modified:
+      - Thu, 18 Apr 2013 01:49:28 GMT
+      Etag:
+      - '"bcd365b762aae42c7b292bf609233641"'
+      Vary:
+      - Accept-Encoding,Cookie
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Server:
+      - '- Web acceleration by http://www.unixy.net/varnish'
+      X-Cacheable:
+      - 'YES'
+      Content-Length:
+      - '30862'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Thu, 18 Apr 2013 14:46:38 GMT
+      X-Varnish:
+      - '251237299'
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      Age:
+      - '0'
+      X-Cache:
+      - MISS
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Thu, 18 Apr 2013 14:46:38 GMT
+- request:
+    method: head
+    uri: http://feeds.feedburner.com/VeryDemotivational
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Etag:
+      - DhD+vNWqx4TVFSupVu7kOPGeoG0
+      Last-Modified:
+      - Thu, 18 Apr 2013 14:27:38 GMT
+      Date:
+      - Thu, 18 Apr 2013 14:46:38 GMT
+      Expires:
+      - Thu, 18 Apr 2013 14:46:38 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Thu, 18 Apr 2013 14:46:38 GMT
+- request:
+    method: head
+    uri: http://xkcd.com/rss.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/xml
+      Accept-Ranges:
+      - bytes
+      Etag:
+      - '"2297256301"'
+      Last-Modified:
+      - Wed, 17 Apr 2013 04:00:06 GMT
+      Content-Length:
+      - '2616'
+      Date:
+      - Thu, 18 Apr 2013 14:46:39 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Thu, 18 Apr 2013 14:46:39 GMT
+- request:
+    method: head
+    uri: http://feeds.feedburner.com/hackaday/LgoM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Etag:
+      - IfxVlzwCX+It6AOmTpC+FP1SiZU
+      Last-Modified:
+      - Thu, 18 Apr 2013 14:46:13 GMT
+      Date:
+      - Thu, 18 Apr 2013 14:46:39 GMT
+      Expires:
+      - Thu, 18 Apr 2013 14:46:39 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Thu, 18 Apr 2013 14:46:39 GMT
+recorded_with: VCR 2.4.0
