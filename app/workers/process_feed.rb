@@ -19,11 +19,16 @@ class ProcessFeed
       #feed.parse_errors = feed.parse_errors + 1
       #feed.fetchable = false if feed.parse_errors > 10
       #feed.save
+      ap t
       ap "THIS BROKE"
       return
     end
 
-    parsed_feed.entries.each do |entry|
+    entries = parsed_feed.entries.select do |entry|
+      EntryGuid.where(feed_id: id, guid: ProcessFeed.entry_guid(entry)).count == 0
+    end
+
+    entries.each do |entry|
       ProcessFeed.process_entry(id, entry)
     end
 
@@ -47,14 +52,18 @@ class ProcessFeed
     end
   end
 
-  def self.process_entry(feed_id, entry)
-    content = entry.respond_to?(:content) ? entry.content : nil
-    content ||= entry.summary
-
+  def self.entry_guid(entry)
     guid = entry.respond_to?(:guid) ? entry.guid : nil
     guid ||= entry.respond_to?(:entry_id) ? entry.entry_id : nil
     guid ||= entry.url
     guid ||= entry.title
+  end
+
+  def self.process_entry(feed_id, entry)
+    content = entry.respond_to?(:content) ? entry.content : nil
+    content ||= entry.summary
+
+    guid = entry_guid(entry)
 
     url = entry.url || guid
     if url && guid

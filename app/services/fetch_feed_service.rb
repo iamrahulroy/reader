@@ -16,6 +16,7 @@ class FetchFeedService
     if response
       @status = response.status
       @url = response.url
+      @etag = response.etag
       if response.body
         @body = response.body.ensure_encoding('UTF-8', :external_encoding  => :sniff, :invalid_characters => :transcode)
       end
@@ -35,7 +36,7 @@ class FetchFeedService
 
   def get_response
     response = self.class.get @url, options
-    OpenStruct.new(status: response.code, body: response.body, url: response.request.last_uri.to_s)
+    OpenStruct.new(status: response.code, body: response.body, url: response.request.last_uri.to_s, etag: response.headers["etag"])
   end
 
 end

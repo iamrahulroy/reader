@@ -8,11 +8,19 @@ describe PollFeed do
 
   describe "#perform", :vcr do
 
-
     it "polls a feed url for updates" do
       PollFeed.perform_async(feed.id)
       run_jobs
       Item.count.should == 15
+    end
+
+    it "checks for entryguids before attempting to do inserts" do
+      PollFeed.perform_async(feed.id)
+      run_jobs
+      Item.count.should == 15
+      ProcessFeed.should_not_receive :process_entry
+      PollFeed.perform_async(feed.id)
+      run_jobs
     end
 
     it "updates the feed etag" do
