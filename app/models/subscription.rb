@@ -112,14 +112,11 @@ class Subscription < ActiveRecord::Base
       sub = Subscription.find_by_user_id_and_feed_id(user.id, feed_model.id)
       sub ||= Subscription.new(:user_id => user.id, :feed_id => feed_model.id, :group => group, :name => feed_model.name)
       sub.save
-      feed_model.entries.last(25).each do |e|
-        Rails.logger.info "deliver #{e.guid} to #{user.name}"
-        e.deliver_to user
-      end
+      DeliverItemsToUser.perform_async(feed_model.id, user.id)
     else
       #puts feed_url
       # TODO: Handle on_failure, and on_success if necessary
-      feed = Feedzirra::Feed.fetch_and_parse(feed_url, :timeout => 5)
+      feed = Feedzirra::Feed.fetch_and_parse(feed_url, :timeout => 15)
       if feed.respond_to? :title
         title = feed.try(:title).truncate(255)
         feed_model = Feed.new(
@@ -139,6 +136,7 @@ class Subscription < ActiveRecord::Base
           end
         end
         sub.save
+        PollFeedNow.perform_async(feed_model.id)
       end
 
       unless feed_model.nil?
