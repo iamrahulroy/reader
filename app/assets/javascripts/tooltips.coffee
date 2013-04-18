@@ -5,35 +5,9 @@ App.updateTooltips = ->
       placement: $el.data('placement')
       title: $el.attr('title')
 
-  # $("#nav-unread-link").tooltip
-  #   placement: "right"
-  #   title: "Unread items"
-
-  # $("#nav-all-link").tooltip
-  #   placement: "right"
-  #   title:     "All items"
-
-  # $("#nav-starred-link").tooltip
-  #   placement: "right"
-  #   title: "Starred items"
-
-  # $("#nav-shared-link").tooltip
-  #   placement: "right"
-  #   title: "Shared items"
-
-  # $("#nav-comments-link").tooltip
-  #   placement: "right"
-  #   title: "Discussions"
-
-
-  # $("#nav-note-link").tooltip
-  #   placement: "right"
-  #   title:     "Share something!"
-
-  # $("#nav-settings-link").tooltip
-  #   placement: "right"
-  #   title:     "Settings"
-
-  # $("#nav-add-link").tooltip
-  #   placement: "right"
+App.hideTooltips = ->
+  $('[data-placement]').each (index, el) ->
+    $el = $(el)
+    $el.tooltip('hide')
   #   title:     "Add new group/feed"
+window.setInterval App.hideTooltips, 9000
