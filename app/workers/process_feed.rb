@@ -35,8 +35,10 @@ class ProcessFeed
     File.delete file_path
     PollFeed.requeue_polling(id)
 
-    feed = Feed.where(id: id).first
-    feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }
+    unless entries.empty?
+      feed = Feed.where(id: id).first
+      feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }
+    end
 
   rescue
 
