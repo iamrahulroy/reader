@@ -118,7 +118,8 @@ class Subscription < ActiveRecord::Base
       # TODO: Handle on_failure, and on_success if necessary
       feed = Feedzirra::Feed.fetch_and_parse(feed_url, :timeout => 15)
       if feed.respond_to? :title
-        title = feed.try(:title).truncate(255)
+        title = feed.try(:title)
+        title = title.truncate(255) unless title.nil?
         feed_model = Feed.new(
                 :name => title || '(untitled feed)',
                 :feed_url => feed.feed_url,

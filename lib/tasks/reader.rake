@@ -1,6 +1,11 @@
 
 namespace :reader do
 
+  desc "Fetch all the feeds, ALL OF THEM"
+  task :fetch_all => :environment do
+    FetchAllFeedsService.new.perform
+  end
+
   desc "reset feed error counts"
   task :reset_feed_errors => :environment do
     Feed.update_all parse_errors: 0, timeouts: 0, fetchable: true, etag: nil, hub: nil, topic: nil

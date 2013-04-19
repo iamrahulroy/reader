@@ -1,8 +1,5 @@
 require 'open-uri'
 require 'timeout'
-class FilelessIO < StringIO
-  attr_accessor :original_filename
-end
 
 class GetIcon
   include Sidekiq::Worker

@@ -20,7 +20,7 @@ class PollFeed
           File.open(file_name, "w") do |f|
             f.write response.body
           end
-          process_feed(id, file_name)
+          process_feed(id)
 
         end
       when 400..599, 304
@@ -36,8 +36,8 @@ class PollFeed
     ap em
   end
 
-  def process_feed(id, file_name, repeat=true)
-    ProcessFeed.perform_async(id, file_name, repeat)
+  def process_feed(id)
+    ProcessFeed.perform_async(id)
   end
 
   def self.requeue_polling(id)

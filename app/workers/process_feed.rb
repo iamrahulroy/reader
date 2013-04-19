@@ -5,8 +5,11 @@ class ProcessFeed
   include Sidekiq::Worker
   sidekiq_options :queue => :process
 
-  def perform(id, file_path, repeat)
-    body = File.open(file_path, "r").read
+  def perform(id)
+    #body = File.open(file_path, "r").read
+
+    feed = Feed.where(id: id).first
+    body = open(feed.document.path).read
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
     body = body.encode('UTF-16', :invalid => :replace, :replace => '')
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
@@ -32,19 +35,17 @@ class ProcessFeed
       ProcessFeed.process_entry(id, entry)
     end
 
-    File.delete file_path
     PollFeed.requeue_polling(id)
 
     unless entries.empty?
-      feed = Feed.where(id: id).first
       feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }
     end
 
-  rescue
+  #rescue
 
-    feed.increment!(:parse_errors) if feed
-    em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
-    ap em
+    #feed.increment!(:parse_errors) if feed
+    #em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
+    #ap em
   end
 
 

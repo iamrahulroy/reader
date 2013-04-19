@@ -1,4 +1,5 @@
 class Feed < ActiveRecord::Base
+  mount_uploader :document, FeedUploader
   has_one :feed_icon, :dependent => :destroy
   has_many :subscriptions, :dependent => :destroy
   has_many :entries, :dependent => :destroy

@@ -50,7 +50,7 @@ module Reader
         user = User.charlie
 
         feed_urls = File.readlines("spec/good_urls.txt").collect {|line| line}
-        feed_urls = feed_urls.sample 5
+        feed_urls = feed_urls.sample 10
 
         feed_urls.each {|fu|
           Subscription.find_or_create_from_url_for_user(fu,user)
@@ -70,6 +70,11 @@ module Reader
       end
 
 
+      bad_urls = File.readlines("spec/failed_urls.txt").collect {|line| line}
+      bad_urls = bad_urls.sample(100)
+      bad_urls.each do |url|
+        Feed.create! :feed_url => url, :name => "Bad URL"
+      end
 
       User.charlie.follow_and_unblock User.loren
       User.loren.follow_and_unblock User.charlie

@@ -48,8 +48,8 @@ group :production do
 end
 
 group :development do
-  gem "binding_of_caller", "~> 0.7"
-  gem "better_errors", "~> 0.6"
+  #gem "binding_of_caller", "~> 0.7"
+  #gem "better_errors", "~> 0.6"
   gem "meta_request", "~> 0.2"
   gem "erb2haml", "~> 0.1"
   gem "mails_viewer", "~> 0.0"
@@ -61,12 +61,12 @@ group :test, :development do
   gem "awesome_print" #, "~> 1.1"
   gem "rspec-rails" #, "~> 2.12"
   gem "quiet_assets" #, "~> 1.0"
-  gem "webmock"
   #gem "jasmine-rails" #, "~> 0.3"
   gem "marginalia"
 end
 
 group :test do
+  gem "webmock"
   gem "timecop"
   gem "selenium-webdriver"
   gem "database_cleaner" #, "~> 0.9"
