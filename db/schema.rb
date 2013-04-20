@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130419141740) do
+ActiveRecord::Schema.define(:version => 20130420232823) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -81,16 +81,6 @@ ActiveRecord::Schema.define(:version => 20130419141740) do
   add_index "entry_guids", ["feed_id"], :name => "index_entry_guids_on_feed_id"
   add_index "entry_guids", ["feed_id"], :name => "new_entry_guid_feed_id_index", :order => {"feed_id"=>:desc}
   add_index "entry_guids", ["guid"], :name => "index_entry_guids_on_guid"
-
-  create_table "facebook_authorizations", :force => true do |t|
-    t.integer  "user_id"
-    t.text     "token"
-    t.datetime "token_expires_at"
-    t.text     "auth_hash"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.string   "facebook_id"
-  end
 
   create_table "facebook_contacts", :force => true do |t|
     t.integer  "left_user_id"
@@ -226,15 +216,6 @@ ActiveRecord::Schema.define(:version => 20130419141740) do
   end
 
   add_index "subscriptions", ["id"], :name => "subscriptions_id"
-
-  create_table "test_records", :force => true do |t|
-    t.text     "title"
-    t.text     "summary"
-    t.text     "content"
-    t.datetime "published_at"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                          :default => ""

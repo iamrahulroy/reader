@@ -1,7 +1,6 @@
 require 'acts_as_follower'
 class User < ActiveRecord::Base
   include ActionView::Helpers::SanitizeHelper
-  include PossibleContacts
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
