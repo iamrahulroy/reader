@@ -41,9 +41,9 @@ class ApplicationController < ActionController::Base
     id = params[:id]
     case params[:streamType]
       when "subscription"
-        sub = Subscription.find(id)
-        Item.unscoped.where(user_id: current_user.id).where(subscription_id: sub.id).update_all(unread: false)
-        sub.update_counts
+        subscription = Subscription.find(id)
+        Item.unscoped.where(user_id: current_user.id).where(subscription_id: subscription.id).update_all(unread: false)
+        subscription.update_counts
       when "group"
         grp = Group.find(id)
         grp.subscriptions.each do |sub|
@@ -78,7 +78,7 @@ class ApplicationController < ActionController::Base
     end
 
     def update_user_subscriptions
-      if current_user.last_seen_at < 5.minutes.ago
+      if current_user.last_seen_at < 15.minutes.ago
         UpdateUserSubscriptions.perform_async(current_user.id)
       end
     end

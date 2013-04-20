@@ -8,30 +8,13 @@ end
 class FetchAllFeedsService
 
   attr_accessor :hydra
+
   def initialize
   end
 
   def self.perform
-    pid = fork do
-      $shutdown_fetch_all = false
-      Signal.trap("USR1") do
-        $debug = !$debug
-        puts "Debug now: #$debug"
-      end
-      Signal.trap("TERM") do
-        puts "Terminating..."
-        exit
-      end
-      loop do
-        break if $shutdown_fetch_all
-        self.new.perform
-        sleep 60
-        puts 'woop'
-      end
-    end
-    Process.detach(pid)
     loop do
-      sleep 60
+      self.new.perform
     end
   end
 
@@ -47,7 +30,7 @@ class FetchAllFeedsService
 
   def request_for(feed, follow = false)
     url = feed.current_feed_url || feed.feed_url
-    request = Typhoeus::Request.new(url, :method => :get, :ssl_verifyhost => 2, :timeout => 60, :followlocation => follow)
+    request = Typhoeus::Request.new(url, ssl_verifyhost: 2, timeout: 60, followlocation: follow)
     request.feed = feed
     request.on_complete do |response|
       handle_response response

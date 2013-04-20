@@ -137,7 +137,7 @@ class Subscription < ActiveRecord::Base
           end
         end
         sub.save
-        PollFeedNow.perform_async(feed_model.id)
+        PollFeed.perform_async(feed_model.id)
       end
 
       unless feed_model.nil?

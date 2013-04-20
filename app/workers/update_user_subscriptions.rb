@@ -5,7 +5,7 @@ class UpdateUserSubscriptions
     user = User.find(user_id)
     user.set_weights
     user.subscriptions.each do |sub|
-      PollFeedNow.perform_async(sub.feed.id) if sub.feed
+      PollFeed.perform_async(sub.feed.id) if sub.feed
     end
   end
 end

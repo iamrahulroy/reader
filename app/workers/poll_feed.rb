@@ -2,12 +2,12 @@ require 'faraday_middleware'
 require 'faraday_middleware/response_middleware'
 class PollFeed
   include Sidekiq::Worker
-  sidekiq_options :queue => :poll
+  sidekiq_options :queue => :critical
   def perform(id)
 
     feed = Feed.find id
     url = feed.current_feed_url || feed.feed_url
-    response = FetchFeedService.perform(:url => url, :etag => feed.etag)
+    response = FetchFeedService.perform(url)
 
     feed.update_column(:current_feed_url, response.url)
     feed.update_column(:etag, response.etag)
@@ -21,12 +21,7 @@ class PollFeed
             f.write response.body
           end
           process_feed(id)
-
         end
-      when 400..599, 304
-        #PollFeed.perform_in(6.hours, feed.id)
-      else
-        #PollFeed.perform_in(6.hours, feed.id)
     end
 
   rescue
