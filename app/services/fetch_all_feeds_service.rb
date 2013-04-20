@@ -11,21 +11,43 @@ class FetchAllFeedsService
   def initialize
   end
 
+  def self.perform
+    pid = fork do
+      $shutdown_fetch_all = false
+      Signal.trap("USR1") do
+        $debug = !$debug
+        puts "Debug now: #$debug"
+      end
+      Signal.trap("TERM") do
+        puts "Terminating..."
+        exit
+      end
+      loop do
+        break if $shutdown_fetch_all
+        self.new.perform
+        sleep 60
+        puts 'woop'
+      end
+    end
+    Process.detach(pid)
+    loop do
+      sleep 60
+    end
+  end
+
   def perform
     @hydra = Typhoeus::Hydra.hydra
     Feed.fetchable.find_each do |feed|
-      url = feed.current_feed_url || feed.feed_url
-      puts url
+      Rails.logger.debug "Fetching #{feed.feed_url} - #{feed.name}"
       hydra.queue request_for(feed)
     end
 
     hydra.run
-    #binding.pry
   end
 
   def request_for(feed, follow = false)
-    url = feed.feed_url # feed.current_feed_url || feed.feed_url
-    request = Typhoeus::Request.new(url, :method => :get, :ssl_verifyhost => 2, :timeout => 1000, :followlocation => follow)
+    url = feed.current_feed_url || feed.feed_url
+    request = Typhoeus::Request.new(url, :method => :get, :ssl_verifyhost => 2, :timeout => 60, :followlocation => follow)
     request.feed = feed
     request.on_complete do |response|
       handle_response response
@@ -35,7 +57,6 @@ class FetchAllFeedsService
 
   def handle_response(response)
     feed = response.request.feed
-    puts "#{response.response_code} - #{feed.feed_url} - #{feed.name} - #{response.total_time}" if Rails.env.development?
     case response.response_code
     when 200
       feed.increment! :fetch_count
@@ -47,14 +68,11 @@ class FetchAllFeedsService
     when 301
       feed.update_attribute :current_feed_url, response.headers["Location"]
       hydra.queue request_for(feed, true)
-      #binding.pry
     when 302
       hydra.queue request_for(feed, true)
-      #binding.pry
     else
-      puts "timeout: #{response.timed_out?}"
+      Rails.logger.debug "Fetch failed: #{feed.feed_url} - #{feed.name}"
       feed.increment! :connection_errors
-      #binding.pry
     end
   end
 end

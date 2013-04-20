@@ -3,7 +3,7 @@ namespace :reader do
 
   desc "Fetch all the feeds, ALL OF THEM"
   task :fetch_all => :environment do
-    FetchAllFeedsService.new.perform
+    FetchAllFeedsService.perform
   end
 
   desc "reset feed error counts"
