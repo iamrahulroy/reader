@@ -450,7 +450,6 @@ DEPENDENCIES
   pry-remote
   quiet_assets
   rails (~> 3.2)
-  rb-fsevent
   rspec-rails
   ruby_gntp
   rvm-capistrano (~> 1.2)

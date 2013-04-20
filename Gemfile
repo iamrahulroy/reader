@@ -64,7 +64,7 @@ group :test, :development do
   #gem "jasmine-rails" #, "~> 0.3"
   gem "marginalia"
   
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  #gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem 'guard-rspec'
   gem 'guard-livereload'
 
