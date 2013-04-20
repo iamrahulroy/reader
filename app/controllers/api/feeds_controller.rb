@@ -3,21 +3,18 @@ class Api::FeedsController < ApplicationController
   def subscribe
     if real_user
       url = params[:url]
-      if url.include? "reddit.com/r/"
-        url = "#{url}/.rss"
-        feeds = [Struct.new(:url, :title, :human_url).new(url, nil, nil)]
-      else
-        feeds = Feediscovery::DiscoverFeedService.new(feed_url).result
-      end
+
+      feeds = DiscoverFeedService.discover(url)
       if feeds.length == 0
-        result = {:error => "No RSS or Atom feeds found at #{url}"}
+        result = {:error => "No RSS or Atom feeds found for #{url}"}
       elsif feeds.length == 1
-        subscription = Subscription.find_or_create_from_url_for_user(feeds[0].href, current_user)
-        subscription.save
+        subscription = current_user.subscribe(feeds.first.href)
         result = {:subscriptions => [subscription]}
       elsif feeds.length > 1
         result = {:feeds => feeds}
       end
+
+
       @result = result
 
       respond_to do |format|

@@ -6,9 +6,8 @@ class FeedsController < ApplicationController
   end
 
   def subscribe
-    fu = Feed.find(params[:id]).feed_url
-
-    Subscription.find_or_create_from_url_for_user(fu,current_user)
+    url = Feed.find(params[:id]).feed_url
+    current_user.subscribe(url)
     render :text => 'ok', :layout => nil
   end
 end

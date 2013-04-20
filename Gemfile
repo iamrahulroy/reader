@@ -16,13 +16,13 @@ gem "devise", "~> 2.2"
 gem "acts_as_follower", "~> 0.1"
 
 gem "feediscovery", git: "https://github.com/flingbob/feediscovery.git"
+#gem "feediscovery", path: "../feediscovery"
 
 gem "hpricot", "~> 0.8"
 gem "private_pub", "~> 1.0"
 gem "libxml-ruby", "~> 2.3"
 gem "curb", "~> 0.8"
 gem "typhoeus", "~> 0.5"
-gem "httparty"
 gem "faraday", "~> 0.8"
 gem "faraday_middleware", "~> 0.9"
 gem "embedly", "~> 1.5"
@@ -63,16 +63,21 @@ group :test, :development do
   gem "quiet_assets" #, "~> 1.0"
   #gem "jasmine-rails" #, "~> 0.3"
   gem "marginalia"
+  
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem 'guard-rspec'
+  gem 'guard-livereload'
+
 end
 
 group :test do
-  gem "webmock"
   gem "timecop"
   gem "selenium-webdriver"
   gem "database_cleaner" #, "~> 0.9"
   gem "capybara" #, "~> 2.0"
   gem "vcr" #, "~> 2.4"
   gem "launchy" #, "~> 2.2"
+  gem "webmock", "1.9"
 end
 
 group :assets do

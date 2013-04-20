@@ -54,19 +54,16 @@ module TestHelpers
     grp = Group.find_or_create_by_label_and_user_id "", user.id
     feed_urls = File.readlines("spec/anon_urls.txt").collect {|line| line}
 
-    feed_urls.each do |fu|
-      if fu =~ /^group:/
-        grp = Group.find_or_create_by_label_and_user_id fu.sub('group:', ''), user.id
+    feed_urls.each do |url|
+      if url =~ /^group:/
+        grp = Group.find_or_create_by_label_and_user_id url.sub('group:', ''), user.id
       else
-        Subscription.find_or_create_from_url_for_user(fu,user,grp)
+        user.subscribe url, grp
       end
     end
-
     run_jobs
-    #Feed.fetchable.each do |f|
-    #  PollFeed.perform_async(f.id)
-    #end
-    #GetIcon.drain
+    Feed.get_icons
+    run_jobs
   end
 
 

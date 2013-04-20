@@ -1,33 +1,17 @@
 require 'features/spec_acceptance_helper'
 
-feature "Users share items with each other", :js => true, :vcr => true do
+feature "Users share items with each other", :js => true, :vcr => {:record => :new_episodes} do
 
   scenario "A shares with B, B adds comment, A sees comment, B sees reply" do
     user_a = create_user_a
     user_b = create_user_b
-    run_jobs
     user_a.follow_and_unblock(user_b)
     user_b.follow_and_unblock(user_a)
+    user_a.subscribe "http://xkcd.com/atom.xml"
+    run_jobs
+    user_a.subscriptions.length.should == 1
 
     sign_in_as(user_a)
-    click_link "Add feeds"
-
-    fill_in "Add a feed", :with => "http://xkcd.com/atom.xml"
-    find('#add-feed-btn').click
-    sleep 1
-    find('#feed_url').value.should == ""
-    page.should have_content "Feed subscription added - "
-    page.should have_content "http://xkcd.com/atom.xml"
-    user_a.subscriptions.length.should == 1
-    run_jobs
-
-    visit('/')
-    find("#nav-all-link").click
-
-    # Just make sure the sub shows up in the list.
-    within("#list") do
-      page.should have_content "xkcd"
-    end
 
     visit('/')
     # Now make sure it has items.

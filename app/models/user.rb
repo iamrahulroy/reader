@@ -174,8 +174,26 @@ class User < ActiveRecord::Base
     end
   end
 
-  def subscribe_to_url(url, group=nil)
-    Subscription.find_or_create_from_url_for_user(url, self, group)
+  def subscribe(url, group=nil)
+    feed = Feed.where(feed_url: url).first
+    if feed
+      sub = self.subscriptions.where(feed_id: feed.id).first_or_create!
+      sub.group = group if group
+      sub.save!
+    else
+      result = DiscoverFeedService.discover(url)
+      if result.length == 1
+        result = result.first
+        feed = Feed.create!(feed_url: result.href, name: result.title)
+        sub = self.subscriptions.where(feed_id: feed.id).first_or_create!
+        sub.group = group if group
+        sub.save!
+      elsif result.length > 1
+        {:feeds => feeds} 
+      else
+        {:error => "No RSS or Atom feeds found for #{feed_url}"}
+      end
+    end
   end
 
   def admin?

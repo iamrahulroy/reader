@@ -35,7 +35,7 @@ module Reader
         feed_urls = File.readlines("spec/anon_urls.txt").collect {|line| line}
         #feed_urls = feed_urls.sample 100
 
-        feed_urls.each {|fu| Subscription.find_or_create_from_url_for_user(fu,user)}
+        feed_urls.each {|url| user.subscribe(url) }
 
         subscriptions = Subscription.where(:user_id => user.id).all
         subscriptions.each do |sub|
@@ -52,8 +52,8 @@ module Reader
         feed_urls = File.readlines("spec/good_urls.txt").collect {|line| line}
         feed_urls = feed_urls.sample 10
 
-        feed_urls.each {|fu|
-          Subscription.find_or_create_from_url_for_user(fu,user)
+        feed_urls.each {|url|
+          user.subscribe(url)
         }
 
         subscriptions = Subscription.where(:user_id => user.id).all
@@ -66,7 +66,7 @@ module Reader
 
         grp = Group.find_or_create_by_label_and_user_id "Ruby", user.id
         feed_urls = File.readlines("spec/ruby_urls.txt").collect {|line| line}
-        feed_urls.each {|fu| Subscription.find_or_create_from_url_for_user(fu,user,grp)}
+        feed_urls.each {|url| user.subscribe(url, grp)}
       end
 
 
@@ -133,7 +133,7 @@ module Reader
         if fu =~ /^group:/
           grp = Group.find_or_create_by_label_and_user_id fu.sub('group:', ''), user.id
         else
-          Subscription.find_or_create_from_url_for_user(fu,user,grp)
+          user.subscribe(url, grp)
         end
       end
     end

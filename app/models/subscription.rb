@@ -8,6 +8,7 @@ class Subscription < ActiveRecord::Base
   has_one :feed_icon, :through => :feed, :dependent => :destroy
 
   before_create :set_default_name
+  before_save :set_group
 
   validates :feed_id, :uniqueness => { :scope => :user_id,
     :message => "one sub per user per feed" }
@@ -50,6 +51,12 @@ class Subscription < ActiveRecord::Base
     (self.group.nil?) ? "" : self.group.parameterize
   end
 
+  def set_group
+    unless self.group && self.user
+      self.group = user.groups.where(label: "").first
+    end
+  end
+
   def group_label
     (self.group.nil?) ? "" : self.group
   end
@@ -85,7 +92,7 @@ class Subscription < ActiveRecord::Base
   def update_unread_counts
     self.unread_count = Item.unscoped.where(user_id: user_id, subscription_id: id, unread: true).count
     self.save! if self.changed?
-  rescue ActiveRecord::RecordInvalid => e
+  rescue ActiveRecord::RecordInvalid
     self.destroy
   end
 
@@ -96,54 +103,8 @@ class Subscription < ActiveRecord::Base
     self.commented_count = Item.unscoped.where(user_id: user_id, subscription_id: id, commented: true).count
     self.all_count = Item.unscoped.where(user_id: user_id, subscription_id: id).count
     self.save! if self.changed?
-  rescue ActiveRecord::RecordInvalid => e
+  rescue ActiveRecord::RecordInvalid
     self.destroy
   end
 
-  # TODO: test this method more thoroughly
-  def self.find_or_create_from_url_for_user(feed_url, user, group=nil)
-
-    feed_url.strip!
-    feed_model = Feed.find_by_feed_url(feed_url)
-
-    group ||= user.root_group
-
-    if feed_model
-      sub = Subscription.find_by_user_id_and_feed_id(user.id, feed_model.id)
-      sub ||= Subscription.new(:user_id => user.id, :feed_id => feed_model.id, :group => group, :name => feed_model.name)
-      sub.save
-      DeliverItemsToUser.perform_async(feed_model.id, user.id)
-    else
-      #puts feed_url
-      # TODO: Handle on_failure, and on_success if necessary
-      feed = Feedzirra::Feed.fetch_and_parse(feed_url, :timeout => 15)
-      if feed.respond_to? :title
-        title = feed.try(:title)
-        title = title.truncate(255) unless title.nil?
-        feed_model = Feed.new(
-                :name => title || '(untitled feed)',
-                :feed_url => feed.feed_url,
-                :site_url => feed.url,
-                :description => feed.description,
-                :user => user
-        )
-
-        if feed_model.valid?
-          feed_model.save
-          sub = Subscription.create(:user_id => user.id, :feed_id => feed_model.id, :group => group, :name => feed_model.name)
-        else
-          if feed_model.feed_url != feed_url
-            sub = Subscription.find_or_create_from_url_for_user(feed_model.feed_url, user, group)
-          end
-        end
-        sub.save
-        PollFeed.perform_async(feed_model.id)
-      end
-
-      unless feed_model.nil?
-        ProcessFeed.process_entries(feed_model.id, feed.entries)
-      end
-    end
-    sub
-  end
 end

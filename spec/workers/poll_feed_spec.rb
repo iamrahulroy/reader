@@ -6,7 +6,7 @@ describe PollFeed do
   let!(:feed) { Feed.create! name: "Feed 1", feed_url: "http://feeds.feedburner.com/zefrank", site_url: "http://www.example.com/" }
   let!(:subscription) { Subscription.create! user: user, feed: feed }
 
-  describe "#perform", :vcr do
+  describe "#perform", :vcr => {:record => :new_episodes} do
 
     it "polls a feed url for updates" do
       PollFeed.perform_async(feed.id)

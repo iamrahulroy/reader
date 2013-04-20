@@ -34,7 +34,7 @@ describe "when a user tries to register with an oauth provider that does not sup
     visit "/auth/callback?code=123"
   end
 
-  it "they will be required to enter an email and password", :js => true, :vcr => true do
+  it "they will be required to enter an email and password", :js => true, :vcr => {:record => :new_episodes} do
     within "#new-user-account-form" do
       fill_in "user_email",                  :with => email
       fill_in "user_password",              :with => password
@@ -50,7 +50,7 @@ describe "when a user tries to register with an oauth provider that does not sup
     page.should have_css("#sign-out-link")
   end
 
-  it "they will be required to enter a password and password confirmation", :js => true, :vcr => true do
+  it "they will be required to enter a password and password confirmation", :js => true, :vcr => {:record => :new_episodes} do
     within "#new-user-account-form" do
       fill_in "user_email",                  :with => email
       fill_in "user_password",              :with => password
@@ -62,7 +62,7 @@ describe "when a user tries to register with an oauth provider that does not sup
     page.should have_content "Password doesn't match confirmation"
   end
 
-  it "they will be required to enter a unique email address", :js => true, :vcr => true do
+  it "they will be required to enter a unique email address", :js => true, :vcr => {:record => :new_episodes} do
     within "#new-user-account-form" do
       fill_in "user_email",                  :with => some_user.email
       fill_in "user_password",              :with => password

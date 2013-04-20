@@ -1,4 +1,5 @@
 class Feed < ActiveRecord::Base
+  include ActionView::Helpers::SanitizeHelper
   mount_uploader :document, FeedUploader
   has_one :feed_icon, :dependent => :destroy
   has_many :subscriptions, :dependent => :destroy
@@ -7,7 +8,8 @@ class Feed < ActiveRecord::Base
   validates :feed_url, :uniqueness => true
 
   before_create :set_tokens, :strip_name
-  after_create :get_icon, :poll_feed
+  before_save :scrub
+  after_create :poll_feed, :get_icon
   scope :fetchable, where(:fetchable => true).where(:private => false)
   scope :unfetchable, where(:fetchable => false)
   #scope :suggested, where(:suggested => true)
@@ -32,6 +34,11 @@ class Feed < ActiveRecord::Base
 
   def strip_name
     self.name.strip!
+  end
+
+  def scrub
+    name = sanitize(name)
+    description = sanitize(description)
   end
 
   def set_tokens
@@ -59,6 +66,13 @@ class Feed < ActiveRecord::Base
 
   def public?
     !private?
+  end
+
+  def save_document(body)
+    file = FilelessIO.new(body)
+    file.original_filename = "feed.xml"
+    self.document = file
+    self.save!
   end
 
 end

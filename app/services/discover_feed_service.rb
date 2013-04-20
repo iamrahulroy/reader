@@ -3,8 +3,13 @@ class DiscoverFeedService
 
   def self.perform(url)
     @url = url
-    @feeds = Feediscovery::DiscoverFeedService.new(feed_url).result
+    @feeds = Feediscovery::DiscoverFeedService.new(url).result
     self
+  end
+
+  def self.discover(url)
+    @url = url
+    Feediscovery::DiscoverFeedService.new(url).result
   end
 
   def self.refine

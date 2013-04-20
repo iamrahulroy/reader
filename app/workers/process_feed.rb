@@ -27,6 +27,11 @@ class ProcessFeed
       return
     end
 
+    feed.site_url = parsed_feed.url
+    feed.description = parsed_feed.description if parsed_feed.respond_to? :description
+    feed.name = parsed_feed.title if parsed_feed.respond_to? :title
+    feed.save! if feed.changed?
+
     entries = parsed_feed.entries.select do |entry|
       EntryGuid.where(feed_id: id, guid: ProcessFeed.entry_guid(entry)).count == 0
     end
@@ -35,7 +40,7 @@ class ProcessFeed
       ProcessFeed.process_entry(id, entry)
     end
 
-    PollFeed.requeue_polling(id)
+    #PollFeed.requeue_polling(id)
 
     unless entries.empty?
       feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }

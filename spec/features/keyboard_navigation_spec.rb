@@ -2,12 +2,12 @@ require 'features/spec_acceptance_helper'
 
 feature "Keyboard navigation", :js => true do
   scenario "keystrokes" do
-    VCR.use_cassette "keystrokes" do
+    VCR.use_cassette "keystrokes", :record => :new_episodes do
       user = create_user_a
       run_jobs
       user.reload
-      user.subscribe_to_url "http://feeds.feedburner.com/makezineonline", user.groups.create(:label => "diy")
-      user.subscribe_to_url "http://xkcd.com/atom.xml"
+      user.subscribe "http://feeds.feedburner.com/makezineonline", user.groups.create(:label => "diy")
+      user.subscribe "http://xkcd.com/atom.xml"
       run_jobs
       sign_in_as(user)
       sleep 1

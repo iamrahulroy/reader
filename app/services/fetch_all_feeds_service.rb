@@ -42,11 +42,9 @@ class FetchAllFeedsService
     feed = response.request.feed
     case response.response_code
     when 200
+
+      feed.save_document response.body
       feed.increment! :fetch_count
-      file = FilelessIO.new(response.body)
-      file.original_filename = "feed.xml"
-      feed.document = file
-      feed.save!
       ProcessFeed.perform_async(feed.id)
     when 301
       feed.update_attribute :current_feed_url, response.headers["Location"]

@@ -49,21 +49,18 @@ class SubscriptionsController < ApplicationController
     if feeds.present?
       results = []
       feeds.each do |feed|
-        subscription = Subscription.find_or_create_from_url_for_user(feed, current_user)
-        if subscription.save
-          results << subscription
-        end
+        subscription = current_user.subscribe(feed.href)
+        results << subscription
       end
       results = {:subscriptions => results}
       render :json => results, :layout => nil
     else
       feed_url = params[:feed_url]
-      feeds = Feediscovery::DiscoverFeedService.new(feed_url).result
+      feeds = DiscoverFeedService.discover(feed_url)
       if feeds.length == 0
-        result = {:error => "No RSS or Atom feeds found at #{feed_url}"}
+        result = {:error => "No RSS or Atom feeds found for #{feed_url}"}
       elsif feeds.length == 1
-        subscription = Subscription.find_or_create_from_url_for_user(feeds[0].href, current_user)
-        subscription.save
+        subscription = current_user.subscribe(feeds.first.href)
         result = {:subscriptions => [subscription]}
       elsif feeds.length > 1
         result = {:feeds => feeds}

@@ -14,90 +14,592 @@ http_interactions:
       code: 200
       message: 
     headers:
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "bGFzdC1tb2RpZmllZA==":
-      - !binary |-
-        V2VkLCAyNyBNYXIgMjAxMyAwNDowMDowNSBHTVQ=
-      !binary "ZXRhZw==":
-      - !binary |-
-        IjI5NjY3NzQ5NDYi
-      !binary "Y29udGVudC10eXBl":
-      - !binary |-
-        YXBwbGljYXRpb24veG1s
-      !binary "YWNjZXB0LXJhbmdlcw==":
-      - !binary |-
-        Ynl0ZXM=
-      !binary "Y29udGVudC1sZW5ndGg=":
-      - !binary |-
-        NzE0
-      !binary "Y29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-      !binary "ZGF0ZQ==":
-      - !binary |-
-        VGh1LCAyOCBNYXIgMjAxMyAyMTowNjoxOSBHTVQ=
-      !binary "c2VydmVy":
-      - !binary |-
-        bGlnaHR0cGQvMS40LjI4
+      vary:
+      - Accept-Encoding
+      last-modified:
+      - Wed, 27 Mar 2013 04:00:05 GMT
+      etag:
+      - '"2966774946"'
+      content-type:
+      - application/xml
+      accept-ranges:
+      - bytes
+      content-length:
+      - '714'
+      connection:
+      - close
+      date:
+      - Thu, 28 Mar 2013 21:06:19 GMT
+      server:
+      - lighttpd/1.4.28
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-03-27T00:00:00Z</updated><entry><title>The Past</title><link href="http://xkcd.com/1191/" rel="alternate"></link><updated>2013-03-27T00:00:00Z</updated><id>http://xkcd.com/1191/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/the_past.png" title="If history has taught us anything, we can use that information to destroy it." alt="If history has taught us anything, we can use that information to destroy it." /&gt;</summary></entry><entry><title>Time</title><link href="http://xkcd.com/1190/" rel="alternate"></link><updated>2013-03-25T00:00:00Z</updated><id>http://xkcd.com/1190/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/time.png" title="Wait for it." alt="Wait for it." /&gt;</summary></entry><entry><title>Voyager 1</title><link href="http://xkcd.com/1189/" rel="alternate"></link><updated>2013-03-22T00:00:00Z</updated><id>http://xkcd.com/1189/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/voyager_1.png" title="So far Voyager 1 has 'left the Solar System' by passing through the termination shock three times, the heliopause twice, and once each through the heliosheath, heliosphere, heliodrome, auroral discontinuity, Heaviside layer, trans-Neptunian panic zone, magnetogap, US Census Bureau Solar System statistical boundary, Kuiper gauntlet, Oort void, and crystal sphere holding the fixed stars." alt="So far Voyager 1 has 'left the Solar System' by passing through the termination shock three times, the heliopause twice, and once each through the heliosheath, heliosphere, heliodrome, auroral discontinuity, Heaviside layer, trans-Neptunian panic zone, magnetogap, US Census Bureau Solar System statistical boundary, Kuiper gauntlet, Oort void, and crystal sphere holding the fixed stars." /&gt;</summary></entry><entry><title>Bonding</title><link href="http://xkcd.com/1188/" rel="alternate"></link><updated>2013-03-20T00:00:00Z</updated><id>http://xkcd.com/1188/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/bonding.png" title="I'm trying to build character but Eclipse is really confusing." alt="I'm trying to build character but Eclipse is really confusing." /&gt;</summary></entry></feed>
+    http_version: 
+  recorded_at: Thu, 28 Mar 2013 21:06:19 GMT
+- request:
+    method: get
+    uri: http://feediscovery.appspot.com/?url=http://xkcd.com/atom.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - text/javascript
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sat, 20 Apr 2013 20:37:53 GMT
+      Server:
+      - Google Frontend
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"href": "http://xkcd.com/atom.xml", "type": "application/atom+xml",
+        "rel": "self", "title": "xkcd.com"}]'
+    http_version: 
+  recorded_at: Sat, 20 Apr 2013 20:37:53 GMT
+- request:
+    method: get
+    uri: http://xkcd.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept-Encoding
+      Last-Modified:
+      - Fri, 19 Apr 2013 08:21:40 GMT
+      Etag:
+      - '"3726030280"'
+      Content-Type:
+      - text/html; charset=utf-8
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '2667'
+      Date:
+      - Sat, 20 Apr 2013 20:37:56 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: UTF-8
+      string: |+
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+            "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+        <html version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+        <head>
+        <link rel="stylesheet" type="text/css" href="http://imgs.xkcd.com/static/styles_short_beta.css" title="Default"/>
+        <title>xkcd: Integration by Parts</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <link rel="shortcut icon" href="http://imgs.xkcd.com/s/919f273.ico" type="image/x-icon"/>
+        <link rel="icon" href="http://imgs.xkcd.com/s/919f273.ico" type="image/x-icon"/>
+        <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/atom.xml"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.xml"/>
+        <link rel="apple-touch-icon-precomposed" href="http://imgs.xkcd.com/static/apple-touch-icon-precomposed.png" />
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-25700708-7']);
+          _gaq.push(['_setDomainName', 'xkcd.com']);
+          _gaq.push(['_setAllowLinker', true]);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+        </head>
+        <body>
+        <div id="topContainer">
+        <div id="topLeft">
+        <ul>
+        <li><a href="/archive">Archive</a></li>
+        <li><a href="http://what-if.xkcd.com">What If?</a></li>
+        <li><a href="http://blag.xkcd.com">Blag</a></li>
+        <li><a href="http://store.xkcd.com/">Store</a></li>
+        <li><a rel="author" href="/about">About</a></li>
+        </ul>
+        </div>
+        <div id="topRight">
+        <div id="masthead">
+        <span><a href="/"><img src="http://imgs.xkcd.com/static/terrible_small_logo.png" alt="xkcd.com logo" height="83" width="185"/></a></span>
+        <span id="slogan">A webcomic of romance,<br/> sarcasm, math, and language.</span>
+        </div>
+        <div id="news">
+        You can get the Subways comic as a <a href="http://store-xkcd-com.myshopify.com/products/subways">poster</a>!
+        </div>
+        </div>
+        <div id="bgLeft" class="bg box"></div>
+        <div id="bgRight" class="bg box"></div>
+        </div>
+        <div id="middleContainer" class="box">
+
+        <div id="ctitle">Integration by Parts</div>
+        <ul class="comicNav">
+        <li><a href="/1/">|&lt;</a></li>
+        <li><a rel="prev" href="/1200/" accesskey="p">&lt; Prev</a></li>
+        <li><a href="http://dynamic.xkcd.com/random/comic/">Random</a></li>
+        <li><a rel="next" href="#" accesskey="n">Next &gt;</a></li>
+        <li><a href="/">&gt;|</a></li>
+        </ul>
+        <div id="comic">
+        <img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a &#39;+C&#39; or you&#39;ll get yelled at." alt="Integration by Parts" />
+        </div>
+        <ul class="comicNav">
+        <li><a href="/1/">|&lt;</a></li>
+        <li><a rel="prev" href="/1200/" accesskey="p">&lt; Prev</a></li>
+        <li><a href="http://dynamic.xkcd.com/random/comic/">Random</a></li>
+        <li><a rel="next" href="#" accesskey="n">Next &gt;</a></li>
+        <li><a href="/">&gt;|</a></li>
+        </ul>
+        <br />
+        Permanent link to this comic: http://xkcd.com/1201/<br />
+        Image URL (for hotlinking/embedding): http://imgs.xkcd.com/comics/integration_by_parts.png
+        <div id="transcript" style="display: none"></div>
+        </div>
+        <div id="bottom" class="box">
+        <img src="http://imgs.xkcd.com/s/a899e84.jpg" width="520" height="100" alt="Selected Comics" usemap="#comicmap"/>
+        <map id="comicmap">
+        <!-- http://code.google.com/p/chromium/issues/detail?id=108489 Might be MIME dependant. -->
+        <area shape="rect" coords="0,0,100,100" href="/150/" alt="Grownups"/>
+        <area shape="rect" coords="104,0,204,100" href="/730/" alt="Circuit Diagram"/>
+        <area shape="rect" coords="208,0,308,100" href="/162/" alt="Angular Momentum"/>
+        <area shape="rect" coords="312,0,412,100" href="/688/" alt="Self-Description"/>
+        <area shape="rect" coords="416,0,520,100" href="/556/" alt="Alternative Energy Revolution"/>
+        </map>
+        <div>
+        Search comic titles and transcripts:
+        <script type="text/javascript" src="//www.google.com/jsapi"></script>
+        <script type="text/javascript">google.load('search', '1');google.setOnLoadCallback(function() {google.search.CustomSearchControl.attachAutoCompletion('012652707207066138651:zudjtuwe28q',document.getElementById('q'),'cse-search-box');});</script>
+        <form action="//www.google.com/cse" id="cse-search-box">
+        <div>
+        <input type="hidden" name="cx" value="012652707207066138651:zudjtuwe28q"/>
+        <input type="hidden" name="ie" value="UTF-8"/>
+        <input type="text" name="q" id="q" size="31"/>
+        <input type="submit" name="sa" value="Search"/>
+        </div>
+        </form>
+        <script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>
+        <a href="/rss.xml">RSS Feed</a> - <a href="/atom.xml">Atom Feed</a>
+        </div>
+        <br />
+        <div id="comicLinks">
+        Comics I enjoy:<br/>
+                <a href="http://threewordphrase.com/">Three Word Phrase</a>,
+                <a href="http://oglaf.com/">Oglaf</a> (nsfw),
+                <a href="http://www.smbc-comics.com/">SMBC</a>,
+                <a href="http://www.qwantz.com">Dinosaur Comics</a>,
+                <a href="http://www.asofterworld.com">A Softer World</a>,
+                <a href="http://buttersafe.com/">Buttersafe</a>,
+                <a href="http://pbfcomics.com/">Perry Bible Fellowship</a>,
+                <a href="http://questionablecontent.net/">Questionable Content</a>,
+                <a href="http://www.buttercupfestival.com/">Buttercup Festival</a>
+        </div>
+        <p>Warning: this comic occasionally contains strong language (which may be unsuitable for children), unusual humor (which may be unsuitable for adults), and advanced mathematics (which may be unsuitable for liberal-arts majors).</p>
+        <div id="footnote">BTC 14FHqYSgAi39CEJksUJJsK8JzJzyqFpLVk<br />We did not invent the algorithm. The algorithm consistently finds Jesus. The algorithm killed Jeeves. <br/>The algorithm is banned in China. The algorithm is from Jersey. The algorithm constantly finds Jesus.<br/>This is not the algorithm. This is close.</div>
+        <div id="licenseText">
+        <p>
+        This work is licensed under a
+        <a href="http://creativecommons.org/licenses/by-nc/2.5/">Creative Commons Attribution-NonCommercial 2.5 License</a>.
+        </p><p>
+        This means you're free to copy and share these comics (but not to sell them). <a rel="license" href="/license.html">More details</a>.</p>
+        </div>
+        </div>
+        </body>
+        <!-- Layout by Ian Clasbey, davean, and chromakode -->
+        </html>
+
+    http_version: 
+  recorded_at: Sat, 20 Apr 2013 20:37:56 GMT
+- request:
+    method: get
+    uri: http://imgs.xkcd.com/s/919f273.ico
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 20 Apr 2013 20:37:57 GMT
+      Server:
+      - VoxCAST
+      Last-Modified:
+      - Tue, 27 Jul 2010 15:51:55 GMT
+      Cache-Control:
+      - public, max-age=311040000
+      Expires:
+      - Sun, 12 Feb 2023 15:30:13 GMT
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '2166'
+      Age:
+      - '1314463'
+      X-Cache:
+      - HIT from VoxCAST
+      Content-Type:
+      - image/x-icon
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGZlZWQg
-        eG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDUvQXRvbSIgeG1sOmxhbmc9
-        ImVuIj48dGl0bGU+eGtjZC5jb208L3RpdGxlPjxsaW5rIGhyZWY9Imh0dHA6
-        Ly94a2NkLmNvbS8iIHJlbD0iYWx0ZXJuYXRlIj48L2xpbms+PGlkPmh0dHA6
-        Ly94a2NkLmNvbS88L2lkPjx1cGRhdGVkPjIwMTMtMDMtMjdUMDA6MDA6MDBa
-        PC91cGRhdGVkPjxlbnRyeT48dGl0bGU+VGhlIFBhc3Q8L3RpdGxlPjxsaW5r
-        IGhyZWY9Imh0dHA6Ly94a2NkLmNvbS8xMTkxLyIgcmVsPSJhbHRlcm5hdGUi
-        PjwvbGluaz48dXBkYXRlZD4yMDEzLTAzLTI3VDAwOjAwOjAwWjwvdXBkYXRl
-        ZD48aWQ+aHR0cDovL3hrY2QuY29tLzExOTEvPC9pZD48c3VtbWFyeSB0eXBl
-        PSJodG1sIj4mbHQ7aW1nIHNyYz0iaHR0cDovL2ltZ3MueGtjZC5jb20vY29t
-        aWNzL3RoZV9wYXN0LnBuZyIgdGl0bGU9IklmIGhpc3RvcnkgaGFzIHRhdWdo
-        dCB1cyBhbnl0aGluZywgd2UgY2FuIHVzZSB0aGF0IGluZm9ybWF0aW9uIHRv
-        IGRlc3Ryb3kgaXQuIiBhbHQ9IklmIGhpc3RvcnkgaGFzIHRhdWdodCB1cyBh
-        bnl0aGluZywgd2UgY2FuIHVzZSB0aGF0IGluZm9ybWF0aW9uIHRvIGRlc3Ry
-        b3kgaXQuIiAvJmd0Ozwvc3VtbWFyeT48L2VudHJ5PjxlbnRyeT48dGl0bGU+
-        VGltZTwvdGl0bGU+PGxpbmsgaHJlZj0iaHR0cDovL3hrY2QuY29tLzExOTAv
-        IiByZWw9ImFsdGVybmF0ZSI+PC9saW5rPjx1cGRhdGVkPjIwMTMtMDMtMjVU
-        MDA6MDA6MDBaPC91cGRhdGVkPjxpZD5odHRwOi8veGtjZC5jb20vMTE5MC88
-        L2lkPjxzdW1tYXJ5IHR5cGU9Imh0bWwiPiZsdDtpbWcgc3JjPSJodHRwOi8v
-        aW1ncy54a2NkLmNvbS9jb21pY3MvdGltZS5wbmciIHRpdGxlPSJXYWl0IGZv
-        ciBpdC4iIGFsdD0iV2FpdCBmb3IgaXQuIiAvJmd0Ozwvc3VtbWFyeT48L2Vu
-        dHJ5PjxlbnRyeT48dGl0bGU+Vm95YWdlciAxPC90aXRsZT48bGluayBocmVm
-        PSJodHRwOi8veGtjZC5jb20vMTE4OS8iIHJlbD0iYWx0ZXJuYXRlIj48L2xp
-        bms+PHVwZGF0ZWQ+MjAxMy0wMy0yMlQwMDowMDowMFo8L3VwZGF0ZWQ+PGlk
-        Pmh0dHA6Ly94a2NkLmNvbS8xMTg5LzwvaWQ+PHN1bW1hcnkgdHlwZT0iaHRt
-        bCI+Jmx0O2ltZyBzcmM9Imh0dHA6Ly9pbWdzLnhrY2QuY29tL2NvbWljcy92
-        b3lhZ2VyXzEucG5nIiB0aXRsZT0iU28gZmFyIFZveWFnZXIgMSBoYXMgJ2xl
-        ZnQgdGhlIFNvbGFyIFN5c3RlbScgYnkgcGFzc2luZyB0aHJvdWdoIHRoZSB0
-        ZXJtaW5hdGlvbiBzaG9jayB0aHJlZSB0aW1lcywgdGhlIGhlbGlvcGF1c2Ug
-        dHdpY2UsIGFuZCBvbmNlIGVhY2ggdGhyb3VnaCB0aGUgaGVsaW9zaGVhdGgs
-        IGhlbGlvc3BoZXJlLCBoZWxpb2Ryb21lLCBhdXJvcmFsIGRpc2NvbnRpbnVp
-        dHksIEhlYXZpc2lkZSBsYXllciwgdHJhbnMtTmVwdHVuaWFuIHBhbmljIHpv
-        bmUsIG1hZ25ldG9nYXAsIFVTIENlbnN1cyBCdXJlYXUgU29sYXIgU3lzdGVt
-        IHN0YXRpc3RpY2FsIGJvdW5kYXJ5LCBLdWlwZXIgZ2F1bnRsZXQsIE9vcnQg
-        dm9pZCwgYW5kIGNyeXN0YWwgc3BoZXJlIGhvbGRpbmcgdGhlIGZpeGVkIHN0
-        YXJzLiIgYWx0PSJTbyBmYXIgVm95YWdlciAxIGhhcyAnbGVmdCB0aGUgU29s
-        YXIgU3lzdGVtJyBieSBwYXNzaW5nIHRocm91Z2ggdGhlIHRlcm1pbmF0aW9u
-        IHNob2NrIHRocmVlIHRpbWVzLCB0aGUgaGVsaW9wYXVzZSB0d2ljZSwgYW5k
-        IG9uY2UgZWFjaCB0aHJvdWdoIHRoZSBoZWxpb3NoZWF0aCwgaGVsaW9zcGhl
-        cmUsIGhlbGlvZHJvbWUsIGF1cm9yYWwgZGlzY29udGludWl0eSwgSGVhdmlz
-        aWRlIGxheWVyLCB0cmFucy1OZXB0dW5pYW4gcGFuaWMgem9uZSwgbWFnbmV0
-        b2dhcCwgVVMgQ2Vuc3VzIEJ1cmVhdSBTb2xhciBTeXN0ZW0gc3RhdGlzdGlj
-        YWwgYm91bmRhcnksIEt1aXBlciBnYXVudGxldCwgT29ydCB2b2lkLCBhbmQg
-        Y3J5c3RhbCBzcGhlcmUgaG9sZGluZyB0aGUgZml4ZWQgc3RhcnMuIiAvJmd0
-        Ozwvc3VtbWFyeT48L2VudHJ5PjxlbnRyeT48dGl0bGU+Qm9uZGluZzwvdGl0
-        bGU+PGxpbmsgaHJlZj0iaHR0cDovL3hrY2QuY29tLzExODgvIiByZWw9ImFs
-        dGVybmF0ZSI+PC9saW5rPjx1cGRhdGVkPjIwMTMtMDMtMjBUMDA6MDA6MDBa
-        PC91cGRhdGVkPjxpZD5odHRwOi8veGtjZC5jb20vMTE4OC88L2lkPjxzdW1t
-        YXJ5IHR5cGU9Imh0bWwiPiZsdDtpbWcgc3JjPSJodHRwOi8vaW1ncy54a2Nk
-        LmNvbS9jb21pY3MvYm9uZGluZy5wbmciIHRpdGxlPSJJJ20gdHJ5aW5nIHRv
-        IGJ1aWxkIGNoYXJhY3RlciBidXQgRWNsaXBzZSBpcyByZWFsbHkgY29uZnVz
-        aW5nLiIgYWx0PSJJJ20gdHJ5aW5nIHRvIGJ1aWxkIGNoYXJhY3RlciBidXQg
-        RWNsaXBzZSBpcyByZWFsbHkgY29uZnVzaW5nLiIgLyZndDs8L3N1bW1hcnk+
-        PC9lbnRyeT48L2ZlZWQ+
+        AAABAAIAEBAAAAAAAABoBQAAJgAAACAgEAAAAAAA6AIAAI4FAAAoAAAAEAAA
+        ACAAAAABAAgAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAJycnABGRkYA
+        enp6AIODgwAkJCQA6+vrAIyMjAAdHR0A29vbAHx8fAAvLy8Ajo6OADg4OAD/
+        //8AFhYWAEpKSgB+fn4AsrKyACgoKAAGBgYA+Pj4AKKiogDW1tYAd3d3AICA
+        gAAqKioAiYmJAOjo6AC9vb0AXl5eAPHx8QBnZ2cA+vr6AHBwcADh4eEAgoKC
+        AIuLiwBgYGAA8/PzAJ2dnQBHR0cAe3t7AOPj4wAlJSUAn5+fANPT0wB0dHQA
+        sbGxAFtbWwCPj48AMDAwADk5OQChoaEAdnZ2AH9/fwApKSkAiIiIAJqamgBv
+        b28AeHh4ANfX1wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0zADc7NwAzMwAEBAATNzM8DgAODg4A
+        Dg4ADg4ADg48Ig4aKg4DGg4OKTASDQ4OIiIOKggOOAMODi00NDUODiIZIA4A
+        KAAOHgkOAAAOLh08OQ8bDgAOGwUAFQwMFQAjGBgfAA4ADgAcIQACAgAnDiIi
+        DiQsACwkDgEQAAAQAQ4iIg4OFgAWDg4CAAAAAAIOIiIOJAAAACQOLxEODjsv
+        DiIYKxQXDhcUKzYlDg4OJg4iGTs9Dg4OPTsyAAcOIjsOIhkYPA4ODjw2BwAA
+        AAAKDiIYBgALMgsACQ4xAAAxDg4iPA46AAAAOg4ODg4ODg4OPDMYEQwyDBE7
+        Ozs7Ozs7GDMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAACAAAABAAAAAAQAEAAAA
+        AAAAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAADPz88A39/fACAgIAD///8AcHBw
+        AICAgACQkJAAoKCgANfX1wAoKCgAf39/AIiIiAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAABEAAREREAARAAEREAAREQAREAERERABERABERABEREAE
+        RABEREQAREQAVEUARERABEQwNERDA0REYHRHDEREQAREQAREQAREREAEQAFE
+        REAEREAJREAERERABmAERERABERDCkQwNERETAiAxEREQARERABEAEREREEA
+        ABREREAEAEQwAANEADREMANEQwRABAA0QwA0QwADREAERDA0QARABEQAREAE
+        MDRABEMDREAEQwNEAEQwNEMDQAQwNERABEQwNABDA0REMAAAA0REQAREQAQA
+        QAREREAAAAREREAEREMAAAA0RFAAAAAABURABEREMAADRERQAAAAAAVEQARE
+        REQAREREQAAAAAAEREAEREQwAANEREADREQwBERABEQwAAAAA0RAJEREQgRE
+        QAREAAREQABEQEREREQEREAEQwRERERANEADREREBERABEAEREREQARAADRE
+        QwREQARAREREREQEQAAERCAEREAEQARERERABEAAAAAABERABEAEREREQARD
+        AAAAADREQARDAAREQAA0RDAAAANEREAERAAAAAAARERLAAC0RERABEQwAAAA
+        A0REREREREREQARERDAAA0REREREREREREAERERERERERERERERERERAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA
     http_version: 
-  recorded_at: Thu, 28 Mar 2013 21:06:19 GMT
+  recorded_at: Sat, 20 Apr 2013 20:37:57 GMT
+- request:
+    method: get
+    uri: http://imgs.xkcd.com/s/919f273.ico
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 20 Apr 2013 20:37:57 GMT
+      Server:
+      - VoxCAST
+      Last-Modified:
+      - Tue, 27 Jul 2010 15:51:55 GMT
+      Cache-Control:
+      - public, max-age=311040000
+      Expires:
+      - Sun, 12 Feb 2023 15:30:13 GMT
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '2166'
+      Age:
+      - '1314463'
+      X-Cache:
+      - HIT from VoxCAST
+      Content-Type:
+      - image/x-icon
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        AAABAAIAEBAAAAAAAABoBQAAJgAAACAgEAAAAAAA6AIAAI4FAAAoAAAAEAAA
+        ACAAAAABAAgAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAJycnABGRkYA
+        enp6AIODgwAkJCQA6+vrAIyMjAAdHR0A29vbAHx8fAAvLy8Ajo6OADg4OAD/
+        //8AFhYWAEpKSgB+fn4AsrKyACgoKAAGBgYA+Pj4AKKiogDW1tYAd3d3AICA
+        gAAqKioAiYmJAOjo6AC9vb0AXl5eAPHx8QBnZ2cA+vr6AHBwcADh4eEAgoKC
+        AIuLiwBgYGAA8/PzAJ2dnQBHR0cAe3t7AOPj4wAlJSUAn5+fANPT0wB0dHQA
+        sbGxAFtbWwCPj48AMDAwADk5OQChoaEAdnZ2AH9/fwApKSkAiIiIAJqamgBv
+        b28AeHh4ANfX1wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0zADc7NwAzMwAEBAATNzM8DgAODg4A
+        Dg4ADg4ADg48Ig4aKg4DGg4OKTASDQ4OIiIOKggOOAMODi00NDUODiIZIA4A
+        KAAOHgkOAAAOLh08OQ8bDgAOGwUAFQwMFQAjGBgfAA4ADgAcIQACAgAnDiIi
+        DiQsACwkDgEQAAAQAQ4iIg4OFgAWDg4CAAAAAAIOIiIOJAAAACQOLxEODjsv
+        DiIYKxQXDhcUKzYlDg4OJg4iGTs9Dg4OPTsyAAcOIjsOIhkYPA4ODjw2BwAA
+        AAAKDiIYBgALMgsACQ4xAAAxDg4iPA46AAAAOg4ODg4ODg4OPDMYEQwyDBE7
+        Ozs7Ozs7GDMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAACAAAABAAAAAAQAEAAAA
+        AAAAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAADPz88A39/fACAgIAD///8AcHBw
+        AICAgACQkJAAoKCgANfX1wAoKCgAf39/AIiIiAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAABEAAREREAARAAEREAAREQAREAERERABERABERABEREAE
+        RABEREQAREQAVEUARERABEQwNERDA0REYHRHDEREQAREQAREQAREREAEQAFE
+        REAEREAJREAERERABmAERERABERDCkQwNERETAiAxEREQARERABEAEREREEA
+        ABREREAEAEQwAANEADREMANEQwRABAA0QwA0QwADREAERDA0QARABEQAREAE
+        MDRABEMDREAEQwNEAEQwNEMDQAQwNERABEQwNABDA0REMAAAA0REQAREQAQA
+        QAREREAAAAREREAEREMAAAA0RFAAAAAABURABEREMAADRERQAAAAAAVEQARE
+        REQAREREQAAAAAAEREAEREQwAANEREADREQwBERABEQwAAAAA0RAJEREQgRE
+        QAREAAREQABEQEREREQEREAEQwRERERANEADREREBERABEAEREREQARAADRE
+        QwREQARAREREREQEQAAERCAEREAEQARERERABEAAAAAABERABEAEREREQARD
+        AAAAADREQARDAAREQAA0RDAAAANEREAERAAAAAAARERLAAC0RERABEQwAAAA
+        A0REREREREREQARERDAAA0REREREREREREAERERERERERERERERERERAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA
+    http_version: 
+  recorded_at: Sat, 20 Apr 2013 20:37:57 GMT
+- request:
+    method: get
+    uri: http://xkcd.com/atom.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/xml
+      Accept-Ranges:
+      - bytes
+      Etag:
+      - '"3112650072"'
+      Last-Modified:
+      - Fri, 19 Apr 2013 08:21:40 GMT
+      Content-Length:
+      - '2624'
+      Date:
+      - Sat, 20 Apr 2013 20:37:57 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
+    http_version: 
+  recorded_at: Sat, 20 Apr 2013 20:37:57 GMT
+- request:
+    method: get
+    uri: http://feediscovery.appspot.com/?url=http://xkcd.com/atom.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - text/javascript
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sat, 20 Apr 2013 21:59:44 GMT
+      Server:
+      - Google Frontend
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"href": "http://xkcd.com/atom.xml", "type": "application/atom+xml",
+        "rel": "self", "title": "xkcd.com"}]'
+    http_version: 
+  recorded_at: Sat, 20 Apr 2013 21:59:44 GMT
+- request:
+    method: ''
+    uri: http://xkcd.com/atom.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/xml
+      Accept-Ranges:
+      - bytes
+      Etag:
+      - '"3112650072"'
+      Last-Modified:
+      - Fri, 19 Apr 2013 08:21:40 GMT
+      Content-Length:
+      - '2624'
+      Date:
+      - Sat, 20 Apr 2013 22:57:46 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
+    http_version: 
+  recorded_at: Sat, 20 Apr 2013 22:57:46 GMT
+- request:
+    method: ''
+    uri: http://xkcd.com/atom.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/xml
+      Accept-Ranges:
+      - bytes
+      Etag:
+      - '"3112650072"'
+      Last-Modified:
+      - Fri, 19 Apr 2013 08:21:40 GMT
+      Content-Length:
+      - '2624'
+      Date:
+      - Sat, 20 Apr 2013 23:03:36 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
+    http_version: 
+  recorded_at: Sat, 20 Apr 2013 23:03:36 GMT
+- request:
+    method: ''
+    uri: http://xkcd.com/atom.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/xml
+      Accept-Ranges:
+      - bytes
+      Etag:
+      - '"3112650072"'
+      Last-Modified:
+      - Fri, 19 Apr 2013 08:21:40 GMT
+      Content-Length:
+      - '2624'
+      Date:
+      - Sat, 20 Apr 2013 23:08:56 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
+    http_version: 
+  recorded_at: Sat, 20 Apr 2013 23:08:56 GMT
 recorded_with: VCR 2.4.0

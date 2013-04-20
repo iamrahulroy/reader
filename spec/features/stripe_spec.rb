@@ -11,7 +11,6 @@ feature "Pay with stripe", :js => true do
 
     click_button "Pay with Card"
 
-    binding.pry
     fill_in "Card number", with: "4242424242424242"
     fill_in "Name on card", with: user_a.name
     fill_in "Expires", with: "01/20"
@@ -20,8 +19,6 @@ feature "Pay with stripe", :js => true do
     within ".stripe-app" do
       click_button "Pay"
     end
-
-    binding.pry
 
   end
 end

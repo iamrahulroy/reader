@@ -2,13 +2,13 @@ require 'features/spec_acceptance_helper'
 
 feature "Shared item notifications", :js => true do
 
-  scenario "A shares with B, B sees notifications", :vcr do
+  scenario "A shares with B, B sees notifications", :vcr => {:record => :new_episodes} do
     user_a = create_user_a
     user_b = create_user_b
     user_a.follow_and_unblock(user_b)
     user_b.follow_and_unblock(user_a)
 
-    user_a.subscribe_to_url("http://allthingsd.com/feed/")
+    user_a.subscribe("http://allthingsd.com/feed/")
 
     run_jobs
 

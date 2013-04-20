@@ -8,7 +8,6 @@ class PollFeed
     feed = Feed.find id
     url = feed.current_feed_url || feed.feed_url
     response = FetchFeedService.perform(url)
-
     feed.update_column(:current_feed_url, response.url)
     feed.update_column(:etag, response.etag)
     feed.touch(:fetched_at)
@@ -16,19 +15,16 @@ class PollFeed
     case response.status
       when 200
         if response.body && response.body.present?
-          file_name = "#{Rails.root}/tmp/xmls/#{id}-#{rand(0..9999)}.xml"
-          File.open(file_name, "w") do |f|
-            f.write response.body
-          end
+          feed.save_document response.body
           process_feed(id)
         end
     end
 
-  rescue
-    feed = Feed.where(id: id).first
-    feed.increment!(:feed_errors) if feed
-    em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
-    ap em
+  #rescue
+    #feed = Feed.where(id: id).first
+    #feed.increment!(:feed_errors) if feed
+    #em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
+    #ap em
   end
 
   def process_feed(id)

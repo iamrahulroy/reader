@@ -60,20 +60,9 @@ module OpmlImporter
     base_url = URI(feed_url)
     base_url = base_url.scheme + '://' + base_url.host
     begin
-      curl = Curl::Easy.new(feed_url) do |c|
-        c.timeout = 10
-        c.max_redirects = 5
-      end
-
-      curl.http_head
-
-      if curl.response_code == 301
-        location_match = /^Location: ([^\s]*)/.match curl.header_str
-        feed_url = location_match[1].strip
-        if /^\// =~ feed_url
-          feed_url = base_url + feed_url
-        end
-      end
+      request = Typhoeus::Request.new(base_url, followlocation: true)
+      response = request.run
+      feed_url = response.effective_url
     rescue
       Rails.logger.error $!
     end
