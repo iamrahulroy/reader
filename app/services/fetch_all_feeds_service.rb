@@ -52,7 +52,7 @@ class FetchAllFeedsService
         feed.update_attribute(:etag, response.headers["etag"])
         ProcessFeed.perform_async(feed.id)
       end
-        
+
     else
       Rails.logger.debug "Fetch failed: #{feed.feed_url} - #{feed.name}"
       feed.increment! :connection_errors
