@@ -47,10 +47,12 @@ class FetchAllFeedsService
     case response.response_code
     when 200
       feed.save_document response.body
-
-      feed.update_attribute(:current_feed_url, response.effective_url)
-      feed.update_attribute(:etag, response.headers["etag"])
-      ProcessFeed.perform_async(feed.id)
+      unless feed.destroyed?
+        feed.update_attribute(:current_feed_url, response.effective_url)
+        feed.update_attribute(:etag, response.headers["etag"])
+        ProcessFeed.perform_async(feed.id)
+      end
+        
     else
       Rails.logger.debug "Fetch failed: #{feed.feed_url} - #{feed.name}"
       feed.increment! :connection_errors
