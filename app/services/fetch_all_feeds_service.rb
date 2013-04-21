@@ -26,8 +26,6 @@ class FetchAllFeedsService
       hydra.run
       puts "Hydra Loop"
     end
-
-
   end
 
   def request_for(feed, follow = false)

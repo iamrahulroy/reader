@@ -46,11 +46,10 @@ class ProcessFeed
       feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }
     end
 
-  #rescue
-
-    #feed.increment!(:parse_errors) if feed
-    #em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
-    #ap em
+  rescue Feedzirra::NoParserAvailable
+    feed.increment!(:parse_errors) if feed
+    em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
+    ap em
   end
 
 
