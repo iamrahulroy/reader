@@ -13,6 +13,8 @@ class Feed < ActiveRecord::Base
   after_create :poll_feed, :get_icon
   after_commit :sweep
   scope :fetchable, where(:fetchable => true).where(:private => false)
+  scope :fetched, where('fetch_count > 0')
+  scope :failed, where('connection_errors > 0 or parse_errors > 0 or fetch_errors > 0')
   scope :unfetchable, where(:fetchable => false)
   #scope :suggested, where(:suggested => true)
 
@@ -22,6 +24,10 @@ class Feed < ActiveRecord::Base
     if feed_errors > 5 || parse_errors > 5
       self.update_column(:fetchable, false)
     end
+  end
+
+  def total_errors
+    connection_errors + parse_errors + fetch_errors
   end
 
   def self.suggested(uid)

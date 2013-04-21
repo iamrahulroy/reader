@@ -20,7 +20,7 @@ class FetchAllFeedsService
 
   def perform
     Typhoeus::Config.verbose = true
-    @hydra = Typhoeus::Hydra.new(max_concurrency: 20)
+    @hydra = Typhoeus::Hydra.new(max_concurrency: 200)
     Feed.fetchable.order("fetch_count ASC").limit(1000).each do |feed|
       Rails.logger.debug "Fetching #{feed.feed_url} - #{feed.name}"
       hydra.queue request_for(feed)
@@ -32,7 +32,7 @@ class FetchAllFeedsService
 
   def request_for(feed)
     url = feed.current_feed_url || feed.feed_url
-    request = Typhoeus::Request.new(url, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true, accept_encoding: "gzip")
+    request = Typhoeus::Request.new(url, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true, maxredirs: 5, accept_encoding: "gzip")
     request.feed = feed
     request.on_complete do |response|
       handle_response response

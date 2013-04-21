@@ -24,7 +24,7 @@ class FetchFeedService
   protected
 
   def get_response
-    request = Typhoeus::Request.new(@url, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true, accept_encoding: "gzip")
+    request = Typhoeus::Request.new(@url, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true, maxredirs: 5, accept_encoding: "gzip")
     response = request.run
     OpenStruct.new(status: response.code, url: response.effective_url, body: response.body, etag: response.headers["etag"])
   end
