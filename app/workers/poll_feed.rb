@@ -20,9 +20,12 @@ class PollFeed
         end
     end
 
-  #rescue
-  #  Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
-  #  feed.increment! :connection_errors
+  rescue ArgumentError
+    Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
+    feed.increment! :parse_errors
+  rescue
+    Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
+    feed.increment! :connection_errors
   end
 
   def process_feed(id)
