@@ -24,6 +24,11 @@ class ProcessFeed
       #feed.parse_errors = feed.parse_errors + 1
       #feed.fetchable = false if feed.parse_errors > 10
       #feed.save
+
+
+      #feed.increment!(:parse_errors) if feed
+      em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
+      ap em
       ap t
       ap "THIS BROKE"
       return
