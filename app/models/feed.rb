@@ -9,7 +9,9 @@ class Feed < ActiveRecord::Base
 
   before_create :set_tokens, :strip_name
   before_save :scrub
+  before_validation :merge
   after_create :poll_feed, :get_icon
+  after_commit :sweep
   scope :fetchable, where(:fetchable => true).where(:private => false)
   scope :unfetchable, where(:fetchable => false)
   #scope :suggested, where(:suggested => true)
@@ -73,6 +75,38 @@ class Feed < ActiveRecord::Base
     file.original_filename = "feed.xml"
     self.document = file
     self.save
+  end
+
+  private
+
+  def sweep
+    self.delete if self.feed_url.start_with?("delete - ")
+  end
+
+  def merge
+    return unless feed
+
+    self.subscriptions.update_all(feed_id: feed.id)
+
+    Entry.order("id ASC").where(feed_id: self.id).each do |entry|
+      other = Entry.where(feed_id: feed.id).where(guid: entry.guid).first
+      if other
+        entry.items.update_all(entry_id: other.id)
+        entry.delete
+      end
+    end
+
+    self.entries.update_all(feed_id: feed.id)
+
+    EntryGuid.where(feed_id: id).delete_all
+    FeedIcon.where(feed_id: id).destroy_all
+
+    self.feed_url = "delete - #{SecureRandom.hex}" # allow the save to go through by setting feed_url to a unique value
+  end
+
+  def feed
+    return unless self.feed_url && self.id
+    Feed.order("id ASC").where(:feed_url => self.feed_url).where("id != #{self.id}").first
   end
 
 end
