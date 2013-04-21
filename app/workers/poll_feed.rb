@@ -2,7 +2,7 @@ require 'faraday_middleware'
 require 'faraday_middleware/response_middleware'
 class PollFeed
   include Sidekiq::Worker
-  sidekiq_options :queue => :critical
+  sidekiq_options :queue => :poll
   def perform(id)
 
     feed = Feed.find id
@@ -21,10 +21,8 @@ class PollFeed
     end
 
   #rescue
-    #feed = Feed.where(id: id).first
-    #feed.increment!(:feed_errors) if feed
-    #em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
-    #ap em
+  #  Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
+  #  feed.increment! :connection_errors
   end
 
   def process_feed(id)
