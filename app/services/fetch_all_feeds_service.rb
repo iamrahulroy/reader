@@ -21,7 +21,7 @@ class FetchAllFeedsService
   def perform
     Typhoeus::Config.verbose = true
     @hydra = Typhoeus::Hydra.hydra
-    Feed.fetchable.find_each do |feed|
+    Feed.fetchable.order("fetch_count ASC").find_each do |feed|
       Rails.logger.debug "Fetching #{feed.feed_url} - #{feed.name}"
       hydra.queue request_for(feed)
       hydra.run
