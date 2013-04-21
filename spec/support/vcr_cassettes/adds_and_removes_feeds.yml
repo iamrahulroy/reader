@@ -2846,4 +2846,36 @@ http_interactions:
         "rel": "alternate", "title": "RSS"}]'
     http_version: 
   recorded_at: Sun, 21 Apr 2013 05:02:17 GMT
+- request:
+    method: get
+    uri: http://feediscovery.appspot.com/?url=http://www.reddit.com/.rss
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - text/javascript
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sun, 21 Apr 2013 08:27:47 GMT
+      Server:
+      - Google Frontend
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"href": "http://www.reddit.com/.rss", "type": "application/rss+xml",
+        "rel": "self", "title": "reddit: the front page of the internet"}]'
+    http_version: 
+  recorded_at: Sun, 21 Apr 2013 08:27:47 GMT
 recorded_with: VCR 2.4.0

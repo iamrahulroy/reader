@@ -9,7 +9,7 @@ namespace :reader do
 
   desc "reset feed error counts"
   task :reset_feed_errors => :environment do
-    Feed.update_all parse_errors: 0, timeouts: 0, fetchable: true, etag: nil, hub: nil, topic: nil
+    Feed.update_all parse_errors: 0, timeouts: 0, fetchable: true, etag: nil, hub: nil, topic: nil, connection_errors: 0, feed_errors: 0, fetch_count: 0
   end
 
   desc "poll feeds for new posts"
