@@ -20,7 +20,7 @@ class FetchAllFeedsService
 
   def perform
     Typhoeus::Config.verbose = true
-    @hydra = Typhoeus::Hydra.hydra
+    @hydra = Typhoeus::Hydra.new(max_concurrency: 100)
     Feed.fetchable.order("fetch_count ASC").find_each do |feed|
       Rails.logger.debug "Fetching #{feed.feed_url} - #{feed.name}"
       hydra.queue request_for(feed)
