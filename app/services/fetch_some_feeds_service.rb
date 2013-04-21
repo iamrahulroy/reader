@@ -5,7 +5,7 @@ module Typhoeus
   end
 end
 
-class FetchAllFeedsService
+class FetchSomeFeedsService
 
   attr_accessor :hydra
 
@@ -13,9 +13,7 @@ class FetchAllFeedsService
   end
 
   def self.perform
-    #loop do
-      self.new.perform
-    #end
+    self.new.perform
   end
 
   def perform
@@ -24,7 +22,6 @@ class FetchAllFeedsService
     Feed.fetchable.order("fetch_count ASC").limit(1000).each do |feed|
       Rails.logger.debug "Fetching #{feed.feed_url} - #{feed.name}"
       hydra.queue request_for(feed)
-
     end
 
     hydra.run
