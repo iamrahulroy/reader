@@ -24,9 +24,10 @@ class FetchAllFeedsService
     Feed.fetchable.order("fetch_count ASC").limit(1000).each do |feed|
       Rails.logger.debug "Fetching #{feed.feed_url} - #{feed.name}"
       hydra.queue request_for(feed)
-      hydra.run
-      puts "Hydra Loop"
+
     end
+
+    hydra.run
   end
 
   def request_for(feed)

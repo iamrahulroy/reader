@@ -3,6 +3,7 @@ namespace :reader do
 
   desc "Fetch all the feeds, ALL OF THEM"
   task :fetch_all => :environment do
+    puts "*** Starting fetch_all"
     FetchAllFeedsService.perform
   end
 
