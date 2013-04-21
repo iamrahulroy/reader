@@ -72,7 +72,7 @@ class Feed < ActiveRecord::Base
     file = FilelessIO.new(body)
     file.original_filename = "feed.xml"
     self.document = file
-    self.save!
+    self.save
   end
 
 end
