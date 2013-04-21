@@ -53,7 +53,7 @@ class ProcessFeed
       feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }
     end
 
-  rescue Feedzirra::NoParserAvailable
+  rescue
     feed.increment!(:parse_errors) if feed
     em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
     ap em
@@ -100,15 +100,13 @@ class ProcessFeed
         Rails.logger.info "Added entry to #{feed_id}: #{entry.title}"
       else
         entry_model.update_attributes!(:feed_id => feed_id,
-                                       :title => entry.title,
-                                       :author => entry.author,
+                                       :title => entry.title.truncate(1000),
+                                       :author => entry.author.truncate(1000),
                                        :content => content,
                                        :url => url,
                                        :guid => guid,
                                        :published_at => entry_date)
       end
     end
-  rescue ActiveRecord::RecordInvalid => e
-    ap "feed: #{feed_id} - guid: #{guid} - #{e} - #{e.message}"
   end
 end
