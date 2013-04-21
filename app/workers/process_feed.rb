@@ -9,7 +9,9 @@ class ProcessFeed
     #body = File.open(file_path, "r").read
 
     feed = Feed.where(id: id).first
-    body = open(feed.document.path).read
+    path = feed.document.path
+    return unless path
+    body = open(path).read
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
     body = body.encode('UTF-16', :invalid => :replace, :replace => '')
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
@@ -28,8 +30,8 @@ class ProcessFeed
     end
 
     feed.site_url = parsed_feed.url
-    feed.description = parsed_feed.description if parsed_feed.respond_to? :description
-    feed.name = parsed_feed.title if parsed_feed.respond_to? :title
+    feed.description = parsed_feed.description if parsed_feed.respond_to?(:description) && parsed_feed.description
+    feed.name = parsed_feed.title if parsed_feed.respond_to?(:title) && parsed_feed.title
     feed.save! if feed.changed?
 
     entries = parsed_feed.entries.select do |entry|
