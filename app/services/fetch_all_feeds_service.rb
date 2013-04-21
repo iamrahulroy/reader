@@ -19,6 +19,7 @@ class FetchAllFeedsService
   end
 
   def perform
+    Typhoeus::Config.verbose = true
     @hydra = Typhoeus::Hydra.hydra
     Feed.fetchable.find_each do |feed|
       Rails.logger.debug "Fetching #{feed.feed_url} - #{feed.name}"
@@ -28,9 +29,9 @@ class FetchAllFeedsService
     end
   end
 
-  def request_for(feed, follow = false)
+  def request_for(feed)
     url = feed.current_feed_url || feed.feed_url
-    request = Typhoeus::Request.new(url, ssl_verifyhost: 2, timeout: 60, followlocation: follow)
+    request = Typhoeus::Request.new(url, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true)
     request.feed = feed
     request.on_complete do |response|
       handle_response response
@@ -42,15 +43,11 @@ class FetchAllFeedsService
     feed = response.request.feed
     case response.response_code
     when 200
-
       feed.save_document response.body
       feed.increment! :fetch_count
+      feed.update_attribute(:current_feed_url, response.effective_url)
+      feed.update_attribute(:etag, response.headers["etag"])
       ProcessFeed.perform_async(feed.id)
-    when 301
-      feed.update_attribute :current_feed_url, response.headers["Location"]
-      hydra.queue request_for(feed, true)
-    when 302
-      hydra.queue request_for(feed, true)
     else
       Rails.logger.debug "Fetch failed: #{feed.feed_url} - #{feed.name}"
       feed.increment! :connection_errors
