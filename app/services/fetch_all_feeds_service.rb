@@ -41,11 +41,12 @@ class FetchAllFeedsService
 
   def handle_response(response)
     feed = response.request.feed
+    feed.increment! :fetch_count
     puts "#{Time.current}: #{response.code} - #{feed.id} - #{feed.name} - #{response.effective_url}"
     case response.response_code
     when 200
       feed.save_document response.body
-      feed.increment! :fetch_count
+
       feed.update_attribute(:current_feed_url, response.effective_url)
       feed.update_attribute(:etag, response.headers["etag"])
       ProcessFeed.perform_async(feed.id)
