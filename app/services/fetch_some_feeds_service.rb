@@ -12,14 +12,14 @@ class FetchSomeFeedsService
   def initialize
   end
 
-  def self.perform
-    self.new.perform
+  def self.perform(ids)
+    self.new.perform(ids)
   end
 
-  def perform
+  def perform(ids)
     Typhoeus::Config.verbose = true
     @hydra = Typhoeus::Hydra.new(max_concurrency: 200)
-    Feed.fetchable.order("fetch_count ASC").limit(1000).each do |feed|
+    Feed.where(:id => ids).each do |feed|
       Rails.logger.debug "Fetching #{feed.feed_url} - #{feed.name}"
       hydra.queue request_for(feed)
     end

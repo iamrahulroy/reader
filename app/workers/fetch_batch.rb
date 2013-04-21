@@ -3,9 +3,11 @@ require 'faraday_middleware/response_middleware'
 class FetchBatch
   include Sidekiq::Worker
   sidekiq_options :queue => :poll
-  def perform(id)
+  def perform
     puts "\n\n\n\n*** Starting fetch batch\n\n\n\n\n"
-    FetchSomeFeedsService.perform
+
+    ids = Feed.fetchable.order("fetch_count ASC").pluck(:id)
+    FetchSomeFeedsService.perform(ids)
     puts "\n\n\n\n*** fetch batch complete\n\n\n\n\n"
 
     self.class.perform_async
