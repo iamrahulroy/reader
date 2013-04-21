@@ -10,7 +10,7 @@ class ProcessFeed
 
     feed = Feed.where(id: id).first
     path = feed.document.path
-    return unless path
+    return unless path && File.exist?(path)
     body = open(path).read
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
     body = body.encode('UTF-16', :invalid => :replace, :replace => '')

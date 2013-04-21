@@ -13,15 +13,15 @@ class FetchAllFeedsService
   end
 
   def self.perform
-    loop do
+    #loop do
       self.new.perform
-    end
+    #end
   end
 
   def perform
     #Typhoeus::Config.verbose = true
     @hydra = Typhoeus::Hydra.new(max_concurrency: 200)
-    Feed.fetchable.order("fetch_count ASC").find_each do |feed|
+    Feed.fetchable.order("fetch_count ASC").limit(1000).each do |feed|
       Rails.logger.debug "Fetching #{feed.feed_url} - #{feed.name}"
       hydra.queue request_for(feed)
       hydra.run
@@ -41,7 +41,7 @@ class FetchAllFeedsService
 
   def handle_response(response)
     feed = response.request.feed
-    puts "#{response.code} - #{feed.id} - #{feed.name} - #{response.effective_url}"
+    puts "#{Time.current}: #{response.code} - #{feed.id} - #{feed.name} - #{response.effective_url}"
     case response.response_code
     when 200
       feed.save_document response.body
