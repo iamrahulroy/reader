@@ -32,7 +32,7 @@ class FetchAllFeedsService
 
   def request_for(feed)
     url = feed.current_feed_url || feed.feed_url
-    request = Typhoeus::Request.new(url, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true)
+    request = Typhoeus::Request.new(url, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true, accept_encoding: "gzip")
     request.feed = feed
     request.on_complete do |response|
       handle_response response
