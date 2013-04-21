@@ -84,8 +84,8 @@ class GetIcon
   def test_favicon(url)
     begin
       status = Timeout::timeout(15) do
-        r = open url
-        if r.status[0] == '200'
+        r = Typhoeus.get(url, followlocation: true)
+        if r.code == '200'
           true
         else
           false
