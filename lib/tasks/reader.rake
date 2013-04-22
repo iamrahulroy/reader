@@ -2,11 +2,11 @@
 namespace :reader do
 
   desc "Fetch all the feeds, ALL OF THEM"
-  task :fetch_all => :environment do
-    puts "\n\n\n\n*** Starting fetch_all\n\n\n\n\n"
-    ids = Feed.fetchable.order("fetch_count ASC").limit(1000).pluck(:id)
+  task :fetch_batch => :environment do
+    puts "\n\n\n\n*** Starting fetch_batch\n\n\n\n\n"
+    ids = Feed.fetchable.order("fetch_count ASC").limit(2000).pluck(:id)
     FetchSomeFeedsService.perform(ids)
-    puts "\n\n\n\n*** fetch complete\n\n\n\n\n"
+    puts "\n\n\n\n*** batch fetch complete\n\n\n\n\n"
   end
 
   desc "reset feed error counts"

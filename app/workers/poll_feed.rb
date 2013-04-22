@@ -16,7 +16,11 @@ class PollFeed
       when 200
         if response.body && response.body.present?
           feed.save_document response.body
-          process_feed(id)
+          unless feed.destroyed?
+            process_feed(id)
+            self.class.requeue_polling(id)
+          end
+
         end
     end
 

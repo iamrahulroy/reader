@@ -14,7 +14,7 @@ class Feed < ActiveRecord::Base
   after_commit :sweep
   scope :fetchable, where(:fetchable => true).where(:private => false)
   scope :fetched, where('fetch_count > 0')
-  scope :failed, where('connection_errors > 0 or parse_errors > 0 or fetch_errors > 0')
+  scope :failed, where('connection_errors > 0 or parse_errors > 0 or feed_errors > 0')
   scope :unfetchable, where(:fetchable => false)
   #scope :suggested, where(:suggested => true)
 
