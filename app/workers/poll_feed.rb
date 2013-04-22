@@ -11,6 +11,7 @@ class PollFeed
     feed.update_column(:current_feed_url, response.url)
     feed.update_column(:etag, response.etag)
     feed.touch(:fetched_at)
+    feed.increment! :fetch_count
 
     case response.status
       when 200
