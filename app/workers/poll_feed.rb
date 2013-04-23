@@ -19,7 +19,7 @@ class PollFeed
           feed.save_document response.body
           unless feed.destroyed?
             process_feed(id)
-            self.class.requeue_polling(id)
+            #self.class.requeue_polling(id)
           end
 
         end
