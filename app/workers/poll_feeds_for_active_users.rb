@@ -1,6 +1,6 @@
 class PollFeedsForActiveUsers
   include Sidekiq::Worker
-  sidekiq_options :queue => :poll
+  sidekiq_options :queue => :critical
   def perform
     users = User.where("last_seen_at > '#{1.week.ago.to_s}'")
     users.each do |user|
