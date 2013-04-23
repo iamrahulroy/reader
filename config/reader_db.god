@@ -13,15 +13,15 @@ God.watch do |w|
   w.keepalive
 end
 
-God.watch do |w|
-  w.group = "reader"
-  w.name = "fetch"
-  w.dir = "#{rails_root}"
-  w.env = { 'RAILS_ENV' => rails_env }
-  w.start = "bundle exec rake reader:fetch_batch"
-  w.log = "#{rails_root}/log/fetch.log"
-  w.keepalive
-end
+#God.watch do |w|
+#  w.group = "reader"
+#  w.name = "fetch"
+#  w.dir = "#{rails_root}"
+#  w.env = { 'RAILS_ENV' => rails_env }
+#  w.start = "bundle exec rake reader:fetch_batch"
+#  w.log = "#{rails_root}/log/fetch.log"
+#  w.keepalive
+#end
 
 
 
