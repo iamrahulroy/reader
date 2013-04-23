@@ -5,7 +5,7 @@ class PollFeedsForActiveUsers
     users = User.where("last_seen_at > '#{1.week.ago.to_s}'")
     users.each do |user|
       puts "Queuing for #{user.id} - #{user.name}"
-      user = User.find(user_id)
+      user = User.find(user.id)
       user.subscriptions.each do |sub|
         PollFeed.perform_async(sub.feed.id) if sub.feed
       end
