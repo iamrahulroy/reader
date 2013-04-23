@@ -46,7 +46,7 @@ class ProcessFeed
       ProcessFeed.process_entry(id, entry)
     end
 
-    PollFeed.requeue_polling(id)
+    #PollFeed.requeue_polling(id)
 
     unless entries.empty?
       feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }
