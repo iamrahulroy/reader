@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420232823) do
+ActiveRecord::Schema.define(:version => 20130423143711) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(:version => 20130420232823) do
     t.integer  "connection_errors",                     :default => 0
     t.integer  "fetch_count",                           :default => 0
     t.string   "document",              :limit => 4096
+    t.text     "document_text"
   end
 
   add_index "feeds", ["feed_url"], :name => "index_feeds_on_feed_url"
