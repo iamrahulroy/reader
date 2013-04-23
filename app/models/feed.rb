@@ -111,7 +111,7 @@ class Feed < ActiveRecord::Base
   end
 
   def feed
-    return unless self.feed_url && self.id
+    return unless self.feed_url.present? && self.id
     Feed.order("id ASC").where(:feed_url => self.feed_url).where("id != #{self.id}").first
   end
 
