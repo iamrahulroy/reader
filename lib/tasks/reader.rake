@@ -21,11 +21,10 @@ namespace :reader do
 
   desc "poll feeds for active users"
   task :run_poller_for_active_users => :environment do
-    users = User.where("last_seen_at > '#{1.week.ago.to_s}'")
-    users.each do |user|
-      puts "Queuing for #{user.id} - #{user.name}"
-      UpdateUserSubscriptions.perform_async(user.id)
+    Sidekiq.redis do |r|
+      r.flushall
     end
+    PollFeedsForActiveUsers.perform_async
   end
 
 
