@@ -1,1 +1,1 @@
-Typhoeus::Config.cache = TyphoeusCache.new
+#Typhoeus::Config.cache = TyphoeusCache.new
