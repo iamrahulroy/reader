@@ -793,4 +793,43 @@ http_interactions:
         <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-22T00:00:00Z</updated><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry></feed>
     http_version: 
   recorded_at: Tue, 23 Apr 2013 03:25:23 GMT
+- request:
+    method: ''
+    uri: http://xkcd.com/atom.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Last-Modified:
+      - Mon, 22 Apr 2013 04:00:06 GMT
+      Etag:
+      - '"2869281266"'
+      Content-Type:
+      - application/xml
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '733'
+      Date:
+      - Tue, 23 Apr 2013 13:45:47 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-22T00:00:00Z</updated><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry></feed>
+    http_version: 
+  recorded_at: Tue, 23 Apr 2013 13:45:47 GMT
 recorded_with: VCR 2.4.0

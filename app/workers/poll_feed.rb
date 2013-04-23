@@ -27,6 +27,9 @@ class PollFeed
 
   rescue Errno::EMFILE
     #let this raise, skip incrementing connection_errors
+    ObjectSpace.each_object(File) do |f|
+      puts "%s: %d" % [f.path, f.fileno] unless f.closed?
+    end
     raise $!
   rescue ArgumentError
     Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
