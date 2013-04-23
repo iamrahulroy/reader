@@ -25,6 +25,9 @@ class PollFeed
         end
     end
 
+  rescue Errno::EMFILE
+    #let this raise, skip incrementing connection_errors
+    raise $!
   rescue ArgumentError
     Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
     feed.increment! :parse_errors
