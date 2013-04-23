@@ -16,7 +16,7 @@ class PollFeed
     case response.status
       when 200
         if response.body && response.body.present?
-          feed.save_document response.body
+          feed.update_column(:document_text, response.body)
           unless feed.destroyed?
             process_feed(id)
             #self.class.requeue_polling(id)

@@ -8,9 +8,7 @@ class ProcessFeed
     #body = File.open(file_path, "r").read
 
     feed = Feed.where(id: id).first
-    path = feed.document.path
-    return unless path && File.exist?(path)
-    body = open(path).read
+    body = feed.document_text
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
     body = body.encode('UTF-16', :invalid => :replace, :replace => '')
     body = body.encode('UTF-8', :invalid => :replace, :replace => '')
