@@ -1,5 +1,3 @@
-require 'faraday_middleware'
-require 'faraday_middleware/response_middleware'
 class PollFeed
   include Sidekiq::Worker
   sidekiq_options :queue => :poll
