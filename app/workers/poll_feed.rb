@@ -5,7 +5,7 @@ class PollFeed
 
     feed = Feed.find id
     url = feed.current_feed_url || feed.feed_url
-    last_fetched_at = (feed.fetch_count > 0) ? feed.last_fetched_at.httpdate : nil
+    last_fetched_at = (feed.fetch_count > 0 && feed.last_fetched_at) ? feed.last_fetched_at.httpdate : nil
     etag = feed.etag
     response = FetchFeedService.perform(url: url, last_fetched_at: last_fetched_at, etag: etag)
     feed.update_column(:current_feed_url, response.url)
@@ -15,6 +15,7 @@ class PollFeed
 
     case response.status
       when 200
+        feed.touch(:last_fetched_at)
         if response.body && response.body.present?
           feed.update_column(:document_text, response.body)
           unless feed.destroyed?
