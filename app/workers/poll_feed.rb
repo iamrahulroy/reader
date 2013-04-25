@@ -5,6 +5,7 @@ class PollFeed
 
     feed = Feed.find id
     url = feed.current_feed_url || feed.feed_url
+    ap "Start poll: #{id} - #{url}"
     last_fetched_at = (feed.fetch_count > 0 && feed.last_fetched_at) ? feed.last_fetched_at.httpdate : nil
     etag = feed.etag
     response = FetchFeedService.perform(url: url, last_fetched_at: last_fetched_at, etag: etag)
@@ -25,6 +26,8 @@ class PollFeed
           end
 
         end
+      when 0
+        feed.increment! :timeouts
     end
 
   rescue Errno::EMFILE

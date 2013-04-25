@@ -8,9 +8,10 @@ class PollFeedsForActiveUsers
       puts "Queuing for #{user.id} - #{user.name}"
       user = User.find(user.id)
       user.subscriptions.each do |sub|
-        PollFeed.perform_async(sub.feed.id) if sub.feed
+        PollFeed.perform_in(1.minute, sub.feed.id) if sub.feed
       end
     end
+    `god restart reader`
 
   end
 
