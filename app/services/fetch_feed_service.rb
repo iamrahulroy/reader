@@ -33,7 +33,8 @@ class FetchFeedService
   protected
 
   def get_response
-    request = Typhoeus::Request.new(@url, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true, maxredirs: 5, accept_encoding: "gzip", headers: {'If-Modified_since' => last_fetch_date, 'If-None-Match' => etag})
+    Typhoeus::Config.verbose = true
+    request = Typhoeus::Request.new(@url, forbid_reuse: 1, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true, maxredirs: 5, accept_encoding: "gzip", headers: {'If-Modified_since' => last_fetch_date, 'If-None-Match' => etag})
     response = request.run
     OpenStruct.new(status: response.code, url: response.effective_url, body: response.body, etag: response.headers["etag"])
   end
