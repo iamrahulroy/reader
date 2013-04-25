@@ -2,7 +2,7 @@
 :timeout: 60
 :verbose: true
 :pidfile: /tmp/sidekiq.pid
-:concurrency: 30
+:concurrency: 80
 :queues:
   - [critical,5]
   - [process,4]
