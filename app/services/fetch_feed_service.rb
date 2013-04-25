@@ -1,12 +1,21 @@
 class FetchFeedService
 
-  attr :url, :status, :body, :etag
-  def initialize(url=nil)
-    @url = url
+  attr :url, :status, :body, :etag, :last_fetch_date
+  def initialize(args=nil)
+    if args
+      @url = args[:url]
+      @last_fetch_date = args[:last_fetched_at]
+      @etag = args[:etag]
+    end
   end
 
-  def perform(url=nil)
-    @url ||= url
+  def perform(args=nil)
+    if args
+      @url             ||= args[:url]
+      @last_fetch_date ||= args[:last_fetched_at]
+      @etag            ||= args[:etag]
+    end
+
     @body = nil
 
     response = get_response

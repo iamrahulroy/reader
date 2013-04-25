@@ -114,7 +114,31 @@ feature "Users share items with each other", :js => true, :vcr => {:record => :n
 
   end
 
-  scenario "User emails an item"
+  scenario "User emails an item" do
+    pending
+    user_a = create_user_a
+    user_a.follow_and_unblock(user_b)
+    user_a.subscribe "http://xkcd.com/atom.xml"
+    run_jobs
+    user_a.subscriptions.length.should == 1
+
+    sign_in_as(user_a)
+
+    visit('/')
+    # Now make sure it has items.
+    within("#list") do
+      items = user_a.subscriptions.order(:id).last.items.count
+      page.should have_content "(#{items})"
+      click_link "xkcd"
+    end
+
+    within(".focused") do
+      click_button "Email"
+    end
+    binding.pry
+    run_jobs
+
+  end
 
   scenario "User shares non feed content"
 

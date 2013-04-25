@@ -5,7 +5,9 @@ class PollFeed
 
     feed = Feed.find id
     url = feed.current_feed_url || feed.feed_url
-    response = FetchFeedService.perform(url)
+    last_fetched_at = (feed.fetch_count > 0) ? feed.last_fetched_at.httpdate : nil
+    etag = feed.etag
+    response = FetchFeedService.perform(url: url, last_fetched_at: last_fetched_at, etag: etag)
     feed.update_column(:current_feed_url, response.url)
     feed.update_column(:etag, response.etag)
     feed.touch(:fetched_at)

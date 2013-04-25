@@ -1,6 +1,5 @@
 class Feed < ActiveRecord::Base
   include ActionView::Helpers::SanitizeHelper
-  mount_uploader :document, FeedUploader
   has_one :feed_icon, :dependent => :destroy
   has_many :subscriptions, :dependent => :destroy
   has_many :entries, :dependent => :destroy
@@ -74,13 +73,6 @@ class Feed < ActiveRecord::Base
 
   def public?
     !private?
-  end
-
-  def save_document(body)
-    file = FilelessIO.new(body)
-    file.original_filename = "feed.xml"
-    self.document = file
-    self.save
   end
 
   private
