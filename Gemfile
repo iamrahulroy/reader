@@ -41,7 +41,7 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem "pry-rails", "~> 0.2"
 gem "pry-nav"
-em "pry-remote"
+gem "pry-remote"
 
 group :production do
   gem "newrelic_rpm", "~> 3.5"
