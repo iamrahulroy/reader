@@ -44,7 +44,7 @@ gem "pry-nav"
 gem "pry-remote"
 
 group :production do
-  gem "newrelic_rpm", "~> 3.5"
+  #gem "newrelic_rpm", "~> 3.5"
 end
 
 group :development do
