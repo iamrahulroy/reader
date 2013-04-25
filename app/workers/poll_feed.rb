@@ -28,15 +28,17 @@ class PollFeed
 
   rescue Errno::EMFILE
     #let this raise, skip incrementing connection_errors
-    ObjectSpace.each_object(File) do |f|
-      puts "%s: %d" % [f.path, f.fileno] unless f.closed?
-    end
+    #ObjectSpace.each_object(File) do |f|
+      #puts "%s: %d" % [f.path, f.fileno] unless f.closed?
+    #end
     raise $!
   rescue ArgumentError
     Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
+    ap "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
     feed.increment! :parse_errors
   rescue
     Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name} - #{$!}"
+    ap "Poll Feed failed: #{feed.feed_url} - #{feed.name} - #{$!}"
     feed.increment! :connection_errors
   end
 
