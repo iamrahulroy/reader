@@ -13,6 +13,7 @@ class PollFeed
     feed.touch(:fetched_at)
     feed.increment! :fetch_count
 
+    ap "#{response.status} - #{url}"
     case response.status
       when 200
         feed.touch(:last_fetched_at)
