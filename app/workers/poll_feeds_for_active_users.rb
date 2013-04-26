@@ -17,7 +17,6 @@ class PollFeedsForActiveUsers
     ids.uniq.each do |id|
       PollFeed.perform_in(1.minute, id)
     end
-    `god restart reader`
 
   end
 
