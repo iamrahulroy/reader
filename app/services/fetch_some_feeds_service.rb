@@ -10,6 +10,7 @@ class FetchSomeFeedsService
   attr_accessor :hydra
 
   def initialize
+    raise "Deprecated"
   end
 
   def self.perform(ids)
