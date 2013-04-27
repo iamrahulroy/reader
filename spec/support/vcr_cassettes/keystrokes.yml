@@ -16880,4 +16880,557 @@ http_interactions:
         <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-24T00:00:00Z</updated><entry><title>Time Machines</title><link href="http://xkcd.com/1203/" rel="alternate"></link><updated>2013-04-24T00:00:00Z</updated><id>http://xkcd.com/1203/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/time_machines.png" title="'All time machine systems nominal ... T-minus ten ... eleven ...'" alt="'All time machine systems nominal ... T-minus ten ... eleven ...'" /&gt;</summary></entry><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry></feed>
     http_version: 
   recorded_at: Thu, 25 Apr 2013 12:09:31 GMT
+- request:
+    method: ''
+    uri: http://feeds.feedburner.com/makezineonline
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      If-Modified-Since:
+      - ''
+      If-None-Match:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Etag:
+      - s1ncxxdakl+fYlSPRHKWaXcyjc0
+      Last-Modified:
+      - Sat, 27 Apr 2013 01:34:35 GMT
+      Date:
+      - Sat, 27 Apr 2013 01:49:31 GMT
+      Expires:
+      - Sat, 27 Apr 2013 01:49:31 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<?xml-stylesheet type=\"text/xsl\"
+        media=\"screen\" href=\"/~d/styles/rss2full.xsl\"?><?xml-stylesheet type=\"text/css\"
+        media=\"screen\" href=\"http://feeds.feedburner.com/~d/styles/itemcontent.css\"?><rss
+        xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:wfw=\"http://wellformedweb.org/CommentAPI/\"
+        xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:atom=\"http://www.w3.org/2005/Atom\"
+        xmlns:sy=\"http://purl.org/rss/1.0/modules/syndication/\" xmlns:slash=\"http://purl.org/rss/1.0/modules/slash/\"
+        xmlns:georss=\"http://www.georss.org/georss\" xmlns:geo=\"http://www.w3.org/2003/01/geo/wgs84_pos#\"
+        xmlns:media=\"http://search.yahoo.com/mrss/\" xmlns:feedburner=\"http://rssnamespace.org/feedburner/ext/1.0\"
+        version=\"2.0\">\r\n\r\n<channel>\r\n\t<title>MAKE</title>\r\n\t\r\n\t<link>http://blog.makezine.com</link>\r\n\t<description>DIY
+        projects, how-tos, and inspiration from geeks, makers, and hackers</description>\r\n\t<lastBuildDate>Sat,
+        27 Apr 2013 01:26:47 +0000</lastBuildDate>\r\n\t<language>en</language>\r\n\t<sy:updatePeriod>hourly</sy:updatePeriod>\r\n\t<sy:updateFrequency>1</sy:updateFrequency>\r\n\t<generator>http://wordpress.com/</generator>\r\n<cloud
+        domain=\"blog.makezine.com\" port=\"80\" path=\"/?rsscloud=notify\" registerProcedure=\"\"
+        protocol=\"http-post\" />\r\n<image>\r\n\t\t<url>http://1.gravatar.com/blavatar/dab43acfe30c0e28a023bb3b7a700440?s=96&amp;d=http%3A%2F%2Fs2.wp.com%2Fi%2Fbuttonw-com.png</url>\r\n\t\t<title>MAKE</title>\r\n\t\t<link>http://blog.makezine.com</link>\r\n\t</image>\r\n\t<atom:link
+        rel=\"search\" type=\"application/opensearchdescription+xml\" href=\"http://blog.makezine.com/osd.xml\"
+        title=\"MAKE\" />\r\n\t\r\n\t\t<atom10:link xmlns:atom10=\"http://www.w3.org/2005/Atom\"
+        rel=\"self\" type=\"application/rss+xml\" href=\"http://feeds.feedburner.com/makezineonline\"
+        /><feedburner:info uri=\"makezineonline\" /><atom10:link xmlns:atom10=\"http://www.w3.org/2005/Atom\"
+        rel=\"hub\" href=\"http://pubsubhubbub.appspot.com/\" /><atom10:link xmlns:atom10=\"http://www.w3.org/2005/Atom\"
+        rel=\"hub\" href=\"http://blog.makezine.com/?pushpress=hub\" /><item>\r\n\t\t<title>Bugle
+        Call: Maker Camp Needs Your Help</title>\r\n\t\t<link>http://feedproxy.google.com/~r/makezineonline/~3/Soc6hyiQuCc/</link>\r\n\t\t<comments>http://blog.makezine.com/2013/04/26/sign-of-the-times-maker-camp-needs-your-help/#comments</comments>\r\n\t\t<pubDate>Fri,
+        26 Apr 2013 22:53:46 +0000</pubDate>\r\n\t\t<dc:creator>Stett Holbrook</dc:creator>\r\n\t\t\t\t<category><![CDATA[General]]></category>\r\n\t\t<category><![CDATA[Maker
+        Camp]]></category>\r\n\t\t<category><![CDATA[Maker Faire]]></category>\r\n\t\t<category><![CDATA[MFBA13]]></category>\r\n\r\n\t\t<guid
+        isPermaLink=\"false\">http://blog.makezine.com/?p=303705</guid>\r\n\t\t<description>&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/sign-of-the-times-maker-camp-needs-your-help/\"&gt;&lt;img
+        width=\"200\" height=\"200\" src=\"http://makezineblog.files.wordpress.com/2013/04/screen-shot-2013-04-26-at-3-31-04-pm.png?w=200&amp;amp;h=200&amp;amp;crop=1\"
+        class=\"attachment-archive-thumb wp-post-image\" alt=\"Screen Shot 2013-04-26
+        at 3.31.04 PM\" style=\"float:left; margin:0 15px 15px 0;\" /&gt;&lt;/a&gt;MAKE
+        is kicking off another session of Maker Camp this summer. We're getting the
+        word out and recruiting campers at Maker Faire next month with a retro looking
+        camp installation. But we need a really cool sign and we're hoping to tap
+        our local maker community for help&lt;p&gt;&lt;a href=\"http://blog.makezine.com/2013/04/26/sign-of-the-times-maker-camp-needs-your-help/\"&gt;Read
+        the full article on MAKE&lt;/a&gt;&lt;/p&gt;&lt;img alt=\"\" border=\"0\"
+        src=\"http://stats.wordpress.com/b.gif?host=blog.makezine.com&amp;#038;blog=30206320&amp;#038;post=303705&amp;#038;subd=makezineblog&amp;#038;ref=&amp;#038;feed=1\"
+        width=\"1\" height=\"1\" /&gt;&lt;div class=\"feedflare\"&gt;\r\n&lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Soc6hyiQuCc:SmtYaGM7nUw:yIl2AUoC8zA\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=yIl2AUoC8zA\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Soc6hyiQuCc:SmtYaGM7nUw:D7DqB2pKExk\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=Soc6hyiQuCc:SmtYaGM7nUw:D7DqB2pKExk\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Soc6hyiQuCc:SmtYaGM7nUw:I9og5sOYxJI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=I9og5sOYxJI\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Soc6hyiQuCc:SmtYaGM7nUw:V_sGLiPBpWU\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=Soc6hyiQuCc:SmtYaGM7nUw:V_sGLiPBpWU\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Soc6hyiQuCc:SmtYaGM7nUw:qj6IDK7rITs\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=qj6IDK7rITs\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Soc6hyiQuCc:SmtYaGM7nUw:-BTjWOF_DHI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=Soc6hyiQuCc:SmtYaGM7nUw:-BTjWOF_DHI\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;\r\n&lt;/div&gt;&lt;img src=\"http://feeds.feedburner.com/~r/makezineonline/~4/Soc6hyiQuCc\"
+        height=\"1\" width=\"1\"/&gt;</description>\r\n\t\t<wfw:commentRss>http://blog.makezine.com/2013/04/26/sign-of-the-times-maker-camp-needs-your-help/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\r\n\t\t<media:thumbnail
+        url=\"http://makezineblog.files.wordpress.com/2013/04/screen-shot-2013-04-26-at-3-31-04-pm.png?w=110\"
+        />\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/screen-shot-2013-04-26-at-3-31-04-pm.png?w=110\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">Screen Shot 2013-04-26
+        at 3.31.04 PM</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://1.gravatar.com/avatar/1a17a363ea7dd8560fe08fc81270d2f3?s=96&amp;d=retro&amp;r=G\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">stettholbrook1234</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/screen-shot-2013-04-26-at-3-00-11-pm.png?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">Screen Shot 2013-04-26
+        at 3.00.11 PM</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/screen-shot-2013-04-26-at-3-31-04-pm.png\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">Screen Shot 2013-04-26
+        at 3.31.04 PM</media:title>\r\n\t\t</media:content>\r\n\t<feedburner:origLink>http://blog.makezine.com/2013/04/26/sign-of-the-times-maker-camp-needs-your-help/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Building
+        a Better Egg</title>\r\n\t\t<link>http://feedproxy.google.com/~r/makezineonline/~3/EIU6ib8yE44/</link>\r\n\t\t<comments>http://blog.makezine.com/2013/04/26/building-a-better-egg/#comments</comments>\r\n\t\t<pubDate>Fri,
+        26 Apr 2013 21:58:16 +0000</pubDate>\r\n\t\t<dc:creator>Stett Holbrook</dc:creator>\r\n\t\t\t\t<category><![CDATA[Food
+        & Beverage]]></category>\r\n\t\t<category><![CDATA[Home]]></category>\r\n\t\t<category><![CDATA[Science]]></category>\r\n\t\t<category><![CDATA[eggs]]></category>\r\n\t\t<category><![CDATA[food
+        science]]></category>\r\n\t\t<category><![CDATA[Maker Faire]]></category>\r\n\t\t<category><![CDATA[MFBA13]]></category>\r\n\r\n\t\t<guid
+        isPermaLink=\"false\">http://blog.makezine.com/?p=303669</guid>\r\n\t\t<description>&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/building-a-better-egg/\"&gt;&lt;img
+        width=\"200\" height=\"200\" src=\"http://makezineblog.files.wordpress.com/2013/04/screen-shot-2013-04-26-at-2-09-31-pm.png?w=200&amp;amp;h=200&amp;amp;crop=1\"
+        class=\"attachment-archive-thumb wp-post-image\" alt=\"Screen Shot 2013-04-26
+        at 2.09.31 PM\" style=\"float:left; margin:0 15px 15px 0;\" /&gt;&lt;/a&gt;The
+        egg is a near perfect food. It's packed with protein, vitamins, and minerals.
+        It tastes good and lends itself to a wide variety of foods--baked good, sauces,
+        pasta, and of of course omelets. And it comes in a tidy, easy to transport
+        package. But the way the vast majority of eggs are produced in this country
+        is anything, but perfect. In fact, it's rotten. But Josh Tetrick thinks he's
+        found a better way. &lt;p&gt;&lt;a href=\"http://blog.makezine.com/2013/04/26/building-a-better-egg/\"&gt;Read
+        the full article on MAKE&lt;/a&gt;&lt;/p&gt;&lt;img alt=\"\" border=\"0\"
+        src=\"http://stats.wordpress.com/b.gif?host=blog.makezine.com&amp;#038;blog=30206320&amp;#038;post=303669&amp;#038;subd=makezineblog&amp;#038;ref=&amp;#038;feed=1\"
+        width=\"1\" height=\"1\" /&gt;&lt;div class=\"feedflare\"&gt;\r\n&lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=EIU6ib8yE44:f5_zL0VhVec:yIl2AUoC8zA\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=yIl2AUoC8zA\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=EIU6ib8yE44:f5_zL0VhVec:D7DqB2pKExk\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=EIU6ib8yE44:f5_zL0VhVec:D7DqB2pKExk\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=EIU6ib8yE44:f5_zL0VhVec:I9og5sOYxJI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=I9og5sOYxJI\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=EIU6ib8yE44:f5_zL0VhVec:V_sGLiPBpWU\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=EIU6ib8yE44:f5_zL0VhVec:V_sGLiPBpWU\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=EIU6ib8yE44:f5_zL0VhVec:qj6IDK7rITs\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=qj6IDK7rITs\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=EIU6ib8yE44:f5_zL0VhVec:-BTjWOF_DHI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=EIU6ib8yE44:f5_zL0VhVec:-BTjWOF_DHI\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;\r\n&lt;/div&gt;&lt;img src=\"http://feeds.feedburner.com/~r/makezineonline/~4/EIU6ib8yE44\"
+        height=\"1\" width=\"1\"/&gt;</description>\r\n\t\t<wfw:commentRss>http://blog.makezine.com/2013/04/26/building-a-better-egg/feed/</wfw:commentRss>\r\n\t\t<slash:comments>5</slash:comments>\r\n\t\r\n\t\t<media:thumbnail
+        url=\"http://makezineblog.files.wordpress.com/2013/04/screen-shot-2013-04-26-at-2-09-31-pm.png?w=150\"
+        />\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/screen-shot-2013-04-26-at-2-09-31-pm.png?w=150\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">Screen Shot 2013-04-26
+        at 2.09.31 PM</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://1.gravatar.com/avatar/1a17a363ea7dd8560fe08fc81270d2f3?s=96&amp;d=retro&amp;r=G\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">stettholbrook1234</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/comingtobayareamakerfaire_20131.png\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">comingtobayareamakerfaire_2013</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/screen-shot-2013-04-26-at-2-06-35-pm.png?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">Screen Shot 2013-04-26
+        at 2.06.35 PM</media:title>\r\n\t\t</media:content>\r\n\t<feedburner:origLink>http://blog.makezine.com/2013/04/26/building-a-better-egg/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Cloning
+        the DARwin-OP</title>\r\n\t\t<link>http://feedproxy.google.com/~r/makezineonline/~3/t_nCepb1DtE/</link>\r\n\t\t<comments>http://blog.makezine.com/2013/04/26/cloning-the-darwin-op/#comments</comments>\r\n\t\t<pubDate>Fri,
+        26 Apr 2013 21:48:56 +0000</pubDate>\r\n\t\t<dc:creator>Sean Michael Ragan</dc:creator>\r\n\t\t\t\t<category><![CDATA[Robotics]]></category>\r\n\t\t<category><![CDATA[3D
+        Printing]]></category>\r\n\t\t<category><![CDATA[Humanoid robot]]></category>\r\n\t\t<category><![CDATA[Maker
+        Faire]]></category>\r\n\t\t<category><![CDATA[MFBA13]]></category>\r\n\t\t<category><![CDATA[RoboGames]]></category>\r\n\t\t<category><![CDATA[vol34]]></category>\r\n\r\n\t\t<guid
+        isPermaLink=\"false\">http://blog.makezine.com/?p=303643</guid>\r\n\t\t<description>&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/cloning-the-darwin-op/\"&gt;&lt;img
+        width=\"200\" height=\"200\" src=\"http://makezineblog.files.wordpress.com/2013/04/michael-overstreet-and-darwin-op-clone.jpg?w=200&amp;amp;h=200&amp;amp;crop=1\"
+        class=\"attachment-archive-thumb wp-post-image\" alt=\"Michael Overstreet
+        and DARwin-OP clone\" style=\"float:left; margin:0 15px 15px 0;\" /&gt;&lt;/a&gt;Kansas
+        City programmer Michael Overstreet wanted his own high-performance humanoid
+        robot to experiment with, but was deterred by the $12,000 pricetag of an off-the-shelf
+        DARwin-OP. Though a significant fraction of the cost is tied up in the top-of-the-line
+        servo actuators the design requires to perform at spec, Michael believed he
+        could build his own \"clone\" of the fully open-source design, at substantial
+        savings, by 3D printing as many pieces as he could in fused filament, on home
+        equipment.\r\n&lt;p&gt;&lt;a href=\"http://blog.makezine.com/2013/04/26/cloning-the-darwin-op/\"&gt;Read
+        the full article on MAKE&lt;/a&gt;&lt;/p&gt;&lt;img alt=\"\" border=\"0\"
+        src=\"http://stats.wordpress.com/b.gif?host=blog.makezine.com&amp;#038;blog=30206320&amp;#038;post=303643&amp;#038;subd=makezineblog&amp;#038;ref=&amp;#038;feed=1\"
+        width=\"1\" height=\"1\" /&gt;&lt;div class=\"feedflare\"&gt;\r\n&lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=t_nCepb1DtE:voGEwwVVw64:yIl2AUoC8zA\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=yIl2AUoC8zA\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=t_nCepb1DtE:voGEwwVVw64:D7DqB2pKExk\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=t_nCepb1DtE:voGEwwVVw64:D7DqB2pKExk\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=t_nCepb1DtE:voGEwwVVw64:I9og5sOYxJI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=I9og5sOYxJI\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=t_nCepb1DtE:voGEwwVVw64:V_sGLiPBpWU\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=t_nCepb1DtE:voGEwwVVw64:V_sGLiPBpWU\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=t_nCepb1DtE:voGEwwVVw64:qj6IDK7rITs\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=qj6IDK7rITs\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=t_nCepb1DtE:voGEwwVVw64:-BTjWOF_DHI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=t_nCepb1DtE:voGEwwVVw64:-BTjWOF_DHI\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;\r\n&lt;/div&gt;&lt;img src=\"http://feeds.feedburner.com/~r/makezineonline/~4/t_nCepb1DtE\"
+        height=\"1\" width=\"1\"/&gt;</description>\r\n\t\t<wfw:commentRss>http://blog.makezine.com/2013/04/26/cloning-the-darwin-op/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\r\n\t\t<media:thumbnail
+        url=\"http://makezineblog.files.wordpress.com/2013/04/michael-overstreet-and-darwin-op-clone.jpg?w=150\"
+        />\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/michael-overstreet-and-darwin-op-clone.jpg?w=150\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">Michael Overstreet and
+        DARwin-OP clone</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://0.gravatar.com/avatar/c4d20edb98d996dab8ce39da39aecad9?s=96&amp;d=retro&amp;r=G\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">seanmichaelragan</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/darwin-op_commercial_vs_clone.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">The commercial version
+        of DARwin-OP, left, and Michael's 3D-printed clone, right.  </media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/comingtobayareamakerfaire_2013.png\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">comingtobayareamakerfaire_2013</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/dynamixel-mx-28.jpg?w=150\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">The Dynamixel MX-28,
+        arguably the most advanced  commercial robotics servo in the world today.</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/michael-overstreet-and-darwin-op-clone.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">Michael Overstreet and
+        DARwin-OP clone</media:title>\r\n\t\t</media:content>\r\n\t<feedburner:origLink>http://blog.makezine.com/2013/04/26/cloning-the-darwin-op/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Choose
+        Your Own Adventure (With a Receipt)</title>\r\n\t\t<link>http://feedproxy.google.com/~r/makezineonline/~3/Yd-PkdZ6Y-A/</link>\r\n\t\t<comments>http://blog.makezine.com/2013/04/26/choose-your-own-adventure-with-a-receipt/#comments</comments>\r\n\t\t<pubDate>Fri,
+        26 Apr 2013 21:30:13 +0000</pubDate>\r\n\t\t<dc:creator>John Baichtal</dc:creator>\r\n\t\t\t\t<category><![CDATA[Arduino]]></category>\r\n\t\t<category><![CDATA[choose-your-own-adventure]]></category>\r\n\t\t<category><![CDATA[thermal
+        printer]]></category>\r\n\r\n\t\t<guid isPermaLink=\"false\">http://blog.makezine.com/?p=303645</guid>\r\n\t\t<description>&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/choose-your-own-adventure-with-a-receipt/\"&gt;&lt;img
+        width=\"200\" height=\"200\" src=\"http://makezineblog.files.wordpress.com/2013/04/8656974284_397ae58fd1_o.jpg?w=200&amp;amp;h=200&amp;amp;crop=1\"
+        class=\"attachment-archive-thumb wp-post-image\" alt=\"8656974284_397ae58fd1_o\"
+        style=\"float:left; margin:0 15px 15px 0;\" /&gt;&lt;/a&gt;At Minne-Faire
+        this year, I ran into Jerry Bjelojac who has created the Choosatron, an Arduino-powered,
+        coin-operated choose-your-own adventure machine that prints your quest out
+        on a thermal printer. As technology has advanced, so has the way we tell stories.
+        The interactive fiction genre evolved so quickly from text adventures [...]&lt;p&gt;&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/choose-your-own-adventure-with-a-receipt/\"&gt;Read
+        the full article on MAKE&lt;/a&gt;&lt;/p&gt;&lt;img alt=\"\" border=\"0\"
+        src=\"http://stats.wordpress.com/b.gif?host=blog.makezine.com&amp;#038;blog=30206320&amp;#038;post=303645&amp;#038;subd=makezineblog&amp;#038;ref=&amp;#038;feed=1\"
+        width=\"1\" height=\"1\" /&gt;&lt;div class=\"feedflare\"&gt;\r\n&lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Yd-PkdZ6Y-A:1TY8hwmrbBg:yIl2AUoC8zA\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=yIl2AUoC8zA\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Yd-PkdZ6Y-A:1TY8hwmrbBg:D7DqB2pKExk\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=Yd-PkdZ6Y-A:1TY8hwmrbBg:D7DqB2pKExk\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Yd-PkdZ6Y-A:1TY8hwmrbBg:I9og5sOYxJI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=I9og5sOYxJI\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Yd-PkdZ6Y-A:1TY8hwmrbBg:V_sGLiPBpWU\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=Yd-PkdZ6Y-A:1TY8hwmrbBg:V_sGLiPBpWU\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Yd-PkdZ6Y-A:1TY8hwmrbBg:qj6IDK7rITs\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=qj6IDK7rITs\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=Yd-PkdZ6Y-A:1TY8hwmrbBg:-BTjWOF_DHI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=Yd-PkdZ6Y-A:1TY8hwmrbBg:-BTjWOF_DHI\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;\r\n&lt;/div&gt;&lt;img src=\"http://feeds.feedburner.com/~r/makezineonline/~4/Yd-PkdZ6Y-A\"
+        height=\"1\" width=\"1\"/&gt;</description>\r\n\t\t<wfw:commentRss>http://blog.makezine.com/2013/04/26/choose-your-own-adventure-with-a-receipt/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\r\n\t\t<media:thumbnail
+        url=\"http://makezineblog.files.wordpress.com/2013/04/8656974284_397ae58fd1_o.jpg?w=112\"
+        />\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/8656974284_397ae58fd1_o.jpg?w=112\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">8656974284_397ae58fd1_o</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://0.gravatar.com/avatar/c0720db1696ab94f499cd391c9920c59?s=96&amp;d=retro&amp;r=G\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">nerdyjb</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/8656974486_f84b8e8f88_o.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">8656974486_f84b8e8f88_o</media:title>\r\n\t\t</media:content>\r\n\t<feedburner:origLink>http://blog.makezine.com/2013/04/26/choose-your-own-adventure-with-a-receipt/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Organize
+        Miscellaneous Cables with Toilet Paper Tubes</title>\r\n\t\t<link>http://feedproxy.google.com/~r/makezineonline/~3/ff4GgG8IPTc/</link>\r\n\t\t<comments>http://blog.makezine.com/2013/04/26/organize-miscellaneous-cables-with-toilet-paper-tubes/#comments</comments>\r\n\t\t<pubDate>Fri,
+        26 Apr 2013 21:22:26 +0000</pubDate>\r\n\t\t<dc:creator>Laura Cochrane</dc:creator>\r\n\t\t\t\t<category><![CDATA[Workshop]]></category>\r\n\t\t<category><![CDATA[Craft
+        Rooms & Organizing]]></category>\r\n\t\t<category><![CDATA[organization]]></category>\r\n\t\t<category><![CDATA[tips]]></category>\r\n\r\n\t\t<guid
+        isPermaLink=\"false\">http://blog.makezine.com/?p=303675</guid>\r\n\t\t<description>&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/organize-miscellaneous-cables-with-toilet-paper-tubes/\"&gt;&lt;img
+        width=\"200\" height=\"200\" src=\"http://i0.wp.com/makezineblog.files.wordpress.com/2013/04/toilet-paper-roll-cord-organizer.jpg?crop=0px%2C0px%2C768px%2C768px&amp;amp;resize=200%2C200\"
+        class=\"attachment-archive-thumb wp-post-image\" alt=\"toilet paper roll cord
+        organizer\" style=\"float:left; margin:0 15px 15px 0;\" /&gt;&lt;/a&gt;You
+        may be tidy enough to keep your snake pit of miscellaneous cords, cables,
+        and wires all in a single box, but if you want to take your organization to
+        the next level, neatly coil and stow each cord individually inside a toilet
+        paper tube. Then pack all the tubes up in a box, and you'll never have to
+        rummage through tangled cords again.&lt;p&gt;&lt;a href=\"http://blog.makezine.com/2013/04/26/organize-miscellaneous-cables-with-toilet-paper-tubes/\"&gt;Read
+        the full article on MAKE&lt;/a&gt;&lt;/p&gt;&lt;img alt=\"\" border=\"0\"
+        src=\"http://stats.wordpress.com/b.gif?host=blog.makezine.com&amp;#038;blog=30206320&amp;#038;post=303675&amp;#038;subd=makezineblog&amp;#038;ref=&amp;#038;feed=1\"
+        width=\"1\" height=\"1\" /&gt;&lt;div class=\"feedflare\"&gt;\r\n&lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=ff4GgG8IPTc:Qmjz2Sktsqo:yIl2AUoC8zA\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=yIl2AUoC8zA\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=ff4GgG8IPTc:Qmjz2Sktsqo:D7DqB2pKExk\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=ff4GgG8IPTc:Qmjz2Sktsqo:D7DqB2pKExk\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=ff4GgG8IPTc:Qmjz2Sktsqo:I9og5sOYxJI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=I9og5sOYxJI\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=ff4GgG8IPTc:Qmjz2Sktsqo:V_sGLiPBpWU\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=ff4GgG8IPTc:Qmjz2Sktsqo:V_sGLiPBpWU\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=ff4GgG8IPTc:Qmjz2Sktsqo:qj6IDK7rITs\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=qj6IDK7rITs\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=ff4GgG8IPTc:Qmjz2Sktsqo:-BTjWOF_DHI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=ff4GgG8IPTc:Qmjz2Sktsqo:-BTjWOF_DHI\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;\r\n&lt;/div&gt;&lt;img src=\"http://feeds.feedburner.com/~r/makezineonline/~4/ff4GgG8IPTc\"
+        height=\"1\" width=\"1\"/&gt;</description>\r\n\t\t<wfw:commentRss>http://blog.makezine.com/2013/04/26/organize-miscellaneous-cables-with-toilet-paper-tubes/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\r\n\t\t<media:thumbnail
+        url=\"http://makezineblog.files.wordpress.com/2013/04/toilet-paper-roll-cord-organizer.jpg?w=150\"
+        />\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/toilet-paper-roll-cord-organizer.jpg?w=150\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">toilet paper roll cord
+        organizer</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://1.gravatar.com/avatar/125d34213808b6bde74b3dadd211e75b?s=96&amp;d=retro&amp;r=G\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">lauracochrane</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/toilet-paper-roll-cord-organizer.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">toilet paper roll cord
+        organizer</media:title>\r\n\t\t</media:content>\r\n\t<feedburner:origLink>http://blog.makezine.com/2013/04/26/organize-miscellaneous-cables-with-toilet-paper-tubes/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Speaker
+        Lineup for Maker Faire UK</title>\r\n\t\t<link>http://feedproxy.google.com/~r/makezineonline/~3/47i__TI9Eb8/</link>\r\n\t\t<comments>http://blog.makezine.com/2013/04/26/speaker-lineup-for-maker-faire-uk/#comments</comments>\r\n\t\t<pubDate>Fri,
+        26 Apr 2013 20:47:44 +0000</pubDate>\r\n\t\t<dc:creator>Goli Mohammadi</dc:creator>\r\n\t\t\t\t<category><![CDATA[Makers]]></category>\r\n\r\n\t\t<guid
+        isPermaLink=\"false\">http://blog.makezine.com/?p=303653</guid>\r\n\t\t<description>&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/speaker-lineup-for-maker-faire-uk/\"&gt;&lt;img
+        width=\"200\" height=\"200\" src=\"http://i0.wp.com/makezineblog.files.wordpress.com/2013/04/dale-dougherty.jpg?crop=28px%2C0px%2C332px%2C332px&amp;amp;resize=200%2C200\"
+        class=\"attachment-archive-thumb wp-post-image\" alt=\"TED Motor City\" style=\"float:left;
+        margin:0 15px 15px 0;\" /&gt;&lt;/a&gt;The 4th annual Maker Faire UK is coming
+        right up this weekend, April 27 and 28, at the Centre for Life in Newcastle.
+        They have a robust array of makers who will be exhibiting their projects as
+        well as a solid lineup of speakers and performers sure to inspire. Our [...]&lt;p&gt;&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/speaker-lineup-for-maker-faire-uk/\"&gt;Read
+        the full article on MAKE&lt;/a&gt;&lt;/p&gt;&lt;img alt=\"\" border=\"0\"
+        src=\"http://stats.wordpress.com/b.gif?host=blog.makezine.com&amp;#038;blog=30206320&amp;#038;post=303653&amp;#038;subd=makezineblog&amp;#038;ref=&amp;#038;feed=1\"
+        width=\"1\" height=\"1\" /&gt;&lt;div class=\"feedflare\"&gt;\r\n&lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=47i__TI9Eb8:BZvQYAFXLsU:yIl2AUoC8zA\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=yIl2AUoC8zA\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=47i__TI9Eb8:BZvQYAFXLsU:D7DqB2pKExk\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=47i__TI9Eb8:BZvQYAFXLsU:D7DqB2pKExk\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=47i__TI9Eb8:BZvQYAFXLsU:I9og5sOYxJI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=I9og5sOYxJI\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=47i__TI9Eb8:BZvQYAFXLsU:V_sGLiPBpWU\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=47i__TI9Eb8:BZvQYAFXLsU:V_sGLiPBpWU\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=47i__TI9Eb8:BZvQYAFXLsU:qj6IDK7rITs\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=qj6IDK7rITs\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=47i__TI9Eb8:BZvQYAFXLsU:-BTjWOF_DHI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=47i__TI9Eb8:BZvQYAFXLsU:-BTjWOF_DHI\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;\r\n&lt;/div&gt;&lt;img src=\"http://feeds.feedburner.com/~r/makezineonline/~4/47i__TI9Eb8\"
+        height=\"1\" width=\"1\"/&gt;</description>\r\n\t\t<wfw:commentRss>http://blog.makezine.com/2013/04/26/speaker-lineup-for-maker-faire-uk/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\r\n\t\t<media:thumbnail
+        url=\"http://makezineblog.files.wordpress.com/2013/04/dale-dougherty.jpg?w=150\"
+        />\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/dale-dougherty.jpg?w=150\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">TED Motor City</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://1.gravatar.com/avatar/799c7a2e786072cad66e0173fd374462?s=96&amp;d=retro&amp;r=G\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">snowgoli</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/dale-dougherty.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">TED Motor City</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/cory-doctorow.png\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">cory doctorow</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/rob-bishop.jpg\" medium=\"image\">\r\n\t\t\t<media:title
+        type=\"html\">rob bishop</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/mitchaltman1.jpg\" medium=\"image\">\r\n\t\t\t<media:title
+        type=\"html\">MitchAltman1</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/oliver-medvedik.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">oliver medvedik</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/alice-taylor-makies.jpeg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">alice taylor makies</media:title>\r\n\t\t</media:content>\r\n\t<feedburner:origLink>http://blog.makezine.com/2013/04/26/speaker-lineup-for-maker-faire-uk/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>The
+        Simplest DC Motor in the World?</title>\r\n\t\t<link>http://feedproxy.google.com/~r/makezineonline/~3/cnvp1bQ7_jA/</link>\r\n\t\t<comments>http://blog.makezine.com/2013/04/26/the-simplest-dc-motor-in-the-world/#comments</comments>\r\n\t\t<pubDate>Fri,
+        26 Apr 2013 20:17:16 +0000</pubDate>\r\n\t\t<dc:creator>Michael Colombo</dc:creator>\r\n\t\t\t\t<category><![CDATA[Energy]]></category>\r\n\t\t<category><![CDATA[Electronics]]></category>\r\n\t\t<category><![CDATA[Hacks]]></category>\r\n\t\t<category><![CDATA[battery]]></category>\r\n\t\t<category><![CDATA[dc]]></category>\r\n\t\t<category><![CDATA[magnets]]></category>\r\n\t\t<category><![CDATA[motors]]></category>\r\n\r\n\t\t<guid
+        isPermaLink=\"false\">http://blog.makezine.com/?p=303655</guid>\r\n\t\t<description>&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/the-simplest-dc-motor-in-the-world/\"&gt;&lt;img
+        width=\"200\" height=\"200\" src=\"http://makezineblog.files.wordpress.com/2013/04/simple-dc.png?w=200&amp;amp;h=200&amp;amp;crop=1\"
+        class=\"attachment-archive-thumb wp-post-image\" alt=\"simple-dc\" style=\"float:left;
+        margin:0 15px 15px 0;\" /&gt;&lt;/a&gt;AA battery + coil of wire + neodymium
+        magnets = DC Motor!&lt;p&gt;&lt;a href=\"http://blog.makezine.com/2013/04/26/the-simplest-dc-motor-in-the-world/\"&gt;Read
+        the full article on MAKE&lt;/a&gt;&lt;/p&gt;&lt;img alt=\"\" border=\"0\"
+        src=\"http://stats.wordpress.com/b.gif?host=blog.makezine.com&amp;#038;blog=30206320&amp;#038;post=303655&amp;#038;subd=makezineblog&amp;#038;ref=&amp;#038;feed=1\"
+        width=\"1\" height=\"1\" /&gt;&lt;div class=\"feedflare\"&gt;\r\n&lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=cnvp1bQ7_jA:EphZe_0iNLI:yIl2AUoC8zA\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=yIl2AUoC8zA\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=cnvp1bQ7_jA:EphZe_0iNLI:D7DqB2pKExk\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=cnvp1bQ7_jA:EphZe_0iNLI:D7DqB2pKExk\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=cnvp1bQ7_jA:EphZe_0iNLI:I9og5sOYxJI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=I9og5sOYxJI\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=cnvp1bQ7_jA:EphZe_0iNLI:V_sGLiPBpWU\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=cnvp1bQ7_jA:EphZe_0iNLI:V_sGLiPBpWU\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=cnvp1bQ7_jA:EphZe_0iNLI:qj6IDK7rITs\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=qj6IDK7rITs\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=cnvp1bQ7_jA:EphZe_0iNLI:-BTjWOF_DHI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=cnvp1bQ7_jA:EphZe_0iNLI:-BTjWOF_DHI\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;\r\n&lt;/div&gt;&lt;img src=\"http://feeds.feedburner.com/~r/makezineonline/~4/cnvp1bQ7_jA\"
+        height=\"1\" width=\"1\"/&gt;</description>\r\n\t\t<wfw:commentRss>http://blog.makezine.com/2013/04/26/the-simplest-dc-motor-in-the-world/feed/</wfw:commentRss>\r\n\t\t<slash:comments>5</slash:comments>\r\n\t\r\n\t\t<media:thumbnail
+        url=\"http://makezineblog.files.wordpress.com/2013/04/simple-dc.png?w=150\"
+        />\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/simple-dc.png?w=150\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">simple-dc</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://1.gravatar.com/avatar/7e3d9eec108b859aeb29257d00367d13?s=96&amp;d=retro&amp;r=G\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">pushtheotherbutton</media:title>\r\n\t\t</media:content>\r\n\t<feedburner:origLink>http://blog.makezine.com/2013/04/26/the-simplest-dc-motor-in-the-world/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Announcing
+        the Winners of the Raspberry Pi Design Contest</title>\r\n\t\t<link>http://feedproxy.google.com/~r/makezineonline/~3/QhF8t3XTHSM/</link>\r\n\t\t<comments>http://blog.makezine.com/2013/04/26/announcing-the-winners-of-the-raspberry-pi-design-contest/#comments</comments>\r\n\t\t<pubDate>Fri,
+        26 Apr 2013 19:02:26 +0000</pubDate>\r\n\t\t<dc:creator>Nick Normal</dc:creator>\r\n\t\t\t\t<category><![CDATA[General]]></category>\r\n\t\t<category><![CDATA[Contest]]></category>\r\n\t\t<category><![CDATA[MCM]]></category>\r\n\t\t<category><![CDATA[raspberry
+        pi]]></category>\r\n\t\t<category><![CDATA[Raspberry Pi Design Contest]]></category>\r\n\r\n\t\t<guid
+        isPermaLink=\"false\">http://blog.makezine.com/?p=303261</guid>\r\n\t\t<description>&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/announcing-the-winners-of-the-raspberry-pi-design-contest/\"&gt;&lt;img
+        width=\"200\" height=\"200\" src=\"http://i0.wp.com/makezineblog.files.wordpress.com/2013/04/rpidc_winners1.jpg?crop=534px%2C0px%2C899px%2C900px&amp;amp;resize=200%2C200\"
+        class=\"attachment-archive-thumb wp-post-image\" alt=\"Raspberry Pi Design
+        Contest\" style=\"float:left; margin:0 15px 15px 0;\" /&gt;&lt;/a&gt;Congratulations
+        to Intonarumori, the Lobbyist Meter, the Raspberry Pi-based State Poster,
+        Walnut Raspberry Pi Enclosure, and the Raspberry Pi Powered Cat Feeder, who
+        are all winners in the first ever Raspberry Pi Design Contest!&lt;p&gt;&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/announcing-the-winners-of-the-raspberry-pi-design-contest/\"&gt;Read
+        the full article on MAKE&lt;/a&gt;&lt;/p&gt;&lt;img alt=\"\" border=\"0\"
+        src=\"http://stats.wordpress.com/b.gif?host=blog.makezine.com&amp;#038;blog=30206320&amp;#038;post=303261&amp;#038;subd=makezineblog&amp;#038;ref=&amp;#038;feed=1\"
+        width=\"1\" height=\"1\" /&gt;&lt;div class=\"feedflare\"&gt;\r\n&lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=QhF8t3XTHSM:JNV8YLb9aQg:yIl2AUoC8zA\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=yIl2AUoC8zA\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=QhF8t3XTHSM:JNV8YLb9aQg:D7DqB2pKExk\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=QhF8t3XTHSM:JNV8YLb9aQg:D7DqB2pKExk\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=QhF8t3XTHSM:JNV8YLb9aQg:I9og5sOYxJI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=I9og5sOYxJI\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=QhF8t3XTHSM:JNV8YLb9aQg:V_sGLiPBpWU\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=QhF8t3XTHSM:JNV8YLb9aQg:V_sGLiPBpWU\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=QhF8t3XTHSM:JNV8YLb9aQg:qj6IDK7rITs\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=qj6IDK7rITs\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=QhF8t3XTHSM:JNV8YLb9aQg:-BTjWOF_DHI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=QhF8t3XTHSM:JNV8YLb9aQg:-BTjWOF_DHI\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;\r\n&lt;/div&gt;&lt;img src=\"http://feeds.feedburner.com/~r/makezineonline/~4/QhF8t3XTHSM\"
+        height=\"1\" width=\"1\"/&gt;</description>\r\n\t\t<wfw:commentRss>http://blog.makezine.com/2013/04/26/announcing-the-winners-of-the-raspberry-pi-design-contest/feed/</wfw:commentRss>\r\n\t\t<slash:comments>2</slash:comments>\r\n\t\r\n\t\t<media:thumbnail
+        url=\"http://makezineblog.files.wordpress.com/2013/04/rpidc_winners1.jpg?w=150\"
+        />\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/rpidc_winners1.jpg?w=150\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">Raspberry Pi Design
+        Contest</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content url=\"http://0.gravatar.com/avatar/faa4d1e6379e1c9d8de5a0a2384e1e64?s=96&amp;d=retro&amp;r=G\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">nicknormal</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/rpidc_winners1.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">Raspberry Pi Design
+        Contest</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/03/rpidc_mcmicon1.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">RPiDC_MCM-button</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/rpidcg_urbanstews-intonarumori__bike_box_inside.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">rpidcg_urbanstews-intonarumori__bike_box_inside</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/mcm_prizes_ps.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">Raspberry Pi Design
+        Contest</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/rpidcg_sl_rasp3.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">rpidcg_sl_rasp3</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/rpidcg_sl_rasp4.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">rpidcg_sl_rasp4</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/rpidcg_stateposter2.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">rpidcg_stateposter2</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/rpidcg_stateposter.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">rpidcg_stateposter</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/rpidcg_walnut40.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">rpidcg_walnut40</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/rpidcg_walnut43.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">rpidcg_walnut43</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/cathuman_feeder__96.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">cathuman_feeder__96</media:title>\r\n\t\t</media:content>\r\n\t<feedburner:origLink>http://blog.makezine.com/2013/04/26/announcing-the-winners-of-the-raspberry-pi-design-contest/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Maker
+        Scouts: Light it Up</title>\r\n\t\t<link>http://feedproxy.google.com/~r/makezineonline/~3/pXr95B_cGHk/</link>\r\n\t\t<comments>http://blog.makezine.com/2013/04/26/maker-scouts-light-it-up/#comments</comments>\r\n\t\t<pubDate>Fri,
+        26 Apr 2013 18:39:51 +0000</pubDate>\r\n\t\t<dc:creator>jeankanekotest</dc:creator>\r\n\t\t\t\t<category><![CDATA[Education]]></category>\r\n\t\t<category><![CDATA[maker
+        scouts]]></category>\r\n\t\t<category><![CDATA[the exploratory]]></category>\r\n\t\t<category><![CDATA[wearable
+        tech]]></category>\r\n\r\n\t\t<guid isPermaLink=\"false\">http://blog.makezine.com/?p=303551</guid>\r\n\t\t<description>&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/maker-scouts-light-it-up/\"&gt;&lt;img
+        width=\"200\" height=\"200\" src=\"http://makezineblog.files.wordpress.com/2013/04/photo-jan-01-12-08-29-pm-11.jpg?w=200&amp;amp;h=200&amp;amp;crop=1\"
+        class=\"attachment-archive-thumb wp-post-image\" alt=\"photo-jan-01-12-08-29-pm-1\"
+        style=\"float:left; margin:0 15px 15px 0;\" /&gt;&lt;/a&gt;As the Los Angeles
+        host for the Maker Education Initiative's Maker Corp program, The Exploratory
+        has had the honor of seeing 18+ adults using the same materials that we use
+        with 4+ Maker Scouts and noticing the differences and similarities. It occurred
+        to me today, that children are more apt to have a story - a narrative that
+        is connected to their making projects. Sometimes, its a story that comes from
+        the project - a way for them to establish a sense of place. Other times, we
+        find that a provocation is helpful as a starting point. I've done e-textile
+        projects before and without a provocation, I have noticed that the young makers
+        tend to make copies of other people's design. So, for this introduction to
+        e-textiles, I thought that I would ask \" What kind of superhero would you
+        be and where would your power come from?\" I also asked \" What do you LOVE
+        so much that you feel a strong need to protect it?\" We had the best answers
+        - \" Cats, Dogs, Eagles, my family, and best of all - MILK.\"&lt;p&gt;&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/maker-scouts-light-it-up/\"&gt;Read
+        the full article on MAKE&lt;/a&gt;&lt;/p&gt;&lt;img alt=\"\" border=\"0\"
+        src=\"http://stats.wordpress.com/b.gif?host=blog.makezine.com&amp;#038;blog=30206320&amp;#038;post=303551&amp;#038;subd=makezineblog&amp;#038;ref=&amp;#038;feed=1\"
+        width=\"1\" height=\"1\" /&gt;&lt;div class=\"feedflare\"&gt;\r\n&lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=pXr95B_cGHk:mnjKBRImpnY:yIl2AUoC8zA\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=yIl2AUoC8zA\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=pXr95B_cGHk:mnjKBRImpnY:D7DqB2pKExk\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=pXr95B_cGHk:mnjKBRImpnY:D7DqB2pKExk\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=pXr95B_cGHk:mnjKBRImpnY:I9og5sOYxJI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=I9og5sOYxJI\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=pXr95B_cGHk:mnjKBRImpnY:V_sGLiPBpWU\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=pXr95B_cGHk:mnjKBRImpnY:V_sGLiPBpWU\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=pXr95B_cGHk:mnjKBRImpnY:qj6IDK7rITs\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=qj6IDK7rITs\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=pXr95B_cGHk:mnjKBRImpnY:-BTjWOF_DHI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=pXr95B_cGHk:mnjKBRImpnY:-BTjWOF_DHI\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;\r\n&lt;/div&gt;&lt;img src=\"http://feeds.feedburner.com/~r/makezineonline/~4/pXr95B_cGHk\"
+        height=\"1\" width=\"1\"/&gt;</description>\r\n\t\t<wfw:commentRss>http://blog.makezine.com/2013/04/26/maker-scouts-light-it-up/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\r\n\t\t<media:thumbnail
+        url=\"http://makezineblog.files.wordpress.com/2013/04/photo-jan-01-12-08-29-pm-11.jpg?w=104\"
+        />\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/photo-jan-01-12-08-29-pm-11.jpg?w=104\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">photo-jan-01-12-08-29-pm-1</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://2.gravatar.com/avatar/e120c646320d1198f670fbceb4044745?s=96&amp;d=retro&amp;r=G\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">jeankanekotest</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/dsc06246.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">SONY DSC</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/makezine_5familyfri_badge1.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">MAKEZINE_5FamilyFri_Badge</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/img_2041.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">img_2041</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/photo-jan-01-12-01-47-pm-1.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">photo jan 01, 12 01
+        47 pm-1</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/photo-jan-01-12-08-29-pm-1.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">photo jan 01, 12 08
+        29 pm-1</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/img_2081.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">img_2081</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/dsc06132.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">SONY DSC</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/dsc04771.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">dsc04771</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/dsc06232.jpg?w=620\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">SONY DSC</media:title>\r\n\t\t</media:content>\r\n\t<feedburner:origLink>http://blog.makezine.com/2013/04/26/maker-scouts-light-it-up/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Maker
+        Pro Newsletter #10</title>\r\n\t\t<link>http://feedproxy.google.com/~r/makezineonline/~3/B_OHIVDRcBI/</link>\r\n\t\t<comments>http://blog.makezine.com/2013/04/26/maker-pro-newsletter-10/#comments</comments>\r\n\t\t<pubDate>Fri,
+        26 Apr 2013 17:30:55 +0000</pubDate>\r\n\t\t<dc:creator>D.C. Denison</dc:creator>\r\n\t\t\t\t<category><![CDATA[Maker
+        Pro]]></category>\r\n\t\t<category><![CDATA[Maker Faire]]></category>\r\n\t\t<category><![CDATA[Maker
+        Pro Newsletter]]></category>\r\n\t\t<category><![CDATA[MFBA13]]></category>\r\n\r\n\t\t<guid
+        isPermaLink=\"false\">http://blog.makezine.com/?p=303484</guid>\r\n\t\t<description>&lt;a
+        href=\"http://blog.makezine.com/2013/04/26/maker-pro-newsletter-10/\"&gt;&lt;img
+        width=\"200\" height=\"200\" src=\"http://i0.wp.com/makezineblog.files.wordpress.com/2013/04/nl_hackpad-com_fikihct9tqo_p-33950_1366827874363_einstein.jpg?crop=85px%2C0px%2C331px%2C331px&amp;amp;resize=200%2C200\"
+        class=\"attachment-archive-thumb wp-post-image\" alt=\"At Einstein&amp;#039;s
+        Workshop, Sofia Houh peers through the center of the expanded 120-cell created
+        using Zome in a workshop with participants from as far away as Stamford, Conn.,
+        180 miles away.\" style=\"float:left; margin:0 15px 15px 0;\" /&gt;&lt;/a&gt;\"Complexity
+        is free.\" From the editors of MAKE magazine, The Maker Pro Newsletter is
+        about the impact of makers on business and technology. Our coverage includes
+        hardware startups, new products, incubators, innovators, along with technology
+        and market trends.&lt;p&gt;&lt;a href=\"http://blog.makezine.com/2013/04/26/maker-pro-newsletter-10/\"&gt;Read
+        the full article on MAKE&lt;/a&gt;&lt;/p&gt;&lt;img alt=\"\" border=\"0\"
+        src=\"http://stats.wordpress.com/b.gif?host=blog.makezine.com&amp;#038;blog=30206320&amp;#038;post=303484&amp;#038;subd=makezineblog&amp;#038;ref=&amp;#038;feed=1\"
+        width=\"1\" height=\"1\" /&gt;&lt;div class=\"feedflare\"&gt;\r\n&lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=B_OHIVDRcBI:cYAKrgkfMX4:yIl2AUoC8zA\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=yIl2AUoC8zA\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=B_OHIVDRcBI:cYAKrgkfMX4:D7DqB2pKExk\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=B_OHIVDRcBI:cYAKrgkfMX4:D7DqB2pKExk\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=B_OHIVDRcBI:cYAKrgkfMX4:I9og5sOYxJI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=I9og5sOYxJI\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=B_OHIVDRcBI:cYAKrgkfMX4:V_sGLiPBpWU\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=B_OHIVDRcBI:cYAKrgkfMX4:V_sGLiPBpWU\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=B_OHIVDRcBI:cYAKrgkfMX4:qj6IDK7rITs\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?d=qj6IDK7rITs\" border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;
+        &lt;a href=\"http://feeds.feedburner.com/~ff/makezineonline?a=B_OHIVDRcBI:cYAKrgkfMX4:-BTjWOF_DHI\"&gt;&lt;img
+        src=\"http://feeds.feedburner.com/~ff/makezineonline?i=B_OHIVDRcBI:cYAKrgkfMX4:-BTjWOF_DHI\"
+        border=\"0\"&gt;&lt;/img&gt;&lt;/a&gt;\r\n&lt;/div&gt;&lt;img src=\"http://feeds.feedburner.com/~r/makezineonline/~4/B_OHIVDRcBI\"
+        height=\"1\" width=\"1\"/&gt;</description>\r\n\t\t<wfw:commentRss>http://blog.makezine.com/2013/04/26/maker-pro-newsletter-10/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\r\n\t\t<media:thumbnail
+        url=\"http://makezineblog.files.wordpress.com/2013/04/nl_hackpad-com_fikihct9tqo_p-33950_1366827874363_einstein.jpg?w=150\"
+        />\r\n\t\t<media:content url=\"http://makezineblog.files.wordpress.com/2013/04/nl_hackpad-com_fikihct9tqo_p-33950_1366827874363_einstein.jpg?w=150\"
+        medium=\"image\" />\r\n\r\n\t\t<media:content url=\"http://1.gravatar.com/avatar/aa42e69d0d5604e332c72cb3a479dced?s=96&amp;d=retro&amp;r=G\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">dcdenison</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/hiw-header-500-wide.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">HIW-header-500-wide</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/nl_hackpad-com_fikihct9tqo_p-33950_1366835778451_handibot21.jpeg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">A Handibot prototype
+        awaits its debut at the Hardware Innovation Workshop</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/nl_hackpad-com_fikihct9tqo_p-33950_1366827874363_einstein.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">At Einstein's Workshop,
+        Sofia Houh peers through the center of the expanded 120-cell created using
+        Zome in a workshop with participants from as far away as Stamford, Conn.,
+        180 miles away.</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/nl_hackpad-com_fikihct9tqo_p-33950_1366737059152_3dprinterslibraries.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">North American libraries
+        with 3D printers, from Riel Gallant's survey</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/nl_hackpad-com_fikihct9tqo_p-33950_1366749449764_nate.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">nl_hackpad-com_fikihct9tqo_p-33950_1366749449764_nate</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/nl_hackpad-com_fikihct9tqo_p-33950_1366735565316_makrshakrx500.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">Photo: Makr Shakr</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/nl_hackpad-com_fikihct9tqo_p-33950_1366735818608_3dgummiesx500.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">nl_hackpad-com_fikihct9tqo_p-33950_1366735818608_3dgummiesx500</media:title>\r\n\t\t</media:content>\r\n\r\n\t\t<media:content
+        url=\"http://makezineblog.files.wordpress.com/2013/04/hiw-header-500-wide.jpg\"
+        medium=\"image\">\r\n\t\t\t<media:title type=\"html\">HIW-header-500-wide</media:title>\r\n\t\t</media:content>\r\n\t<feedburner:origLink>http://blog.makezine.com/2013/04/26/maker-pro-newsletter-10/</feedburner:origLink></item>\r\n\t</channel>\r\n</rss>\r\n"
+    http_version: 
+  recorded_at: Sat, 27 Apr 2013 01:49:31 GMT
+- request:
+    method: ''
+    uri: http://xkcd.com/atom.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      If-Modified-Since:
+      - ''
+      If-None-Match:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Last-Modified:
+      - Fri, 26 Apr 2013 16:05:56 GMT
+      Etag:
+      - '"3955024123"'
+      Content-Type:
+      - application/xml
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '710'
+      Date:
+      - Sat, 27 Apr 2013 01:49:31 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-26T00:00:00Z</updated><entry><title>Detail</title><link href="http://xkcd.com/1204/" rel="alternate"></link><updated>2013-04-26T00:00:00Z</updated><id>http://xkcd.com/1204/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/detail.png" title="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" alt="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" /&gt;</summary></entry><entry><title>Time Machines</title><link href="http://xkcd.com/1203/" rel="alternate"></link><updated>2013-04-24T00:00:00Z</updated><id>http://xkcd.com/1203/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/time_machines.png" title="'All time machine systems nominal ... T-minus ten ... eleven ...'" alt="'All time machine systems nominal ... T-minus ten ... eleven ...'" /&gt;</summary></entry><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry></feed>
+    http_version: 
+  recorded_at: Sat, 27 Apr 2013 01:49:31 GMT
 recorded_with: VCR 2.4.0

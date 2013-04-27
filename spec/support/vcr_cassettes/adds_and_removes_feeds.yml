@@ -3007,4 +3007,68 @@ http_interactions:
         "rel": "alternate", "title": "RSS"}]'
     http_version: 
   recorded_at: Tue, 23 Apr 2013 14:47:09 GMT
+- request:
+    method: get
+    uri: http://feediscovery.appspot.com/?url=http://www.reddit.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - text/javascript
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sat, 27 Apr 2013 01:46:04 GMT
+      Server:
+      - Google Frontend
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"href": "http://www.reddit.com/.rss", "type": "application/rss+xml",
+        "rel": "alternate", "title": "RSS"}]'
+    http_version: 
+  recorded_at: Sat, 27 Apr 2013 01:46:04 GMT
+- request:
+    method: get
+    uri: http://feediscovery.appspot.com/?url=http://feeds.feedburner.com/Chainsawsuit
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - text/javascript
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sat, 27 Apr 2013 01:49:56 GMT
+      Server:
+      - Google Frontend
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"href": "http://feeds.feedburner.com/Chainsawsuit", "type": "application/rss+xml",
+        "rel": "self", "title": "chainsawsuit by kris straub"}]'
+    http_version: 
+  recorded_at: Sat, 27 Apr 2013 01:49:56 GMT
 recorded_with: VCR 2.4.0
