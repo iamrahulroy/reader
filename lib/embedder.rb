@@ -24,7 +24,8 @@ module Embedder
           :urls => urls.dup,
           :maxwidth => 850,
           :wmode => 'transparent',
-          :method => 'after'
+          :method => 'after',
+          :secure => true
         )
 
         h = Hash[urls.zip(objs)]
