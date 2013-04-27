@@ -36,7 +36,7 @@ class PollFeed
       #puts "%s: %d" % [f.path, f.fileno] unless f.closed?
     #end
     raise $!
-  rescue ArgumentError
+  rescue ArgumentError, Encoding::CompatibilityError
     Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
     ap "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
     feed.increment! :parse_errors
