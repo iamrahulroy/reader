@@ -12,12 +12,12 @@ class ItemsController < ApplicationController
   end
 
   def counts
-    unread = current_user.items.where(unread: true).count
-    starred = current_user.items.where(starred: true).count
-    shared = current_user.items.where(shared: true).count
-    commented = current_user.items.where(commented: true).count
-    has_new_comments = current_user.items.where(has_new_comments: true).count
-    all = current_user.items.count
+    unread = current_user.select(:id).items.where(unread: true).count
+    starred = current_user.select(:id).items.where(starred: true).count
+    shared = current_user.select(:id).items.where(shared: true).count
+    commented = current_user.select(:id).items.where(commented: true).count
+    has_new_comments = current_user.select(:id).items.where(has_new_comments: true).count
+    all = current_user.select(:id).items.count
 
     render :json => {
       unread_count: unread,
