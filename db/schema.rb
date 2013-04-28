@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130425113051) do
+ActiveRecord::Schema.define(:version => 20130427183116) do
 
   create_table "categories", :force => true do |t|
     t.string    "name"
@@ -253,6 +253,8 @@ ActiveRecord::Schema.define(:version => 20130425113051) do
     t.boolean   "premium_account",                             :default => false
     t.string    "stripe_customer_id"
     t.boolean   "premium_account_cancel_pending",              :default => false
+    t.integer   "has_new_comments_count"
+    t.integer   "commented_count"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

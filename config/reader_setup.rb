@@ -35,7 +35,7 @@ module Reader
         feed_urls = File.readlines("spec/anon_urls.txt").collect {|line| line}
         #feed_urls = feed_urls.sample 100
 
-        feed_urls.each {|url| user.subscribe(url) }
+        feed_urls.select{|url| url.start_with? "http" }.each {|url| user.subscribe(url) }
 
         subscriptions = Subscription.where(:user_id => user.id).all
         subscriptions.each do |sub|
@@ -52,9 +52,7 @@ module Reader
         feed_urls = File.readlines("spec/good_urls.txt").collect {|line| line}
         feed_urls = feed_urls.sample 10
 
-        feed_urls.each {|url|
-          user.subscribe(url)
-        }
+        feed_urls.each {|url| result = user.subscribe(url) }
 
         subscriptions = Subscription.where(:user_id => user.id).all
         subscriptions.each do |sub|
@@ -69,20 +67,16 @@ module Reader
         feed_urls.each {|url| user.subscribe(url, grp)}
       end
 
-
-      bad_urls = File.readlines("spec/failed_urls.txt").collect {|line| line}
-      bad_urls = bad_urls.sample(100)
-      bad_urls.each do |url|
-        Feed.create! :feed_url => url, :name => "Bad URL"
-      end
-
       User.charlie.follow_and_unblock User.loren
       User.loren.follow_and_unblock User.charlie
       User.loren.follow_and_unblock User.josh
       User.josh.follow_and_unblock User.loren
       User.josh.follow_and_unblock User.steve
 
+      User.all.each {|user| user.touch :last_seen_at }
 
+      PollFeedsForActiveUsers.new.perform
+      UpdateCountsForActiveUsers.new.perform
 
     end
 
@@ -106,11 +100,8 @@ module Reader
       Subscription.delete_all
       Category.delete_all
       CategoryEntryMapping.delete_all
-      FacebookAuthorization.delete_all
       FeedIcon.delete_all
       Comment.delete_all
-      FacebookContact.delete_all
-      FetchError.delete_all
       Follow.delete_all
       Group.delete_all
     end
@@ -129,9 +120,9 @@ module Reader
 
       feed_urls = File.readlines("spec/anon_urls.txt").collect {|line| line}
 
-      feed_urls.each do |fu|
-        if fu =~ /^group:/
-          grp = Group.find_or_create_by_label_and_user_id fu.sub('group:', ''), user.id
+      feed_urls.each do |url|
+        if url =~ /^group:/
+          grp = Group.find_or_create_by_label_and_user_id url.sub('group:', ''), user.id
         else
           user.subscribe(url, grp)
         end

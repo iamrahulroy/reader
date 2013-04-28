@@ -5,7 +5,7 @@ class PollFeed
 
     feed = Feed.find id
     url = feed.current_feed_url || feed.feed_url
-    ap "Start poll: #{id} - #{url}"
+    Rails.logger.debug "Start poll: #{id} - #{url}"
     last_fetched_at = (feed.fetch_count > 0 && feed.last_fetched_at) ? feed.last_fetched_at.httpdate : nil
     etag = feed.etag
     response = FetchFeedService.perform(url: url, last_fetched_at: last_fetched_at, etag: etag)
@@ -14,7 +14,7 @@ class PollFeed
     feed.touch(:fetched_at)
     feed.increment! :fetch_count
 
-    ap "#{response.status} - #{url}"
+    Rails.logger.debug "#{response.status} - #{url}"
     case response.status
       when 200
         feed.touch(:last_fetched_at)
@@ -38,11 +38,9 @@ class PollFeed
     raise $!
   rescue ArgumentError, Encoding::CompatibilityError
     Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
-    ap "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
     feed.increment! :parse_errors
   rescue
     Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
-    ap "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
     feed.increment! :connection_errors
   end
 

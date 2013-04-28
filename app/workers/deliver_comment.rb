@@ -12,6 +12,7 @@ class DeliverComment
 
     user = comment.user
     user.all_following.each do |follower|
+      follower.increment! :has_new_comments_count
       Client.where(:user_id => follower.id).each do |client|
         # todo use the serializer
         json = comment.active_model_serializer.new(comment).to_json(:root => false)

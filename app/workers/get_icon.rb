@@ -11,7 +11,6 @@ class GetIcon
     return unless feed
     return if feed.feed_icon.present?
     icon_url = get_favicon feed.site_url
-
     unless icon_url.nil?
       fi = FeedIcon.find_or_create_by_feed_id(id, :uri => icon_url)
       fi.uri = icon_url
@@ -50,9 +49,9 @@ class GetIcon
         if test_favicon(html.favicon)
           return html.favicon
         end
-        return get_root_favicon
+        return get_root_favicon(site_url)
       end
-      get_root_favicon
+      get_root_favicon(site_url)
     end
   end
 
@@ -60,7 +59,7 @@ class GetIcon
     FeedIcon.create(:feed_id => id, :uri => url)
   end
 
-  def get_root_favicon
+  def get_root_favicon(site_url)
     begin
       uri = URI(site_url)
       ico = uri.scheme + "://" + uri.host + "/favicon.ico"
@@ -82,21 +81,13 @@ class GetIcon
   end
 
   def test_favicon(url)
-    begin
-      status = Timeout::timeout(15) do
-        r = Typhoeus.get(url, followlocation: true)
-        if r.code == '200'
-          true
-        else
-          false
-        end
+    status = Timeout::timeout(15) do
+      r = Typhoeus.get(url, followlocation: true)
+      if r.code == 200
+        true
+      else
+        false
       end
-    rescue OpenURI::HTTPError => e
-      ap e
-      false
-    rescue Timeout::Error => e
-      ap e
-      false
     end
   end
 

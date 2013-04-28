@@ -18,7 +18,7 @@ window.App =
     $('#stream-header').addClass('hide')
     $('#list').addClass('out')
     $('#home').removeClass('hide')
-    $("#summary-container").load("/summary")
+    #$("#summary-container").load("/summary")
   showStream: ->
     App.hideAllSwapAreas()
     $('#stream-header').removeClass('hide')

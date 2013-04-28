@@ -183,14 +183,16 @@ class User < ActiveRecord::Base
       result = DiscoverFeedService.discover(url)
       if result.length == 1
         result = result.first
-        feed = Feed.create!(feed_url: result.href, name: result.title)
+        fz = Feedzirra::Feed.fetch_and_parse result.href
+        feed = Feed.where(feed_url: result.href).first_or_create!(name: result.title, site_url: fz.url)
+        ap "feed site url: #{feed.site_url}"
         sub = self.subscriptions.where(feed_id: feed.id).first_or_create!
         sub.group = group if group
         sub.save!
       elsif result.length > 1
         {:feeds => feeds} 
       else
-        {:error => "No RSS or Atom feeds found for #{feed_url}"}
+        {:error => "No RSS or Atom feeds found for #{url}"}
       end
     end
   end

@@ -54,6 +54,9 @@ group :development do
   gem "erb2haml", "~> 0.1"
   gem "mails_viewer", "~> 0.0"
   gem "foreman", "~> 0.61"
+  gem "guard-ctags-bundler"
+  gem "guard-bundler"
+  
 end
 
 group :test, :development do

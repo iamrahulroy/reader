@@ -25,6 +25,7 @@ namespace :reader do
       r.flushall
     end
     PollFeedsForActiveUsers.perform_async
+    UpdateCountsForActiveUsers.perform_async
   end
 
 

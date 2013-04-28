@@ -2,45 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.7
-  response:
-    status:
-      code: 200
-      message: 
-    headers:
-      vary:
-      - Accept-Encoding
-      last-modified:
-      - Wed, 27 Mar 2013 04:00:05 GMT
-      etag:
-      - '"2966774946"'
-      content-type:
-      - application/xml
-      accept-ranges:
-      - bytes
-      content-length:
-      - '714'
-      connection:
-      - close
-      date:
-      - Thu, 28 Mar 2013 21:06:19 GMT
-      server:
-      - lighttpd/1.4.28
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-03-27T00:00:00Z</updated><entry><title>The Past</title><link href="http://xkcd.com/1191/" rel="alternate"></link><updated>2013-03-27T00:00:00Z</updated><id>http://xkcd.com/1191/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/the_past.png" title="If history has taught us anything, we can use that information to destroy it." alt="If history has taught us anything, we can use that information to destroy it." /&gt;</summary></entry><entry><title>Time</title><link href="http://xkcd.com/1190/" rel="alternate"></link><updated>2013-03-25T00:00:00Z</updated><id>http://xkcd.com/1190/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/time.png" title="Wait for it." alt="Wait for it." /&gt;</summary></entry><entry><title>Voyager 1</title><link href="http://xkcd.com/1189/" rel="alternate"></link><updated>2013-03-22T00:00:00Z</updated><id>http://xkcd.com/1189/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/voyager_1.png" title="So far Voyager 1 has 'left the Solar System' by passing through the termination shock three times, the heliopause twice, and once each through the heliosheath, heliosphere, heliodrome, auroral discontinuity, Heaviside layer, trans-Neptunian panic zone, magnetogap, US Census Bureau Solar System statistical boundary, Kuiper gauntlet, Oort void, and crystal sphere holding the fixed stars." alt="So far Voyager 1 has 'left the Solar System' by passing through the termination shock three times, the heliopause twice, and once each through the heliosheath, heliosphere, heliodrome, auroral discontinuity, Heaviside layer, trans-Neptunian panic zone, magnetogap, US Census Bureau Solar System statistical boundary, Kuiper gauntlet, Oort void, and crystal sphere holding the fixed stars." /&gt;</summary></entry><entry><title>Bonding</title><link href="http://xkcd.com/1188/" rel="alternate"></link><updated>2013-03-20T00:00:00Z</updated><id>http://xkcd.com/1188/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/bonding.png" title="I'm trying to build character but Eclipse is really confusing." alt="I'm trying to build character but Eclipse is really confusing." /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Thu, 28 Mar 2013 21:06:19 GMT
-- request:
-    method: get
     uri: http://feediscovery.appspot.com/?url=http://xkcd.com/atom.xml
     body:
       encoding: US-ASCII
@@ -60,7 +21,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Sat, 20 Apr 2013 20:37:53 GMT
+      - Sat, 27 Apr 2013 22:13:35 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -70,7 +31,7 @@ http_interactions:
       string: '[{"href": "http://xkcd.com/atom.xml", "type": "application/atom+xml",
         "rel": "self", "title": "xkcd.com"}]'
     http_version: 
-  recorded_at: Sat, 20 Apr 2013 20:37:53 GMT
+  recorded_at: Sat, 27 Apr 2013 22:13:35 GMT
 - request:
     method: get
     uri: http://xkcd.com/
@@ -92,17 +53,17 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Last-Modified:
-      - Fri, 19 Apr 2013 08:21:40 GMT
+      - Fri, 26 Apr 2013 16:05:56 GMT
       Etag:
-      - '"3726030280"'
+      - '"2453618409"'
       Content-Type:
       - text/html; charset=utf-8
       Accept-Ranges:
       - bytes
       Content-Length:
-      - '2667'
+      - '2681'
       Date:
-      - Sat, 20 Apr 2013 20:37:56 GMT
+      - Sat, 27 Apr 2013 22:13:37 GMT
       Server:
       - lighttpd/1.4.28
     body:
@@ -114,7 +75,7 @@ http_interactions:
         <html version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
         <head>
         <link rel="stylesheet" type="text/css" href="http://imgs.xkcd.com/static/styles_short_beta.css" title="Default"/>
-        <title>xkcd: Integration by Parts</title>
+        <title>xkcd: Detail</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <link rel="shortcut icon" href="http://imgs.xkcd.com/s/919f273.ico" type="image/x-icon"/>
         <link rel="icon" href="http://imgs.xkcd.com/s/919f273.ico" type="image/x-icon"/>
@@ -161,27 +122,27 @@ http_interactions:
         </div>
         <div id="middleContainer" class="box">
 
-        <div id="ctitle">Integration by Parts</div>
+        <div id="ctitle">Detail</div>
         <ul class="comicNav">
         <li><a href="/1/">|&lt;</a></li>
-        <li><a rel="prev" href="/1200/" accesskey="p">&lt; Prev</a></li>
+        <li><a rel="prev" href="/1203/" accesskey="p">&lt; Prev</a></li>
         <li><a href="http://dynamic.xkcd.com/random/comic/">Random</a></li>
         <li><a rel="next" href="#" accesskey="n">Next &gt;</a></li>
         <li><a href="/">&gt;|</a></li>
         </ul>
         <div id="comic">
-        <img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a &#39;+C&#39; or you&#39;ll get yelled at." alt="Integration by Parts" />
+        <img src="http://imgs.xkcd.com/comics/detail.png" title="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they &#39;don&#39;t reveal anything that couldn&#39;t be seen by any pedestrian scanning your house with an electron microscope.&#39;" alt="Detail" />
         </div>
         <ul class="comicNav">
         <li><a href="/1/">|&lt;</a></li>
-        <li><a rel="prev" href="/1200/" accesskey="p">&lt; Prev</a></li>
+        <li><a rel="prev" href="/1203/" accesskey="p">&lt; Prev</a></li>
         <li><a href="http://dynamic.xkcd.com/random/comic/">Random</a></li>
         <li><a rel="next" href="#" accesskey="n">Next &gt;</a></li>
         <li><a href="/">&gt;|</a></li>
         </ul>
         <br />
-        Permanent link to this comic: http://xkcd.com/1201/<br />
-        Image URL (for hotlinking/embedding): http://imgs.xkcd.com/comics/integration_by_parts.png
+        Permanent link to this comic: http://xkcd.com/1204/<br />
+        Image URL (for hotlinking/embedding): http://imgs.xkcd.com/comics/detail.png
         <div id="transcript" style="display: none"></div>
         </div>
         <div id="bottom" class="box">
@@ -223,7 +184,7 @@ http_interactions:
                 <a href="http://www.buttercupfestival.com/">Buttercup Festival</a>
         </div>
         <p>Warning: this comic occasionally contains strong language (which may be unsuitable for children), unusual humor (which may be unsuitable for adults), and advanced mathematics (which may be unsuitable for liberal-arts majors).</p>
-        <div id="footnote">BTC 14FHqYSgAi39CEJksUJJsK8JzJzyqFpLVk<br />We did not invent the algorithm. The algorithm consistently finds Jesus. The algorithm killed Jeeves. <br/>The algorithm is banned in China. The algorithm is from Jersey. The algorithm constantly finds Jesus.<br/>This is not the algorithm. This is close.</div>
+        <div id="footnote">BTC 1NEPgrUmed3VyXpqbYZom7YVJ8MozYrNWx<br />We did not invent the algorithm. The algorithm consistently finds Jesus. The algorithm killed Jeeves. <br/>The algorithm is banned in China. The algorithm is from Jersey. The algorithm constantly finds Jesus.<br/>This is not the algorithm. This is close.</div>
         <div id="licenseText">
         <p>
         This work is licensed under a
@@ -237,7 +198,7 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Sat, 20 Apr 2013 20:37:56 GMT
+  recorded_at: Sat, 27 Apr 2013 22:13:37 GMT
 - request:
     method: get
     uri: http://imgs.xkcd.com/s/919f273.ico
@@ -245,19 +206,15 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
       User-Agent:
-      - Ruby
+      - Typhoeus - https://github.com/typhoeus/typhoeus
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 20 Apr 2013 20:37:57 GMT
+      - Sat, 27 Apr 2013 22:13:37 GMT
       Server:
       - VoxCAST
       Last-Modified:
@@ -265,13 +222,13 @@ http_interactions:
       Cache-Control:
       - public, max-age=311040000
       Expires:
-      - Sun, 12 Feb 2023 15:30:13 GMT
+      - Thu, 02 Mar 2023 16:58:09 GMT
       Accept-Ranges:
       - bytes
       Content-Length:
       - '2166'
       Age:
-      - '1314463'
+      - '364528'
       X-Cache:
       - HIT from VoxCAST
       Content-Type:
@@ -329,7 +286,7 @@ http_interactions:
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAA
     http_version: 
-  recorded_at: Sat, 20 Apr 2013 20:37:57 GMT
+  recorded_at: Sat, 27 Apr 2013 22:13:37 GMT
 - request:
     method: get
     uri: http://imgs.xkcd.com/s/919f273.ico
@@ -349,7 +306,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 20 Apr 2013 20:37:57 GMT
+      - Sat, 27 Apr 2013 22:13:37 GMT
       Server:
       - VoxCAST
       Last-Modified:
@@ -357,13 +314,13 @@ http_interactions:
       Cache-Control:
       - public, max-age=311040000
       Expires:
-      - Sun, 12 Feb 2023 15:30:13 GMT
+      - Thu, 02 Mar 2023 16:58:09 GMT
       Accept-Ranges:
       - bytes
       Content-Length:
       - '2166'
       Age:
-      - '1314463'
+      - '364528'
       X-Cache:
       - HIT from VoxCAST
       Content-Type:
@@ -421,534 +378,7 @@ http_interactions:
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAA
     http_version: 
-  recorded_at: Sat, 20 Apr 2013 20:37:57 GMT
-- request:
-    method: get
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Etag:
-      - '"3112650072"'
-      Last-Modified:
-      - Fri, 19 Apr 2013 08:21:40 GMT
-      Content-Length:
-      - '2624'
-      Date:
-      - Sat, 20 Apr 2013 20:37:57 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Sat, 20 Apr 2013 20:37:57 GMT
-- request:
-    method: get
-    uri: http://feediscovery.appspot.com/?url=http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - text/javascript
-      Vary:
-      - Accept-Encoding
-      Date:
-      - Sat, 20 Apr 2013 21:59:44 GMT
-      Server:
-      - Google Frontend
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '[{"href": "http://xkcd.com/atom.xml", "type": "application/atom+xml",
-        "rel": "self", "title": "xkcd.com"}]'
-    http_version: 
-  recorded_at: Sat, 20 Apr 2013 21:59:44 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Etag:
-      - '"3112650072"'
-      Last-Modified:
-      - Fri, 19 Apr 2013 08:21:40 GMT
-      Content-Length:
-      - '2624'
-      Date:
-      - Sat, 20 Apr 2013 22:57:46 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Sat, 20 Apr 2013 22:57:46 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Etag:
-      - '"3112650072"'
-      Last-Modified:
-      - Fri, 19 Apr 2013 08:21:40 GMT
-      Content-Length:
-      - '2624'
-      Date:
-      - Sat, 20 Apr 2013 23:03:36 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Sat, 20 Apr 2013 23:03:36 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Etag:
-      - '"3112650072"'
-      Last-Modified:
-      - Fri, 19 Apr 2013 08:21:40 GMT
-      Content-Length:
-      - '2624'
-      Date:
-      - Sat, 20 Apr 2013 23:08:56 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Sat, 20 Apr 2013 23:08:56 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Etag:
-      - '"3112650072"'
-      Last-Modified:
-      - Fri, 19 Apr 2013 08:21:40 GMT
-      Content-Length:
-      - '2624'
-      Date:
-      - Sun, 21 Apr 2013 05:02:26 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Sun, 21 Apr 2013 05:02:26 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Etag:
-      - '"3112650072"'
-      Last-Modified:
-      - Fri, 19 Apr 2013 08:21:40 GMT
-      Content-Length:
-      - '2624'
-      Date:
-      - Sun, 21 Apr 2013 05:14:19 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Sun, 21 Apr 2013 05:14:19 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Last-Modified:
-      - Fri, 19 Apr 2013 08:21:40 GMT
-      Etag:
-      - '"3012651994"'
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Content-Length:
-      - '802'
-      Date:
-      - Sun, 21 Apr 2013 08:29:34 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Sun, 21 Apr 2013 08:29:34 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Last-Modified:
-      - Fri, 19 Apr 2013 08:21:40 GMT
-      Etag:
-      - '"3012651994"'
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Content-Length:
-      - '802'
-      Date:
-      - Mon, 22 Apr 2013 01:39:48 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-19T00:00:00Z</updated><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry><entry><title>Geologist</title><link href="http://xkcd.com/1198/" rel="alternate"></link><updated>2013-04-12T00:00:00Z</updated><id>http://xkcd.com/1198/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/geologist.png" title="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" alt="'It seems like it's still alive, Professor.' 'Yeah, a big one like this can keep running around for a few billion years after you remove the head.&amp;quot;" /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Mon, 22 Apr 2013 01:39:48 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Last-Modified:
-      - Mon, 22 Apr 2013 04:00:06 GMT
-      Etag:
-      - '"2869281266"'
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Content-Length:
-      - '733'
-      Date:
-      - Tue, 23 Apr 2013 03:25:23 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-22T00:00:00Z</updated><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Tue, 23 Apr 2013 03:25:23 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Last-Modified:
-      - Mon, 22 Apr 2013 04:00:06 GMT
-      Etag:
-      - '"2869281266"'
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Content-Length:
-      - '733'
-      Date:
-      - Tue, 23 Apr 2013 13:45:47 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-22T00:00:00Z</updated><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Tue, 23 Apr 2013 13:45:47 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Last-Modified:
-      - Mon, 22 Apr 2013 04:00:06 GMT
-      Etag:
-      - '"2869281266"'
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Content-Length:
-      - '733'
-      Date:
-      - Tue, 23 Apr 2013 14:43:23 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-22T00:00:00Z</updated><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Tue, 23 Apr 2013 14:43:23 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Last-Modified:
-      - Mon, 22 Apr 2013 04:00:06 GMT
-      Etag:
-      - '"2869281266"'
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Content-Length:
-      - '733'
-      Date:
-      - Tue, 23 Apr 2013 14:48:22 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-22T00:00:00Z</updated><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry><entry><title>Silence</title><link href="http://xkcd.com/1199/" rel="alternate"></link><updated>2013-04-15T00:00:00Z</updated><id>http://xkcd.com/1199/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/silence.png" title="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." alt="All music is just performances of 4'33&amp;quot; in studios where another band happened to be playing at the time." /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Tue, 23 Apr 2013 14:48:22 GMT
-- request:
-    method: ''
-    uri: http://xkcd.com/atom.xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Last-Modified:
-      - Wed, 24 Apr 2013 04:00:06 GMT
-      Etag:
-      - '"2938971362"'
-      Content-Type:
-      - application/xml
-      Accept-Ranges:
-      - bytes
-      Content-Length:
-      - '704'
-      Date:
-      - Thu, 25 Apr 2013 12:07:25 GMT
-      Server:
-      - lighttpd/1.4.28
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="utf-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-24T00:00:00Z</updated><entry><title>Time Machines</title><link href="http://xkcd.com/1203/" rel="alternate"></link><updated>2013-04-24T00:00:00Z</updated><id>http://xkcd.com/1203/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/time_machines.png" title="'All time machine systems nominal ... T-minus ten ... eleven ...'" alt="'All time machine systems nominal ... T-minus ten ... eleven ...'" /&gt;</summary></entry><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry><entry><title>Authorization</title><link href="http://xkcd.com/1200/" rel="alternate"></link><updated>2013-04-17T00:00:00Z</updated><id>http://xkcd.com/1200/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/authorization.png" title="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." alt="Before you say anything, no, I know not to leave my computer sitting out logged in to all my accounts. I have it set up so after a few minutes of inactivity it automatically switches to my brother's." /&gt;</summary></entry></feed>
-    http_version: 
-  recorded_at: Thu, 25 Apr 2013 12:07:25 GMT
+  recorded_at: Sat, 27 Apr 2013 22:13:37 GMT
 - request:
     method: ''
     uri: http://xkcd.com/atom.xml
@@ -982,7 +412,7 @@ http_interactions:
       Content-Length:
       - '710'
       Date:
-      - Sat, 27 Apr 2013 01:50:27 GMT
+      - Sat, 27 Apr 2013 22:13:37 GMT
       Server:
       - lighttpd/1.4.28
     body:
@@ -991,5 +421,48 @@ http_interactions:
         <?xml version="1.0" encoding="utf-8"?>
         <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-26T00:00:00Z</updated><entry><title>Detail</title><link href="http://xkcd.com/1204/" rel="alternate"></link><updated>2013-04-26T00:00:00Z</updated><id>http://xkcd.com/1204/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/detail.png" title="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" alt="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" /&gt;</summary></entry><entry><title>Time Machines</title><link href="http://xkcd.com/1203/" rel="alternate"></link><updated>2013-04-24T00:00:00Z</updated><id>http://xkcd.com/1203/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/time_machines.png" title="'All time machine systems nominal ... T-minus ten ... eleven ...'" alt="'All time machine systems nominal ... T-minus ten ... eleven ...'" /&gt;</summary></entry><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry></feed>
     http_version: 
-  recorded_at: Sat, 27 Apr 2013 01:50:27 GMT
+  recorded_at: Sat, 27 Apr 2013 22:13:37 GMT
+- request:
+    method: ''
+    uri: http://xkcd.com/atom.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      If-Modified-Since:
+      - ''
+      If-None-Match:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Last-Modified:
+      - Fri, 26 Apr 2013 16:05:56 GMT
+      Etag:
+      - '"3955024123"'
+      Content-Type:
+      - application/xml
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '710'
+      Date:
+      - Sun, 28 Apr 2013 06:26:47 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-26T00:00:00Z</updated><entry><title>Detail</title><link href="http://xkcd.com/1204/" rel="alternate"></link><updated>2013-04-26T00:00:00Z</updated><id>http://xkcd.com/1204/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/detail.png" title="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" alt="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" /&gt;</summary></entry><entry><title>Time Machines</title><link href="http://xkcd.com/1203/" rel="alternate"></link><updated>2013-04-24T00:00:00Z</updated><id>http://xkcd.com/1203/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/time_machines.png" title="'All time machine systems nominal ... T-minus ten ... eleven ...'" alt="'All time machine systems nominal ... T-minus ten ... eleven ...'" /&gt;</summary></entry><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry></feed>
+    http_version: 
+  recorded_at: Sun, 28 Apr 2013 06:26:46 GMT
 recorded_with: VCR 2.4.0
