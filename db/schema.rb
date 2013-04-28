@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130427183116) do
+ActiveRecord::Schema.define(:version => 20130428132437) do
 
   create_table "categories", :force => true do |t|
     t.string    "name"
@@ -191,9 +191,13 @@ ActiveRecord::Schema.define(:version => 20130427183116) do
     t.string    "twitter_id"
   end
 
+  add_index "items", ["commented"], :name => "index_items_on_commented"
   add_index "items", ["entry_id"], :name => "index_items_on_entry_id"
+  add_index "items", ["has_new_comments"], :name => "index_items_on_has_new_comments"
+  add_index "items", ["shared"], :name => "index_items_on_shared"
+  add_index "items", ["starred"], :name => "index_items_on_starred"
   add_index "items", ["subscription_id"], :name => "index_items_on_subscription_id"
-  add_index "items", ["unread", "starred", "shared", "has_new_comments"], :name => "items_flags"
+  add_index "items", ["unread"], :name => "index_items_on_unread"
   add_index "items", ["user_id", "entry_id", "from_id"], :name => "item_user_from_entry", :unique => true
   add_index "items", ["user_id"], :name => "index_items_on_user_id"
 

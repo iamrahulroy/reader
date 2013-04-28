@@ -56,7 +56,6 @@ group :development do
   gem "foreman", "~> 0.61"
   gem "guard-ctags-bundler"
   gem "guard-bundler"
-  
 end
 
 group :test, :development do
@@ -66,11 +65,8 @@ group :test, :development do
   gem "quiet_assets" #, "~> 1.0"
   #gem "jasmine-rails" #, "~> 0.3"
   gem "marginalia"
-  
   #gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem 'guard-rspec'
-  gem 'guard-livereload'
-
 end
 
 group :test do
