@@ -86,8 +86,7 @@ class ItemsController < ApplicationController
 
   def update
     head(:ok) and return if current_user.anonymous
-    item = Item.find(params[:id])
-    head(:ok) and return unless item.user == current_user
+    item = current_user.items.where(id: params[:id]).first
     item.unread = params[:unread]
     item.starred = params[:starred]
     item.shared = params[:shared]
