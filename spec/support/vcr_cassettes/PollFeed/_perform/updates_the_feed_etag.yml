@@ -774,4 +774,133 @@ http_interactions:
         />\r\n<pubDate>Wed, 24 Oct 2012 16:53:16 -0500</pubDate>\r\n</item>\r\n\r\n\r\n</channel>\r\n</rss>\r\n"
     http_version: 
   recorded_at: Sun, 28 Apr 2013 15:45:22 GMT
+- request:
+    method: ''
+    uri: http://feeds.feedburner.com/zefrank
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      If-Modified-Since:
+      - ''
+      If-None-Match:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Etag:
+      - Ay256cwFBVnRBAnf6A9vSxTt08w
+      Last-Modified:
+      - Sun, 28 Apr 2013 22:25:23 GMT
+      Date:
+      - Sun, 28 Apr 2013 23:29:01 GMT
+      Expires:
+      - Sun, 28 Apr 2013 23:29:01 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<?xml-stylesheet type=\"text/xsl\"
+        media=\"screen\" href=\"/~d/styles/rss2full.xsl\"?><?xml-stylesheet type=\"text/css\"
+        media=\"screen\" href=\"http://feeds.feedburner.com/~d/styles/itemcontent.css\"?><rss
+        version=\"2.0\">\r\n<channel>\r\n<title>ze's page :: zefrank.com</title>\r\n<link>http://www.zefrank.com/</link>\r\n<description
+        />\r\n<language>en-us</language>\r\n<copyright>Copyright 2012</copyright>\r\n<lastBuildDate>Thu,
+        13 Dec 2012 13:12:21 -0500</lastBuildDate>\r\n<pubDate>Thu, 13 Dec 2012 13:13:29
+        -0500</pubDate>\r\n<generator>http://www.movabletype.org/?v=3.34</generator>\r\n<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        \r\n\r\n<atom10:link xmlns:atom10=\"http://www.w3.org/2005/Atom\" rel=\"self\"
+        type=\"application/rss+xml\" href=\"http://feeds.feedburner.com/zefrank\"
+        /><feedburner:info xmlns:feedburner=\"http://rssnamespace.org/feedburner/ext/1.0\"
+        uri=\"zefrank\" /><atom10:link xmlns:atom10=\"http://www.w3.org/2005/Atom\"
+        rel=\"hub\" href=\"http://pubsubhubbub.appspot.com/\" /><feedburner:emailServiceId
+        xmlns:feedburner=\"http://rssnamespace.org/feedburner/ext/1.0\">zefrank</feedburner:emailServiceId><feedburner:feedburnerHostname
+        xmlns:feedburner=\"http://rssnamespace.org/feedburner/ext/1.0\">http://feedburner.google.com</feedburner:feedburnerHostname><item>\r\n<title>little
+        kids explain the holidays</title>\r\n<description>&lt;p&gt;&lt;iframe width=\"350\"
+        height=\"197\" src=\"http://www.youtube.com/embed/S-HSS3oczV8\" frameborder=\"0\"
+        allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/12/little_kids_exp.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/12/little_kids_exp.html</guid>\r\n<category
+        />\r\n<pubDate>Thu, 13 Dec 2012 13:12:21 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>true
+        facts about baby echidnas</title>\r\n<description>&lt;p&gt;&lt;iframe width=\"350\"
+        height=\"197\" src=\"http://www.youtube.com/embed/L6kAE06mJAQ\" frameborder=\"0\"
+        allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/12/true_facts_abou_1.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/12/true_facts_abou_1.html</guid>\r\n<category
+        />\r\n<pubDate>Mon, 10 Dec 2012 12:29:44 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>body
+        karaoke</title>\r\n<description>&lt;p&gt;&lt;iframe width=\"350\" height=\"197\"
+        src=\"http://www.youtube.com/embed/O80Ffwm_Df8\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/12/body_karaoke.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/12/body_karaoke.html</guid>\r\n<category
+        />\r\n<pubDate>Mon, 03 Dec 2012 15:15:01 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>the
+        perfect guide to holiday etiquette</title>\r\n<description>&lt;p&gt;&lt;iframe
+        width=\"350\" height=\"197\" src=\"http://www.youtube.com/embed/hFzz6EZmkq8\"
+        frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/11/the_perfect_gui.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/11/the_perfect_gui.html</guid>\r\n<category
+        />\r\n<pubDate>Tue, 20 Nov 2012 12:06:31 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>15
+        Things We Can All Agree On</title>\r\n<description>&lt;p&gt;&lt;iframe width=\"350\"
+        height=\"197\" src=\"http://www.youtube.com/embed/6j3-vzPMtCA\" frameborder=\"0\"
+        allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/11/15_things_we_ca.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/11/15_things_we_ca.html</guid>\r\n<category
+        />\r\n<pubDate>Sat, 17 Nov 2012 10:32:38 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>the
+        most awkward moments</title>\r\n<description>&lt;p&gt;&lt;iframe width=\"350\"
+        height=\"197\" src=\"http://www.youtube.com/embed/Jznn0vxc5sM\" frameborder=\"0\"
+        allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/11/the_most_awkwar.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/11/the_most_awkwar.html</guid>\r\n<category
+        />\r\n<pubDate>Thu, 15 Nov 2012 12:59:49 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>what
+        we think about when we fly home</title>\r\n<description>&lt;p&gt;&lt;iframe
+        width=\"350\" height=\"197\" src=\"http://www.youtube.com/embed/UBjtjfg0s4E\"
+        frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/11/what_we_think_a.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/11/what_we_think_a.html</guid>\r\n<category
+        />\r\n<pubDate>Tue, 13 Nov 2012 15:28:33 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>emoticats
+        :)</title>\r\n<description>&lt;p&gt;&lt;iframe width=\"350\" height=\"197\"
+        src=\"http://www.youtube.com/embed/Bh2xWAmeZ0k\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/11/emoticats.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/11/emoticats.html</guid>\r\n<category
+        />\r\n<pubDate>Tue, 13 Nov 2012 13:15:34 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>hack
+        to power, brian</title>\r\n<description>&lt;p&gt;&lt;iframe width=\"350\"
+        height=\"197\" src=\"http://www.youtube.com/embed/WnG4dJT3itM\" frameborder=\"0\"
+        allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/11/hack_to_power_b.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/11/hack_to_power_b.html</guid>\r\n<category
+        />\r\n<pubDate>Mon, 12 Nov 2012 10:34:55 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>election</title>\r\n<description>&lt;p&gt;&lt;iframe
+        width=\"350\" height=\"197\" src=\"http://www.youtube.com/embed/H_X-H-kLskQ\"
+        frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/11/election.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/11/election.html</guid>\r\n<category
+        />\r\n<pubDate>Wed, 07 Nov 2012 13:45:36 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>life
+        school (intern show #2)</title>\r\n<description>&lt;p&gt;&lt;iframe width=\"350\"
+        height=\"197\" src=\"http://www.youtube.com/embed/EKHKHBHIjSA\" frameborder=\"0\"
+        allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/11/life_school_int.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/11/life_school_int.html</guid>\r\n<category
+        />\r\n<pubDate>Mon, 05 Nov 2012 13:14:03 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>the
+        man's pebble (intern show #1)</title>\r\n<description>&lt;p&gt;&lt;iframe
+        width=\"350\" height=\"197\" src=\"http://www.youtube.com/embed/0QDBsAVZA7s\"
+        frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/11/the_mans_pebble.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/11/the_mans_pebble.html</guid>\r\n<category
+        />\r\n<pubDate>Thu, 01 Nov 2012 17:49:59 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>hurricane
+        sandy :: the damage</title>\r\n<description>&lt;p&gt;&lt;iframe width=\"350\"
+        height=\"197\" src=\"http://www.youtube.com/embed/mU3GbUgXcxY\" frameborder=\"0\"
+        allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/10/hurricane_sandy.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/10/hurricane_sandy.html</guid>\r\n<category
+        />\r\n<pubDate>Tue, 30 Oct 2012 10:56:25 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>the
+        guide to trading candy</title>\r\n<description>&lt;p&gt;&lt;iframe width=\"350\"
+        height=\"197\" src=\"http://www.youtube.com/embed/wGdYhmFH-DQ\" frameborder=\"0\"
+        allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/10/the_guide_to_tr.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/10/the_guide_to_tr.html</guid>\r\n<category
+        />\r\n<pubDate>Fri, 26 Oct 2012 14:25:45 -0500</pubDate>\r\n</item>\r\n<item>\r\n<title>the
+        cutest halloween costumes</title>\r\n<description>&lt;p&gt;Who wins the Cuteness?
+        Babies, Dogs, or HedgeHogs?&lt;br /&gt;\r\n&lt;br /&gt;&lt;br /&gt;\r\n&lt;iframe
+        width=\"350\" height=\"197\" src=\"http://www.youtube.com/embed/CXAXKVTYIlo\"
+        frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>\r\n<link>http://www.zefrank.com/zesblog/archives/2012/10/the_cutest_hall.html</link>\r\n<guid
+        isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/10/the_cutest_hall.html</guid>\r\n<category
+        />\r\n<pubDate>Wed, 24 Oct 2012 16:53:16 -0500</pubDate>\r\n</item>\r\n\r\n\r\n</channel>\r\n</rss>\r\n"
+    http_version: 
+  recorded_at: Sun, 28 Apr 2013 23:29:01 GMT
 recorded_with: VCR 2.4.0

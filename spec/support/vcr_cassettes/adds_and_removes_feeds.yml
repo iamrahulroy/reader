@@ -574,4 +574,37 @@ http_interactions:
         at the Speed of Light \u00bb Comics"}]'
     http_version: 
   recorded_at: Sun, 28 Apr 2013 15:43:41 GMT
+- request:
+    method: get
+    uri: http://feediscovery.appspot.com/?url=http://feeds.feedburner.com/amazingsuperpowers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - text/javascript
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sun, 28 Apr 2013 23:29:28 GMT
+      Server:
+      - Google Frontend
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"href": "http://feeds.feedburner.com/amazingsuperpowers", "type":
+        "application/rss+xml", "rel": "self", "title": "AmazingSuperPowers: Webcomic
+        at the Speed of Light \u00bb Comics"}]'
+    http_version: 
+  recorded_at: Sun, 28 Apr 2013 23:29:28 GMT
 recorded_with: VCR 2.4.0
