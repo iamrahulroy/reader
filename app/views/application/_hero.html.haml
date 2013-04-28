@@ -2,21 +2,29 @@
 = render :partial => "follow_requests", :locals => {:follow_requests => @follow_requests}
 
 %div.hero-unit
+  %h1 1kpl.us
+  %p.sub (as in, 1,000+, because keeping track of the internet is hard work.)
+  %p 1kpl.us is an RSS and Atom feed reader. Use it to subscribe to your favorite sites, and share and discuss news with friends.
+  %p 1k is fast, with no ads, designed to make it as efficient as possible for you to keep up with the blogs and feeds you care about.
+  %p.announce
+    Free accounts on 1k are being discontinued. In an effort to keep this service available to those who find it valuable, 1kpl.us is transitioning to a monthly subscription service structure. The monthly subscription fee is $5.
+
+
   - if real_user
-    %div#summary-container.row
+    - unless current_user.paid?
+      %a.btn.btn-primary{:href => "/settings"} Subscribe now for $5/month
 
     %div#hero-action-btns
-      %a.btn.btn-primary{:href => "/settings/feeds"} Add feeds
-      %a.btn.btn-primary{:href => "/settings/friends"} Invite friends
+      %a.btn{:href => "/settings/feeds"} Add feeds
+      %a.btn{:href => "/settings/friends"} Invite friends
   - else
-    %h1 1kpl.us
-    %p This is an RSS and Atom feed reader. Use it to subscribe to your favorite sites, and share and discuss news with friends.
-    -#%p With a free account you can follow up to 25 feeds. If you need to follow more than 25 feeds, you'll want to upgrade to a premium plan, for $5 a month. Your support will help to ensure this product is maintained and improved.
+    %p New users can try out 1kpl.us for 3 weeks
 
+    %a.btn.btn-primary{:href => "/login"} Log in or sign up
     = render "application/login_buttons"
 
-    %div#summary-container.row
-
-
+%div.about
+  %div.pull-left
+    1kpl.us is hand crafted by Charlie Wilkins (#{link_to("@flingbob", "https://twitter.com/flingbob")}) in Los Angeles, CA.
 
 

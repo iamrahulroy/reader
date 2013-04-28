@@ -29,6 +29,10 @@
             .controls
               %input#password_confirmation.input-xlarge{:type => "password", :name => 'user[password_confirmation]'}
 
+          .controls
+            %label.checkbox.control-label{:for => "agree-to-terms"}
+              %input#agree-to-terms{:type => "checkbox", :checked => false, :name => 'user[agree_to_terms]'} I agree to the #{link_to 'terms of use', '/terms.html'} and #{link_to 'privacy policy', '/privacy.html'}.
+
     %div.modal-footer
       %input#register-submit-link-btn.btn.btn-primary{:type => "submit", :value => "Register"}
       %a#register-close-link-btn.btn{:href => "/"} Close

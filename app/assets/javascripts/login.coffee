@@ -22,6 +22,7 @@ $(document).on 'ajax:success', 'form#register_form', (e, data, status, xhr) ->
     errors.push("Email " + data.errors.email[0]) if data.errors.email?
     errors.push("Password " + data.errors.password[0]) if data.errors.password?
     errors.push("Name " + data.errors.name[0]) if data.errors.name?
+    errors.push("You must agree to the terms of use") if data.errors.terms?
     $('#user_register_box').html(errors.join('<br />'))
 
 $(document).on 'click', '#password-submit-link-btn', (evt) ->

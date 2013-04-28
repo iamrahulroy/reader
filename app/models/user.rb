@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
     :recoverable, :rememberable, :trackable, :validatable, :remember_for => 3.months
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :name, :password, :password_confirmation, :remember_me, :anonymous, :registration_complete
+  attr_accessible :email, :name, :password, :password_confirmation, :remember_me, :anonymous, :registration_complete, :agree_to_terms
 
   acts_as_followable
   acts_as_follower
@@ -35,6 +35,18 @@ class User < ActiveRecord::Base
   has_many :groups, :dependent => :destroy
 
   validates_presence_of :email
+
+
+
+  scope :active, where("premium_account = ? or free_account = ? or created_at > ?", true, true, 3.weeks.ago)
+
+  def paid?
+    self.premium_account? || self.free_account?
+  end
+
+  def active?
+    self.premium_account? || self.free_account? || self.created_at > 3.weeks.ago
+  end
 
   def check_user_registration_state
     self.update_attribute(:registration_complete, true) if self.valid? && !registration_complete?
@@ -190,7 +202,7 @@ class User < ActiveRecord::Base
         sub.group = group if group
         sub.save!
       elsif result.length > 1
-        {:feeds => feeds} 
+        {:feeds => feeds}
       else
         {:error => "No RSS or Atom feeds found for #{url}"}
       end

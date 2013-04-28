@@ -551,4 +551,90 @@ http_interactions:
         <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-26T00:00:00Z</updated><entry><title>Detail</title><link href="http://xkcd.com/1204/" rel="alternate"></link><updated>2013-04-26T00:00:00Z</updated><id>http://xkcd.com/1204/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/detail.png" title="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" alt="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" /&gt;</summary></entry><entry><title>Time Machines</title><link href="http://xkcd.com/1203/" rel="alternate"></link><updated>2013-04-24T00:00:00Z</updated><id>http://xkcd.com/1203/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/time_machines.png" title="'All time machine systems nominal ... T-minus ten ... eleven ...'" alt="'All time machine systems nominal ... T-minus ten ... eleven ...'" /&gt;</summary></entry><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry></feed>
     http_version: 
   recorded_at: Sun, 28 Apr 2013 13:26:56 GMT
+- request:
+    method: ''
+    uri: http://xkcd.com/atom.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      If-Modified-Since:
+      - ''
+      If-None-Match:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Last-Modified:
+      - Fri, 26 Apr 2013 16:05:56 GMT
+      Etag:
+      - '"3955024123"'
+      Content-Type:
+      - application/xml
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '710'
+      Date:
+      - Sun, 28 Apr 2013 15:37:56 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-26T00:00:00Z</updated><entry><title>Detail</title><link href="http://xkcd.com/1204/" rel="alternate"></link><updated>2013-04-26T00:00:00Z</updated><id>http://xkcd.com/1204/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/detail.png" title="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" alt="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" /&gt;</summary></entry><entry><title>Time Machines</title><link href="http://xkcd.com/1203/" rel="alternate"></link><updated>2013-04-24T00:00:00Z</updated><id>http://xkcd.com/1203/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/time_machines.png" title="'All time machine systems nominal ... T-minus ten ... eleven ...'" alt="'All time machine systems nominal ... T-minus ten ... eleven ...'" /&gt;</summary></entry><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry></feed>
+    http_version: 
+  recorded_at: Sun, 28 Apr 2013 15:37:56 GMT
+- request:
+    method: ''
+    uri: http://xkcd.com/atom.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      If-Modified-Since:
+      - ''
+      If-None-Match:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Last-Modified:
+      - Fri, 26 Apr 2013 16:05:56 GMT
+      Etag:
+      - '"3955024123"'
+      Content-Type:
+      - application/xml
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '710'
+      Date:
+      - Sun, 28 Apr 2013 15:43:52 GMT
+      Server:
+      - lighttpd/1.4.28
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title>xkcd.com</title><link href="http://xkcd.com/" rel="alternate"></link><id>http://xkcd.com/</id><updated>2013-04-26T00:00:00Z</updated><entry><title>Detail</title><link href="http://xkcd.com/1204/" rel="alternate"></link><updated>2013-04-26T00:00:00Z</updated><id>http://xkcd.com/1204/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/detail.png" title="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" alt="2031: Google defends the swiveling roof-mounted scanning electron microscopes on its Street View cars, saying they 'don't reveal anything that couldn't be seen by any pedestrian scanning your house with an electron microscope.'" /&gt;</summary></entry><entry><title>Time Machines</title><link href="http://xkcd.com/1203/" rel="alternate"></link><updated>2013-04-24T00:00:00Z</updated><id>http://xkcd.com/1203/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/time_machines.png" title="'All time machine systems nominal ... T-minus ten ... eleven ...'" alt="'All time machine systems nominal ... T-minus ten ... eleven ...'" /&gt;</summary></entry><entry><title>Girls and Boys</title><link href="http://xkcd.com/1202/" rel="alternate"></link><updated>2013-04-22T00:00:00Z</updated><id>http://xkcd.com/1202/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/girls_and_boys.png" title="To get more knowledge" alt="To get more knowledge" /&gt;</summary></entry><entry><title>Integration by Parts</title><link href="http://xkcd.com/1201/" rel="alternate"></link><updated>2013-04-19T00:00:00Z</updated><id>http://xkcd.com/1201/</id><summary type="html">&lt;img src="http://imgs.xkcd.com/comics/integration_by_parts.png" title="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." alt="If you can manage to choose u and v such that u = v = x, then the answer is just (1/2)x^2, which is easy to remember. Oh, and add a '+C' or you'll get yelled at." /&gt;</summary></entry></feed>
+    http_version: 
+  recorded_at: Sun, 28 Apr 2013 15:43:52 GMT
 recorded_with: VCR 2.4.0

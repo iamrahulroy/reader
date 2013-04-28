@@ -1,9 +1,15 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   def create
+    ap params
     build_resource
     @user = resource
-
-    if resource.save
+    agreed = params['agree_to_terms'] == 'true'
+    ap "agreed : #{agreed}"
+    unless agreed
+      render :json => {errors: {:terms => true}}
+      return
+    end
+    if resource.save && agreed
       if resource.active_for_authentication?
         sign_in(resource_name, resource)
         resource.send_welcome_email
