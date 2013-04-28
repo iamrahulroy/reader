@@ -16,6 +16,8 @@ describe "User wants to create account", :type => :feature do
       fill_in "Password Confirmation:", :with => "123456"
       find("#register-submit-link-btn").click
       page.should have_content "You must agree"
+      check "I agree"
+      find("#register-submit-link-btn").click
     end
     sleep 1
 

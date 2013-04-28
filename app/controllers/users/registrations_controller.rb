@@ -3,7 +3,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     ap params
     build_resource
     @user = resource
-    agreed = params['agree_to_terms'] == 'true'
+    agreed = params[:user]['agree_to_terms'] == 'on'
     ap "agreed : #{agreed}"
     unless agreed
       render :json => {errors: {:terms => true}}
