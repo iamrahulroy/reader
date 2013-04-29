@@ -4,10 +4,11 @@
 %div.hero-unit
   %h1 1kpl.us
   %p.sub (as in, 1,000+, because keeping track of the internet is hard work.)
-  %p 1kpl.us is an RSS and Atom feed reader. Use it to subscribe to your favorite sites, and share and discuss news with friends.
-  %p 1k is fast, with no ads, designed to make it as efficient as possible for you to keep up with the blogs and feeds you care about.
-  %p.announce
-    Free accounts on 1k are being discontinued. In an effort to keep this service available to those who find it valuable, 1kpl.us is transitioning to a monthly subscription service structure. The monthly subscription fee is $7.
+  - unless current_user.paid?
+    %p 1kpl.us is an RSS and Atom feed reader. Use it to subscribe to your favorite sites, and share and discuss news with friends.
+    %p 1k is fast, with no ads, designed to make it as efficient as possible for you to keep up with the blogs and feeds you care about.
+    %p.announce
+      Free accounts on 1k are being discontinued. In an effort to keep this service available to those who find it valuable, 1kpl.us is transitioning to a monthly subscription service structure. The monthly subscription fee is $7.
 
 
   - if real_user
@@ -22,6 +23,7 @@
 
     %a.btn.btn-primary{:href => "/login"} Log in or sign up
     = render "application/login_buttons"
+  = render :template => "help/index"
 
 %div.about
   %div.pull-left
