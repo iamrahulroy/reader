@@ -1,16 +1,15 @@
 %div#plan
   %h3 Your Plan
   - if current_user.premium_account_cancel_pending?
-    %p You are on the premium account plan.
     %p Your account will expire on #{@premium_account_expire_date}. You will not be billed again.
   - elsif current_user.premium_account?
-    %p You are on the premium account plan. Your support makes this possible.
+    %p You are subscribed to the 1kpl.us service. Your support makes this possible.
     %p
       Not getting your $7 worth?
-      = link_to "Click here to downgrade to the free plan", "/charges", :method => :delete, :confirm => "Click ok to downgrade your account to the free 25 feed plan.", :style => "text-decoration: underline;"
+      = link_to "Click here to cancel your membership", "/charges", :method => :delete, :confirm => "Click ok to cancel your membership", :style => "text-decoration: underline;"
   - else
-    %p You are currently using the free plan, limited to 25 feeds. Consider upgrading to a premium account if you would like to follow more than 25 feeds.
-    %button#upgrade-button.btn.btn-primary Upgrade to a premium account
+    %p Subscribe to 1kpl.us to continue using this service. I would love you for that.
+    %button#upgrade-button.btn.btn-primary Become a member
     = form_tag "/charges", :id => "upgrade-form" do
       = render :template => "settings/stripe"
 
