@@ -9,7 +9,7 @@ class Users::SessionsController < Devise::SessionsController
       params[:user][:remember_me] = params[:user][:remember_me] == "on"
       resource = warden.authenticate!(:scope => resource_name, :recall => "#{controller_path}#failure")
       if resource.id != 1 and sign_in(resource_name, resource)
-        flash[:notice] = "Agree to the new terms!" unless current_user.agree_to_terms?
+        #flash[:notice] = "Agree to the new terms!" unless current_user.agree_to_terms?
         return render :json => {:success => true, :user => current_user, :continue_to => params[:continue_to]}
       end
       return render :json => {:success => false}

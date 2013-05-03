@@ -14,6 +14,7 @@ gem "thin", "~> 1.5", :require => false
 gem "pg", "~> 0.15"
 gem "devise", "~> 2.2"
 gem "acts_as_follower", "~> 0.1"
+#gem "acts-as-taggable-on"
 
 gem "feediscovery", git: "https://github.com/flingbob/feediscovery.git"
 #gem "feediscovery", path: "../feediscovery"
