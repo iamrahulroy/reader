@@ -19,7 +19,6 @@ class User < ActiveRecord::Base
 
 
   before_save :ensure_websocket_token, :ensure_public_token, :touch_last_seen_at
-  has_one :facebook_authorization, :dependent => :destroy
 
   belongs_to :shared_feed, :class_name => "Feed"
   belongs_to :starred_feed, :class_name => "Feed"
