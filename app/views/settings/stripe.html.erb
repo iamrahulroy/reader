@@ -9,10 +9,10 @@
 
     StripeCheckout.open({
       key:         '<%= ENV['STRIPE_PUBLIC_KEY'] %>',
-      amount:      700,
-      name:        '1kpl.us premium',
+      amount:      500,
+      name:        '1kpl.us basic',
       description: 'Hosted RSS & Atom feed reader',
-      panelLabel:  'Upgrade account - ',
+      panelLabel:  'Subscribe to 1k - ',
       token:       token,
       image:       "/favicon.png"
     });

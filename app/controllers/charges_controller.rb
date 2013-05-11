@@ -8,12 +8,12 @@ class ChargesController < ApplicationController
   def create
     if real_user
       # Amount in cents
-      @amount = 700
+      @amount = 500
 
       customer = Stripe::Customer.create(
         :email => current_user.email,
         :card  => params[:stripeToken],
-        :plan  => "1"
+        :plan  => "2"
       )
 
       current_user.update_column(:stripe_data, customer.to_json)
