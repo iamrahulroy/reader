@@ -187,7 +187,7 @@ $(document).on "click", "a[href='/help']", (evt) ->
   App.router.help()
   false
 
-$(document).on "click", ".subscription-link", (evt) ->
+$(document).on "click touchstart", ".subscription-link", (evt) ->
   path = $(evt.currentTarget).attr("href")
   parts = path.split("/")
   App.router.navigate(path)
