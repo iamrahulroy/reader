@@ -2,7 +2,7 @@
 :timeout: 60
 :verbose: true
 :pidfile: /tmp/sidekiq.pid
-:concurrency: 45
+:concurrency: 35
 :queues:
   - [clients,8]
   - [users,6]
