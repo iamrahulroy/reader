@@ -1,11 +1,12 @@
 namespace :reader do
   desc "get rss documents for testing"
   task :xmls => :environment do
+    raise "Out of date, setup typhoeus"
     Feed.find_each do |feed|
       begin
-        conn = Faraday.new(:url => feed.feed_url) do |c|
+        conn = Typhoeus.new(:url => feed.feed_url) do |c|
           c.response :follow_redirects
-          c.adapter Faraday.default_adapter
+          c.adapter Typhoeus.default_adapter
         end
         response = conn.get
 

@@ -19,7 +19,6 @@ describe "when a user tries to register with an oauth provider that does not sup
 
   let!(:some_user)   { User.create!(name: "Jeff", email: "jeff@example.com", password: "123456") }
 
-
   before :each do
     profile_object = {
       :access_token => access_token,
@@ -29,8 +28,7 @@ describe "when a user tries to register with an oauth provider that does not sup
         :email => nil
       }
     }
-    JSON.should_receive(:parse).and_return(profile_object)
-    #AuthorizeService.should_receive(:new).and_return(auth)
+    JSON.stub(:parse).and_return(profile_object)
     visit "/auth/callback?code=123"
   end
 

@@ -24,7 +24,7 @@ http_interactions:
       Content-Type:
       - text/plain
       Date:
-      - Thu, 16 May 2013 13:44:32 GMT
+      - Thu, 16 May 2013 14:09:37 GMT
       X-Powered-By:
       - Express
       Content-Length:
@@ -35,5 +35,5 @@ http_interactions:
       encoding: UTF-8
       string: Cannot GET /oauth/access_token
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 13:44:32 GMT
+  recorded_at: Thu, 16 May 2013 14:10:05 GMT
 recorded_with: VCR 2.4.0

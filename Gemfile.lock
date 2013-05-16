@@ -136,10 +136,6 @@ GEM
     eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    faraday (0.8.7)
-      multipart-post (~> 1.1)
-    faraday_middleware (0.9.0)
-      faraday (>= 0.7.4, < 0.9)
     fast-stemmer (1.0.2)
     faye (0.8.9)
       cookiejar (>= 0.3.0)
@@ -221,7 +217,6 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.3)
-    multipart-post (1.2.0)
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.1)
@@ -416,8 +411,6 @@ DEPENDENCIES
   embedly (~> 1.5)
   ensure-encoding (~> 0.1)
   erb2haml (~> 0.1)
-  faraday (~> 0.8)
-  faraday_middleware (~> 0.9)
   feediscovery!
   feedzirra!
   figaro (~> 0.6)

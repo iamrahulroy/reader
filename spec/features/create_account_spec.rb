@@ -50,7 +50,7 @@ describe "User wants to create account", :type => :feature do
     click_link "Create new account"
     find("#register-modal").should be_visible
     click_link "Close"
-    sleep 1
+    sleep 1.5
     page.text.should_not include 'Password Confirmation'
   end
 

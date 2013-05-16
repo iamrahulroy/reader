@@ -74,8 +74,8 @@ class ItemsController < ApplicationController
   def commented
     @items = current_user.items.filter(:commented).limit(Reader::GET_ITEM_BATCH_COUNT).order("updated_at DESC")
     exclude_ids
-
     current_user.items.where(has_new_comments: true).update_all(has_new_comments: false)
+    current_user.update_attribute(:has_new_comments_count, 0)
     render_items
   end
 

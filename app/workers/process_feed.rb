@@ -25,8 +25,8 @@ class ProcessFeed
 
       #feed.increment!(:parse_errors) if feed
       em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
-      ap em
-      ap t
+      Rails.logger.debug em
+      Rails.logger.debug t
       ap "THIS BROKE"
       return
     end

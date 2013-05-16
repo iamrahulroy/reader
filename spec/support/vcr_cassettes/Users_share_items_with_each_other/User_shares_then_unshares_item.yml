@@ -21,7 +21,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 16 May 2013 13:33:00 GMT
+      - Thu, 16 May 2013 14:11:59 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -32,7 +32,7 @@ http_interactions:
         "application/rss+xml", "rel": "self", "title": "Stuff Christians Like - Jon
         Acuff"}]'
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 13:33:00 GMT
+  recorded_at: Thu, 16 May 2013 14:11:59 GMT
 - request:
     method: get
     uri: http://feediscovery.appspot.com/?url=http://feeds.feedburner.com/stuffchristianslikeblog
@@ -54,7 +54,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 16 May 2013 13:33:00 GMT
+      - Thu, 16 May 2013 14:12:00 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -65,7 +65,7 @@ http_interactions:
         "application/rss+xml", "rel": "self", "title": "Stuff Christians Like - Jon
         Acuff"}]'
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 13:33:00 GMT
+  recorded_at: Thu, 16 May 2013 14:12:00 GMT
 - request:
     method: get
     uri: http://feeds.feedburner.com/stuffchristianslikeblog
@@ -87,11 +87,11 @@ http_interactions:
       ETag:
       - s/3teuHW0nHG6Cmp04ppZkBBhLY
       Last-Modified:
-      - Thu, 16 May 2013 12:30:07 GMT
+      - Thu, 16 May 2013 13:58:27 GMT
       Date:
-      - Thu, 16 May 2013 13:33:02 GMT
+      - Thu, 16 May 2013 14:12:02 GMT
       Expires:
-      - Thu, 16 May 2013 13:33:02 GMT
+      - Thu, 16 May 2013 14:12:02 GMT
       Cache-Control:
       - private, max-age=0
       X-Content-Type-Options:
@@ -727,5 +727,5 @@ http_interactions:
         ZXZlci88L2ZlZWRidXJuZXI6b3JpZ0xpbms+PC9pdGVtPg0KCTwvY2hhbm5l
         bD4NCjwvcnNzPg0K
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 13:33:02 GMT
+  recorded_at: Thu, 16 May 2013 14:12:02 GMT
 recorded_with: VCR 2.4.0

@@ -92,7 +92,7 @@ class GetIcon
   end
 
   #def open(url)
-  #  Faraday.get(url)
+  #  Typhoeus.get(url)
   #end
 
 end

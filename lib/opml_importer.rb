@@ -27,7 +27,6 @@ module OpmlImporter
       feed_url = node.attributes['xmlUrl']
       site_url = node.attributes['htmlUrl']
 
-
       if feed_url.nil?
         self.import_opml node, user
         next
@@ -35,39 +34,28 @@ module OpmlImporter
 
       feed = Feed.find_by_feed_url(feed_url)
       if feed.nil?
-        feed_url = check_feed_url feed_url
         feed = Feed.find_by_feed_url(feed_url)
       end
 
       continue if feed_url.nil?
 
       if feed.nil?
-        feed = Feed.create(:name => title, :feed_url => feed_url, :site_url => site_url, :user => user)
+        feed = Feed.create!(:name => title, :feed_url => feed_url, :site_url => site_url, :user => user)
       end
+
       subscription = Subscription.where("feed_id = ? AND user_id = ?", feed.id, user.id).all
+
       if subscription.empty?
+        ap "new subscription"
         group = Group.find_or_create_by_label_and_user_id label, user.id
-        Subscription.create(:user_id => user.id, :feed_id => feed.id, :group => group)
+        Subscription.create!(:user_id => user.id, :feed_id => feed.id, :group => group)
       end
+
       subscriptions << subscription
     end
     Rails.logger.info "opml import complete. #{subscriptions.count}"
     subscriptions
   end
 
-  def check_feed_url(feed_url)
-    Rails.logger.info "check_feed_url(#{feed_url})"
-    base_url = URI(feed_url)
-    base_url = base_url.scheme + '://' + base_url.host
-    begin
-      request = Typhoeus::Request.new(base_url, followlocation: true)
-      response = request.run
-      feed_url = response.effective_url
-    rescue
-      Rails.logger.error $!
-    end
-    Rails.logger.info "completed check_feed_url(#{feed_url})"
-    feed_url
-  end
 
 end

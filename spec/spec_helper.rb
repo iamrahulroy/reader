@@ -6,7 +6,6 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'vcr'
 require 'sidekiq/testing'
-require 'faraday'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -20,7 +19,7 @@ end
 
 VCR.configure do |config|
   config.cassette_library_dir = "#{Rails.root}/spec/support/vcr_cassettes"
-  config.hook_into :webmock, :typhoeus, :faraday
+  config.hook_into :webmock, :typhoeus
   config.ignore_localhost = true
   config.configure_rspec_metadata!
 end

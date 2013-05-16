@@ -21,7 +21,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 16 May 2013 13:30:00 GMT
+      - Thu, 16 May 2013 14:11:03 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -31,5 +31,5 @@ http_interactions:
       string: '[{"href": "http://smokeandacoke.com/rss", "type": "application/atom+xml",
         "rel": "self", "title": "Smoke & a Coke"}]'
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 13:30:01 GMT
+  recorded_at: Thu, 16 May 2013 14:11:03 GMT
 recorded_with: VCR 2.4.0

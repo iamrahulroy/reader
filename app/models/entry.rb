@@ -95,7 +95,7 @@ class Entry < ActiveRecord::Base
   end
 
   def inline_imgur(link)
-    body = Faraday.get(link).body
+    body = Typhoeus.get(link).body
     doc = Nokogiri::HTML(body)
     images = doc.css(".image img")
     chunk = ""
@@ -109,7 +109,7 @@ class Entry < ActiveRecord::Base
   end
 
   def inline_quickmeme(link)
-    body = Faraday.get(link).body
+    body = Typhoeus.get(link).body
     doc = Nokogiri::HTML(body)
     images = doc.css("#img")
     chunk = ""

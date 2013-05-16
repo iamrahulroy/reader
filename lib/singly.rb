@@ -74,21 +74,11 @@ class Singly
       end
 
       def post(url, body = nil)
-        conn = Faraday.new(:url => url) do |c|
-          c.adapter Faraday.default_adapter
-        end
-        response = conn.post do |request|
-          request.body = body if body
-        end
-        response
+        Typhoeus.post(url, body: body)
       end
 
       def get(url)
-        conn = Faraday.new(:url => url) do |c|
-          c.adapter Faraday.default_adapter
-        end
-        response = conn.get
-        response
+        Typhoeus.get(url)
       end
   end
 
