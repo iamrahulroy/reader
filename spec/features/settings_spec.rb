@@ -3,7 +3,7 @@ require 'features/spec_acceptance_helper'
 feature "Settings", :js => true do
   scenario "adds and removes feeds" do
 
-    VCR.use_cassette "adds and removes feeds", :record => :new_episodes do
+    VCR.use_cassette "adds and removes feeds", :record => :once do
       user_a = create_user_a
       run_jobs
 

@@ -2,7 +2,7 @@ require 'features/spec_acceptance_helper'
 
 describe "User wants to create account", :type => :feature do
 
-  it "User creates account", :js => true, :vcr => {:record => :new_episodes} do
+  it "User creates account", :js => true, :vcr => {:record => :once} do
     visit "/"
     click_link "login-link"
     click_link "Create new account"
@@ -24,7 +24,7 @@ describe "User wants to create account", :type => :feature do
     emails.length.should == 1
   end
 
-  it "User forgot password", :js => true, :vcr => {:record => :new_episodes} do
+  it "User forgot password", :js => true, :vcr => {:record => :once} do
     u = User.steve
     visit "/"
     click_link "login-link"
@@ -44,7 +44,7 @@ describe "User wants to create account", :type => :feature do
     last_email.body.should include "Change my password"
   end
 
-  it "User closes registration modal", :js => true, :vcr => {:record => :new_episodes} do
+  it "User closes registration modal", :js => true, :vcr => {:record => :once} do
     visit "/"
     click_link "login-link"
     click_link "Create new account"

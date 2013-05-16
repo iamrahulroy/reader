@@ -50,7 +50,6 @@ class App.StreamMenuView extends Backbone.View
     console.log $grp
     console.log $sub
     $sub.prependTo($grp)
-#    debugger
 #    TODO: get the subscription to re-parent to the selected group
 
 

@@ -2,7 +2,7 @@ require 'features/spec_acceptance_helper'
 
 feature "Shared item notifications", :js => true do
 
-  scenario "A shares with B, B sees notifications", :vcr => {:record => :new_episodes} do
+  scenario "A shares with B, B sees notifications", :vcr => {:record => :once} do
     user_a = create_user_a
     user_b = create_user_b
     user_a.follow_and_unblock(user_b)

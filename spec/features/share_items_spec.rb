@@ -1,6 +1,6 @@
 require 'features/spec_acceptance_helper'
 
-feature "Users share items with each other", :js => true, :vcr => {:record => :new_episodes} do
+feature "Users share items with each other", :js => true, :vcr => {:record => :once} do
 
   scenario "A shares with B, B adds comment, A sees comment, B sees reply" do
     user_a = create_user_a

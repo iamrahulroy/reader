@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe User, :vcr => {:record => :new_episodes} do
+describe User, :vcr => {:record => :once} do
 
   let(:other_user)           { User.create! name: "Jane", email: "jane@example.com", password: '123456' }
   let(:other_subscription)   { Subscription.create! user: other_user, feed: feed, name: "User Subscription", group: other_group }

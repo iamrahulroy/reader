@@ -7,9 +7,14 @@ class SubscriptionSerializer < ActiveModel::Serializer
 
   attribute :icon
   attribute :item_view
+  attribute :site_url
 
   def icon
     object.icon
+  end
+
+  def site_url
+    object.site_url || ""
   end
 
   def item_view

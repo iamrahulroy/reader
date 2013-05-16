@@ -12,8 +12,6 @@ class PollFeedsForActiveUsers
         ids << sub.feed.id if sub.feed
       end
     end
-    ap ids
-    ap "#{ids.length} feeds to poll"
     ids.uniq.each do |id|
       PollFeed.perform_in(1.minute, id)
     end

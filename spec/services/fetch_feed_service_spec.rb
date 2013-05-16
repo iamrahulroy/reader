@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe FetchFeedService, :vcr => {:record => :new_episodes} do
+describe FetchFeedService, :vcr => {:record => :once} do
 
   it "should have an attr_reader for url" do
     fetch = FetchFeedService.new(url: "http://news.ycombinator.com/rss")

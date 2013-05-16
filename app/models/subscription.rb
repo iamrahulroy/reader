@@ -14,6 +14,7 @@ class Subscription < ActiveRecord::Base
     :message => "one sub per user per feed" }
 
   after_update :deliver, :if => :persisted?
+  delegate :site_url, :to => :feed, :allow_nil => true
 
   default_scope {
     where(deleted: false)

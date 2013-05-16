@@ -1,6 +1,6 @@
 require 'features/spec_acceptance_helper'
 
-describe "anonymous user visits site", :type => :feature, :vcr => {:record => :new_episodes} do
+describe "anonymous user visits site", :type => :feature, :vcr => {:record => :once} do
   it "default feeds are visible", :js => true do
     create_anon_feeds
     Feed.order("id ASC").first.name.should include "AmazingSuperPowers: Webcomic at the Speed of Light"
