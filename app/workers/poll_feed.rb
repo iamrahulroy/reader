@@ -22,19 +22,13 @@ class PollFeed
           feed.update_column(:document_text, response.body)
           unless feed.destroyed?
             process_feed(id)
-            #self.class.requeue_polling(id)
           end
-
         end
       when 0
         feed.increment! :timeouts
     end
 
   rescue Errno::EMFILE
-    #let this raise, skip incrementing connection_errors
-    #ObjectSpace.each_object(File) do |f|
-      #puts "%s: %d" % [f.path, f.fileno] unless f.closed?
-    #end
     raise $!
   rescue ArgumentError, Encoding::CompatibilityError
     Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"

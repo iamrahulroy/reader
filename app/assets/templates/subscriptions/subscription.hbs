@@ -1,13 +1,13 @@
 <div class="subscription-label">
-  <a class="subscription-link" href="/subscription/{{filter}}/{{this.id}}" data-stream-id="{{this.id}}">
-    <div class="subscription-link-inner">
+  <div class="subscription-link-inner">
+    <a class="subscription-link" href="/subscription/{{filter}}/{{this.id}}" data-stream-id="{{this.id}}">
       {{#if icon}}
         <img src="{{icon}}" height="16" width="16"/>
       {{/if}}
       <span class="stream-name">{{this.short_name}}</span>
       <span class="count">({{count}})</span>
-    </div>
-  </a>
+    </a>
+  </div>
 </div>
 <div class="dropdown subscription-dropdown">
 {{#unless anonymous}}
