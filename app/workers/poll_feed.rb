@@ -34,6 +34,7 @@ class PollFeed
     Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
     feed.increment! :parse_errors
   rescue
+    binding.pry
     Rails.logger.debug "Poll Feed failed: #{feed.feed_url} - #{feed.name}"
     feed.increment! :connection_errors
   end

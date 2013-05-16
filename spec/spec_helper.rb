@@ -20,7 +20,7 @@ end
 
 VCR.configure do |config|
   config.cassette_library_dir = "#{Rails.root}/spec/support/vcr_cassettes"
-  config.hook_into :webmock
+  config.hook_into :webmock, :typhoeus, :faraday
   config.ignore_localhost = true
   config.configure_rspec_metadata!
 end

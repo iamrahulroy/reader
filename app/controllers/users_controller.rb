@@ -14,14 +14,10 @@ class UsersController < ApplicationController
 
     code = params[:code]
 
-    conn = Faraday.new(:url => "https://api.singly.com/oauth/access_token") do |c|
-      c.response :follow_redirects
-      c.adapter Faraday.default_adapter
-    end
-    response = conn.post do |request|
-      request.headers['Content-Type'] = 'application/json'
-      request.body = '{"client_id":"'+ENV['SINGLY_CLIENT_ID']+'","client_secret":"'+ENV['SINGLY_CLIENT_SECRET']+'","code":"'+code+'","profile":"all"}'
-    end
+    Typhoeus::Config.verbose = ENV['TYPHOEUS_VERBOSE'] || false
+    request = Typhoeus::Request.new("https://api.singly.com/oauth/access_token", forbid_reuse: 1, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true, maxredirs: 5, accept_encoding: "gzip", 
+                                    body: '{"client_id":"'+ENV['SINGLY_CLIENT_ID']+'","client_secret":"'+ENV['SINGLY_CLIENT_SECRET']+'","code":"'+code+'","profile":"all"}')
+    response = request.run
 
     obj = JSON.parse(response.body, {symbolize_names: true})
     # todo: finish the singly.
@@ -31,7 +27,6 @@ class UsersController < ApplicationController
     account      = obj[:account]
     email        = obj[:profile][:email]
     name         = obj[:profile][:name]
-
 
     @user = User.find_by_email(email)
     unless @user
@@ -45,8 +40,6 @@ class UsersController < ApplicationController
         @user = User.new
       end
     end
-
-
 
     if @user.persisted? && @user.email == email && email
       @user.singly_access_token = access_token
