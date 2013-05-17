@@ -40,8 +40,9 @@ namespace :reader do
 
   desc "set site_url and icon on subscriptions"
   task :update_subscriptions_site_url_and_icon => :environment do
-    Feed.find_each do |feed|
-      feed.update_subscriptions
+    ids = Feed.pluck(:id)
+    ids.each do |id|
+      UpdateFeedSubscriptions.perform_async(id)
     end
   end
 

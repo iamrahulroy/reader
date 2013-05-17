@@ -26,9 +26,10 @@ class Feed < ActiveRecord::Base
   end
 
   def update_subscriptions
+    icon_path = (feed_icon) ? feed_icon.local_path : nil
     subscriptions.each do |sub|
       sub.update_column :site_url, self.site_url
-      sub.update_column :icon_path, sub.icon
+      sub.update_column :icon_path, icon_path
     end
   end
 

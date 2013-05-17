@@ -1,16 +1,11 @@
 class SubscriptionSerializer < ActiveModel::Serializer
 
-  attributes :id, :user_id, :feed_id, :group_id, :name, :weight, :unread_count, :starred_count, :shared_count, :all_count, :commented_count, :favorite, :sort
+  attributes :id, :user_id, :feed_id, :group_id, :name, :weight, :unread_count, :starred_count, :shared_count, :all_count, :commented_count, :favorite, :sort, :site_url
   attribute :icon
   attribute :item_view
-  attribute :site_url
 
   def icon
-    object.icon
-  end
-
-  def site_url
-    object.site_url || ""
+    object.icon_path
   end
 
   def item_view

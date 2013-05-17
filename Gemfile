@@ -69,6 +69,7 @@ group :test, :development do
 end
 
 group :test do
+  gem "capybara-webkit", github: 'thoughtbot/capybara-webkit', branch: 'master'
   gem "timecop"
   gem "selenium-webdriver"
   gem "database_cleaner" #, "~> 0.9"

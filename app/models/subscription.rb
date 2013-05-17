@@ -14,7 +14,6 @@ class Subscription < ActiveRecord::Base
     :message => "one sub per user per feed" }
 
   after_update :deliver, :if => :persisted?
-  delegate :site_url, :to => :feed, :allow_nil => true
 
   default_scope {
     where(deleted: false)
@@ -67,14 +66,6 @@ class Subscription < ActiveRecord::Base
       Rails.logger.info  "Feed is nil"
     else
       self[:name] = feed.name || "Untitled Feed"
-    end
-  end
-
-  def icon
-    if feed_id
-      if feed.feed_icon
-        feed.feed_icon.local_path
-      end
     end
   end
 

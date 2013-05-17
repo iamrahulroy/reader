@@ -141,6 +141,7 @@ class Entry < ActiveRecord::Base
   def deliver
     feed = self.feed
     if feed
+      feed.reload
       subscriptions = feed.subscriptions
       subscriptions.each do |sub|
         item = Item.new(:user_id => sub.user_id, :entry => self, :subscription => sub)
