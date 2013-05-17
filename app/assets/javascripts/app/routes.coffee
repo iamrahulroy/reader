@@ -128,66 +128,66 @@ class App.Router extends Backbone.Router
     App.showList()
     App.renderFeedList()
 
-$(document).on "click", "a[href='/']", (evt) ->
+$(document).on "click touchend", "a[href='/']", (evt) ->
   App.router.defaultAction()
   App.router.navigate("/")
   evt.preventDefault()
 
-$(document).on "click", "a[href^='/destroy-cancel']", (evt) ->
+$(document).on "click touchend", "a[href^='/destroy-cancel']", (evt) ->
   App.router.cancelDelete()
   evt.preventDefault()
 
-$(document).on "click", "a[href^='/destroy-confirmed']", (evt) ->
+$(document).on "click touchend", "a[href^='/destroy-confirmed']", (evt) ->
   App.router.deleteModel()
   evt.preventDefault()
 
-$(document).on "click", "a[href^='/rmsubscription']", (evt) ->
+$(document).on "click touchend", "a[href^='/rmsubscription']", (evt) ->
   path = $(evt.currentTarget).attr("href")
   parts = path.split("/")
   App.subscriptions.destroySubscription(parts[2])
   evt.preventDefault()
 
-$(document).on "click", "a[href='/settings']", (evt) ->
+$(document).on "click touchend", "a[href='/settings']", (evt) ->
   $('#settings-login-dropdown-link').dropdown("toggle")
   App.router.navigate("/settings")
   App.router.settings()
   false
 
-$(document).on "click", "a[href='/login']", (evt) ->
+$(document).on "click touchend", "a[href='/login']", (evt) ->
   evt.preventDefault()
   App.router.openLogin()
   App.router.navigate("/login")
 
 
-$(document).on "click", "a[href='/all']", (evt) ->
+$(document).on "click touchend", "a[href='/all']", (evt) ->
   evt.preventDefault()
   App.viewAll()
 
-$(document).on "click", "a[href='/unread']", (evt) ->
+$(document).on "click touchend", "a[href='/unread']", (evt) ->
   App.router.viewUnread()
   false
 
-$(document).on "click", "a[href='/starred']", (evt) ->
+$(document).on "click touchend", "a[href='/starred']", (evt) ->
   App.router.viewStarred()
   false
 
-$(document).on "click", "a[href='/shared']", (evt) ->
+$(document).on "click touchend", "a[href='/shared']", (evt) ->
   App.router.viewShared()
   false
 
-$(document).on "click", "a[href='/commented']", (evt) ->
+$(document).on "click touchend", "a[href='/commented']", (evt) ->
   App.router.viewCommented()
   false
 
-$(document).on "click", "a[href='/share']", (evt) ->
+$(document).on "click touchend", "a[href='/share']", (evt) ->
   App.router.openShare()
   false
 
-$(document).on "click", "a[href='/help']", (evt) ->
+$(document).on "click touchend", "a[href='/help']", (evt) ->
   App.router.help()
   false
 
-$(document).on "click touchstart", ".subscription-link", (evt) ->
+$(document).on "click touchend", ".subscription-link", (evt) ->
   path = $(evt.currentTarget).attr("href")
   parts = path.split("/")
   App.router.navigate(path)
@@ -201,21 +201,21 @@ $(document).on "click", ".summary-item-link", (evt) ->
   App.viewSubscription(parts[2], parts[3], parts[5])
   false
 
-$(document).on "click", ".single-item-link", (evt) ->
+$(document).on "click touchend", ".single-item-link", (evt) ->
   path = $(evt.currentTarget).attr("href")
   parts = path.split("/")
   App.router.navigate(path)
   App.viewSingleItem(parts[2])
   false
 
-$(document).on "click", ".group-link", (evt) ->
+$(document).on "click touchend", ".group-link", (evt) ->
   path = $(evt.currentTarget).attr("href")
   parts = path.split("/")
   App.router.navigate(path)
   App.viewGroup(parts[2], parts[3])
   false
 
-$(document).on "click", ".person-link", (evt) ->
+$(document).on "click touchend", ".person-link", (evt) ->
   path = $(evt.currentTarget).attr("href")
   parts = path.split("/")
   App.router.navigate(path)

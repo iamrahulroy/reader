@@ -2,7 +2,9 @@ class SubscriptionsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @subscriptions = Subscription.includes(:feed_icon).where(:user_id => current_user.id).order("weight DESC")
+    @subscriptions = Subscription.includes(:feed, :feed_icon).where(:user_id => current_user.id).order("weight DESC")
+    #render :json => @subscriptions.first
+    #head :ok
     render :json => @subscriptions, :each_serializer => SubscriptionSerializer, :root => false
   end
 

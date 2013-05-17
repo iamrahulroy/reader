@@ -38,6 +38,13 @@ namespace :reader do
     end
   end
 
+  desc "set site_url and icon on subscriptions"
+  task :update_subscriptions_site_url_and_icon => :environment do
+    Feed.find_each do |feed|
+      feed.update_subscriptions
+    end
+  end
+
   desc "set subscription count on feeds"
   task :update_feed_subscription_count => :environment do
     Feed.find_each do |feed|

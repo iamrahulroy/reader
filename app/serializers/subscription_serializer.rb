@@ -1,10 +1,6 @@
 class SubscriptionSerializer < ActiveModel::Serializer
 
-  cols = Subscription.column_names
-  cols.each do |c|
-    attribute c.to_sym
-  end
-
+  attributes :id, :user_id, :feed_id, :group_id, :name, :weight, :unread_count, :starred_count, :shared_count, :all_count, :commented_count, :favorite, :sort
   attribute :icon
   attribute :item_view
   attribute :site_url

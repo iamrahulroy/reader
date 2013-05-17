@@ -17,11 +17,18 @@ class Feed < ActiveRecord::Base
   scope :unfetchable, where(:fetchable => false)
   #scope :suggested, where(:suggested => true)
 
-  after_save :set_fetchable
+  after_save :set_fetchable, :update_subscriptions
 
   def set_fetchable
     if feed_errors > 5 || parse_errors > 5
       self.update_column(:fetchable, false)
+    end
+  end
+
+  def update_subscriptions
+    subscriptions.each do |sub|
+      sub.update_column :site_url, self.site_url
+      sub.update_column :icon_path, sub.icon
     end
   end
 

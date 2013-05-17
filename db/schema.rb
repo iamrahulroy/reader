@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130428183126) do
+ActiveRecord::Schema.define(:version => 20130517124912) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -207,18 +207,20 @@ ActiveRecord::Schema.define(:version => 20130428183126) do
     t.integer  "feed_id"
     t.integer  "group_id"
     t.string   "name"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
-    t.integer  "weight",          :default => 0
+    t.datetime "created_at",                                         :null => false
+    t.datetime "updated_at",                                         :null => false
+    t.integer  "weight",                          :default => 0
     t.integer  "unread_count"
     t.integer  "starred_count"
     t.integer  "shared_count"
     t.integer  "all_count"
     t.integer  "commented_count"
-    t.boolean  "deleted",         :default => false
+    t.boolean  "deleted",                         :default => false
     t.string   "item_view"
-    t.boolean  "favorite",        :default => false
+    t.boolean  "favorite",                        :default => false
     t.string   "sort"
+    t.string   "site_url",        :limit => 4096
+    t.string   "icon_path",       :limit => 4096
   end
 
   add_index "subscriptions", ["id"], :name => "subscriptions_id"
