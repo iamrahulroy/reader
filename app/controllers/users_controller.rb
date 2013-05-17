@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     obj = JSON.parse(response.body, {symbolize_names: true})
     # todo: finish the singly.
     # todo: create or lookup user then save account, other token ???,
-    Rails.logger.info(awesome_print(obj))
+    
     access_token = obj[:access_token]
     account      = obj[:account]
     email        = obj[:profile][:email]
