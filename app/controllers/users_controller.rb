@@ -15,14 +15,14 @@ class UsersController < ApplicationController
     code = params[:code]
 
     Typhoeus::Config.verbose = ENV['TYPHOEUS_VERBOSE'] || false
-    request = Typhoeus::Request.new("https://api.singly.com/oauth/access_token", forbid_reuse: 1, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true, maxredirs: 5, accept_encoding: "gzip", 
-                                    body: '{"client_id":"'+ENV['SINGLY_CLIENT_ID']+'","client_secret":"'+ENV['SINGLY_CLIENT_SECRET']+'","code":"'+code+'","profile":"all"}')
-    response = request.run
+    response = Typhoeus.post("https://api.singly.com/oauth/access_token", forbid_reuse: 1, ssl_verifypeer: false, ssl_verifyhost: 2, timeout: 60, followlocation: true, maxredirs: 5, accept_encoding: "gzip",
+                                    body: '{"client_id":"'+ENV['SINGLY_CLIENT_ID']+'","client_secret":"'+ENV['SINGLY_CLIENT_SECRET']+'","code":"'+code+'","profile":"all"}',
+                                    headers: {'Content-Type' => 'application/json'})
 
     obj = JSON.parse(response.body, {symbolize_names: true})
     # todo: finish the singly.
     # todo: create or lookup user then save account, other token ???,
-
+    Rails.logger.info(awesome_print(obj))
     access_token = obj[:access_token]
     account      = obj[:account]
     email        = obj[:profile][:email]
