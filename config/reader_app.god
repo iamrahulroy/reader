@@ -12,15 +12,15 @@ rails_root  = ENV['RAILS_ROOT'] || File.expand_path('../../', __FILE__).to_s
 #  w.keepalive
 #end
 
-God.watch do |w|
-  w.group = "reader"
-  w.name = "sidekiq"
-  w.dir = "#{rails_root}"
-  w.env = { 'RAILS_ENV' => rails_env }
-  w.start = "bundle exec sidekiq -e #{rails_env} -C #{rails_root}/config/sidekiq_app.yml"
-  w.log = "#{rails_root}/log/sidekiq.log"
-  w.keepalive
-end
+#God.watch do |w|
+#  w.group = "reader"
+#  w.name = "sidekiq"
+#  w.dir = "#{rails_root}"
+#  w.env = { 'RAILS_ENV' => rails_env }
+#  w.start = "bundle exec sidekiq -e #{rails_env} -C #{rails_root}/config/sidekiq_app.yml"
+#  w.log = "#{rails_root}/log/sidekiq.log"
+#  w.keepalive
+#end
 
 # For some reason private_pub needs to think it's in production env.
 # On local dev environment, use dev values in production config.
