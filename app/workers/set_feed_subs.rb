@@ -9,5 +9,7 @@ class SetFeedSubs
       sub.source_type = 'Feed'
       sub.save!
     end
+  rescue
+    Rails.logger.debug "SetFeedSubs #{id} error #{$!}"
   end
 end
