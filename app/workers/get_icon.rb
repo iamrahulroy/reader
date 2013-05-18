@@ -53,6 +53,8 @@ class GetIcon
       end
       get_root_favicon(site_url)
     end
+  rescue
+    return nil
   end
 
   def create_icon(url)
