@@ -14,7 +14,8 @@ class Subscription < ActiveRecord::Base
   validates :feed_id, :uniqueness => { :scope => :user_id,
     :message => "one sub per user per feed" }
 
-  after_update :deliver, :if => :persisted?
+  # temporarily disable during polymorphic sub
+  #after_update :deliver, :if => :persisted?
 
   default_scope {
     where(deleted: false)

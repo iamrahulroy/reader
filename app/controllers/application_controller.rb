@@ -73,6 +73,7 @@ class ApplicationController < ActionController::Base
       if real_user
         get_follower_requests
         update_user_subscriptions
+        set_weights
         touch_user
       end
     end

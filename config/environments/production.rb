@@ -31,8 +31,8 @@ Reader::Application.configure do
   config.force_ssl = true
 
   # See everything in the log (default is :info)
-  #config.log_level = :debug
-  #config.active_record.auto_explain_threshold_in_seconds = 10
+  config.log_level = :debug
+  config.active_record.auto_explain_threshold_in_seconds = 10
 
   # Prepend all log lines with the following tags
   # config.log_tags = [ :subdomain, :uuid ]
