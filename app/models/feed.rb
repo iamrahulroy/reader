@@ -2,6 +2,7 @@ class Feed < ActiveRecord::Base
   include ActionView::Helpers::SanitizeHelper
   has_one :feed_icon, :dependent => :destroy
   has_many :subscriptions, :dependent => :destroy
+  has_many :subs, :as => :source, :class_name => "Subscription", :dependent => :destroy
   has_many :entries, :dependent => :destroy
   belongs_to :user
   validates :feed_url, :uniqueness => true

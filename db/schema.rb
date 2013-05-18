@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517124912) do
+ActiveRecord::Schema.define(:version => 20130518122726) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -221,6 +221,8 @@ ActiveRecord::Schema.define(:version => 20130517124912) do
     t.string   "sort"
     t.string   "site_url",        :limit => 4096
     t.string   "icon_path",       :limit => 4096
+    t.integer  "source_id"
+    t.string   "source_type"
   end
 
   add_index "subscriptions", ["id"], :name => "subscriptions_id"

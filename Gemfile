@@ -16,7 +16,7 @@ gem "devise", "~> 2.2"
 gem "acts_as_follower", "~> 0.1"
 #gem "acts-as-taggable-on"
 
-gem "feediscovery", git: "https://github.com/flingbob/feediscovery.git"
+gem "feediscovery", :git => "https://github.com/flingbob/feediscovery.git"
 #gem "feediscovery", path: "../feediscovery"
 
 gem "hpricot", "~> 0.8"
@@ -69,7 +69,7 @@ group :test, :development do
 end
 
 group :test do
-  gem "capybara-webkit", github: 'thoughtbot/capybara-webkit', branch: 'master'
+  gem "capybara-webkit", :github => 'thoughtbot/capybara-webkit', :branch => 'master'
   gem "timecop"
   gem "selenium-webdriver"
   gem "database_cleaner" #, "~> 0.9"
