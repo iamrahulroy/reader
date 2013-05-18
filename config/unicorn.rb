@@ -5,6 +5,8 @@ timeout Integer(ENV["UNICORN_TIMEOUT"] || 60)
 listen "/tmp/unicorn.reader.sock", :backlog => 64
 pid "/tmp/unicorn.reader.pid"
 
+preload_app true
+
 # Production specific settings
 if ENV["RAILS_ENV"] == "production"
   # Help ensure your application will always spawn in the symlinked
