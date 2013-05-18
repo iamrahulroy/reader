@@ -18,7 +18,7 @@ class Feed < ActiveRecord::Base
   scope :unfetchable, where(:fetchable => false)
   #scope :suggested, where(:suggested => true)
 
-  after_save :set_fetchable, :update_subscriptions
+  after_save :set_fetchable
 
   def set_fetchable
     if feed_errors > 5 || parse_errors > 5
@@ -27,6 +27,7 @@ class Feed < ActiveRecord::Base
   end
 
   def update_subscriptions
+    # This needs to be run after the feed icon or site url is updated. 
     icon_path = (feed_icon) ? feed_icon.local_path : nil
     subscriptions.each do |sub|
       sub.update_column :site_url, self.site_url
