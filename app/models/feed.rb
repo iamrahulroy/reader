@@ -50,7 +50,7 @@ class Feed < ActiveRecord::Base
   end
 
   def strip_name
-    self.name.strip!
+    self.name.try :strip!
   end
 
   def scrub
