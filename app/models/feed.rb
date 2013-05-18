@@ -50,7 +50,8 @@ class Feed < ActiveRecord::Base
   end
 
   def strip_name
-    self.name.try :strip!
+    self.name ||= "no title"
+    self.name.strip!
   end
 
   def scrub
