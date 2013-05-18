@@ -30,9 +30,8 @@ namespace :reader do
 
   desc "set sources  - ok to delete"
   task :polly => :environment do
-    Feed.find_each do |feed|
-      puts "updating feed subs #{feed.id} - #{feed.name}"
-      feed.subs = feed.subscriptions
+    Feed.pluck(:id).each do |id|
+      SetFeedSubs.perform_async(id)
     end
   end
 
