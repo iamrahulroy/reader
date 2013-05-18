@@ -10,4 +10,4 @@ App.hideTooltips = ->
     $el = $(el)
     $el.tooltip('hide')
   #   title:     "Add new group/feed"
-window.setInterval App.hideTooltips, 9000
+window.setInterval App.hideTooltips, 6000

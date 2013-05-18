@@ -7,12 +7,7 @@ class UpdateComment
     user = comment.user
     user.all_following.each do |follower|
       Client.where(:user_id => follower.id).each do |client|
-        # todo use the serializer
-        json = Jbuilder.encode do |json|
-          json.(comment, :id, :user_id, :item_id, :body, :html, :created_at)
-          json.(user, :name)
-        end
-
+        json = comment.active_model_serializer.new(comment).to_json(:root => false)
         begin
           PrivatePub.publish_to client.channel, "App.receiver.updateComment(#{json})"
         rescue Errno::ECONNREFUSED

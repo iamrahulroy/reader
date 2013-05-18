@@ -4,6 +4,7 @@
 :pidfile: /tmp/sidekiq.pid
 :concurrency: 35
 :queues:
+  - [critical,9]
   - [clients,8]
   - [users,6]
   - [subscriptions,5]

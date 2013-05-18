@@ -12,10 +12,9 @@ class Subscription < ActiveRecord::Base
   before_save :set_group
 
   validates :feed_id, :uniqueness => { :scope => :user_id,
-    :message => "one sub per user per feed" }
+    :message => "uniqueness violation - one subscription per user per feed or source" }
 
-  # temporarily disable during polymorphic sub
-  #after_update :deliver, :if => :persisted?
+  after_update :deliver, :if => :persisted?
 
   default_scope {
     where(deleted: false)
@@ -54,8 +53,8 @@ class Subscription < ActiveRecord::Base
   end
 
   def set_group
-    unless self.group && self.user
-      self.group = user.groups.where(label: "").first
+    unless self.group_id && self.user_id
+      self.group = self.user.groups.where(label: "").first
     end
   end
 

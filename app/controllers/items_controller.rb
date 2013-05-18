@@ -86,15 +86,7 @@ class ItemsController < ApplicationController
 
   def update
     head(:ok) and return if current_user.anonymous
-    item = current_user.items.where(id: params[:id]).first
-    item.unread = params[:unread]
-    item.starred = params[:starred]
-    item.shared = params[:shared]
-    item.has_new_comments = params[:has_new_comments]
-
-    item.save!
-    item.after_user_item_update
-    item.update_subscription_count
+    UpdateItem.perform_async(params)
     head :ok
   end
 
