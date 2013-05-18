@@ -28,6 +28,13 @@ namespace :reader do
     UpdateCountsForActiveUsers.perform_async
   end
 
+  desc "set sources  - ok to delete"
+  task :polly => :environment do
+    Feed.find_each do |feed|
+      puts "updating feed subs #{feed.id} - #{feed.name}"
+      feed.subs = feed.subscriptions
+    end
+  end
 
   namespace :redis do
     desc "redis - remove all keys from all databases"
@@ -45,6 +52,8 @@ namespace :reader do
       UpdateFeedSubscriptions.perform_async(id)
     end
   end
+
+
 
   desc "set subscription count on feeds"
   task :update_feed_subscription_count => :environment do
