@@ -6,7 +6,6 @@ class UpdateUserSubscriptions
     user.set_weights
     user.subscriptions.each do |sub|
       sub.update_counts
-      #PollFeedNow.perform_async(sub.feed.id) if sub.feed
     end
   end
 end
