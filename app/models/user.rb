@@ -90,6 +90,7 @@ class User < ActiveRecord::Base
 
     weight = 0
     self.subscriptions.order("weight ASC").each do |sub|
+      ap "#{weight} - #{sub.name}"
       weight = weight + 100
       sub.update_column(:weight, weight) unless sub.weight == weight
     end
