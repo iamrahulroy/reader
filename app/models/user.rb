@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
 
   validates_presence_of :email
 
-
+  scope :recent_visitors, where("last_seen_at > ?", 1.week.ago)
 
   scope :active, where("premium_account = ? or free_account = ? or created_at > ?", true, true, 3.weeks.ago)
 
@@ -76,9 +76,9 @@ class User < ActiveRecord::Base
     User.anonymous.subscriptions.each do |sub|
       grp = Group.find_or_create_by_label_and_user_id(sub.group.label, self.id)
       sub2 = Subscription.new(:user_id => self.id, :feed_id => sub.feed.id, :group => grp, :name => sub.feed.name)
-      sub2.save
+      sub2.save!
     end
-    NewUserSetup.perform_in(2.seconds, self.id)
+    NewUserSetup.perform_async(self.id)
   end
 
   def set_weights
@@ -87,6 +87,7 @@ class User < ActiveRecord::Base
   end
 
   def set_subscription_weights
+
     weight = 0
     self.subscriptions.order("weight ASC").each do |sub|
       weight = weight + 100

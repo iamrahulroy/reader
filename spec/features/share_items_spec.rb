@@ -26,8 +26,10 @@ feature "Users share items with each other", :js => true, :vcr => {:record => :o
     end
     run_jobs
     sign_out
+
     sign_in_as(user_b)
-    sleep 1
+
+    page.should have_content "User A"
     within("#list") do
       page.should have_content "User A"
       click_link "User A"

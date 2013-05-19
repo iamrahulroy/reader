@@ -39,7 +39,10 @@ describe "when a user tries to register with an oauth provider that does not sup
       fill_in "user_password_confirmation", :with => password
     end
     click_button "Continue"
-    user = User.find_by_email(email)
+    sleep 1
+
+    user = User.where(email: email).first
+    user.should_not be_nil
     user.singly_access_token.should eq access_token
     user.singly_account_id.should eq account
     user.name.should eq name

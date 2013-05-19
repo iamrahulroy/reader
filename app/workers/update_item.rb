@@ -2,6 +2,7 @@ class UpdateItem
   include Sidekiq::Worker
   sidekiq_options :queue => :critical
   def perform(params)
+    params.symbolize_keys!
     item = Item.find params[:id]
     item.unread = params[:unread]
     item.starred = params[:starred]

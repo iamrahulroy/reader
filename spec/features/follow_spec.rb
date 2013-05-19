@@ -20,11 +20,10 @@ feature "User A can follow User B", :js => true do
     sign_out
     sign_in_as(user_b)
     page.should have_content "User A would like to follow your shared items"
-    within "#home" do
-      click_button "Accept & Follow User A"
-    end
-    page.should_not have_content "User A would like to follow your shared items"
+    page.should have_content "Accept & Follow User A"
+    click_button "Accept & Follow User A"
     run_jobs
+    page.should_not have_content "User A would like to follow your shared items"
     Follow.count.should == 2
     Follow.all.each do |f|
       f.blocked.should == false

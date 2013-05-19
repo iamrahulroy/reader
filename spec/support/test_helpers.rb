@@ -19,6 +19,7 @@ module TestHelpers
     u.email = "gorbles@example.com"
     u.password = "123123123"
     u.save!
+    run_jobs
     u.reload
   end
 
@@ -94,6 +95,8 @@ module TestHelpers
       Dir["#{Rails.root.to_s}/app/workers/*"].each do |f|
         File.basename(f,'.rb').camelize.constantize.drain
       end
+      ShareItem.drain
+      UnshareItem.drain
     end
   end
 

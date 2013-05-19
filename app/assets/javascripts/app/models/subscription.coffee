@@ -58,7 +58,7 @@ class App.Subscription extends App.Stream
 
   setupDrag: (container) ->
     $(container).draggable
-        axis: 'y'
+      axis: 'y'
 
   getGroup: =>
     App.groups.get(@.get('group_id'))

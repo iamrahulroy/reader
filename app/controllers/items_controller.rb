@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_filter :authenticate_user!
+
   def index
     offset = params[:offset]
     offset ||= 0
@@ -86,7 +87,7 @@ class ItemsController < ApplicationController
 
   def update
     head(:ok) and return if current_user.anonymous
-    UpdateItem.perform_async(params)
+    UpdateItem.perform_async(params[:item])
     head :ok
   end
 

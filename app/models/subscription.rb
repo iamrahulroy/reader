@@ -6,7 +6,9 @@ class Subscription < ActiveRecord::Base
   belongs_to :group
   has_many :entries, :through => :items
   has_many :items, :dependent => :destroy
-  has_one :feed_icon, :through => :feed, :dependent => :destroy
+
+  # wtf?
+  #has_one :feed_icon, :through => :feed, :dependent => :destroy
 
   before_create :set_default_name
   before_save :set_group

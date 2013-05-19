@@ -10,7 +10,7 @@ feature "Keyboard navigation", :js => true do
       user.subscribe "http://xkcd.com/atom.xml"
       run_jobs
       sign_in_as(user)
-      sleep 1
+      sleep 0.5
       within "#list" do
         click_link "MAKE"
       end
@@ -18,10 +18,12 @@ feature "Keyboard navigation", :js => true do
       unread_item_count = user.items.filter(:unread).count
       unread_item_count.should == 14
       unread_item_count.times do
-        sleep 0.5
+        sleep 0.3
         page.driver.browser.execute_script "App.nextItem()"
       end
-      sleep 1
+
+      run_jobs
+
       user.items.filter(:unread).count.should == 0
     end
   end

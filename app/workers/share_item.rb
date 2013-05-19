@@ -4,6 +4,7 @@ class ShareItem
   def perform(id)
     item = Item.find id
     user = item.user
+
     user.followers.each do |follower|
       ap "Sharing item with #{follower.name}"
       new_item = Item.new(user_id: follower.id, entry_id: item.entry_id, subscription_id: item.subscription_id, parent_id: item.id, from_id: user.id)
