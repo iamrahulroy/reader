@@ -9,3 +9,4 @@ class App.GroupListView extends Backbone.View
     @$el.html html
     @$el.attr('data-id', @model.id)
     App.setupDropTargets()
+    console.log("booooooooooooooooooted!")
