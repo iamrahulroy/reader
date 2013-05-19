@@ -132,7 +132,7 @@ App.setupDropTargets = ->
       if prev.get("group_id") == sub.get("group_id")
         sub.set('weight', (prev.get("weight") - 1))
       else if next.get("group_id") == sub.get("group_id")
-        sub.set('weight', next.get("weight") + 1)
+        sub.set('weight', (next.get("weight") + 1))
       sub.set('group_id', group.id)
       sub.fastSave()
       App.renderFeedList()
