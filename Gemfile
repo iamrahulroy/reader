@@ -88,5 +88,5 @@ group :assets do
   gem "compass-rails"
   gem "handlebars_assets"
   gem "uglifier"
-  #gem "turbo-sprockets-rails3", "~> 0.3"
+  gem "turbo-sprockets-rails3", "~> 0.3"
 end

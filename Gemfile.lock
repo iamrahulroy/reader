@@ -380,6 +380,9 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    turbo-sprockets-rails3 (0.3.6)
+      railties (> 3.2.8, < 4.0.0)
+      sprockets (>= 2.0.0)
     typhoeus (0.6.3)
       ethon (~> 0.5.11)
     tzinfo (0.3.37)
@@ -465,6 +468,7 @@ DEPENDENCIES
   stripe!
   thin (~> 1.5)
   timecop
+  turbo-sprockets-rails3 (~> 0.3)
   typhoeus (~> 0.5)
   uglifier
   unicorn (~> 4.4)
