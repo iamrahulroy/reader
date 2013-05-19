@@ -124,26 +124,26 @@ App.setupDropTargets = ->
   $('.group-list-drop-target').sortable
     connectWith: '.group-list-drop-target'
     stop: (evt, ui) ->
-      console.log "605pm"
       $item = ui.item.first()
       group = App.groups.get $item.closest('.group-list-drop-target').first().attr('data-id')
       sub = App.subscriptions.get $item.attr('data-id')
-      prev = sub.prev()
-      next = sub.next()
-      console.log "prev - #{prev.get("name")}" if prev?
-      console.log "sub - #{sub.get("name")}" if sub?
-      console.log "next - #{next.get("name")}" if next?
-      if prev and prev.get("group_id") == sub.get("group_id")
-        sub.set('weight', (prev.get("weight") - 1))
-      else if next and next.get("group_id") == sub.get("group_id")
-        sub.set('weight', (next.get("weight") + 1))
-      sub.set('group_id', group.id)
-      sub.fastSave()
-      App.renderFeedList()
+      App.subscriptionDrop(sub, group)
+
+App.subscriptionDrop = (sub, group) ->
+  prev = sub.prev()
+  next = sub.next()
+  console.log "prev - #{prev.get("name")}" if prev?
+  console.log "sub - #{sub.get("name")}" if sub?
+  console.log "next - #{next.get("name")}" if next?
+  if prev and prev.get("group_id") == sub.get("group_id")
+    sub.set('weight', (prev.get("weight") - 1))
+  else if next and next.get("group_id") == sub.get("group_id")
+    sub.set('weight', (next.get("weight") + 1))
+  sub.set('group_id', group.id)
+  sub.fastSave()
+  App.renderFeedList()
+
 
 $(document).ready () ->
   tracker.track("Application load");
   _.extend(App, Backbone.Events)
-
-
-

@@ -1,9 +1,9 @@
 class Entry < ActiveRecord::Base
   include ActionView::Helpers::SanitizeHelper
   include Embedder
-  belongs_to :feed
+  belongs_to :source, :polymorphic => true
   validates_presence_of :guid, :url, :published_at
-  validates_uniqueness_of :guid, :scope => :feed_id
+  validates_uniqueness_of :guid, :scope => [:source_id, :source_type]
 
   before_save :inline_reddit, :embed_content, :ensure_pubdate, :sanitize_content
   has_many :items, :dependent => :destroy
@@ -13,6 +13,7 @@ class Entry < ActiveRecord::Base
   after_create :deliver
 
   attr_accessor :embedded
+  attr_accessible :title, :author, :content, :url, :published_at, :source_id, :source_type, :guid
 
   def ensure_entry_guid_exists
     create_entry_guid unless self.entry_guid
@@ -46,8 +47,8 @@ class Entry < ActiveRecord::Base
   end
 
   def inline_reddit
-    return unless self.feed_id
-    feed_url = self.feed.try(:feed_url)
+    return unless self.source
+    feed_url = self.source.try(:feed_url)
     if feed_url && feed_url =~ /reddit\.com/
       content = self.content
       url = self.content.match /<a href="([^"]*)">\[link\]/
@@ -102,6 +103,7 @@ class Entry < ActiveRecord::Base
     images.each do |node|
       node.remove_attribute('class')
       chunk += node.to_s.gsub('data-src', 'src')
+      @embedded = true
     end
     self.content = chunk + self.content
   rescue OpenURI::HTTPError => e
@@ -116,6 +118,7 @@ class Entry < ActiveRecord::Base
     images.each do |node|
       node.remove_attribute('class')
       chunk += node.to_s.gsub('data-src', 'src')
+      @embedded = true
     end
     self.content = chunk + self.content
   rescue OpenURI::HTTPError => e
@@ -139,9 +142,10 @@ class Entry < ActiveRecord::Base
   end
 
   def deliver
-    feed = self.feed
+    feed = self.source
     if feed
-      feed.reload
+      #feed.reload
+      #binding.pry
       subscriptions = feed.subscriptions
       subscriptions.each do |sub|
         item = Item.new(:user_id => sub.user_id, :entry => self, :subscription => sub)
@@ -167,7 +171,7 @@ class Entry < ActiveRecord::Base
   def deliver_to(user)
     feed = self.feed
     if feed
-      subscriptions = Subscription.where(:user_id => user.id).where(:feed_id => feed.id)
+      subscriptions = Subscription.where(:user_id => user.id).where(:source_id => feed.id, :source_type => 'Feed')
       subscriptions.each do |sub|
         item = Item.new(:user_id => sub.user_id, :entry => self, :subscription => sub)
 
@@ -180,8 +184,8 @@ class Entry < ActiveRecord::Base
   end
 
   def site_root
-    return unless self.feed_id
-    uri = URI.parse(self.feed.site_url)
+    return unless self.source_id
+    uri = URI.parse(self.source.site_url)
     "#{uri.scheme}://#{uri.host}"
   rescue URI::InvalidURIError => e
     ""
@@ -232,7 +236,7 @@ class Entry < ActiveRecord::Base
 
   protected
     def create_entry_guid
-      entry_guid = EntryGuid.find_or_initialize_by_feed_id_and_guid(self.feed_id, guid)
+      entry_guid = EntryGuid.find_or_initialize_by_source_id_and_source_type_and_guid(self.source.id, self.source.class.name, guid)
       if entry_guid.save
         self.entry_guid_id = entry_guid.id
       else

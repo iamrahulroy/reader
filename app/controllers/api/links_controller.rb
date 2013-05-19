@@ -3,6 +3,7 @@ class Api::LinksController < ApplicationController
   before_filter :authenticate
 
   def index
+    raise "NOOOOOOOOOOOOOOOOOOO"
     @links = User.charlie.items.where(starred: true).map do |item|
       {
         url: item.entry.url,

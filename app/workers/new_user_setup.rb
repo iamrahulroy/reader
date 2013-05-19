@@ -5,9 +5,9 @@ class NewUserSetup
     user = User.find id
 
     user.subscriptions.each do |sub|
-      entries = sub.feed.entries.where("created_at > ?", Date.current - 2.weeks)
+      entries = sub.source.entries.where("created_at > ?", 2.weeks.ago)
       if entries.count < 25
-        entries = sub.feed.entries.limit(25)
+        entries = sub.source.entries.limit(25)
       end
       entries.each do |entry|
         item = Item.new(:user_id => sub.user_id, :entry => entry, :subscription => sub)

@@ -6,7 +6,7 @@ class ImportOpml
     import_opml filetext, user_id
     user = User.find(user_id)
     PlusMailer.opml_imported(user).deliver
-  rescue LibXML::XML::Error => e
-    ap "OPML parsing error; ignoring"
+  #rescue LibXML::XML::Error => e
+  #  ap "OPML parsing error; ignoring"
   end
 end

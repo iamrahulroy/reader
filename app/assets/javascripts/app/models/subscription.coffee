@@ -54,8 +54,6 @@ class App.Subscription extends App.Stream
   path: ->
     '/subscription/' + App.filter + '/' + @.id
 
-
-
   setupDrag: (container) ->
     $(container).draggable
       axis: 'y'

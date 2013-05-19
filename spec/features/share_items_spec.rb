@@ -34,7 +34,7 @@ feature "Users share items with each other", :js => true, :vcr => {:record => :o
       page.should have_content "User A"
       click_link "User A"
     end
-
+    page.should have_css ".comment-form-body"
     find(".comment-form-body").set "user b comment 1"
     click_button "Add Comment"
 
@@ -117,8 +117,8 @@ feature "Users share items with each other", :js => true, :vcr => {:record => :o
   end
 
   scenario "User emails an item" do
-    pending
     user_a = create_user_a
+    user_b = create_user_b
     user_a.follow_and_unblock(user_b)
     user_a.subscribe "http://xkcd.com/atom.xml"
     run_jobs
@@ -137,14 +137,34 @@ feature "Users share items with each other", :js => true, :vcr => {:record => :o
     within(".focused") do
       click_button "Email"
     end
-    binding.pry
+
+    page.should have_content "Send to email"
+
+    within("#send-item-modal") do
+      page.should have_css ".btn-close"
+      find('.btn-close').click
+    end
+
+    page.should_not have_content "Send to email"
+
+    within(".focused") do
+      click_button "Email"
+    end
+
+    page.should have_content "Send to email"
+
+    within("#send-item-modal") do
+      fill_in "To:", :with => "herman@example.com"
+      fill_in "Message:", :with => "I found this."
+      click_button "Send"
+    end
+
+    page.should_not have_content "Send to email"
+
     run_jobs
 
+    last_email.should_not be_nil
+    last_email.to.should include "herman@example.com"
+
   end
-
-  scenario "User shares non feed content"
-
-  scenario "User shares non feed content"
-
-  scenario "User C can request to follow User A via User B"
 end

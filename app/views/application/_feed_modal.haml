@@ -1,4 +1,4 @@
-%div#feed-modal.modal.hide.fade
+%div#feed-modal.modal.hide
   = form_for("feed", :url => subscriptions_path, :html => {:id => "modal_add_feed_form", :class => 'form-vertical'}, :remote => true) do |f|
     %div.modal-header
       %h3 Add feed

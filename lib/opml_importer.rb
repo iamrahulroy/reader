@@ -43,12 +43,11 @@ module OpmlImporter
         feed = Feed.create!(:name => title, :feed_url => feed_url, :site_url => site_url, :user => user)
       end
 
-      subscription = Subscription.where("feed_id = ? AND user_id = ?", feed.id, user.id).all
+      subscription = Subscription.where("source_id = ? AND source_type = 'Feed' AND user_id = ?", feed.id, user.id).all
 
       if subscription.empty?
-        ap "new subscription"
         group = Group.find_or_create_by_label_and_user_id label, user.id
-        Subscription.create!(:user_id => user.id, :feed_id => feed.id, :group => group)
+        Subscription.create!(:user_id => user.id, :source => feed, :group => group)
       end
 
       subscriptions << subscription

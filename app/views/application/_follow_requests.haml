@@ -1,6 +1,6 @@
 - if real_user && follow_requests
   - follow_requests.each do |f|
-    %div.alert.alert-info.fade.in{"data-id"=>"#{f.id}"}
+    %div.alert.alert-info.in{"data-id"=>"#{f.id}"}
       %a.close{"data-dismiss" => "alert", :href => "#"}
         &times;
       %h4.alert-heading

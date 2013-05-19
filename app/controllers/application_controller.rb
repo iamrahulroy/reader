@@ -101,9 +101,7 @@ class ApplicationController < ActionController::Base
     end
 
     def touch_user
-      if real_user
-        current_user.touch(:last_seen_at)
-      end
+      current_user.touch(:last_seen_at)
     end
 
 end

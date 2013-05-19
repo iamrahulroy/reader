@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130518122726) do
+ActiveRecord::Schema.define(:version => 20130519061622) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -49,38 +49,40 @@ ActiveRecord::Schema.define(:version => 20130518122726) do
 
   create_table "entries", :force => true do |t|
     t.string   "guid",              :limit => 4096
-    t.integer  "feed_id"
+    t.integer  "source_id"
     t.string   "title",             :limit => 4096
-    t.string   "url",               :limit => 4096,                    :null => false
+    t.string   "url",               :limit => 4096,                     :null => false
     t.string   "author",            :limit => 4096
     t.string   "summary",           :limit => 4096
     t.text     "content"
     t.datetime "published_at"
-    t.datetime "created_at",                                           :null => false
-    t.datetime "updated_at",                                           :null => false
+    t.datetime "created_at",                                            :null => false
+    t.datetime "updated_at",                                            :null => false
     t.boolean  "processed",                         :default => false
     t.boolean  "delivered",                         :default => false
     t.boolean  "content_inlined",                   :default => false
     t.boolean  "content_embedded",                  :default => false
     t.boolean  "content_sanitized",                 :default => false
     t.integer  "entry_guid_id"
+    t.string   "source_type",                       :default => "Feed"
   end
 
-  add_index "entries", ["feed_id", "guid"], :name => "entries_feed_id_guid"
-  add_index "entries", ["feed_id"], :name => "index_entries_on_feed_id"
   add_index "entries", ["guid"], :name => "index_entries_on_guid"
   add_index "entries", ["id"], :name => "entries_id"
+  add_index "entries", ["source_id", "guid"], :name => "entries_feed_id_guid"
+  add_index "entries", ["source_id"], :name => "index_entries_on_feed_id"
   add_index "entries", ["url"], :name => "index_entries_on_url"
 
   create_table "entry_guids", :force => true do |t|
-    t.integer "feed_id"
-    t.string  "guid",    :limit => 4096
+    t.integer "source_id"
+    t.string  "guid",        :limit => 4096
+    t.string  "source_type",                 :default => "Feed"
   end
 
-  add_index "entry_guids", ["feed_id", "guid"], :name => "feed_id_guid", :unique => true
-  add_index "entry_guids", ["feed_id"], :name => "index_entry_guids_on_feed_id"
-  add_index "entry_guids", ["feed_id"], :name => "new_entry_guid_feed_id_index", :order => {"feed_id"=>:desc}
   add_index "entry_guids", ["guid"], :name => "index_entry_guids_on_guid"
+  add_index "entry_guids", ["source_id", "guid"], :name => "feed_id_guid", :unique => true
+  add_index "entry_guids", ["source_id"], :name => "index_entry_guids_on_feed_id"
+  add_index "entry_guids", ["source_id"], :name => "new_entry_guid_feed_id_index", :order => {"source_id"=>:desc}
 
   create_table "facebook_contacts", :force => true do |t|
     t.integer  "left_user_id"
@@ -204,7 +206,6 @@ ActiveRecord::Schema.define(:version => 20130518122726) do
 
   create_table "subscriptions", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "feed_id"
     t.integer  "group_id"
     t.string   "name"
     t.datetime "created_at",                                         :null => false

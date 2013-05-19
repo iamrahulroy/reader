@@ -5,23 +5,20 @@ describe "Re-order feeds in feed list", :type => :feature, :vcr => {:record => :
   before :each do
     create_anon_feeds
     @user = create_user
-    run_jobs
-    @user.reload.items.count.should == 175
+    @user.reload.items.count.should == 51
     sign_in_as(@user)
   end
 
-  it "user can drag first feed to last position", :js => true do
-    pending "Can't seem to get drags to test right. Works interactively."
+  it "user can drag last feed to first position", :js => true do
     page.should have_content "Interesting"
+    sub = @user.subscriptions.order("weight ASC").last
+    sub.name.should eq "Longform"
+    grp = @user.groups.order("weight ASC").first
     last_feed = all('.subscription-link').last
     first_group = all('.group-list-drop-target').first
-    list_before = sub_list_for @user
     last_feed.drag_to first_group
-    sleep 2
-    list_after  = sub_list_for @user.reload
-    ap list_before
-    ap list_after
-    list_before.first.should_not eq list_after.first
+    visit '/'
+    page.text.should include "Comics (26) Longform (20) chainsawsuit"
   end
 
 end

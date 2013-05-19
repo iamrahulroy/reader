@@ -21,7 +21,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 16 May 2013 14:10:26 GMT
+      - Sun, 19 May 2013 19:51:22 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       string: '[{"href": "http://xkcd.com/atom.xml", "type": "application/atom+xml",
         "rel": "self", "title": "xkcd.com"}]'
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 14:10:26 GMT
+  recorded_at: Sun, 19 May 2013 19:51:22 GMT
 - request:
     method: get
     uri: http://feediscovery.appspot.com/?url=http://xkcd.com/atom.xml
@@ -53,7 +53,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 16 May 2013 14:10:26 GMT
+      - Sun, 19 May 2013 19:51:22 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -63,7 +63,7 @@ http_interactions:
       string: '[{"href": "http://xkcd.com/atom.xml", "type": "application/atom+xml",
         "rel": "self", "title": "xkcd.com"}]'
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 14:10:26 GMT
+  recorded_at: Sun, 19 May 2013 19:51:22 GMT
 - request:
     method: get
     uri: http://feediscovery.appspot.com/?url=http://feeds.feedburner.com/amazingsuperpowers
@@ -85,7 +85,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 16 May 2013 14:10:28 GMT
+      - Sun, 19 May 2013 19:51:24 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -96,7 +96,7 @@ http_interactions:
         "application/rss+xml", "rel": "self", "title": "AmazingSuperPowers: Webcomic
         at the Speed of Light \u00bb Comics"}]'
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 14:10:28 GMT
+  recorded_at: Sun, 19 May 2013 19:51:24 GMT
 - request:
     method: get
     uri: http://feediscovery.appspot.com/?url=http://feeds.feedburner.com/amazingsuperpowers
@@ -118,7 +118,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 16 May 2013 14:10:28 GMT
+      - Sun, 19 May 2013 19:51:25 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -129,7 +129,7 @@ http_interactions:
         "application/rss+xml", "rel": "self", "title": "AmazingSuperPowers: Webcomic
         at the Speed of Light \u00bb Comics"}]'
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 14:10:28 GMT
+  recorded_at: Sun, 19 May 2013 19:51:25 GMT
 - request:
     method: get
     uri: http://feediscovery.appspot.com/?url=http://feeds.feedburner.com/Chainsawsuit
@@ -151,7 +151,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 16 May 2013 14:10:30 GMT
+      - Sun, 19 May 2013 19:51:27 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -161,7 +161,7 @@ http_interactions:
       string: '[{"href": "http://feeds.feedburner.com/Chainsawsuit", "type": "application/rss+xml",
         "rel": "self", "title": "chainsawsuit by kris straub"}]'
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 14:10:30 GMT
+  recorded_at: Sun, 19 May 2013 19:51:27 GMT
 - request:
     method: get
     uri: http://feediscovery.appspot.com/?url=http://feeds.feedburner.com/Chainsawsuit
@@ -183,7 +183,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 16 May 2013 14:10:30 GMT
+      - Sun, 19 May 2013 19:51:27 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -193,7 +193,7 @@ http_interactions:
       string: '[{"href": "http://feeds.feedburner.com/Chainsawsuit", "type": "application/rss+xml",
         "rel": "self", "title": "chainsawsuit by kris straub"}]'
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 14:10:30 GMT
+  recorded_at: Sun, 19 May 2013 19:51:27 GMT
 - request:
     method: get
     uri: http://www.google.com/uds/GwebSearch?filter=1&hl=en&key=notsupplied&q=reddit&rsz=large&start=0&v=1.0
@@ -219,7 +219,7 @@ http_interactions:
       Expires:
       - Fri, 01 Jan 1990 00:00:00 GMT
       Date:
-      - Thu, 16 May 2013 14:10:32 GMT
+      - Sun, 19 May 2013 19:51:28 GMT
       Content-Type:
       - text/javascript; charset=utf-8
       X-Embedded-Status:
@@ -249,104 +249,108 @@ http_interactions:
         cmF0ZWQgbmV3cyBsaW5rcy4gVm90ZXMgcHJvbW90ZSBzdG9yaWVzIHRvIHRo
         ZSBmcm9udCBwYWdlLiJ9LHsiR3NlYXJjaFJlc3VsdENsYXNzIjoiR3dlYlNl
         YXJjaCIsInVuZXNjYXBlZFVybCI6Imh0dHA6Ly93d3cucmVkZGl0LmNvbS9y
-        L3BpY3MvIiwidXJsIjoiaHR0cDovL3d3dy5yZWRkaXQuY29tL3IvcGljcy8i
-        LCJ2aXNpYmxlVXJsIjoid3d3LnJlZGRpdC5jb20iLCJjYWNoZVVybCI6Imh0
-        dHA6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g/cVx1MDAzZGNhY2hlOklVYnJZ
-        TVhqRmpRSjp3d3cucmVkZGl0LmNvbSIsInRpdGxlIjoiL3IvUGljcyAtIFx1
-        MDAzY2JcdTAwM2VSZWRkaXRcdTAwM2MvYlx1MDAzZSIsInRpdGxlTm9Gb3Jt
-        YXR0aW5nIjoiL3IvUGljcyAtIFJlZGRpdCIsImNvbnRlbnQiOiJGb3IgYW4g
-        aW1hZ2Ugc3VicmVkZGl0IHdpdGggZmV3ZXIgICByZXN0cmljdGlvbnMsIGNo
-        ZWNrIG91dCAvci9pbWFnZXMhIEEgcGxhY2UgICB0byBcdTAwM2NiXHUwMDNl
-        Li4uXHUwMDNjL2JcdTAwM2UifSx7IkdzZWFyY2hSZXN1bHRDbGFzcyI6Ikd3
-        ZWJTZWFyY2giLCJ1bmVzY2FwZWRVcmwiOiJodHRwOi8vd3d3LnJlZGRpdC5j
-        b20vci9XVEYvIiwidXJsIjoiaHR0cDovL3d3dy5yZWRkaXQuY29tL3IvV1RG
-        LyIsInZpc2libGVVcmwiOiJ3d3cucmVkZGl0LmNvbSIsImNhY2hlVXJsIjoi
-        aHR0cDovL3d3dy5nb29nbGUuY29tL3NlYXJjaD9xXHUwMDNkY2FjaGU6YlNQ
-        MkRyRGZ1dGtKOnd3dy5yZWRkaXQuY29tIiwidGl0bGUiOiJXVEY/ISAtIFx1
-        MDAzY2JcdTAwM2VSZWRkaXRcdTAwM2MvYlx1MDAzZSIsInRpdGxlTm9Gb3Jt
-        YXR0aW5nIjoiV1RGPyEgLSBSZWRkaXQiLCJjb250ZW50IjoiR29yZSBhbmQg
-        UG9ybiBhcmUgbm90IGJ5IGRlZmF1bHQgV1RGLCAgIGNvbnNpZGVyIHBvc3Rp
-        bmcgdGhlIG1vcmUgZXh0cmVtZSBzdHVmZiBcdTAwM2NiXHUwMDNlLi4uXHUw
-        MDNjL2JcdTAwM2UifSx7IkdzZWFyY2hSZXN1bHRDbGFzcyI6Ikd3ZWJTZWFy
-        Y2giLCJ1bmVzY2FwZWRVcmwiOiJodHRwOi8vd3d3LnJlZGRpdC5jb20vci9m
-        dW5ueSIsInVybCI6Imh0dHA6Ly93d3cucmVkZGl0LmNvbS9yL2Z1bm55Iiwi
+        L1dURi8iLCJ1cmwiOiJodHRwOi8vd3d3LnJlZGRpdC5jb20vci9XVEYvIiwi
         dmlzaWJsZVVybCI6Ind3dy5yZWRkaXQuY29tIiwiY2FjaGVVcmwiOiJodHRw
-        Oi8vd3d3Lmdvb2dsZS5jb20vc2VhcmNoP3FcdTAwM2RjYWNoZTo3QUlxa0RK
-        bC1mZ0o6d3d3LnJlZGRpdC5jb20iLCJ0aXRsZSI6InIvRnVubnkgLSBcdTAw
-        M2NiXHUwMDNlUmVkZGl0XHUwMDNjL2JcdTAwM2UiLCJ0aXRsZU5vRm9ybWF0
-        dGluZyI6InIvRnVubnkgLSBSZWRkaXQiLCJjb250ZW50IjoiMjAsNTgxIHVz
-        ZXJzIGhlcmUgbm93LiBXZWxjb21lIHRvIHIvICBGdW5ueTogWW91IG1heSBv
-        bmx5IHBvc3QgaWYgeW91IGFyZSBcdTAwM2NiXHUwMDNlLi4uXHUwMDNjL2Jc
-        dTAwM2UifSx7IkdzZWFyY2hSZXN1bHRDbGFzcyI6Ikd3ZWJTZWFyY2giLCJ1
-        bmVzY2FwZWRVcmwiOiJodHRwOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1Jl
-        ZGRpdCIsInVybCI6Imh0dHA6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVk
-        ZGl0IiwidmlzaWJsZVVybCI6ImVuLndpa2lwZWRpYS5vcmciLCJjYWNoZVVy
-        bCI6Imh0dHA6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g/cVx1MDAzZGNhY2hl
-        OlNYNlNvbmliaS1BSjplbi53aWtpcGVkaWEub3JnIiwidGl0bGUiOiJcdTAw
-        M2NiXHUwMDNlUmVkZGl0XHUwMDNjL2JcdTAwM2UgLSBXaWtpcGVkaWEsIHRo
-        ZSBmcmVlIGVuY3ljbG9wZWRpYSIsInRpdGxlTm9Gb3JtYXR0aW5nIjoiUmVk
-        ZGl0IC0gV2lraXBlZGlhLCB0aGUgZnJlZSBlbmN5Y2xvcGVkaWEiLCJjb250
-        ZW50IjoiXHUwMDNjYlx1MDAzZVJlZGRpdFx1MDAzYy9iXHUwMDNlIC/LiHLJ
-        m2TJqnQvLCBzdHlsaXplZCBhcyBcdTAwM2NiXHUwMDNlcmVkZGl0XHUwMDNj
-        L2JcdTAwM2UsIGlzIGEgc29jaWFsIG5ld3MgYW5kIGVudGVydGFpbm1lbnQg
-        d2Vic2l0ZSAgIHdoZXJlIHJlZ2lzdGVyZWQgdXNlcnMgc3VibWl0IGNvbnRl
-        bnQgaW4gdGhlIGZvcm0gb2YgZWl0aGVyIGEgbGluayBvciBhIHRleHQgKFx1
-        MDAyNnF1b3Q7c2VsZlx1MDAyNnF1b3Q7KSBcdTAwM2NiXHUwMDNlLi4uXHUw
-        MDNjL2JcdTAwM2UifSx7IkdzZWFyY2hSZXN1bHRDbGFzcyI6Ikd3ZWJTZWFy
-        Y2giLCJ1bmVzY2FwZWRVcmwiOiJodHRwOi8vbWFzaGFibGUuY29tL2NhdGVn
-        b3J5L3JlZGRpdC8iLCJ1cmwiOiJodHRwOi8vbWFzaGFibGUuY29tL2NhdGVn
-        b3J5L3JlZGRpdC8iLCJ2aXNpYmxlVXJsIjoibWFzaGFibGUuY29tIiwiY2Fj
-        aGVVcmwiOiJodHRwOi8vd3d3Lmdvb2dsZS5jb20vc2VhcmNoP3FcdTAwM2Rj
-        YWNoZTpMQzNTOER0NjNEQUo6bWFzaGFibGUuY29tIiwidGl0bGUiOiJcdTAw
-        M2NiXHUwMDNlUmVkZGl0XHUwMDNjL2JcdTAwM2UgLSBNYXNoYWJsZSIsInRp
-        dGxlTm9Gb3JtYXR0aW5nIjoiUmVkZGl0IC0gTWFzaGFibGUiLCJjb250ZW50
-        IjoiNiBkYXlzIGFnbyBcdTAwM2NiXHUwMDNlLi4uXHUwMDNjL2JcdTAwM2Ug
-        XHUwMDNjYlx1MDAzZXJlZGRpdFx1MDAzYy9iXHUwMDNlIGlzIGEgc29jaWFs
-        IG5ld3Mgd2Vic2l0ZSB3aGVyZSB1c2VycyBjYW4gcG9zdCBsaW5rcyB0byBj
-        b250ZW50IG9uIHRoZSB3ZWIuICAgT3RoZXIgdXNlcnMgbWF5IHRoZW4gdm90
-        ZSB0aGUgcG9zdGVkIGxpbmtzIHVwIG9yIGRvd24sIFx1MDAzY2JcdTAwM2Uu
-        Li5cdTAwM2MvYlx1MDAzZSJ9LHsiR3NlYXJjaFJlc3VsdENsYXNzIjoiR3dl
-        YlNlYXJjaCIsInVuZXNjYXBlZFVybCI6Imh0dHA6Ly93d3cueW91dHViZS5j
-        b20vdXNlci9yZWRkaXQiLCJ1cmwiOiJodHRwOi8vd3d3LnlvdXR1YmUuY29t
-        L3VzZXIvcmVkZGl0IiwidmlzaWJsZVVybCI6Ind3dy55b3V0dWJlLmNvbSIs
-        ImNhY2hlVXJsIjoiaHR0cDovL3d3dy5nb29nbGUuY29tL3NlYXJjaD9xXHUw
-        MDNkY2FjaGU6Rk5LeExCS2lJSndKOnd3dy55b3V0dWJlLmNvbSIsInRpdGxl
-        IjoiXHUwMDNjYlx1MDAzZXJlZGRpdFx1MDAzYy9iXHUwMDNlLmNvbVx1MDAy
-        NiMzOTtzIHZpZGVvcyAtIFlvdVR1YmUiLCJ0aXRsZU5vRm9ybWF0dGluZyI6
-        InJlZGRpdC5jb21cdTAwMjYjMzk7cyB2aWRlb3MgLSBZb3VUdWJlIiwiY29u
-        dGVudCI6Ilx1MDAzY2JcdTAwM2VyZWRkaXRcdTAwM2MvYlx1MDAzZSB8IHRo
-        ZSBmcm9udCBwYWdlIG9mIHRoZSBpbnRlcm5ldCBcdTAwM2NiXHUwMDNlcmVk
-        ZGl0XHUwMDNjL2JcdTAwM2UgaXMgYSBwbGF0Zm9ybSBmb3IgaW50ZXJuZXQg
-        Y29tbXVuaXRpZXMgICB3aGVyZSB5b3VyIHZvdGVzIHNoYXBlIHdoYXQgdGhl
-        IHdvcmxkIGlzIHRhbGtpbmcgYWJvdXQgc3Vic2NyaWJlISA6IGh0dC4uLiJ9
-        LHsiR3NlYXJjaFJlc3VsdENsYXNzIjoiR3dlYlNlYXJjaCIsInVuZXNjYXBl
-        ZFVybCI6Imh0dHA6Ly93d3cudXJiYW5kaWN0aW9uYXJ5LmNvbS9kZWZpbmUu
-        cGhwP3Rlcm1cdTAwM2RyZWRkaXQiLCJ1cmwiOiJodHRwOi8vd3d3LnVyYmFu
-        ZGljdGlvbmFyeS5jb20vZGVmaW5lLnBocCUzRnRlcm0lM0RyZWRkaXQiLCJ2
-        aXNpYmxlVXJsIjoid3d3LnVyYmFuZGljdGlvbmFyeS5jb20iLCJjYWNoZVVy
-        bCI6Imh0dHA6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g/cVx1MDAzZGNhY2hl
-        Om8xT3UxSlVHT3ZNSjp3d3cudXJiYW5kaWN0aW9uYXJ5LmNvbSIsInRpdGxl
-        IjoiVXJiYW4gRGljdGlvbmFyeTogXHUwMDNjYlx1MDAzZXJlZGRpdFx1MDAz
-        Yy9iXHUwMDNlIiwidGl0bGVOb0Zvcm1hdHRpbmciOiJVcmJhbiBEaWN0aW9u
-        YXJ5OiByZWRkaXQiLCJjb250ZW50IjoiQSB1c2VyIGdlbmVyYXRlZCB3ZWIg
-        Mi4wIG5ld3Mgd2Vic2l0ZSB3aXRoIGEgbGVmdHksIGxpYmVydGFyaWFuIGFu
-        ZCBnZWVrIHNsYW50LiAgIFRlbmRzIHRvIGJlIHNsaWdodGx5IG1vcmUgdXBt
-        YXJrZXQgdGhhbiBpdHMgbGFyZ2VyIGNvbXBldGl0b3IgZGlnZy4uLi4ifV0s
-        ImN1cnNvciI6eyJyZXN1bHRDb3VudCI6IjY1LDAwMCwwMDAiLCJwYWdlcyI6
-        W3sic3RhcnQiOiIwIiwibGFiZWwiOjF9LHsic3RhcnQiOiI4IiwibGFiZWwi
-        OjJ9LHsic3RhcnQiOiIxNiIsImxhYmVsIjozfSx7InN0YXJ0IjoiMjQiLCJs
-        YWJlbCI6NH0seyJzdGFydCI6IjMyIiwibGFiZWwiOjV9LHsic3RhcnQiOiI0
-        MCIsImxhYmVsIjo2fSx7InN0YXJ0IjoiNDgiLCJsYWJlbCI6N30seyJzdGFy
-        dCI6IjU2IiwibGFiZWwiOjh9XSwiZXN0aW1hdGVkUmVzdWx0Q291bnQiOiI2
-        NTAwMDAwMCIsImN1cnJlbnRQYWdlSW5kZXgiOjAsIm1vcmVSZXN1bHRzVXJs
-        IjoiaHR0cDovL3d3dy5nb29nbGUuY29tL3NlYXJjaD9vZVx1MDAzZHV0Zjhc
-        dTAwMjZpZVx1MDAzZHV0ZjhcdTAwMjZzb3VyY2VcdTAwM2R1ZHNcdTAwMjZz
-        dGFydFx1MDAzZDBcdTAwMjZmaWx0ZXJcdTAwM2QxXHUwMDI2aGxcdTAwM2Rl
-        blx1MDAyNnFcdTAwM2RyZWRkaXQiLCJzZWFyY2hSZXN1bHRUaW1lIjoiMC4w
-        OSJ9fSwgInJlc3BvbnNlRGV0YWlscyI6IG51bGwsICJyZXNwb25zZVN0YXR1
-        cyI6IDIwMH0=
+        Oi8vd3d3Lmdvb2dsZS5jb20vc2VhcmNoP3FcdTAwM2RjYWNoZTpiU1AyRHJE
+        ZnV0a0o6d3d3LnJlZGRpdC5jb20iLCJ0aXRsZSI6IldURj8hIC0gXHUwMDNj
+        Ylx1MDAzZVJlZGRpdFx1MDAzYy9iXHUwMDNlIiwidGl0bGVOb0Zvcm1hdHRp
+        bmciOiJXVEY/ISAtIFJlZGRpdCIsImNvbnRlbnQiOiJSRUFEIFRIRSBSVUxF
+        Uy4gTm8gU2NyZWVuc2hvdHMhIEFsbCAgIChcdTAwMjZhbXA7IG9ubHkpIHRo
+        aW5ncyB0aGF0IG1ha2UgeW91IHNheSBXVEYgXHUwMDNjYlx1MDAzZS4uLlx1
+        MDAzYy9iXHUwMDNlIn0seyJHc2VhcmNoUmVzdWx0Q2xhc3MiOiJHd2ViU2Vh
+        cmNoIiwidW5lc2NhcGVkVXJsIjoiaHR0cDovL3d3dy5yZWRkaXQuY29tL3Iv
+        cGljcy8iLCJ1cmwiOiJodHRwOi8vd3d3LnJlZGRpdC5jb20vci9waWNzLyIs
+        InZpc2libGVVcmwiOiJ3d3cucmVkZGl0LmNvbSIsImNhY2hlVXJsIjoiaHR0
+        cDovL3d3dy5nb29nbGUuY29tL3NlYXJjaD9xXHUwMDNkY2FjaGU6SVVicllN
+        WGpGalFKOnd3dy5yZWRkaXQuY29tIiwidGl0bGUiOiIvci9QaWNzIC0gXHUw
+        MDNjYlx1MDAzZVJlZGRpdFx1MDAzYy9iXHUwMDNlIiwidGl0bGVOb0Zvcm1h
+        dHRpbmciOiIvci9QaWNzIC0gUmVkZGl0IiwiY29udGVudCI6IkhpIHIvcGlj
+        cyB3ZSBidWlsdCBhIGZ1biBpUGhvbmUgYXBwIHRvICAgZXhjaGFuZ2UgcGlj
+        dHVyZXMgd2l0aCByYW5kb20gcGVvcGxlLiJ9LHsiR3NlYXJjaFJlc3VsdENs
+        YXNzIjoiR3dlYlNlYXJjaCIsInVuZXNjYXBlZFVybCI6Imh0dHA6Ly93d3cu
+        cmVkZGl0LmNvbS9yL2Z1bm55IiwidXJsIjoiaHR0cDovL3d3dy5yZWRkaXQu
+        Y29tL3IvZnVubnkiLCJ2aXNpYmxlVXJsIjoid3d3LnJlZGRpdC5jb20iLCJj
+        YWNoZVVybCI6Imh0dHA6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g/cVx1MDAz
+        ZGNhY2hlOjdBSXFrREpsLWZnSjp3d3cucmVkZGl0LmNvbSIsInRpdGxlIjoi
+        ci9mdW5ueSAtIFx1MDAzY2JcdTAwM2VSZWRkaXRcdTAwM2MvYlx1MDAzZSIs
+        InRpdGxlTm9Gb3JtYXR0aW5nIjoici9mdW5ueSAtIFJlZGRpdCIsImNvbnRl
+        bnQiOiJObyByZWFjdGlvbmdpZnMgb3IgSElGVyBwb3N0cywgSG93IEkgICBG
+        ZWVsIFdoZW4gcG9zdHMgYmVsb25nIGluIC9yL0hJRlcuIn0seyJHc2VhcmNo
+        UmVzdWx0Q2xhc3MiOiJHd2ViU2VhcmNoIiwidW5lc2NhcGVkVXJsIjoiaHR0
+        cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9SZWRkaXQiLCJ1cmwiOiJodHRw
+        Oi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1JlZGRpdCIsInZpc2libGVVcmwi
+        OiJlbi53aWtpcGVkaWEub3JnIiwiY2FjaGVVcmwiOiJodHRwOi8vd3d3Lmdv
+        b2dsZS5jb20vc2VhcmNoP3FcdTAwM2RjYWNoZTpTWDZTb25pYmktQUo6ZW4u
+        d2lraXBlZGlhLm9yZyIsInRpdGxlIjoiXHUwMDNjYlx1MDAzZVJlZGRpdFx1
+        MDAzYy9iXHUwMDNlIC0gV2lraXBlZGlhLCB0aGUgZnJlZSBlbmN5Y2xvcGVk
+        aWEiLCJ0aXRsZU5vRm9ybWF0dGluZyI6IlJlZGRpdCAtIFdpa2lwZWRpYSwg
+        dGhlIGZyZWUgZW5jeWNsb3BlZGlhIiwiY29udGVudCI6Ilx1MDAzY2JcdTAw
+        M2VSZWRkaXRcdTAwM2MvYlx1MDAzZSAvy4hyyZtkyap0Lywgc3R5bGl6ZWQg
+        YXMgXHUwMDNjYlx1MDAzZXJlZGRpdFx1MDAzYy9iXHUwMDNlLCBpcyBhIHNv
+        Y2lhbCBuZXdzIGFuZCBlbnRlcnRhaW5tZW50IHdlYnNpdGUgICB3aGVyZSBy
+        ZWdpc3RlcmVkIHVzZXJzIHN1Ym1pdCBjb250ZW50IGluIHRoZSBmb3JtIG9m
+        IGVpdGhlciBhIGxpbmsgb3IgYSB0ZXh0IChcdTAwMjZxdW90O3NlbGZcdTAw
+        MjZxdW90OykgXHUwMDNjYlx1MDAzZS4uLlx1MDAzYy9iXHUwMDNlIn0seyJH
+        c2VhcmNoUmVzdWx0Q2xhc3MiOiJHd2ViU2VhcmNoIiwidW5lc2NhcGVkVXJs
+        IjoiaHR0cDovL21hc2hhYmxlLmNvbS9jYXRlZ29yeS9yZWRkaXQvIiwidXJs
+        IjoiaHR0cDovL21hc2hhYmxlLmNvbS9jYXRlZ29yeS9yZWRkaXQvIiwidmlz
+        aWJsZVVybCI6Im1hc2hhYmxlLmNvbSIsImNhY2hlVXJsIjoiaHR0cDovL3d3
+        dy5nb29nbGUuY29tL3NlYXJjaD9xXHUwMDNkY2FjaGU6TEMzUzhEdDYzREFK
+        Om1hc2hhYmxlLmNvbSIsInRpdGxlIjoiXHUwMDNjYlx1MDAzZVJlZGRpdFx1
+        MDAzYy9iXHUwMDNlIC0gTWFzaGFibGUiLCJ0aXRsZU5vRm9ybWF0dGluZyI6
+        IlJlZGRpdCAtIE1hc2hhYmxlIiwiY29udGVudCI6IjIgZGF5cyBhZ28gXHUw
+        MDNjYlx1MDAzZS4uLlx1MDAzYy9iXHUwMDNlIFx1MDAzY2JcdTAwM2VyZWRk
+        aXRcdTAwM2MvYlx1MDAzZSBpcyBhIHNvY2lhbCBuZXdzIHdlYnNpdGUgd2hl
+        cmUgdXNlcnMgY2FuIHBvc3QgbGlua3MgdG8gY29udGVudCBvbiB0aGUgd2Vi
+        LiAgIE90aGVyIHVzZXJzIG1heSB0aGVuIHZvdGUgdGhlIHBvc3RlZCBsaW5r
+        cyB1cCBvciBkb3duLCBcdTAwM2NiXHUwMDNlLi4uXHUwMDNjL2JcdTAwM2Ui
+        fSx7IkdzZWFyY2hSZXN1bHRDbGFzcyI6Ikd3ZWJTZWFyY2giLCJ1bmVzY2Fw
+        ZWRVcmwiOiJodHRwOi8vd3d3Lmh1ZmZpbmd0b25wb3N0LmNvbS8yMDEzLzA1
+        LzE3L3JlZGRpdHMtYWQtc2FsZXMtcGl0Y2gtcmVfbl8zMjk0MDE5Lmh0bWwi
+        LCJ1cmwiOiJodHRwOi8vd3d3Lmh1ZmZpbmd0b25wb3N0LmNvbS8yMDEzLzA1
+        LzE3L3JlZGRpdHMtYWQtc2FsZXMtcGl0Y2gtcmVfbl8zMjk0MDE5Lmh0bWwi
+        LCJ2aXNpYmxlVXJsIjoid3d3Lmh1ZmZpbmd0b25wb3N0LmNvbSIsImNhY2hl
+        VXJsIjoiaHR0cDovL3d3dy5nb29nbGUuY29tL3NlYXJjaD9xXHUwMDNkY2Fj
+        aGU6YURuZGVtbURKaFFKOnd3dy5odWZmaW5ndG9ucG9zdC5jb20iLCJ0aXRs
+        ZSI6Ilx1MDAzY2JcdTAwM2VSZWRkaXRcdTAwMjYjMzk7c1x1MDAzYy9iXHUw
+        MDNlIEFkIFNhbGVzIFBpdGNoIFJldmVhbGVkIChWSURFTykgLSBIdWZmaW5n
+        dG9uIFBvc3QiLCJ0aXRsZU5vRm9ybWF0dGluZyI6IlJlZGRpdFx1MDAyNiMz
+        OTtzIEFkIFNhbGVzIFBpdGNoIFJldmVhbGVkIChWSURFTykgLSBIdWZmaW5n
+        dG9uIFBvc3QiLCJjb250ZW50IjoiMiBkYXlzIGFnbyBcdTAwM2NiXHUwMDNl
+        Li4uXHUwMDNjL2JcdTAwM2UgXHUwMDNjYlx1MDAzZVJlZGRpdFx1MDAzYy9i
+        XHUwMDNlIGJpbGxzIGl0c2VsZiB0byB1c2VycyBhcyB0aGUgXHUwMDI2cXVv
+        dDtmcm9udCBwYWdlIG9mIHRoZSBpbnRlcm5ldCxcdTAwMjZxdW90OyBidXQg
+        dG8gYWR2ZXJ0aXNlcnMsIGl0cyAgIHBpdGNoIGlzIG11Y2ggbW9yZSB0aG9y
+        b3VnaCAtLSBhbmQgbWVtZS1oZWF2eSAtLSBhcyByZXZlYWxlZCBcdTAwM2Ni
+        XHUwMDNlLi4uXHUwMDNjL2JcdTAwM2UifSx7IkdzZWFyY2hSZXN1bHRDbGFz
+        cyI6Ikd3ZWJTZWFyY2giLCJ1bmVzY2FwZWRVcmwiOiJodHRwOi8vd3d3Lnlv
+        dXR1YmUuY29tL3VzZXIvcmVkZGl0IiwidXJsIjoiaHR0cDovL3d3dy55b3V0
+        dWJlLmNvbS91c2VyL3JlZGRpdCIsInZpc2libGVVcmwiOiJ3d3cueW91dHVi
+        ZS5jb20iLCJjYWNoZVVybCI6Imh0dHA6Ly93d3cuZ29vZ2xlLmNvbS9zZWFy
+        Y2g/cVx1MDAzZGNhY2hlOkZOS3hMQktpSUp3Sjp3d3cueW91dHViZS5jb20i
+        LCJ0aXRsZSI6Ilx1MDAzY2JcdTAwM2VyZWRkaXRcdTAwM2MvYlx1MDAzZS5j
+        b21cdTAwMjYjMzk7cyB2aWRlb3MgLSBZb3VUdWJlIiwidGl0bGVOb0Zvcm1h
+        dHRpbmciOiJyZWRkaXQuY29tXHUwMDI2IzM5O3MgdmlkZW9zIC0gWW91VHVi
+        ZSIsImNvbnRlbnQiOiJcdTAwM2NiXHUwMDNlcmVkZGl0XHUwMDNjL2JcdTAw
+        M2UgfCB0aGUgZnJvbnQgcGFnZSBvZiB0aGUgaW50ZXJuZXQgXHUwMDNjYlx1
+        MDAzZXJlZGRpdFx1MDAzYy9iXHUwMDNlIGlzIGEgcGxhdGZvcm0gZm9yIGlu
+        dGVybmV0IGNvbW11bml0aWVzICAgd2hlcmUgeW91ciB2b3RlcyBzaGFwZSB3
+        aGF0IHRoZSB3b3JsZCBpcyB0YWxraW5nIGFib3V0IHN1YnNjcmliZSEgOiBo
+        dHQuLi4ifV0sImN1cnNvciI6eyJyZXN1bHRDb3VudCI6IjY1LDEwMCwwMDAi
+        LCJwYWdlcyI6W3sic3RhcnQiOiIwIiwibGFiZWwiOjF9LHsic3RhcnQiOiI4
+        IiwibGFiZWwiOjJ9LHsic3RhcnQiOiIxNiIsImxhYmVsIjozfSx7InN0YXJ0
+        IjoiMjQiLCJsYWJlbCI6NH0seyJzdGFydCI6IjMyIiwibGFiZWwiOjV9LHsi
+        c3RhcnQiOiI0MCIsImxhYmVsIjo2fSx7InN0YXJ0IjoiNDgiLCJsYWJlbCI6
+        N30seyJzdGFydCI6IjU2IiwibGFiZWwiOjh9XSwiZXN0aW1hdGVkUmVzdWx0
+        Q291bnQiOiI2NTEwMDAwMCIsImN1cnJlbnRQYWdlSW5kZXgiOjAsIm1vcmVS
+        ZXN1bHRzVXJsIjoiaHR0cDovL3d3dy5nb29nbGUuY29tL3NlYXJjaD9vZVx1
+        MDAzZHV0ZjhcdTAwMjZpZVx1MDAzZHV0ZjhcdTAwMjZzb3VyY2VcdTAwM2R1
+        ZHNcdTAwMjZzdGFydFx1MDAzZDBcdTAwMjZmaWx0ZXJcdTAwM2QxXHUwMDI2
+        aGxcdTAwM2Rlblx1MDAyNnFcdTAwM2RyZWRkaXQiLCJzZWFyY2hSZXN1bHRU
+        aW1lIjoiMC4xMSJ9fSwgInJlc3BvbnNlRGV0YWlscyI6IG51bGwsICJyZXNw
+        b25zZVN0YXR1cyI6IDIwMH0=
     http_version: 
-  recorded_at: Thu, 16 May 2013 14:10:32 GMT
+  recorded_at: Sun, 19 May 2013 19:51:29 GMT
 - request:
     method: get
     uri: http://feediscovery.appspot.com/?url=http://www.reddit.com/
@@ -368,7 +372,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 16 May 2013 14:10:32 GMT
+      - Sun, 19 May 2013 19:51:29 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -378,7 +382,7 @@ http_interactions:
       string: '[{"href": "http://www.reddit.com/.rss", "type": "application/rss+xml",
         "rel": "alternate", "title": "RSS"}]'
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 14:10:32 GMT
+  recorded_at: Sun, 19 May 2013 19:51:29 GMT
 - request:
     method: get
     uri: http://feediscovery.appspot.com/?url=http://www.reddit.com/.rss
@@ -400,7 +404,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 16 May 2013 14:10:32 GMT
+      - Sun, 19 May 2013 19:51:30 GMT
       Server:
       - Google Frontend
       Transfer-Encoding:
@@ -410,5 +414,5 @@ http_interactions:
       string: '[{"href": "http://www.reddit.com/.rss", "type": "application/rss+xml",
         "rel": "self", "title": "reddit: the front page of the internet"}]'
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 14:10:32 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Sun, 19 May 2013 19:51:30 GMT
+recorded_with: VCR 2.5.0

@@ -12,8 +12,17 @@ require 'capybara-screenshot/rspec'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f }
 
+#Capybara.register_driver :chrome do |app|
+#  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+#end
+
 Capybara.default_wait_time = 5
-Capybara.javascript_driver = :webkit
+#Capybara.javascript_driver = :webkit
+#Capybara.javascript_driver = :chrome
+
+Capybara::Screenshot.autosave_on_failure = false
+
+
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -27,6 +36,8 @@ VCR.configure do |config|
 end
 
 RSpec.configure do |config|
+  config.include Warden::Test::Helpers
+
   config.include Devise::TestHelpers, :type => :controller
   config.use_transactional_fixtures = false
   config.infer_base_class_for_anonymous_controllers = false
@@ -38,9 +49,11 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
     ActionMailer::Base.deliveries = []
     Capybara.reset_sessions!
+    Warden.test_mode!
   end
 
   config.after :each do
+    Warden.test_reset!
     rspec_reset
     clear_jobs
     Capybara.reset_sessions!    # Forget the (simulated) browser state

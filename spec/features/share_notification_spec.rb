@@ -25,10 +25,7 @@ feature "Shared item notifications", :js => true do
     comment.save!
 
     run_jobs
-
     sign_in_as(user_b)
-
-    sleep 1
     page.should have_css("#nav-comments-link.attention")
 
   end

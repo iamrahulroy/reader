@@ -75,7 +75,7 @@ class User < ActiveRecord::Base
   def copy_anonymous_feeds
     User.anonymous.subscriptions.each do |sub|
       grp = Group.find_or_create_by_label_and_user_id(sub.group.label, self.id)
-      sub2 = Subscription.new(:user_id => self.id, :feed_id => sub.feed.id, :group => grp, :name => sub.feed.name)
+      sub2 = Subscription.new(:user_id => self.id, :source_id => sub.source.id, :source_type => 'Feed', :group => grp, :name => sub.source.name)
       sub2.save!
     end
     NewUserSetup.perform_async(self.id)
@@ -87,10 +87,8 @@ class User < ActiveRecord::Base
   end
 
   def set_subscription_weights
-
     weight = 0
     self.subscriptions.order("weight ASC").each do |sub|
-      ap "#{weight} - #{sub.name}"
       weight = weight + 100
       sub.update_column(:weight, weight) unless sub.weight == weight
     end
@@ -189,7 +187,7 @@ class User < ActiveRecord::Base
   def subscribe(url, group=nil)
     feed = Feed.where(feed_url: url).first
     if feed
-      sub = self.subscriptions.where(feed_id: feed.id).first_or_create!
+      sub = self.subscriptions.where(source_id: feed.id, source_type: 'Feed').first_or_create!
       sub.group = group if group
       sub.save!
     else
@@ -198,7 +196,7 @@ class User < ActiveRecord::Base
         result = result.first
         fz = Feedzirra::Feed.fetch_and_parse result.href
         feed = Feed.where(feed_url: result.href).first_or_create!(name: result.title, site_url: fz.url)
-        sub = self.subscriptions.where(feed_id: feed.id).first_or_create!
+        sub = self.subscriptions.where(source_id: feed.id, source_type: 'Feed').first_or_create!
         sub.group = group if group
         sub.save!
       elsif result.length > 1

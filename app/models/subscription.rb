@@ -10,11 +10,14 @@ class Subscription < ActiveRecord::Base
   # wtf?
   #has_one :feed_icon, :through => :feed, :dependent => :destroy
 
-  before_create :set_default_name
+  before_validation :set_default_name
   before_save :set_group
 
-  validates :feed_id, :uniqueness => { :scope => :user_id,
+  validates :source_id, :uniqueness => { :scope => [:source_type, :user_id],
     :message => "uniqueness violation - one subscription per user per feed or source" }
+
+  validates_presence_of :name
+
 
   after_update :deliver, :if => :persisted?
 
@@ -60,15 +63,14 @@ class Subscription < ActiveRecord::Base
     end
   end
 
+
   def group_label
     (self.group.nil?) ? "" : self.group
   end
 
   def set_default_name
-    if feed.nil?
-      Rails.logger.info  "Feed is nil"
-    else
-      self[:name] = feed.name || "Untitled Feed"
+    unless self.source.nil?
+      self[:name] = source.name || "Untitled Feed"
     end
   end
 

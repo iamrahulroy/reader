@@ -19,7 +19,7 @@ class Item < ActiveRecord::Base
 
   belongs_to :parent, :class_name => "Item"
   has_many :children, :class_name => "Item", :foreign_key => :parent_id
-  has_one :feed, :through => :subscription
+
 
   validates_with ItemValidator
 
@@ -28,7 +28,7 @@ class Item < ActiveRecord::Base
   delegate :url, :title, :to => :entry, :allow_nil => true
 
   default_scope {
-    includes(:entry).includes(:comments).includes(:feed)
+    includes(:entry).includes(:comments)
   }
 
   scope :for, lambda { |user_id|
@@ -40,6 +40,10 @@ class Item < ActiveRecord::Base
       where("#{filter} = ?", true)
     end
   }
+
+  def feed
+    raise "beans"
+  end
 
   def after_user_item_update
     update_children

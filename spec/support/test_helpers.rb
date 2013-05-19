@@ -1,17 +1,8 @@
 module TestHelpers
 
-  #def create_anon_user
-  #  anonymous = User.anonymous
-  #  unless
-  #    u = User.new
-  #    u.name = "Anonymous 1kpl.us User"
-  #    u.email = "anonymous@1kpl.com"
-  #    u.password = '6xsahykygh4tbdmj'
-  #    u.password_confirmation = '6xsahykygh4tbdmj'
-  #    u.anonymous = true
-  #    u.save!
-  #  end
-  #end
+  def create_anon_user
+    User.anonymous
+  end
 
   def create_user
     u = User.new
@@ -94,6 +85,7 @@ module TestHelpers
       Dir["#{Rails.root.to_s}/app/workers/*"].each do |f|
         File.basename(f,'.rb').camelize.constantize.drain
       end
+      #PollFeed.drain
       ShareItem.drain
       UnshareItem.drain
     end

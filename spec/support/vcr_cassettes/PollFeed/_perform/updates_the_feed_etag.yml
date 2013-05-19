@@ -21,11 +21,11 @@ http_interactions:
       ETag:
       - Ay256cwFBVnRBAnf6A9vSxTt08w
       Last-Modified:
-      - Thu, 16 May 2013 12:36:26 GMT
+      - Sun, 19 May 2013 19:47:00 GMT
       Date:
-      - Thu, 16 May 2013 14:12:55 GMT
+      - Sun, 19 May 2013 19:50:28 GMT
       Expires:
-      - Thu, 16 May 2013 14:12:55 GMT
+      - Sun, 19 May 2013 19:50:28 GMT
       Cache-Control:
       - private, max-age=0
       X-Content-Type-Options:
@@ -126,5 +126,5 @@ http_interactions:
         isPermaLink=\"false\">http://www.zefrank.com/zesblog/archives/2012/10/the_cutest_hall.html</guid>\r\n<category
         />\r\n<pubDate>Wed, 24 Oct 2012 16:53:16 -0500</pubDate>\r\n</item>\r\n\r\n\r\n</channel>\r\n</rss>\r\n"
     http_version: '1.1'
-  recorded_at: Thu, 16 May 2013 14:12:55 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Sun, 19 May 2013 19:50:28 GMT
+recorded_with: VCR 2.5.0

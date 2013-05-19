@@ -10,10 +10,8 @@ feature "Keyboard navigation", :js => true do
       user.subscribe "http://xkcd.com/atom.xml"
       run_jobs
       sign_in_as(user)
-      sleep 0.5
-      within "#list" do
-        click_link "MAKE"
-      end
+      page.should have_content "MAKE"
+      click_link "MAKE"
 
       unread_item_count = user.items.filter(:unread).count
       unread_item_count.should == 14

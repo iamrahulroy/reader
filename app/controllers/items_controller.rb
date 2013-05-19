@@ -113,9 +113,7 @@ class ItemsController < ApplicationController
 
   def toggle_star
     return if current_user.anonymous
-    ap params
     item = Item.find(params[:id])
-    ap item
     item.starred = !item.starred
     item.save!
     render :json => item, :serializer => ItemSerializer, :root => false

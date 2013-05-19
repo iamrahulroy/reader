@@ -1,5 +1,5 @@
 
-%div#share-modal.modal.hide.fade
+%div#share-modal.modal.hide
   = form_for("entry", :url => share_path, :html => {:id => "share_form", :class => 'form-vertical'}, :remote => true) do |f|
     %div.modal-header
       -#%a.close{'data-dismiss'=>:alert} ×

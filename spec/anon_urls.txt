@@ -4,4 +4,4 @@ http://feeds.feedburner.com/Chainsawsuit
 group:Technology
 http://feeds.arstechnica.com/arstechnica/index
 group:Interesting
-http://feeds.wnyc.org/radiolab
+http://longform.org/feed.rss

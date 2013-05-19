@@ -4,13 +4,20 @@ describe ApplicationController do
 
   describe "GET index" do
 
-    let(:user) { User.create! name: "Bob", email: "bob@example.com", password: '123456' }
-
-    it 'should trigger an UpdateUserSubscriptions job' do
+    it 'triggers an UpdateUserSubscriptions job' do
       pending
-
+      get :index
+      Timecop.travel(20.minutes)
+      get :index
       UpdateUserSubscriptions.should_receive(:perform_async)
-      true.should == false
+    end
+
+    it 'does not trigger an UpdateUserSubscriptions job if user was last seen less than 15 minutes ago' do
+      pending
+      get :index
+      Timecop.travel(2.minutes)
+      get :index
+      UpdateUserSubscriptions.should_not_receive(:perform_async)
     end
 
   end

@@ -1,5 +1,5 @@
 
-%div#register-modal.modal.hide.fade
+%div#register-modal.modal.hide
   = form_for("user", :url => registration_path(:user), :html => {:id => "register_form"}, :class => 'form-horizontal', :remote => true) do |f|
     %div.modal-header
       %h3 Create account

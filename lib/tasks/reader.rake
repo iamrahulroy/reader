@@ -143,7 +143,8 @@ namespace :reader do
   desc "init EntryGuids"
   task :init_entry_guids => :environment do
     Entry.all.each do |entry|
-      eg = EntryGuid.find_or_initialize_by_feed_id_and_guid(entry.feed_id, entry.guid)
+      eg = EntryGuid.find_or_initialize_by_source_id_and_source_type_and_guid(entry.source.id, entry.source.class.name, entry.guid)
+
       if eg.new_record?
         eg.save
       end

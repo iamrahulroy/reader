@@ -1,5 +1,5 @@
 
-%div#login-modal.modal.hide.fade
+%div#login-modal.modal.hide
   = form_for("user", :url => user_session_path, :html => {:id => "sign_in_form"}, :class => 'form-horizontal', :remote => true) do |f|
     %input{type: "hidden", name: "continue_to", value: params[:continue_to]}
     %div.modal-header

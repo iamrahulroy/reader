@@ -14,7 +14,7 @@ describe FetchFeedService do
   end
 
   it 'has the correct URL when redirected', :vcr => {:record => :once} do
-    pending "Can't get this to work under test env"
+    pending "VCR doesn't return the effective URL when using a pre-existing cassette"
     fetch = FetchFeedService.new(url: "http://news.ycombinator.com/rss")
     fetch.perform
     expect(fetch.url).to eq("https://news.ycombinator.com/rss")

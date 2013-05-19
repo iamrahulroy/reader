@@ -9,8 +9,8 @@ describe DeliverSubscription do
   describe "#perform" do
     it "doesn't throw an error" do
       feed = Feed.create! name: "Feed 1", feed_url: "http://www.example.com/foo.rss", site_url: "http://www.example.com/"
-      subscription = Subscription.create! user: user, feed: feed
-      entry = Entry.create! guid: "123", url: "http://www.example.com/", feed: feed, published_at: Date.current
+      subscription = Subscription.create! user: user, source_id: feed.id, source_type: 'Feed'
+      entry = Entry.create! guid: "123", url: "http://www.example.com/", source_id: feed.id, source_type: 'Feed', published_at: Date.current
       feed.reload
 
       Item.where(entry_id: entry.id).count.should == 1

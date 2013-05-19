@@ -10,14 +10,14 @@
       .control-group
         %label.control-label{:for => "to"} To:
         .controls
-          %input#title.input-xlarge{:type => "text", :name => 'to'}
+          %input#to.input-xlarge{:type => "text", :name => 'to'}
         %label.control-label{:for => "subject"} Subject:
         .controls
-          %input#title.input-xlarge{:type => "text", :name => 'subject', :value => @item.entry.title}
+          %input#subject.input-xlarge{:type => "text", :name => 'subject', :value => @item.entry.title}
         %p
         %label.control-label{:for => "body"} Message:
         .controls
-          %textarea#content.input-xlarge{:type => "textarea", :name => 'body', :cols => 30, :rows => 4, :width => "100%"}
+          %textarea#body.input-xlarge{:type => "textarea", :name => 'body', :cols => 30, :rows => 4, :width => "100%"}
 
         %div.well
           = raw @item.entry.content

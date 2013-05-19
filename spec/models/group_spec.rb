@@ -3,15 +3,15 @@ require 'spec_helper'
 describe Group do
 
   let(:other_user)           { User.create! name: "Jane", email: "jane@example.com", password: '123456' }
-  let(:other_subscription)   { Subscription.create! user: other_user, feed: feed, name: "User Subscription", group: other_group }
+  let(:other_subscription)   { Subscription.create! user: other_user, source_id: feed.id, source_type: 'Feed', name: "User Subscription", group: other_group }
   let!(:other_item)          { Item.create! user: other_user, entry: entry, subscription: other_subscription }
   let(:other_group)          { Group.create! user: other_user, label: "Group 1" }
 
   let(:user)                 { User.create! name: "Bob", email: "bob@example.com", password: '123456' }
-  let(:subscription)         { Subscription.create! user: user, feed: feed, name: "User Subscription", group: group }
+  let(:subscription)         { Subscription.create! user: user, source_id: feed.id, source_type: 'Feed', name: "User Subscription", group: group }
   let!(:item)                { Item.create! user: user, entry: entry, subscription: subscription }
   let(:group)                { Group.create! user: user, label: "Group 1" }
-  let(:entry)                { Entry.create! guid: "123", url: "http://www.example.com/", feed: feed,
+  let(:entry)                { Entry.create! guid: "123", url: "http://www.example.com/", source_id: feed.id, source_type: 'Feed',
                                              published_at: Date.current }
   let(:feed)                 { Feed.create! name: "Feed 1", feed_url: "http://www.example.com/foo.rss",
                                             site_url: "http://www.example.com/" }

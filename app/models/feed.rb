@@ -1,9 +1,9 @@
 class Feed < ActiveRecord::Base
   include ActionView::Helpers::SanitizeHelper
   has_one :feed_icon, :dependent => :destroy
-  has_many :subscriptions, :dependent => :destroy
-  has_many :subs, :as => :source, :class_name => "Subscription", :dependent => :destroy
-  has_many :entries, :dependent => :destroy
+  #has_many :subscriptions, :dependent => :destroy
+  has_many :subscriptions, :as => :source, :dependent => :destroy
+  has_many :entries, :as => :source, :dependent => :destroy
   belongs_to :user
   validates :feed_url, :uniqueness => true
 
@@ -27,7 +27,7 @@ class Feed < ActiveRecord::Base
   end
 
   def update_subscriptions
-    # This needs to be run after the feed icon or site url is updated. 
+    # This needs to be run after the feed icon or site url is updated.
     icon_path = (feed_icon) ? feed_icon.local_path : nil
     subscriptions.each do |sub|
       sub.update_column :site_url, self.site_url
@@ -41,7 +41,7 @@ class Feed < ActiveRecord::Base
 
   def self.suggested(uid)
     user = User.find uid
-    fids = user.subscriptions.pluck(:feed_id)
+    fids = user.subscriptions.where(:source_type => 'Feed').pluck(:source_id)
     feeds = []
     self.where(:suggested => true).all.each do |f|
       feeds << f unless fids.include? f.id
@@ -95,19 +95,19 @@ class Feed < ActiveRecord::Base
   def merge
     return unless feed
 
-    self.subscriptions.update_all(feed_id: feed.id)
+    self.subscriptions.update_all(source_id: feed.id)
 
-    Entry.order("id ASC").where(feed_id: self.id).each do |entry|
-      other = Entry.where(feed_id: feed.id).where(guid: entry.guid).first
+    Entry.order("id ASC").where(source_id: self.id).each do |entry|
+      other = Entry.where(source_id: feed.id, source_type: 'Feed').where(guid: entry.guid).first
       if other
         entry.items.update_all(entry_id: other.id)
         entry.delete
       end
     end
 
-    self.entries.update_all(feed_id: feed.id)
+    self.entries.update_all(source_id: feed.id)
 
-    EntryGuid.where(feed_id: id).delete_all
+    EntryGuid.where(source_id: id, source_type: 'Feed').delete_all
     FeedIcon.where(feed_id: id).destroy_all
 
     self.feed_url = "delete - #{SecureRandom.hex}" # allow the save to go through by setting feed_url to a unique value

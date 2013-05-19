@@ -37,7 +37,7 @@ class ProcessFeed
     feed.save! if feed.changed?
 
     entries = parsed_feed.entries.select do |entry|
-      EntryGuid.where(feed_id: id, guid: ProcessFeed.entry_guid(entry)).count == 0
+      EntryGuid.where(source_id: feed.id, source_type: 'Feed', guid: ProcessFeed.entry_guid(entry)).count == 0
     end
 
     entries.each do |entry|
@@ -50,10 +50,11 @@ class ProcessFeed
       feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }
     end
 
-  rescue
-    feed.increment!(:parse_errors) if feed
-    em =  "ERROR: #{$!}: #{id} - #{feed.try(:feed_url)}"
-    ap em
+  #rescue
+    #binding.pry
+    #feed.increment!(:parse_errors) if feed
+    #em =  "ProcessFeed Error: #{$!}: #{id} - #{feed.try(:feed_url)}"
+    #ap em
   end
 
 
@@ -77,15 +78,17 @@ class ProcessFeed
     guid = entry_guid(entry)
 
     url = entry.url || guid
+    feed = Feed.find(feed_id)
     if url && guid
-      entry_model = Entry.find_or_initialize_by_feed_id_and_guid(feed_id, guid)
+      entry_model = Entry.find_or_initialize_by_source_id_and_source_type_and_guid(feed.id, feed.class.name, guid)
 
       entry_date = entry.published
       entry_date ||= (entry.respond_to?(:updated)) ? entry.updated : nil
       entry_date ||= Time.current.to_formatted_s(:db) + " UTC"
 
       if entry_model.new_record?
-        entry_model.attributes= {:feed_id => feed_id,
+        entry_model.attributes= {:source_id => feed_id,
+                                 :source_type => 'Feed',
                                  :title => entry.title,
                                  :author => entry.author,
                                  :content => content,
@@ -96,7 +99,8 @@ class ProcessFeed
         entry_model.save!
         Rails.logger.info "Added entry to #{feed_id}: #{entry.title}"
       else
-        entry_model.update_attributes!(:feed_id => feed_id,
+        entry_model.update_attributes!(:source_id => feed_id,
+                                       :source_type => 'Feed',
                                        :title => entry.title.truncate(1000),
                                        :author => entry.author.truncate(1000),
                                        :content => content,
