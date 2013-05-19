@@ -85,7 +85,7 @@ class Entry < ActiveRecord::Base
 
   def embed_content
     unless @embedded || Rails.env.test?
-      if self.feed && self.feed.feed_url =~ /reddit\.com/
+      if self.source && self.source.feed_url =~ /reddit\.com/
         content_url = self.content.match /<a href="([^"]*)">\[link\]/
         len = content_url.try(:length) || 0
         if len > 1
