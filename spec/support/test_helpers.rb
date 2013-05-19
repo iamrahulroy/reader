@@ -69,9 +69,8 @@ module TestHelpers
 
 
   def screenshot
-    if Capybara.current_driver == :poltergeist
-      page.driver.render(png = "/tmp/poltergeist/#{rand(36**8).to_s(36)}.png")
-      x = `open -F #{png}`
+    if Capybara.current_driver == :webkit
+      Capybara::Screenshot.screen_shot_and_open_image
     else
       save_and_open_page
     end

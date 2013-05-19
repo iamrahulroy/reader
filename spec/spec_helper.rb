@@ -13,7 +13,7 @@ require 'capybara-screenshot/rspec'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f }
 
 Capybara.default_wait_time = 5
-#Capybara.javascript_driver = :webkit
+Capybara.javascript_driver = :webkit
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
