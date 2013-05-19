@@ -104,4 +104,8 @@ class Subscription < ActiveRecord::Base
     self.destroy
   end
 
+  def feed
+    self.source if self.source_type == 'Feed' && self.source_id
+  end
+
 end
