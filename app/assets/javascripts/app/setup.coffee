@@ -124,6 +124,7 @@ App.setupDropTargets = ->
   $('.group-list-drop-target').sortable
     connectWith: '.group-list-drop-target'
     stop: (evt, ui) ->
+      console.log "605pm"
       $item = ui.item.first()
       group = App.groups.get $item.closest('.group-list-drop-target').first().attr('data-id')
       sub = App.subscriptions.get $item.attr('data-id')
