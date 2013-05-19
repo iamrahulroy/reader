@@ -50,11 +50,10 @@ class ProcessFeed
       feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }
     end
 
-  #rescue
-    #binding.pry
-    #feed.increment!(:parse_errors) if feed
-    #em =  "ProcessFeed Error: #{$!}: #{id} - #{feed.try(:feed_url)}"
-    #ap em
+  rescue
+    feed.increment!(:parse_errors) if feed
+    em =  "ProcessFeed Error: #{$!}: #{id} - #{feed.try(:feed_url)}"
+    ap em
   end
 
 
