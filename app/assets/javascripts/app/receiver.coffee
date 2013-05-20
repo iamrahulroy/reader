@@ -40,12 +40,15 @@ class App.Receiver
     console.log "addSubscription"
     console.log sub_json
     if App.subscriptions?
+
       sub = @.findSub(sub_json)
       if sub
         sub.set sub_json
       else
         sub = new App.Subscription(sub_json)
         App.subscriptions.add(sub)
+        console.log "boooosh"
+        App.renderFeedList()
     else
       _.delay(@addSubscription, 50, sub_json)
 

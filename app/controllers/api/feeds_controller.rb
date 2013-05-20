@@ -14,7 +14,6 @@ class Api::FeedsController < ApplicationController
         result = {:feeds => feeds}
       end
 
-
       @result = result
 
       respond_to do |format|

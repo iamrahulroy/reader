@@ -36,15 +36,17 @@ class ProcessFeed
     feed.name = parsed_feed.title if parsed_feed.respond_to?(:title) && parsed_feed.title
     feed.save! if feed.changed?
 
-    entries = parsed_feed.entries.select do |entry|
+    entries = parsed_feed.entries
+    entries = entries.first(3) if Rails.env.test?
+    entries = entries.select do |entry|
       EntryGuid.where(source_id: feed.id, source_type: 'Feed', guid: ProcessFeed.entry_guid(entry)).count == 0
     end
+
+
 
     entries.each do |entry|
       ProcessFeed.process_entry(id, entry)
     end
-
-    #PollFeed.requeue_polling(id)
 
     unless entries.empty?
       feed.subscriptions.each { |sub| UpdateSubscriptionCount.perform_async(sub.id) }

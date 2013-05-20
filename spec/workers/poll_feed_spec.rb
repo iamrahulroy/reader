@@ -11,13 +11,14 @@ describe PollFeed do
     it "polls a feed url for updates", :vcr => {:record => :once} do
       PollFeed.perform_async(feed.id)
       run_jobs
-      Item.count.should == 15
+      Item.count.should == 3
     end
 
     it "checks for entryguids before attempting to do inserts", :vcr => {:record => :once} do
       PollFeed.perform_async(feed.id)
       run_jobs
-      Item.count.should == 15
+      Item.count.should == 3
+      EntryGuid.count.should ==3
       ProcessFeed.should_not_receive :process_entry
       PollFeed.perform_async(feed.id)
       run_jobs

@@ -14,7 +14,7 @@ feature "Keyboard navigation", :js => true do
       click_link "MAKE"
 
       unread_item_count = user.items.filter(:unread).count
-      unread_item_count.should == 14
+      unread_item_count.should == 6
       unread_item_count.times do
         sleep 0.3
         page.driver.browser.execute_script "App.nextItem()"

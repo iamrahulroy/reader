@@ -1,13 +1,4 @@
 GIT
-  remote: git://github.com/thoughtbot/capybara-webkit.git
-  revision: 7bf3c800315ebf90da1f549c028b90306c88c0f2
-  branch: master
-  specs:
-    capybara-webkit (0.14.1)
-      capybara (~> 2.0, >= 2.0.2)
-      json
-
-GIT
   remote: https://github.com/flingbob/feediscovery.git
   revision: d4021419e1c06ba2cba9d677088b501ad26e38ea
   specs:
@@ -86,8 +77,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-screenshot (0.3.6)
-      capybara (>= 1.0, < 3)
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -417,8 +406,6 @@ DEPENDENCIES
   bootstrap-sass
   capistrano (~> 2.0)
   capybara
-  capybara-screenshot
-  capybara-webkit!
   carrierwave (~> 0.8)
   coffee-rails
   compass-rails

@@ -10,6 +10,7 @@ describe ImportOpml do
       ImportOpml.new.perform(filetext, user.id)
       Feed.fetchable.count.should == 5 # Includes the shared & starred feeds for anon and bob (4 feeds).
       Subscription.count.should == 5
+      user.set_weights
     end
 
   end

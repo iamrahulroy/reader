@@ -87,8 +87,12 @@ class User < ActiveRecord::Base
   end
 
   def set_subscription_weights
+    # alpha sort the feeds if this is the first time to set weights
+    weights = self.subscriptions.pluck(:weight)
+    sub_order =  "weight ASC"
+    sub_order = "lower(name) ASC" if weights.uniq.length == 1
     weight = 0
-    self.subscriptions.order("weight ASC").each do |sub|
+    self.subscriptions.order(sub_order).each do |sub|
       weight = weight + 100
       sub.update_column(:weight, weight) unless sub.weight == weight
     end
@@ -190,6 +194,7 @@ class User < ActiveRecord::Base
       sub = self.subscriptions.where(source_id: feed.id, source_type: 'Feed').first_or_create!
       sub.group = group if group
       sub.save!
+      sub
     else
       result = DiscoverFeedService.discover(url)
       if result.length == 1
@@ -199,6 +204,7 @@ class User < ActiveRecord::Base
         sub = self.subscriptions.where(source_id: feed.id, source_type: 'Feed').first_or_create!
         sub.group = group if group
         sub.save!
+        sub
       elsif result.length > 1
         {:feeds => feeds}
       else
