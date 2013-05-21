@@ -129,12 +129,18 @@ module Reader
       end
     end
 
+    def self.prune
+      prune_items
+      prune_feeds
+      prune_entries
+    end
+
     def self.prune_items
       items = Item.where("starred = false AND shared = false AND commented = false").where("created_at < ?", 2.weeks.ago)
       puts "#{items.count} items to delete"
       items.find_each do |i|
         puts "deleting item #{i.id}"
-        i.delete
+        # i.delete
       end
     end
 
@@ -144,7 +150,7 @@ module Reader
         unless f.private
           if f.subscriptions.empty?
             puts "destroy feed #{f.name}"
-            f.destroy
+            # f.destroy
           end
         end
       end
@@ -160,7 +166,7 @@ module Reader
 
       puts "#{entries.length} entries to delete"
       entries.each do |e|
-        e.destroy
+        # e.destroy
       end
     end
 

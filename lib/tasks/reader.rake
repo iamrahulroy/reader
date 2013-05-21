@@ -99,6 +99,11 @@ namespace :reader do
     Reader::Setup.prune_items
   end
 
+  desc "prune database"
+  task :prune_items => :environment do
+    Reader::Setup.prune
+  end
+
   desc "update anonymous user feeds"
   task :anonymous => :environment do
     Reader::Setup.update_anon_feeds
