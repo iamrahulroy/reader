@@ -140,7 +140,7 @@ module Reader
       puts "#{items.count} items to delete"
       items.find_each do |i|
         puts "deleting item #{i.id}"
-        # i.delete
+        i.delete
       end
     end
 
@@ -148,9 +148,10 @@ module Reader
       puts "Find feeds without subscriptions"
       Feed.find_each do |f|
         unless f.private
+          putc '.'
           if f.subscriptions.empty?
-            puts "destroy feed #{f.name}"
-            # f.destroy
+            puts "\ndestroy feed #{f.name}"
+            f.destroy
           end
         end
       end
@@ -159,14 +160,16 @@ module Reader
     def self.prune_entries
       entries = []
       Entry.find_each do |e|
+        putc '.'
         if e.items.empty?
           entries << e
         end
       end
 
-      puts "#{entries.length} entries to delete"
+      puts "\n\n#{entries.length} entries to delete"
       entries.each do |e|
-        # e.destroy
+        puts "destroy entry: #{e.id} - #{e.title}"
+        e.destroy
       end
     end
 
