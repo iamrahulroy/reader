@@ -100,7 +100,7 @@ namespace :reader do
   end
 
   desc "prune database"
-  task :prune_items => :environment do
+  task :prune => :environment do
     Reader::Setup.prune
   end
 
