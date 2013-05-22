@@ -9,13 +9,13 @@ class ApplicationController < ActionController::Base
 
   def stats
     redirect_to "/login" unless current_user && current_user.admin?
-    @user_count = User.unscoped.count - 1 # anonymous user
-    @item_count = Item.unscoped.count
-    @entry_count = Entry.count
+    @user_count    = User.unscoped.count - 1 # anonymous user
+    @item_count    = Item.unscoped.count
+    @entry_count   = Entry.count
     @comment_count = Comment.unscoped.count
-    @sub_count  = Subscription.unscoped.count
-    @feed_count = Feed.unscoped.count
-    @client_count = Client.unscoped.count
+    @sub_count     = Subscription.unscoped.count
+    @feed_count    = Feed.unscoped.count
+    @client_count  = Client.unscoped.count
     #index_setup
     render :content_type => "text/html", :layout => nil
   end
@@ -40,19 +40,19 @@ class ApplicationController < ActionController::Base
     return if current_user.anonymous
     id = params[:id]
     case params[:streamType]
-      when "subscription"
-        subscription = Subscription.find(id)
-        Item.unscoped.where(user_id: current_user.id).where(subscription_id: subscription.id).update_all(unread: false)
-        subscription.update_counts
-      when "group"
-        grp = Group.find(id)
-        grp.subscriptions.each do |sub|
-          Item.unscoped.where(user_id: current_user.id).where(subscription_id: sub.id).update_all(unread: false)
-          sub.update_counts
-        end
-      when "person"
-        person = User.find(id)
-        Item.unscoped.where(user_id: current_user.id).where(from_id: person.id).update_all(unread: false)
+    when "subscription"
+      subscription = Subscription.find(id)
+      Item.unscoped.where(user_id: current_user.id).where(subscription_id: subscription.id).update_all(unread: false)
+      subscription.update_counts
+    when "group"
+      grp = Group.find(id)
+      grp.subscriptions.each do |sub|
+        Item.unscoped.where(user_id: current_user.id).where(subscription_id: sub.id).update_all(unread: false)
+        sub.update_counts
+      end
+    when "person"
+      person = User.find(id)
+      Item.unscoped.where(user_id: current_user.id).where(from_id: person.id).update_all(unread: false)
     end
     head :ok
   end
@@ -67,41 +67,42 @@ class ApplicationController < ActionController::Base
 
   protected
 
-    def index_setup
-      check_reader_user
-      @user_json = render_to_string :json => current_user, :serializer => FastUserSerializer, :root => false
-      update_user_subscriptions
-      if real_user
-        get_follower_requests
+  def index_setup
+    check_reader_user
+    @user_json = render_to_string :json => current_user, :serializer => FastUserSerializer, :root => false
+    update_user_subscriptions
+    if real_user
+      get_follower_requests
 
-        set_weights
-        touch_user
-      end
+      set_weights
+      touch_user
     end
+  end
 
-    def update_user_subscriptions
-      if current_user.last_seen_at < 15.minutes.ago
-        UpdateUserSubscriptions.perform_async(current_user.id)
-      end
+  def update_user_subscriptions
+    if current_user.last_seen_at < 15.minutes.ago
+      UpdateUserSubscriptions.perform_async(current_user.id)
     end
+  end
 
-    def get_follower_requests
-      if real_user
-        @follow_requests = current_user.follow_requests
-      end
+  def get_follower_requests
+    if real_user
+      @follow_requests = current_user.follow_requests
     end
+  end
 
-    def do_not_cache
-      response.headers["Pragma"] = "no-cache"
-      response.headers["Cache-Control"] = "no-cache"
-    end
+  def do_not_cache
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Cache-Control"] = "no-cache"
+  end
 
-    def set_weights
-      current_user.set_weights if real_user
-    end
+  def set_weights
+    current_user.set_weights if real_user
+  end
 
-    def touch_user
-      current_user.touch(:last_seen_at)
-    end
+  def touch_user
+    current_user.touch(:last_seen_at)
+  end
 
 end
+

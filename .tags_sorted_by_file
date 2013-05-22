@@ -1,0 +1,768 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+_gaq	app/assets/javascripts/app/defer/ga.js	/^var _gaq = _gaq || [];$/;"	v
+s	app/assets/javascripts/app/defer/ga.js	/^  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);$/;"	v
+b	app/assets/javascripts/app/defer/mp.js	/^(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text\/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'\/\/cdn.mxpnl.com\/libs\/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]); mixpanel.init("e3e5084ca7897fac64acb098e84a98ab");/;"	f
+b.init	app/assets/javascripts/app/defer/mp.js	/^(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text\/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'\/\/cdn.mxpnl.com\/libs\/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]); mixpanel.init("e3e5084ca7897fac64acb098e84a98ab");/;"	f
+b.init.f	app/assets/javascripts/app/defer/mp.js	/^(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text\/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'\/\/cdn.mxpnl.com\/libs\/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]); mixpanel.init("e3e5084ca7897fac64acb098e84a98ab");/;"	f
+c.people.toString	app/assets/javascripts/app/defer/mp.js	/^(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text\/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'\/\/cdn.mxpnl.com\/libs\/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]); mixpanel.init("e3e5084ca7897fac64acb098e84a98ab");/;"	f
+c.toString	app/assets/javascripts/app/defer/mp.js	/^(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text\/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'\/\/cdn.mxpnl.com\/libs\/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]); mixpanel.init("e3e5084ca7897fac64acb098e84a98ab");/;"	f
+Api	app/controllers/api/auth_controller.rb	/^class Api::AuthController < ApplicationController$/;"	c
+authorized	app/controllers/api/auth_controller.rb	/^  def authorized$/;"	f	class:Api
+Api	app/controllers/api/feeds_controller.rb	/^class Api::FeedsController < ApplicationController$/;"	c
+subscribe	app/controllers/api/feeds_controller.rb	/^  def subscribe$/;"	f	class:Api
+Api	app/controllers/api/links_controller.rb	/^class Api::LinksController < ApplicationController$/;"	c
+authenticate	app/controllers/api/links_controller.rb	/^    def authenticate$/;"	f	class:Api
+index	app/controllers/api/links_controller.rb	/^  def index$/;"	f	class:Api
+Api	app/controllers/api/share_controller.rb	/^class Api::ShareController < ApplicationController$/;"	c
+content	app/controllers/api/share_controller.rb	/^  def content$/;"	f	class:Api
+url	app/controllers/api/share_controller.rb	/^  def url$/;"	f	class:Api
+Api	app/controllers/api/tokens_controller.rb	/^class Api::TokensController < ApplicationController$/;"	c
+create	app/controllers/api/tokens_controller.rb	/^    def create$/;"	f	class:Api
+destroy	app/controllers/api/tokens_controller.rb	/^  def destroy$/;"	f	class:Api
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+do_not_cache	app/controllers/application_controller.rb	/^    def do_not_cache$/;"	f	class:ApplicationController
+get_follower_requests	app/controllers/application_controller.rb	/^    def get_follower_requests$/;"	f	class:ApplicationController
+icon_check	app/controllers/application_controller.rb	/^  def icon_check$/;"	f	class:ApplicationController
+index	app/controllers/application_controller.rb	/^  def index$/;"	f	class:ApplicationController
+index_setup	app/controllers/application_controller.rb	/^    def index_setup$/;"	f	class:ApplicationController
+mark_read	app/controllers/application_controller.rb	/^  def mark_read$/;"	f	class:ApplicationController
+newrelic	app/controllers/application_controller.rb	/^  def newrelic$/;"	f	class:ApplicationController
+set_weights	app/controllers/application_controller.rb	/^    def set_weights$/;"	f	class:ApplicationController
+stats	app/controllers/application_controller.rb	/^  def stats$/;"	f	class:ApplicationController
+summary	app/controllers/application_controller.rb	/^  def summary$/;"	f	class:ApplicationController
+touch_user	app/controllers/application_controller.rb	/^    def touch_user$/;"	f	class:ApplicationController
+update_subscriptions	app/controllers/application_controller.rb	/^  def update_subscriptions$/;"	f	class:ApplicationController
+update_user_subscriptions	app/controllers/application_controller.rb	/^    def update_user_subscriptions$/;"	f	class:ApplicationController
+ChargesController	app/controllers/charges_controller.rb	/^class ChargesController < ApplicationController$/;"	c
+create	app/controllers/charges_controller.rb	/^  def create$/;"	f	class:ChargesController
+destroy	app/controllers/charges_controller.rb	/^  def destroy$/;"	f	class:ChargesController
+new	app/controllers/charges_controller.rb	/^  def new$/;"	f	class:ChargesController
+stripe_customer_id	app/controllers/charges_controller.rb	/^    def stripe_customer_id$/;"	f	class:ChargesController
+CommentsController	app/controllers/comments_controller.rb	/^class CommentsController < ApplicationController$/;"	c
+create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController
+destroy	app/controllers/comments_controller.rb	/^  def destroy$/;"	f	class:CommentsController
+editor	app/controllers/comments_controller.rb	/^  def editor$/;"	f	class:CommentsController
+index	app/controllers/comments_controller.rb	/^  def index$/;"	f	class:CommentsController
+show	app/controllers/comments_controller.rb	/^  def show$/;"	f	class:CommentsController
+update	app/controllers/comments_controller.rb	/^  def update$/;"	f	class:CommentsController
+EntriesController	app/controllers/entries_controller.rb	/^class EntriesController < ApplicationController$/;"	c
+show	app/controllers/entries_controller.rb	/^  def show$/;"	f	class:EntriesController
+FeedsController	app/controllers/feeds_controller.rb	/^class FeedsController < ApplicationController$/;"	c
+show	app/controllers/feeds_controller.rb	/^  def show$/;"	f	class:FeedsController
+subscribe	app/controllers/feeds_controller.rb	/^  def subscribe$/;"	f	class:FeedsController
+GroupsController	app/controllers/groups_controller.rb	/^class GroupsController < ApplicationController$/;"	c
+create	app/controllers/groups_controller.rb	/^  def create$/;"	f	class:GroupsController
+destroy	app/controllers/groups_controller.rb	/^  def destroy$/;"	f	class:GroupsController
+index	app/controllers/groups_controller.rb	/^  def index$/;"	f	class:GroupsController
+items	app/controllers/groups_controller.rb	/^  def items$/;"	f	class:GroupsController
+update	app/controllers/groups_controller.rb	/^  def update$/;"	f	class:GroupsController
+ItemsController	app/controllers/items_controller.rb	/^class ItemsController < ApplicationController$/;"	c
+all	app/controllers/items_controller.rb	/^  def all$/;"	f	class:ItemsController
+commented	app/controllers/items_controller.rb	/^  def commented$/;"	f	class:ItemsController
+counts	app/controllers/items_controller.rb	/^  def counts$/;"	f	class:ItemsController
+email	app/controllers/items_controller.rb	/^  def email$/;"	f	class:ItemsController
+email_form	app/controllers/items_controller.rb	/^  def email_form$/;"	f	class:ItemsController
+exclude_ids	app/controllers/items_controller.rb	/^    def exclude_ids$/;"	f	class:ItemsController
+facebook	app/controllers/items_controller.rb	/^  def facebook$/;"	f	class:ItemsController
+index	app/controllers/items_controller.rb	/^  def index$/;"	f	class:ItemsController
+render_items	app/controllers/items_controller.rb	/^    def render_items$/;"	f	class:ItemsController
+shared	app/controllers/items_controller.rb	/^  def shared$/;"	f	class:ItemsController
+show	app/controllers/items_controller.rb	/^  def show$/;"	f	class:ItemsController
+starred	app/controllers/items_controller.rb	/^  def starred$/;"	f	class:ItemsController
+toggle_star	app/controllers/items_controller.rb	/^  def toggle_star$/;"	f	class:ItemsController
+tweet	app/controllers/items_controller.rb	/^  def tweet$/;"	f	class:ItemsController
+unread	app/controllers/items_controller.rb	/^  def unread$/;"	f	class:ItemsController
+update	app/controllers/items_controller.rb	/^  def update$/;"	f	class:ItemsController
+user_items	app/controllers/items_controller.rb	/^    def user_items(filter)$/;"	f	class:ItemsController
+OpmlController	app/controllers/opml_controller.rb	/^class OpmlController < ApplicationController$/;"	c
+create	app/controllers/opml_controller.rb	/^  def create$/;"	f	class:OpmlController
+submitted	app/controllers/opml_controller.rb	/^  def submitted$/;"	f	class:OpmlController
+PeopleController	app/controllers/people_controller.rb	/^class PeopleController < ApplicationController$/;"	c
+followers	app/controllers/people_controller.rb	/^  def followers$/;"	f	class:PeopleController
+following	app/controllers/people_controller.rb	/^  def following$/;"	f	class:PeopleController
+index	app/controllers/people_controller.rb	/^  def index$/;"	f	class:PeopleController
+invite	app/controllers/people_controller.rb	/^  def invite$/;"	f	class:PeopleController
+items	app/controllers/people_controller.rb	/^  def items$/;"	f	class:PeopleController
+may_know	app/controllers/people_controller.rb	/^  def may_know$/;"	f	class:PeopleController
+PushController	app/controllers/push_controller.rb	/^class PushController < ApplicationController$/;"	c
+receiver	app/controllers/push_controller.rb	/^  def receiver$/;"	f	class:PushController
+ReaderController	app/controllers/reader_controller.rb	/^class ReaderController < ApplicationController$/;"	c
+SettingsController	app/controllers/settings_controller.rb	/^class SettingsController < ApplicationController$/;"	c
+options	app/controllers/settings_controller.rb	/^  def options$/;"	f	class:SettingsController
+suggested_feeds	app/controllers/settings_controller.rb	/^  def suggested_feeds$/;"	f	class:SettingsController
+your_feeds	app/controllers/settings_controller.rb	/^  def your_feeds$/;"	f	class:SettingsController
+ShareController	app/controllers/share_controller.rb	/^class ShareController < ApplicationController$/;"	c
+create	app/controllers/share_controller.rb	/^  def create$/;"	f	class:ShareController
+SubscriptionsController	app/controllers/subscriptions_controller.rb	/^class SubscriptionsController < ApplicationController$/;"	c
+create	app/controllers/subscriptions_controller.rb	/^  def create$/;"	f	class:SubscriptionsController
+destroy	app/controllers/subscriptions_controller.rb	/^  def destroy$/;"	f	class:SubscriptionsController
+index	app/controllers/subscriptions_controller.rb	/^  def index$/;"	f	class:SubscriptionsController
+items	app/controllers/subscriptions_controller.rb	/^  def items$/;"	f	class:SubscriptionsController
+show	app/controllers/subscriptions_controller.rb	/^  def show$/;"	f	class:SubscriptionsController
+update	app/controllers/subscriptions_controller.rb	/^  def update$/;"	f	class:SubscriptionsController
+Users	app/controllers/users/passwords_controller.rb	/^class Users::PasswordsController < Devise::PasswordsController$/;"	c
+create	app/controllers/users/passwords_controller.rb	/^  def create$/;"	f	class:Users
+edit	app/controllers/users/passwords_controller.rb	/^  def edit$/;"	f	class:Users
+update	app/controllers/users/passwords_controller.rb	/^  def update$/;"	f	class:Users
+Users	app/controllers/users/registrations_controller.rb	/^class Users::RegistrationsController < Devise::RegistrationsController$/;"	c
+create	app/controllers/users/registrations_controller.rb	/^  def create$/;"	f	class:Users
+render_user	app/controllers/users/registrations_controller.rb	/^    def render_user$/;"	f	class:Users
+Users	app/controllers/users/sessions_controller.rb	/^class Users::SessionsController < Devise::SessionsController$/;"	c
+create	app/controllers/users/sessions_controller.rb	/^  def create$/;"	f	class:Users
+failure	app/controllers/users/sessions_controller.rb	/^  def failure$/;"	f	class:Users
+sign_in_and_redirect	app/controllers/users/sessions_controller.rb	/^  def sign_in_and_redirect(resource_or_scope, resource=nil)$/;"	f	class:Users
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+allow	app/controllers/users_controller.rb	/^  def allow$/;"	f	class:UsersController
+authorize	app/controllers/users_controller.rb	/^  def authorize$/;"	f	class:UsersController
+block_follower	app/controllers/users_controller.rb	/^  def block_follower$/;"	f	class:UsersController
+callback	app/controllers/users_controller.rb	/^  def callback$/;"	f	class:UsersController
+complete_registration	app/controllers/users_controller.rb	/^  def complete_registration$/;"	f	class:UsersController
+finalize	app/controllers/users_controller.rb	/^  def finalize$/;"	f	class:UsersController
+follow	app/controllers/users_controller.rb	/^  def follow$/;"	f	class:UsersController
+private_pub_sign_on	app/controllers/users_controller.rb	/^  def private_pub_sign_on$/;"	f	class:UsersController
+reciprocate	app/controllers/users_controller.rb	/^  def reciprocate$/;"	f	class:UsersController
+reject	app/controllers/users_controller.rb	/^  def reject$/;"	f	class:UsersController
+stop_following	app/controllers/users_controller.rb	/^  def stop_following$/;"	f	class:UsersController
+update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+anonymous_user	app/helpers/application_helper.rb	/^  def anonymous_user$/;"	f	class:ApplicationHelper
+check_reader_user	app/helpers/application_helper.rb	/^  def check_reader_user$/;"	f	class:ApplicationHelper
+real_user	app/helpers/application_helper.rb	/^  def real_user$/;"	f	class:ApplicationHelper
+ChargesHelper	app/helpers/charges_helper.rb	/^module ChargesHelper$/;"	m
+ItemHelper	app/helpers/item_helper.rb	/^module ItemHelper$/;"	m
+item_state	app/helpers/item_helper.rb	/^  def item_state(item)$/;"	f	class:ItemHelper
+PeopleHelper	app/helpers/people_helper.rb	/^module PeopleHelper$/;"	m
+block_link	app/helpers/people_helper.rb	/^  def block_link(person)$/;"	f	class:PeopleHelper
+follow_link	app/helpers/people_helper.rb	/^  def follow_link(person)$/;"	f	class:PeopleHelper
+follower_links	app/helpers/people_helper.rb	/^  def follower_links(person)$/;"	f	class:PeopleHelper
+following_links	app/helpers/people_helper.rb	/^  def following_links(person)$/;"	f	class:PeopleHelper
+stop_following_link	app/helpers/people_helper.rb	/^  def stop_following_link(person)$/;"	f	class:PeopleHelper
+ItemMailer	app/mailers/item_mailer.rb	/^class ItemMailer < ActionMailer::Base$/;"	c
+item	app/mailers/item_mailer.rb	/^  def item(email)$/;"	f	class:ItemMailer
+PlusMailer	app/mailers/plus_mailer.rb	/^class PlusMailer < ActionMailer::Base$/;"	c
+invite	app/mailers/plus_mailer.rb	/^  def invite(friend_email, user)$/;"	f	class:PlusMailer
+opml_imported	app/mailers/plus_mailer.rb	/^  def opml_imported(user)$/;"	f	class:PlusMailer
+welcome	app/mailers/plus_mailer.rb	/^  def welcome(user)$/;"	f	class:PlusMailer
+Category	app/models/category.rb	/^class Category < ActiveRecord::Base$/;"	c
+CategoryEntryMapping	app/models/category_entry_mapping.rb	/^class CategoryEntryMapping < ActiveRecord::Base$/;"	c
+Client	app/models/client.rb	/^class Client < ActiveRecord::Base$/;"	c
+Comment	app/models/comment.rb	/^class Comment < ActiveRecord::Base$/;"	c
+add_breaks	app/models/comment.rb	/^  def add_breaks$/;"	f
+deliver	app/models/comment.rb	/^  def deliver$/;"	f
+find_target_item	app/models/comment.rb	/^  def find_target_item$/;"	f	class:Comment
+format_body	app/models/comment.rb	/^  def format_body$/;"	f
+refresh	app/models/comment.rb	/^  def refresh$/;"	f
+revoke	app/models/comment.rb	/^  def revoke$/;"	f
+Entry	app/models/entry.rb	/^class Entry < ActiveRecord::Base$/;"	c
+create_entry_guid	app/models/entry.rb	/^    def create_entry_guid$/;"	f	class:Entry.sanitize_content
+deliver	app/models/entry.rb	/^  def deliver$/;"	f	class:Entry
+deliver_to	app/models/entry.rb	/^  def deliver_to(user)$/;"	f	class:Entry
+embed_content	app/models/entry.rb	/^  def embed_content$/;"	f	class:Entry
+ensure_entry_guid_exists	app/models/entry.rb	/^  def ensure_entry_guid_exists$/;"	f	class:Entry
+ensure_pubdate	app/models/entry.rb	/^  def ensure_pubdate$/;"	f	class:Entry
+inline_imgur	app/models/entry.rb	/^  def inline_imgur(link)$/;"	f	class:Entry
+inline_quickmeme	app/models/entry.rb	/^  def inline_quickmeme(link)$/;"	f	class:Entry
+inline_reddit	app/models/entry.rb	/^  def inline_reddit$/;"	f	class:Entry
+parse_formatting	app/models/entry.rb	/^  def parse_formatting$/;"	f	class:Entry
+parse_share	app/models/entry.rb	/^  def parse_share$/;"	f	class:Entry
+pubdate	app/models/entry.rb	/^  def pubdate$/;"	f	class:Entry
+sanitize_content	app/models/entry.rb	/^  def sanitize_content$/;"	f	class:Entry
+share	app/models/entry.rb	/^  def self.share(user, title, body)$/;"	F	class:Entry
+site_root	app/models/entry.rb	/^  def site_root$/;"	f	class:Entry
+EntryGuid	app/models/entry_guid.rb	/^class EntryGuid < ActiveRecord::Base$/;"	c
+Feed	app/models/feed.rb	/^class Feed < ActiveRecord::Base$/;"	c
+feed	app/models/feed.rb	/^  def feed$/;"	f
+get_icon	app/models/feed.rb	/^  def get_icon$/;"	f	class:Feed
+get_icons	app/models/feed.rb	/^  def self.get_icons$/;"	F	class:Feed
+merge	app/models/feed.rb	/^  def merge$/;"	f	class:Feed
+poll_feed	app/models/feed.rb	/^  def poll_feed$/;"	f	class:Feed
+public?	app/models/feed.rb	/^  def public?$/;"	f	class:Feed
+push_enabled?	app/models/feed.rb	/^  def push_enabled?$/;"	f	class:Feed
+scrub	app/models/feed.rb	/^  def scrub$/;"	f	class:Feed
+set_fetchable	app/models/feed.rb	/^  def set_fetchable$/;"	f	class:Feed
+set_tokens	app/models/feed.rb	/^  def set_tokens$/;"	f	class:Feed
+strip_name	app/models/feed.rb	/^  def strip_name$/;"	f	class:Feed
+suggested	app/models/feed.rb	/^  def self.suggested(uid)$/;"	F	class:Feed
+sweep	app/models/feed.rb	/^  def sweep$/;"	f	class:Feed
+total_errors	app/models/feed.rb	/^  def total_errors$/;"	f	class:Feed
+update_subscriptions	app/models/feed.rb	/^  def update_subscriptions$/;"	f	class:Feed
+FeedIcon	app/models/feed_icon.rb	/^class FeedIcon < ActiveRecord::Base$/;"	c
+local_path	app/models/feed_icon.rb	/^  def local_path$/;"	f	class:FeedIcon
+set_icon_path_on_subscriptions	app/models/feed_icon.rb	/^  def set_icon_path_on_subscriptions$/;"	f	class:FeedIcon
+Follow	app/models/follow.rb	/^class Follow < ActiveRecord::Base$/;"	c
+block!	app/models/follow.rb	/^  def block!$/;"	f	class:Follow
+Group	app/models/group.rb	/^class Group < ActiveRecord::Base$/;"	c
+parameterize_key	app/models/group.rb	/^    def parameterize_key$/;"	f	class:Group
+Item	app/models/item.rb	/^class Item < ActiveRecord::Base$/;"	c
+ItemValidator	app/models/item.rb	/^class ItemValidator < ActiveModel::Validator$/;"	c
+active_model_serializer	app/models/item.rb	/^  def active_model_serializer$/;"	f	class:Item
+after_user_item_update	app/models/item.rb	/^  def after_user_item_update$/;"	f	class:Item
+all_comments	app/models/item.rb	/^  def all_comments$/;"	f	class:Item
+batch_mark_read	app/models/item.rb	/^  def self.batch_mark_read(ids)$/;"	F	class:Item
+feed	app/models/item.rb	/^  def feed$/;"	f	class:Item
+parent_comments	app/models/item.rb	/^  def parent_comments$/;"	f	class:Item
+post_to_facebook	app/models/item.rb	/^  def post_to_facebook$/;"	f	class:Item
+post_to_twitter	app/models/item.rb	/^  def post_to_twitter$/;"	f	class:Item
+share_item	app/models/item.rb	/^  def share_item$/;"	f	class:Item
+unshare_item	app/models/item.rb	/^  def unshare_item$/;"	f	class:Item
+update_children	app/models/item.rb	/^  def update_children$/;"	f	class:Item
+update_subscription_count	app/models/item.rb	/^  def update_subscription_count$/;"	f	class:Item
+validate	app/models/item.rb	/^  def validate(record)$/;"	f	class:ItemValidator
+Subscription	app/models/subscription.rb	/^class Subscription < ActiveRecord::Base$/;"	c
+active_model_serializer	app/models/subscription.rb	/^  def active_model_serializer$/;"	f	class:Subscription
+all_items	app/models/subscription.rb	/^  def all_items$/;"	f	class:Subscription
+deliver	app/models/subscription.rb	/^  def deliver$/;"	f	class:Subscription
+delivery_in_queue?	app/models/subscription.rb	/^  def delivery_in_queue?$/;"	f	class:Subscription
+destroy_invalid_subscriptions	app/models/subscription.rb	/^  def self.destroy_invalid_subscriptions$/;"	F	class:Subscription
+feed	app/models/subscription.rb	/^  def feed$/;"	f	class:Subscription
+group_key	app/models/subscription.rb	/^  def group_key$/;"	f	class:Subscription
+group_label	app/models/subscription.rb	/^  def group_label$/;"	f	class:Subscription
+set_default_name	app/models/subscription.rb	/^  def set_default_name$/;"	f	class:Subscription
+set_group	app/models/subscription.rb	/^  def set_group$/;"	f	class:Subscription
+unsubscribe	app/models/subscription.rb	/^  def unsubscribe$/;"	f	class:Subscription
+update_counts	app/models/subscription.rb	/^  def self.update_counts$/;"	F	class:Subscription
+update_counts	app/models/subscription.rb	/^  def update_counts$/;"	f	class:Subscription
+update_unread_counts	app/models/subscription.rb	/^  def update_unread_counts$/;"	f	class:Subscription
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+active?	app/models/user.rb	/^  def active?$/;"	f	class:User
+active_model_serializer	app/models/user.rb	/^  def active_model_serializer$/;"	f	class:User
+admin?	app/models/user.rb	/^  def admin?$/;"	f
+anonymous	app/models/user.rb	/^  def self.anonymous$/;"	F
+charlie	app/models/user.rb	/^  def self.charlie$/;"	F
+check_user_registration_state	app/models/user.rb	/^  def check_user_registration_state$/;"	f	class:User
+copy_anonymous_feeds	app/models/user.rb	/^  def copy_anonymous_feeds$/;"	f	class:User
+create_shared_item_feed	app/models/user.rb	/^  def create_shared_item_feed$/;"	f
+create_starred_item_feed	app/models/user.rb	/^  def create_starred_item_feed$/;"	f
+create_user_item_feed	app/models/user.rb	/^    def create_user_item_feed(type)$/;"	f
+ensure_public_token	app/models/user.rb	/^  def ensure_public_token$/;"	f
+ensure_token!	app/models/user.rb	/^  def ensure_token!$/;"	f
+ensure_websocket_token	app/models/user.rb	/^  def ensure_websocket_token$/;"	f
+follow_and_unblock	app/models/user.rb	/^  def follow_and_unblock(user)$/;"	f
+follow_requests	app/models/user.rb	/^  def follow_requests$/;"	f
+followed_people	app/models/user.rb	/^  def followed_people$/;"	f
+friends	app/models/user.rb	/^  def friends$/;"	f
+has_root_group?	app/models/user.rb	/^  def has_root_group?$/;"	f
+ignore_requests_from	app/models/user.rb	/^  def ignore_requests_from(user)$/;"	f
+josh	app/models/user.rb	/^  def self.josh$/;"	F
+loren	app/models/user.rb	/^  def self.loren$/;"	F
+make_root_group	app/models/user.rb	/^  def make_root_group$/;"	f
+paid?	app/models/user.rb	/^  def paid?$/;"	f	class:User
+recent_shared_items	app/models/user.rb	/^  def recent_shared_items$/;"	f	class:User
+recent_starred_items	app/models/user.rb	/^  def recent_starred_items$/;"	f	class:User
+root_group	app/models/user.rb	/^  def root_group$/;"	f
+sanitize_name	app/models/user.rb	/^  def sanitize_name$/;"	f
+send_welcome_email	app/models/user.rb	/^  def send_welcome_email$/;"	f
+set_group_weights	app/models/user.rb	/^  def set_group_weights$/;"	f	class:User
+set_subscription_weights	app/models/user.rb	/^  def set_subscription_weights$/;"	f	class:User
+set_weights	app/models/user.rb	/^  def set_weights$/;"	f	class:User
+steve	app/models/user.rb	/^  def self.steve$/;"	F
+subscribe	app/models/user.rb	/^  def subscribe(url, group=nil)$/;"	f
+touch_last_seen_at	app/models/user.rb	/^    def touch_last_seen_at$/;"	f
+unblock	app/models/user.rb	/^  def unblock(user)$/;"	f
+CommentSerializer	app/serializers/comment_serializer.rb	/^class CommentSerializer < ActiveModel::Serializer$/;"	c
+author_name	app/serializers/comment_serializer.rb	/^  def author_name$/;"	f	class:CommentSerializer
+FastUserSerializer	app/serializers/fast_user_serializer.rb	/^class FastUserSerializer < ActiveModel::Serializer$/;"	c
+GroupSerializer	app/serializers/group_serializer.rb	/^class GroupSerializer < ActiveModel::Serializer$/;"	c
+ItemSerializer	app/serializers/item_serializer.rb	/^class ItemSerializer < ActiveModel::Serializer$/;"	c
+author	app/serializers/item_serializer.rb	/^  def author$/;"	f	class:ItemSerializer
+comments	app/serializers/item_serializer.rb	/^  def comments$/;"	f	class:ItemSerializer
+content	app/serializers/item_serializer.rb	/^  def content$/;"	f	class:ItemSerializer
+formatted_published_at	app/serializers/item_serializer.rb	/^  def formatted_published_at$/;"	f	class:ItemSerializer
+published_at	app/serializers/item_serializer.rb	/^  def published_at$/;"	f	class:ItemSerializer
+title	app/serializers/item_serializer.rb	/^  def title$/;"	f	class:ItemSerializer
+url	app/serializers/item_serializer.rb	/^  def url$/;"	f	class:ItemSerializer
+SubscriptionSerializer	app/serializers/subscription_serializer.rb	/^class SubscriptionSerializer < ActiveModel::Serializer$/;"	c
+icon	app/serializers/subscription_serializer.rb	/^  def icon$/;"	f	class:SubscriptionSerializer
+item_view	app/serializers/subscription_serializer.rb	/^  def item_view$/;"	f	class:SubscriptionSerializer
+UserSerializer	app/serializers/user_serializer.rb	/^class UserSerializer < ActiveModel::Serializer$/;"	c
+all_count	app/serializers/user_serializer.rb	/^  def all_count$/;"	f	class:UserSerializer
+commented_count	app/serializers/user_serializer.rb	/^  def commented_count$/;"	f	class:UserSerializer
+shared_count	app/serializers/user_serializer.rb	/^  def shared_count$/;"	f	class:UserSerializer
+starred_count	app/serializers/user_serializer.rb	/^  def starred_count$/;"	f	class:UserSerializer
+success	app/serializers/user_serializer.rb	/^  def success$/;"	f	class:UserSerializer
+unread_count	app/serializers/user_serializer.rb	/^  def unread_count$/;"	f	class:UserSerializer
+DiscoverFeedService	app/services/discover_feed_service.rb	/^class DiscoverFeedService$/;"	c
+discover	app/services/discover_feed_service.rb	/^  def self.discover(url)$/;"	F	class:DiscoverFeedService
+perform	app/services/discover_feed_service.rb	/^  def self.perform(url)$/;"	F	class:DiscoverFeedService
+refine	app/services/discover_feed_service.rb	/^  def self.refine$/;"	F	class:DiscoverFeedService
+FetchFeedService	app/services/fetch_feed_service.rb	/^class FetchFeedService$/;"	c
+get_response	app/services/fetch_feed_service.rb	/^  def get_response$/;"	f	class:FetchFeedService
+initialize	app/services/fetch_feed_service.rb	/^  def initialize(args=nil)$/;"	f	class:FetchFeedService
+perform	app/services/fetch_feed_service.rb	/^  def perform(args=nil)$/;"	f	class:FetchFeedService
+perform	app/services/fetch_feed_service.rb	/^  def self.perform(url)$/;"	F	class:FetchFeedService
+FetchSomeFeedsService	app/services/fetch_some_feeds_service.rb	/^class FetchSomeFeedsService$/;"	c
+Request	app/services/fetch_some_feeds_service.rb	/^  class Request$/;"	c	class:Typhoeus
+Typhoeus	app/services/fetch_some_feeds_service.rb	/^module Typhoeus$/;"	m
+handle_response	app/services/fetch_some_feeds_service.rb	/^  def handle_response(response)$/;"	f	class:FetchSomeFeedsService
+initialize	app/services/fetch_some_feeds_service.rb	/^  def initialize$/;"	f	class:FetchSomeFeedsService
+perform	app/services/fetch_some_feeds_service.rb	/^  def perform(ids)$/;"	f	class:FetchSomeFeedsService
+perform	app/services/fetch_some_feeds_service.rb	/^  def self.perform(ids)$/;"	F	class:FetchSomeFeedsService
+request_for	app/services/fetch_some_feeds_service.rb	/^  def request_for(feed)$/;"	f	class:FetchSomeFeedsService
+RestartPollerService	app/services/restart_poller_service.rb	/^class RestartPollerService$/;"	c
+clear_poll_from_retries	app/services/restart_poller_service.rb	/^  def clear_poll_from_retries$/;"	f
+clear_sidekiq	app/services/restart_poller_service.rb	/^  def clear_sidekiq$/;"	f
+clear_xml_dir	app/services/restart_poller_service.rb	/^  def clear_xml_dir$/;"	f	class:RestartPollerService
+feeds	app/services/restart_poller_service.rb	/^  def feeds$/;"	f	class:RestartPollerService
+perform	app/services/restart_poller_service.rb	/^  def perform$/;"	f	class:RestartPollerService
+perform	app/services/restart_poller_service.rb	/^  def self.perform$/;"	F	class:RestartPollerService
+poll_feeds	app/services/restart_poller_service.rb	/^  def poll_feeds$/;"	f	class:clear_poll_from_retries
+FeedIconUploader	app/uploaders/feed_icon_uploader.rb	/^class FeedIconUploader < CarrierWave::Uploader::Base$/;"	c
+store_dir	app/uploaders/feed_icon_uploader.rb	/^  def store_dir$/;"	f	class:FeedIconUploader
+DeliverComment	app/workers/deliver_comment.rb	/^class DeliverComment$/;"	c
+perform	app/workers/deliver_comment.rb	/^  def perform(comment_id)$/;"	f	class:DeliverComment
+DeliverItemsToUser	app/workers/deliver_items_to_user.rb	/^class DeliverItemsToUser$/;"	c
+perform	app/workers/deliver_items_to_user.rb	/^  def perform(feed_id, user_id)$/;"	f	class:DeliverItemsToUser
+DeliverSubscription	app/workers/deliver_subscription.rb	/^class DeliverSubscription$/;"	c
+perform	app/workers/deliver_subscription.rb	/^  def perform(id, user_id)$/;"	f	class:DeliverSubscription
+ExpireClient	app/workers/expire_client.rb	/^class ExpireClient$/;"	c
+perform	app/workers/expire_client.rb	/^  def perform(id)$/;"	f	class:ExpireClient
+GetIcon	app/workers/get_icon.rb	/^class GetIcon$/;"	c
+create_icon	app/workers/get_icon.rb	/^  def create_icon(url)$/;"	f
+get_favicon	app/workers/get_icon.rb	/^  def get_favicon(site_url)$/;"	f	class:GetIcon
+get_root_favicon	app/workers/get_icon.rb	/^  def get_root_favicon(site_url)$/;"	f
+perform	app/workers/get_icon.rb	/^  def perform(id)$/;"	f	class:GetIcon
+test_favicon	app/workers/get_icon.rb	/^  def test_favicon(url)$/;"	f
+ImportOpml	app/workers/import_opml.rb	/^class ImportOpml$/;"	c
+perform	app/workers/import_opml.rb	/^  def perform(filetext, user_id)$/;"	f	class:ImportOpml
+NewUserSetup	app/workers/new_user_setup.rb	/^class NewUserSetup$/;"	c
+perform	app/workers/new_user_setup.rb	/^  def perform(id)$/;"	f	class:NewUserSetup
+PollFeed	app/workers/poll_feed.rb	/^class PollFeed$/;"	c
+perform	app/workers/poll_feed.rb	/^  def perform(id)$/;"	f	class:PollFeed
+poll_scheduled	app/workers/poll_feed.rb	/^  def self.poll_scheduled?(id)$/;"	F	class:PollFeed
+process_feed	app/workers/poll_feed.rb	/^  def process_feed(id)$/;"	f	class:PollFeed
+requeue_polling	app/workers/poll_feed.rb	/^  def self.requeue_polling(id)$/;"	F	class:PollFeed
+PollFeedNow	app/workers/poll_feed_now.rb	/^class PollFeedNow < PollFeed$/;"	c
+PollFeedsForActiveUsers	app/workers/poll_feeds_for_active_users.rb	/^class PollFeedsForActiveUsers$/;"	c
+perform	app/workers/poll_feeds_for_active_users.rb	/^  def perform$/;"	f	class:PollFeedsForActiveUsers
+ProcessFeed	app/workers/process_feed.rb	/^class ProcessFeed$/;"	c
+entry_guid	app/workers/process_feed.rb	/^  def self.entry_guid(entry)$/;"	F	class:ProcessFeed
+perform	app/workers/process_feed.rb	/^  def perform(id)$/;"	f	class:ProcessFeed
+process_entries	app/workers/process_feed.rb	/^  def self.process_entries(feed_id, entries)$/;"	F	class:ProcessFeed
+process_entry	app/workers/process_feed.rb	/^  def self.process_entry(feed_id, entry)$/;"	F	class:ProcessFeed
+Prune	app/workers/prune.rb	/^class Prune$/;"	c
+perform	app/workers/prune.rb	/^  def perform$/;"	f	class:Prune
+RevokeComment	app/workers/revoke_comment.rb	/^class RevokeComment$/;"	c
+perform	app/workers/revoke_comment.rb	/^  def perform(comment_id, user_id)$/;"	f	class:RevokeComment
+SetFeedSubs	app/workers/set_feed_subs.rb	/^class SetFeedSubs$/;"	c
+perform	app/workers/set_feed_subs.rb	/^  def perform(id)$/;"	f	class:SetFeedSubs
+ShareItem	app/workers/share_item.rb	/^class ShareItem$/;"	c
+perform	app/workers/share_item.rb	/^  def perform(id)$/;"	f	class:ShareItem
+SubscribeClient	app/workers/subscribe_client.rb	/^class SubscribeClient$/;"	c
+perform	app/workers/subscribe_client.rb	/^  def perform(client_id, channel)$/;"	f	class:SubscribeClient
+UnshareItem	app/workers/unshare_item.rb	/^class UnshareItem$/;"	c
+perform	app/workers/unshare_item.rb	/^  def perform(id)$/;"	f	class:UnshareItem
+UnsubscribeClient	app/workers/unsubscribe_client.rb	/^class UnsubscribeClient$/;"	c
+perform	app/workers/unsubscribe_client.rb	/^  def perform(client_id)$/;"	f	class:UnsubscribeClient
+UpdateComment	app/workers/update_comment.rb	/^class UpdateComment$/;"	c
+perform	app/workers/update_comment.rb	/^  def perform(comment_id)$/;"	f	class:UpdateComment
+UpdateCountsForActiveUsers	app/workers/update_counts_for_active_users.rb	/^class UpdateCountsForActiveUsers$/;"	c
+perform	app/workers/update_counts_for_active_users.rb	/^  def perform$/;"	f	class:UpdateCountsForActiveUsers
+UpdateDownstreamItems	app/workers/update_downstream_items.rb	/^class UpdateDownstreamItems$/;"	c
+perform	app/workers/update_downstream_items.rb	/^  def perform(id)$/;"	f	class:UpdateDownstreamItems
+UpdateFeedSubscriptions	app/workers/update_feed_subscriptions.rb	/^class UpdateFeedSubscriptions$/;"	c
+perform	app/workers/update_feed_subscriptions.rb	/^  def perform(id)$/;"	f	class:UpdateFeedSubscriptions
+UpdateIcons	app/workers/update_icons.rb	/^class UpdateIcons$/;"	c
+perform	app/workers/update_icons.rb	/^  def perform$/;"	f	class:UpdateIcons
+UpdateItem	app/workers/update_item.rb	/^class UpdateItem$/;"	c
+perform	app/workers/update_item.rb	/^  def perform(params)$/;"	f	class:UpdateItem
+UpdateSubscriptionCount	app/workers/update_subscription_count.rb	/^class UpdateSubscriptionCount$/;"	c
+perform	app/workers/update_subscription_count.rb	/^  def perform(id)$/;"	f	class:UpdateSubscriptionCount
+UpdateUserSubscriptions	app/workers/update_user_subscriptions.rb	/^class UpdateUserSubscriptions$/;"	c
+perform	app/workers/update_user_subscriptions.rb	/^  def perform(user_id)$/;"	f	class:UpdateUserSubscriptions
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Reader
+Reader	config/application.rb	/^module Reader$/;"	m
+run_rake	config/deploy.rb	/^def run_rake(cmd)$/;"	f
+Reader	config/reader_setup.rb	/^module Reader$/;"	m
+Setup	config/reader_setup.rb	/^  class Setup$/;"	c	class:Reader
+delete_icons	config/reader_setup.rb	/^    def self.delete_icons$/;"	F	class:Reader.Setup
+empty_tables	config/reader_setup.rb	/^    def self.empty_tables$/;"	F	class:Reader.Setup
+prune	config/reader_setup.rb	/^    def self.prune$/;"	F	class:Reader.Setup
+prune_entries	config/reader_setup.rb	/^    def self.prune_entries$/;"	F	class:Reader.Setup
+prune_feeds	config/reader_setup.rb	/^    def self.prune_feeds$/;"	F	class:Reader.Setup
+prune_items	config/reader_setup.rb	/^    def self.prune_items$/;"	F	class:Reader.Setup
+reset_auto_increment	config/reader_setup.rb	/^    def self.reset_auto_increment$/;"	F	class:Reader.Setup
+scrub	config/reader_setup.rb	/^    def self.scrub$/;"	F	class:Reader.Setup
+seed	config/reader_setup.rb	/^    def self.seed$/;"	F	class:Reader.Setup
+update_anon_feeds	config/reader_setup.rb	/^    def self.update_anon_feeds$/;"	F	class:Reader.Setup
+users	config/reader_setup.rb	/^    def self.users$/;"	F	class:Reader.Setup
+DeviseCreateUsers	db/migrate/20120309055454_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120309055454_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+CreateFeeds	db/migrate/20120324135859_create_feeds.rb	/^class CreateFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120324135859_create_feeds.rb	/^  def change$/;"	f	class:CreateFeeds
+CreateFetchErrors	db/migrate/20120324140544_create_fetch_errors.rb	/^class CreateFetchErrors < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120324140544_create_fetch_errors.rb	/^  def change$/;"	f	class:CreateFetchErrors
+CreateFeedIcons	db/migrate/20120324140638_create_feed_icons.rb	/^class CreateFeedIcons < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120324140638_create_feed_icons.rb	/^  def change$/;"	f	class:CreateFeedIcons
+CreateSubscriptions	db/migrate/20120324201345_create_subscriptions.rb	/^class CreateSubscriptions < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120324201345_create_subscriptions.rb	/^  def change$/;"	f	class:CreateSubscriptions
+CreateEntries	db/migrate/20120324201346_create_entries.rb	/^class CreateEntries < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120324201346_create_entries.rb	/^  def change$/;"	f	class:CreateEntries
+CreateItems	db/migrate/20120324201647_create_items.rb	/^class CreateItems < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120324201647_create_items.rb	/^  def change$/;"	f	class:CreateItems
+ActsAsFollowerMigration	db/migrate/20120324203436_acts_as_follower_migration.rb	/^class ActsAsFollowerMigration < ActiveRecord::Migration$/;"	c
+down	db/migrate/20120324203436_acts_as_follower_migration.rb	/^  def self.down$/;"	F	class:ActsAsFollowerMigration
+up	db/migrate/20120324203436_acts_as_follower_migration.rb	/^  def self.up$/;"	F	class:ActsAsFollowerMigration
+CreateGroups	db/migrate/20120401154005_create_groups.rb	/^class CreateGroups < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120401154005_create_groups.rb	/^  def change$/;"	f	class:CreateGroups
+CreateCategories	db/migrate/20120401160936_create_categories.rb	/^class CreateCategories < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120401160936_create_categories.rb	/^  def change$/;"	f	class:CreateCategories
+CreateCategoryEntryMappings	db/migrate/20120401161224_create_category_entry_mappings.rb	/^class CreateCategoryEntryMappings < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120401161224_create_category_entry_mappings.rb	/^  def change$/;"	f	class:CreateCategoryEntryMappings
+AddFetchableToFeed	db/migrate/20120401223133_add_fetchable_to_feed.rb	/^class AddFetchableToFeed < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120401223133_add_fetchable_to_feed.rb	/^  def change$/;"	f	class:AddFetchableToFeed
+AddSanitizedContentToEntries	db/migrate/20120504134502_add_sanitized_content_to_entries.rb	/^class AddSanitizedContentToEntries < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120504134502_add_sanitized_content_to_entries.rb	/^  def change$/;"	f	class:AddSanitizedContentToEntries
+AddHubToFeed	db/migrate/20120511023413_add_hub_to_feed.rb	/^class AddHubToFeed < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120511023413_add_hub_to_feed.rb	/^  def change$/;"	f	class:AddHubToFeed
+AddTopicToFeed	db/migrate/20120511023435_add_topic_to_feed.rb	/^class AddTopicToFeed < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120511023435_add_topic_to_feed.rb	/^  def change$/;"	f	class:AddTopicToFeed
+AddTokenToFeed	db/migrate/20120511153410_add_token_to_feed.rb	/^class AddTokenToFeed < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120511153410_add_token_to_feed.rb	/^  def change$/;"	f	class:AddTokenToFeed
+AddShareDeliveredToItem	db/migrate/20120512232617_add_share_delivered_to_item.rb	/^class AddShareDeliveredToItem < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120512232617_add_share_delivered_to_item.rb	/^  def change$/;"	f	class:AddShareDeliveredToItem
+AddFromToItem	db/migrate/20120513021253_add_from_to_item.rb	/^class AddFromToItem < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120513021253_add_from_to_item.rb	/^  def change$/;"	f	class:AddFromToItem
+CreateFacebookAuthorizations	db/migrate/20120527230804_create_facebook_authorizations.rb	/^class CreateFacebookAuthorizations < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120527230804_create_facebook_authorizations.rb	/^  def change$/;"	f	class:CreateFacebookAuthorizations
+AddFacebookIdToFacebookAuthorization	db/migrate/20120527234255_add_facebook_id_to_facebook_authorization.rb	/^class AddFacebookIdToFacebookAuthorization < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120527234255_add_facebook_id_to_facebook_authorization.rb	/^  def change$/;"	f	class:AddFacebookIdToFacebookAuthorization
+AddAnonymousToUser	db/migrate/20120528195756_add_anonymous_to_user.rb	/^class AddAnonymousToUser < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120528195756_add_anonymous_to_user.rb	/^  def change$/;"	f	class:AddAnonymousToUser
+AddWebsocketTokenToUser	db/migrate/20120528203628_add_websocket_token_to_user.rb	/^class AddWebsocketTokenToUser < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120528203628_add_websocket_token_to_user.rb	/^  def change$/;"	f	class:AddWebsocketTokenToUser
+AddFileToFeedIcon	db/migrate/20120528230048_add_file_to_feed_icon.rb	/^class AddFileToFeedIcon < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120528230048_add_file_to_feed_icon.rb	/^  def change$/;"	f	class:AddFileToFeedIcon
+CreateComments	db/migrate/20120531014017_create_comments.rb	/^class CreateComments < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120531014017_create_comments.rb	/^  def change$/;"	f	class:CreateComments
+AddTimeoutsToFeed	db/migrate/20120602182221_add_timeouts_to_feed.rb	/^class AddTimeoutsToFeed < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120602182221_add_timeouts_to_feed.rb	/^  def change$/;"	f	class:AddTimeoutsToFeed
+Clients	db/migrate/20120602231353_clients.rb	/^class Clients < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120602231353_clients.rb	/^  def change$/;"	f	class:Clients
+AddNewCommentsToItem	db/migrate/20120603130719_add_new_comments_to_item.rb	/^class AddNewCommentsToItem < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120603130719_add_new_comments_to_item.rb	/^  def change$/;"	f	class:AddNewCommentsToItem
+AddIgnoredToFollows	db/migrate/20120604022934_add_ignored_to_follows.rb	/^class AddIgnoredToFollows < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120604022934_add_ignored_to_follows.rb	/^  def change$/;"	f	class:AddIgnoredToFollows
+AddOpenAndWeightToGroups	db/migrate/20120606133152_add_open_and_weight_to_groups.rb	/^class AddOpenAndWeightToGroups < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120606133152_add_open_and_weight_to_groups.rb	/^  def change$/;"	f	class:AddOpenAndWeightToGroups
+AddWeightToSubscriptions	db/migrate/20120606133226_add_weight_to_subscriptions.rb	/^class AddWeightToSubscriptions < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120606133226_add_weight_to_subscriptions.rb	/^  def change$/;"	f	class:AddWeightToSubscriptions
+AddHtmlToComment	db/migrate/20120608142813_add_html_to_comment.rb	/^class AddHtmlToComment < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120608142813_add_html_to_comment.rb	/^  def change$/;"	f	class:AddHtmlToComment
+AddErrorsToFeeds	db/migrate/20120610035344_add_errors_to_feeds.rb	/^class AddErrorsToFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120610035344_add_errors_to_feeds.rb	/^  def change$/;"	f	class:AddErrorsToFeeds
+AddPublicTokenToUser	db/migrate/20120610175955_add_public_token_to_user.rb	/^class AddPublicTokenToUser < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120610175955_add_public_token_to_user.rb	/^  def change$/;"	f	class:AddPublicTokenToUser
+AddSharedFeedToUser	db/migrate/20120610182114_add_shared_feed_to_user.rb	/^class AddSharedFeedToUser < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120610182114_add_shared_feed_to_user.rb	/^  def change$/;"	f	class:AddSharedFeedToUser
+AddPossibleFacebookContactTable	db/migrate/20120610233951_add_possible_facebook_contact_table.rb	/^class AddPossibleFacebookContactTable < ActiveRecord::Migration$/;"	c
+down	db/migrate/20120610233951_add_possible_facebook_contact_table.rb	/^  def down$/;"	f	class:AddPossibleFacebookContactTable
+up	db/migrate/20120610233951_add_possible_facebook_contact_table.rb	/^  def up$/;"	f	class:AddPossibleFacebookContactTable
+CreateEntryGuids	db/migrate/20120707191616_create_entry_guids.rb	/^class CreateEntryGuids < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120707191616_create_entry_guids.rb	/^  def change$/;"	f	class:CreateEntryGuids
+AddPushSubscribedToFeeds	db/migrate/20120911011622_add_push_subscribed_to_feeds.rb	/^class AddPushSubscribedToFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120911011622_add_push_subscribed_to_feeds.rb	/^  def change$/;"	f	class:AddPushSubscribedToFeeds
+AddSecretTokenToFeeds	db/migrate/20120911022903_add_secret_token_to_feeds.rb	/^class AddSecretTokenToFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20120911022903_add_secret_token_to_feeds.rb	/^  def change$/;"	f	class:AddSecretTokenToFeeds
+AddItemIndexes	db/migrate/20121113124104_add_item_indexes.rb	/^class AddItemIndexes < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121113124104_add_item_indexes.rb	/^  def change$/;"	f	class:AddItemIndexes
+AddSubscriptionIndexes	db/migrate/20121113124837_add_subscription_indexes.rb	/^class AddSubscriptionIndexes < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121113124837_add_subscription_indexes.rb	/^  def change$/;"	f	class:AddSubscriptionIndexes
+AddCommentIndexes	db/migrate/20121113124902_add_comment_indexes.rb	/^class AddCommentIndexes < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121113124902_add_comment_indexes.rb	/^  def change$/;"	f	class:AddCommentIndexes
+AddFeedIndexes	db/migrate/20121113124919_add_feed_indexes.rb	/^class AddFeedIndexes < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121113124919_add_feed_indexes.rb	/^  def change$/;"	f	class:AddFeedIndexes
+AddEntryIndexes	db/migrate/20121113125256_add_entry_indexes.rb	/^class AddEntryIndexes < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121113125256_add_entry_indexes.rb	/^  def change$/;"	f	class:AddEntryIndexes
+ChangeItemItemToParent	db/migrate/20121115013829_change_item_item_to_parent.rb	/^class ChangeItemItemToParent < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121115013829_change_item_item_to_parent.rb	/^  def change$/;"	f	class:ChangeItemItemToParent
+AddEtagToFeeds	db/migrate/20121116024445_add_etag_to_feeds.rb	/^class AddEtagToFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121116024445_add_etag_to_feeds.rb	/^  def change$/;"	f	class:AddEtagToFeeds
+AddUnreadCountToSubscription	db/migrate/20121125165557_add_unread_count_to_subscription.rb	/^class AddUnreadCountToSubscription < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121125165557_add_unread_count_to_subscription.rb	/^  def change$/;"	f	class:AddUnreadCountToSubscription
+AddCommentedToItems	db/migrate/20121125230547_add_commented_to_items.rb	/^class AddCommentedToItems < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121125230547_add_commented_to_items.rb	/^  def change$/;"	f	class:AddCommentedToItems
+AddAllCountToSubscription	db/migrate/20121128140404_add_all_count_to_subscription.rb	/^class AddAllCountToSubscription < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121128140404_add_all_count_to_subscription.rb	/^  def change$/;"	f	class:AddAllCountToSubscription
+AddCommentedCountToSubscription	db/migrate/20121128152122_add_commented_count_to_subscription.rb	/^class AddCommentedCountToSubscription < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121128152122_add_commented_count_to_subscription.rb	/^  def change$/;"	f	class:AddCommentedCountToSubscription
+FixShortFields	db/migrate/20121219154752_fix_short_fields.rb	/^class FixShortFields < ActiveRecord::Migration$/;"	c
+down	db/migrate/20121219154752_fix_short_fields.rb	/^  def down$/;"	f	class:FixShortFields
+up	db/migrate/20121219154752_fix_short_fields.rb	/^  def up$/;"	f	class:FixShortFields
+AddSoftDeleteSubscription	db/migrate/20121223023300_add_soft_delete_subscription.rb	/^class AddSoftDeleteSubscription < ActiveRecord::Migration$/;"	c
+change	db/migrate/20121223023300_add_soft_delete_subscription.rb	/^  def change$/;"	f	class:AddSoftDeleteSubscription
+AddSinglyAccessTokenToUsers	db/migrate/20130115042325_add_singly_access_token_to_users.rb	/^class AddSinglyAccessTokenToUsers < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130115042325_add_singly_access_token_to_users.rb	/^  def change$/;"	f	class:AddSinglyAccessTokenToUsers
+AddTwitterAndFacebookShareOptionsToUser	db/migrate/20130115153420_add_twitter_and_facebook_share_options_to_user.rb	/^class AddTwitterAndFacebookShareOptionsToUser < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130115153420_add_twitter_and_facebook_share_options_to_user.rb	/^  def change$/;"	f	class:AddTwitterAndFacebookShareOptionsToUser
+AddItemViewToSubscriptions	db/migrate/20130121050050_add_item_view_to_subscriptions.rb	/^class AddItemViewToSubscriptions < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130121050050_add_item_view_to_subscriptions.rb	/^  def change$/;"	f	class:AddItemViewToSubscriptions
+AddItemViewToGroups	db/migrate/20130121142647_add_item_view_to_groups.rb	/^class AddItemViewToGroups < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130121142647_add_item_view_to_groups.rb	/^  def change$/;"	f	class:AddItemViewToGroups
+AddFacebookToItems	db/migrate/20130121142927_add_facebook_to_items.rb	/^class AddFacebookToItems < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130121142927_add_facebook_to_items.rb	/^  def change$/;"	f	class:AddFacebookToItems
+AddTwitterToItems	db/migrate/20130121143011_add_twitter_to_items.rb	/^class AddTwitterToItems < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130121143011_add_twitter_to_items.rb	/^  def change$/;"	f	class:AddTwitterToItems
+AddIndexesToEntryGuids	db/migrate/20130125132309_add_indexes_to_entry_guids.rb	/^class AddIndexesToEntryGuids < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130125132309_add_indexes_to_entry_guids.rb	/^  def change$/;"	f	class:AddIndexesToEntryGuids
+AddIndexOnFeedIcons	db/migrate/20130126145906_add_index_on_feed_icons.rb	/^class AddIndexOnFeedIcons < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130126145906_add_index_on_feed_icons.rb	/^  def change$/;"	f	class:AddIndexOnFeedIcons
+AddFavoriteToSubscriptions	db/migrate/20130126190003_add_favorite_to_subscriptions.rb	/^class AddFavoriteToSubscriptions < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130126190003_add_favorite_to_subscriptions.rb	/^  def change$/;"	f	class:AddFavoriteToSubscriptions
+AddEntryGuidIndex	db/migrate/20130215172813_add_entry_guid_index.rb	/^class AddEntryGuidIndex < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130215172813_add_entry_guid_index.rb	/^  def change$/;"	f	class:AddEntryGuidIndex
+AddTestingTable	db/migrate/20130223145840_add_testing_table.rb	/^class AddTestingTable < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130223145840_add_testing_table.rb	/^  def change$/;"	f	class:AddTestingTable
+RedesignEntries	db/migrate/20130316172742_redesign_entries.rb	/^class RedesignEntries < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130316172742_redesign_entries.rb	/^  def change$/;"	f	class:RedesignEntries
+MoreRedesignEntries	db/migrate/20130316174111_more_redesign_entries.rb	/^class MoreRedesignEntries < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130316174111_more_redesign_entries.rb	/^  def change$/;"	f	class:MoreRedesignEntries
+AddEntryGuidIdToEntries	db/migrate/20130320125348_add_entry_guid_id_to_entries.rb	/^class AddEntryGuidIdToEntries < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130320125348_add_entry_guid_id_to_entries.rb	/^  def change$/;"	f	class:AddEntryGuidIdToEntries
+AddIncompleteRegistrationToUsers	db/migrate/20130320134956_add_incomplete_registration_to_users.rb	/^class AddIncompleteRegistrationToUsers < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130320134956_add_incomplete_registration_to_users.rb	/^  def change$/;"	f	class:AddIncompleteRegistrationToUsers
+change	db/migrate/20130324210431_change_users.rb	/^  def change$/;"	f
+Feeds	db/migrate/20130325004903_feeds.rb	/^class Feeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130325004903_feeds.rb	/^  def change$/;"	f	class:Feeds
+Users	db/migrate/20130325004918_users.rb	/^class Users < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130325004918_users.rb	/^  def change$/;"	f	class:Users
+Subscriptions	db/migrate/20130327132516_subscriptions.rb	/^class Subscriptions < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130327132516_subscriptions.rb	/^  def change$/;"	f	class:Subscriptions
+Entries	db/migrate/20130327134023_entries.rb	/^class Entries < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130327134023_entries.rb	/^  def change$/;"	f	class:Entries
+Errorsfeeds	db/migrate/20130328024141_errorsfeeds.rb	/^class Errorsfeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130328024141_errorsfeeds.rb	/^  def change$/;"	f	class:Errorsfeeds
+RemoveErrorsFeeds	db/migrate/20130328025337_remove_errors_feeds.rb	/^class RemoveErrorsFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130328025337_remove_errors_feeds.rb	/^  def change$/;"	f	class:RemoveErrorsFeeds
+ChangeItemIndexesForSharing	db/migrate/20130330121452_change_item_indexes_for_sharing.rb	/^class ChangeItemIndexesForSharing < ActiveRecord::Migration$/;"	c
+down	db/migrate/20130330121452_change_item_indexes_for_sharing.rb	/^  def down$/;"	f	class:ChangeItemIndexesForSharing
+up	db/migrate/20130330121452_change_item_indexes_for_sharing.rb	/^  def up$/;"	f	class:ChangeItemIndexesForSharing
+AddCurrentFeedUrlToFeeds	db/migrate/20130330152139_add_current_feed_url_to_feeds.rb	/^class AddCurrentFeedUrlToFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130330152139_add_current_feed_url_to_feeds.rb	/^  def change$/;"	f	class:AddCurrentFeedUrlToFeeds
+AddConnectionErrorsToFeeds	db/migrate/20130330172013_add_connection_errors_to_feeds.rb	/^class AddConnectionErrorsToFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130330172013_add_connection_errors_to_feeds.rb	/^  def change$/;"	f	class:AddConnectionErrorsToFeeds
+AddPaymentInfoToUsers	db/migrate/20130331034913_add_payment_info_to_users.rb	/^class AddPaymentInfoToUsers < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130331034913_add_payment_info_to_users.rb	/^  def change$/;"	f	class:AddPaymentInfoToUsers
+AddStripeCustomerIdToUsers	db/migrate/20130331053756_add_stripe_customer_id_to_users.rb	/^class AddStripeCustomerIdToUsers < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130331053756_add_stripe_customer_id_to_users.rb	/^  def change$/;"	f	class:AddStripeCustomerIdToUsers
+AddPremiumAccountCancelPendingToUsers	db/migrate/20130331060107_add_premium_account_cancel_pending_to_users.rb	/^class AddPremiumAccountCancelPendingToUsers < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130331060107_add_premium_account_cancel_pending_to_users.rb	/^  def change$/;"	f	class:AddPremiumAccountCancelPendingToUsers
+AddFetchCountToFeeds	db/migrate/20130419140147_add_fetch_count_to_feeds.rb	/^class AddFetchCountToFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130419140147_add_fetch_count_to_feeds.rb	/^  def change$/;"	f	class:AddFetchCountToFeeds
+AddDocumentToFeeds	db/migrate/20130419141740_add_document_to_feeds.rb	/^class AddDocumentToFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130419141740_add_document_to_feeds.rb	/^  def change$/;"	f	class:AddDocumentToFeeds
+DroppingSomeTables	db/migrate/20130420232823_dropping_some_tables.rb	/^class DroppingSomeTables < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130420232823_dropping_some_tables.rb	/^  def change$/;"	f	class:DroppingSomeTables
+AddDocumentTextToFeeds	db/migrate/20130423143711_add_document_text_to_feeds.rb	/^class AddDocumentTextToFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130423143711_add_document_text_to_feeds.rb	/^  def change$/;"	f	class:AddDocumentTextToFeeds
+AddLastFetchedAtToFeeds	db/migrate/20130425113051_add_last_fetched_at_to_feeds.rb	/^class AddLastFetchedAtToFeeds < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130425113051_add_last_fetched_at_to_feeds.rb	/^  def change$/;"	f	class:AddLastFetchedAtToFeeds
+AddCommentCountsToUsers	db/migrate/20130427183116_add_comment_counts_to_users.rb	/^class AddCommentCountsToUsers < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130427183116_add_comment_counts_to_users.rb	/^  def change$/;"	f	class:AddCommentCountsToUsers
+ChangeItemIndexes	db/migrate/20130428132437_change_item_indexes.rb	/^class ChangeItemIndexes < ActiveRecord::Migration$/;"	c
+down	db/migrate/20130428132437_change_item_indexes.rb	/^  def down$/;"	f	class:ChangeItemIndexes
+up	db/migrate/20130428132437_change_item_indexes.rb	/^  def up$/;"	f	class:ChangeItemIndexes
+AddFreeAccountToUsers	db/migrate/20130428154442_add_free_account_to_users.rb	/^class AddFreeAccountToUsers < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130428154442_add_free_account_to_users.rb	/^  def change$/;"	f	class:AddFreeAccountToUsers
+AddTermsToUser	db/migrate/20130428183126_add_terms_to_user.rb	/^class AddTermsToUser < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130428183126_add_terms_to_user.rb	/^  def change$/;"	f	class:AddTermsToUser
+AddSiteUrlAndFeedIconPathToSubscriptions	db/migrate/20130517124912_add_site_url_and_feed_icon_path_to_subscriptions.rb	/^class AddSiteUrlAndFeedIconPathToSubscriptions < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130517124912_add_site_url_and_feed_icon_path_to_subscriptions.rb	/^  def change$/;"	f	class:AddSiteUrlAndFeedIconPathToSubscriptions
+AddSourceToSubscriptions	db/migrate/20130518122726_add_source_to_subscriptions.rb	/^class AddSourceToSubscriptions < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130518122726_add_source_to_subscriptions.rb	/^  def change$/;"	f	class:AddSourceToSubscriptions
+RemoveFeedFromSubscriptions	db/migrate/20130519050122_remove_feed_from_subscriptions.rb	/^class RemoveFeedFromSubscriptions < ActiveRecord::Migration$/;"	c
+down	db/migrate/20130519050122_remove_feed_from_subscriptions.rb	/^  def down$/;"	f	class:RemoveFeedFromSubscriptions
+up	db/migrate/20130519050122_remove_feed_from_subscriptions.rb	/^  def up$/;"	f	class:RemoveFeedFromSubscriptions
+AddSourceToEntries	db/migrate/20130519060310_add_source_to_entries.rb	/^class AddSourceToEntries < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130519060310_add_source_to_entries.rb	/^  def change$/;"	f	class:AddSourceToEntries
+RenameFeedOnEntryGuids	db/migrate/20130519061622_rename_feed_on_entry_guids.rb	/^class RenameFeedOnEntryGuids < ActiveRecord::Migration$/;"	c
+change	db/migrate/20130519061622_rename_feed_on_entry_guids.rb	/^  def change$/;"	f	class:RenameFeedOnEntryGuids
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+Embedder	lib/embedder.rb	/^module Embedder$/;"	m
+embed_tpl	lib/embedder.rb	/^  def embed_tpl(e, include_titles = true)$/;"	f	class:Embedder
+embed_urls	lib/embedder.rb	/^  def embed_urls(content, include_titles=true)$/;"	f	class:Embedder
+FilelessIO	lib/fileless_io.rb	/^class FilelessIO < StringIO$/;"	c
+Growler	lib/growler.rb	/^class Growler$/;"	c
+log	lib/growler.rb	/^  def self.log(msg, sticky=false)$/;"	F	class:Growler
+OpmlImporter	lib/opml_importer.rb	/^module OpmlImporter$/;"	m
+import_opml	lib/opml_importer.rb	/^  def import_opml(xml, user_id, label=nil)$/;"	f	class:OpmlImporter
+Singly	lib/singly.rb	/^class Singly$/;"	c
+action_for_url	lib/singly.rb	/^      def action_for_url(url)$/;"	f	class:Singly
+authentication_url_for	lib/singly.rb	/^    def authentication_url_for(service)$/;"	f	class:Singly
+facebook_home_for	lib/singly.rb	/^    def facebook_home_for(user)$/;"	f	class:Singly
+facebook_item	lib/singly.rb	/^    def facebook_item(user, item)$/;"	f	class:Singly
+friends_for	lib/singly.rb	/^    def friends_for(user)$/;"	f	class:Singly
+get	lib/singly.rb	/^      def get(url)$/;"	f	class:Singly
+image_url?	lib/singly.rb	/^      def image_url?(url)$/;"	f	class:Singly
+key_for_url	lib/singly.rb	/^      def key_for_url(url)$/;"	f	class:Singly
+post	lib/singly.rb	/^      def post(url, body = nil)$/;"	f	class:Singly
+share_item	lib/singly.rb	/^    def share_item(user, item)$/;"	f	class:Singly
+singly_profile_for	lib/singly.rb	/^    def singly_profile_for(user)$/;"	f	class:Singly
+tweet_item	lib/singly.rb	/^    def tweet_item(user, item)$/;"	f	class:Singly
+TyphoeusCache	lib/typhoeus_cache.rb	/^class TyphoeusCache$/;"	c
+get	lib/typhoeus_cache.rb	/^  def get(key)$/;"	f	class:TyphoeusCache
+initialize	lib/typhoeus_cache.rb	/^  def initialize(client = nil)$/;"	f	class:TyphoeusCache
+set	lib/typhoeus_cache.rb	/^  def set(key, value)$/;"	f	class:TyphoeusCache
+send_last_sub	spec/features/add_feed_spec.rb	/^  def send_last_sub$/;"	f
+sub_list_for	spec/features/reorder_feeds_spec.rb	/^def sub_list_for(user)$/;"	f
+AcceptanceHelpers	spec/features/support/acceptance_helpers.rb	/^module AcceptanceHelpers$/;"	m
+sign_in_as	spec/features/support/acceptance_helpers.rb	/^  def sign_in_as(user)$/;"	f	class:AcceptanceHelpers
+sign_out	spec/features/support/acceptance_helpers.rb	/^  def sign_out$/;"	f
+TestHelpers	spec/support/test_helpers.rb	/^module TestHelpers$/;"	m
+clear_jobs	spec/support/test_helpers.rb	/^  def clear_jobs$/;"	f
+create_anon_feeds	spec/support/test_helpers.rb	/^  def create_anon_feeds$/;"	f	class:TestHelpers
+create_anon_user	spec/support/test_helpers.rb	/^  def create_anon_user$/;"	f	class:TestHelpers
+create_user	spec/support/test_helpers.rb	/^  def create_user$/;"	f	class:TestHelpers
+create_user_a	spec/support/test_helpers.rb	/^  def create_user_a$/;"	f	class:TestHelpers
+create_user_b	spec/support/test_helpers.rb	/^  def create_user_b$/;"	f	class:TestHelpers
+create_user_c	spec/support/test_helpers.rb	/^  def create_user_c$/;"	f	class:TestHelpers
+emails	spec/support/test_helpers.rb	/^  def emails$/;"	f	class:TestHelpers
+last_email	spec/support/test_helpers.rb	/^  def last_email$/;"	f	class:TestHelpers
+run_jobs	spec/support/test_helpers.rb	/^  def run_jobs(count = 1)$/;"	f	class:TestHelpers
+screenshot	spec/support/test_helpers.rb	/^  def screenshot$/;"	f	class:TestHelpers
+Backbone	vendor/assets/javascripts/backbone.js	/^  var Backbone;$/;"	v
+Backbone.noConflict	vendor/assets/javascripts/backbone.js	/^  Backbone.noConflict = function() {$/;"	f
+_	vendor/assets/javascripts/backbone.js	/^  var _ = root._;$/;"	v
+args	vendor/assets/javascripts/backbone.js	/^      var args = slice.call(arguments, 1);$/;"	v
+array	vendor/assets/javascripts/backbone.js	/^  var array = [];$/;"	v
+attributeMethods	vendor/assets/javascripts/backbone.js	/^  var attributeMethods = ['groupBy', 'countBy', 'sortBy'];$/;"	v
+eventSplitter	vendor/assets/javascripts/backbone.js	/^  var eventSplitter = \/\\s+\/;$/;"	v
+eventsApi	vendor/assets/javascripts/backbone.js	/^  var eventsApi = function(obj, action, name, rest) {$/;"	f
+listenMethods.listenTo	vendor/assets/javascripts/backbone.js	/^  var listenMethods = {listenTo: 'on', listenToOnce: 'once'};$/;"	p
+listenMethods.listenToOnce	vendor/assets/javascripts/backbone.js	/^  var listenMethods = {listenTo: 'on', listenToOnce: 'once'};$/;"	p
+methods	vendor/assets/javascripts/backbone.js	/^  var methods = ['forEach', 'each', 'map', 'collect', 'reduce', 'foldl',$/;"	v
+namedParam	vendor/assets/javascripts/backbone.js	/^  var namedParam    = \/(\\(\\?)?:\\w+\/g;$/;"	v
+once	vendor/assets/javascripts/backbone.js	/^      var once = _.once(function() {$/;"	v
+optionalParam	vendor/assets/javascripts/backbone.js	/^  var optionalParam = \/\\((.*?)\\)\/g;$/;"	v
+previousBackbone	vendor/assets/javascripts/backbone.js	/^  var previousBackbone = root.Backbone;$/;"	v
+push	vendor/assets/javascripts/backbone.js	/^  var push = array.push;$/;"	v
+slice	vendor/assets/javascripts/backbone.js	/^  var slice = array.slice;$/;"	v
+splice	vendor/assets/javascripts/backbone.js	/^  var splice = array.splice;$/;"	v
+triggerEvents	vendor/assets/javascripts/backbone.js	/^  var triggerEvents = function(events, args) {$/;"	f
+handleObj.handler	vendor/assets/javascripts/jquery.hotkeys.js	/^        handleObj.handler = function( event ) {$/;"	f
+hotkeys.specialKeys	vendor/assets/javascripts/jquery.hotkeys.js	/^        specialKeys: {$/;"	p
+hotkeys.version	vendor/assets/javascripts/jquery.hotkeys.js	/^        version: "0.8+",$/;"	p
+keyHandler	vendor/assets/javascripts/jquery.hotkeys.js	/^    function keyHandler( handleObj ) {$/;"	f
+$.editable.types	vendor/assets/javascripts/jquery.jeditable.js	/^    types:        {$/;"	p
+$.fn.editable.defaults.event	vendor/assets/javascripts/jquery.jeditable.js	/^    event:       'click.editable',$/;"	p
+$.fn.editable.defaults.height	vendor/assets/javascripts/jquery.jeditable.js	/^    height:      'auto',$/;"	p
+$.fn.editable.defaults.id	vendor/assets/javascripts/jquery.jeditable.js	/^    id:          'id',$/;"	p
+$.fn.editable.defaults.loaddata	vendor/assets/javascripts/jquery.jeditable.js	/^    loaddata:    {},$/;"	p
+$.fn.editable.defaults.loadtext	vendor/assets/javascripts/jquery.jeditable.js	/^    loadtext:    'Loading...',$/;"	p
+$.fn.editable.defaults.loadtype	vendor/assets/javascripts/jquery.jeditable.js	/^    loadtype:    'GET',$/;"	p
+$.fn.editable.defaults.name	vendor/assets/javascripts/jquery.jeditable.js	/^    name:        'value',$/;"	p
+$.fn.editable.defaults.onblur	vendor/assets/javascripts/jquery.jeditable.js	/^    onblur:      'cancel',$/;"	p
+$.fn.editable.defaults.placeholder	vendor/assets/javascripts/jquery.jeditable.js	/^    placeholder: 'Click to edit',$/;"	p
+$.fn.editable.defaults.type	vendor/assets/javascripts/jquery.jeditable.js	/^    type:        'text',$/;"	p
+$.fn.editable.defaults.width	vendor/assets/javascripts/jquery.jeditable.js	/^    width:       'auto',$/;"	p
+fn.editable	vendor/assets/javascripts/jquery.jeditable.js	/^(function ($) {$/;"	f
+Date	vendor/assets/javascripts/json2.js	/^        Date.prototype.toJSON = function (key) {$/;"	c
+Date.toJSON	vendor/assets/javascripts/json2.js	/^        Date.prototype.toJSON = function (key) {$/;"	m
+JSON	vendor/assets/javascripts/json2.js	/^var JSON;$/;"	v
+JSON.parse.walk	vendor/assets/javascripts/json2.js	/^            function walk(holder, key) {$/;"	f
+JSON.stringify	vendor/assets/javascripts/json2.js	/^        JSON.stringify = function (value, replacer, space) {$/;"	f
+String	vendor/assets/javascripts/json2.js	/^        String.prototype.toJSON      =$/;"	c
+String.toJSON	vendor/assets/javascripts/json2.js	/^        String.prototype.toJSON      =$/;"	m
+f	vendor/assets/javascripts/json2.js	/^    function f(n) {$/;"	f
+quote	vendor/assets/javascripts/json2.js	/^    function quote(string) {$/;"	f
+str	vendor/assets/javascripts/json2.js	/^    function str(key, holder) {$/;"	f
+ArrayProto	vendor/assets/javascripts/underscore.js	/^  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;$/;"	v
+_	vendor/assets/javascripts/underscore.js	/^  _.object = function(list, values) {$/;"	f
+_	vendor/assets/javascripts/underscore.js	/^  var _ = function(obj) {$/;"	c
+_.after	vendor/assets/javascripts/underscore.js	/^  _.after = function(times, func) {$/;"	f
+_.bind	vendor/assets/javascripts/underscore.js	/^  _.bind = function bind(func, context) {$/;"	f
+_.bindAll	vendor/assets/javascripts/underscore.js	/^  _.bindAll = function(obj) {$/;"	f
+_.chain	vendor/assets/javascripts/underscore.js	/^  _.chain = function(obj) {$/;"	f
+_.clone	vendor/assets/javascripts/underscore.js	/^  _.clone = function(obj) {$/;"	f
+_.compact	vendor/assets/javascripts/underscore.js	/^  _.compact = function(array) {$/;"	f
+_.compose	vendor/assets/javascripts/underscore.js	/^  _.compose = function() {$/;"	f
+_.countBy	vendor/assets/javascripts/underscore.js	/^  _.countBy = function(obj, value, context) {$/;"	f
+_.debounce	vendor/assets/javascripts/underscore.js	/^  _.debounce = function(func, wait, immediate) {$/;"	f
+_.debounce.later	vendor/assets/javascripts/underscore.js	/^      var later = function() {$/;"	f
+_.defaults	vendor/assets/javascripts/underscore.js	/^  _.defaults = function(obj) {$/;"	f
+_.defer	vendor/assets/javascripts/underscore.js	/^  _.defer = function(func) {$/;"	f
+_.delay	vendor/assets/javascripts/underscore.js	/^  _.delay = function(func, wait) {$/;"	f
+_.difference	vendor/assets/javascripts/underscore.js	/^  _.difference = function(array) {$/;"	f
+_.extend	vendor/assets/javascripts/underscore.js	/^  _.extend = function(obj) {$/;"	f
+_.flatten	vendor/assets/javascripts/underscore.js	/^  _.flatten = function(array, shallow) {$/;"	f
+_.groupBy	vendor/assets/javascripts/underscore.js	/^  _.groupBy = function(obj, value, context) {$/;"	f
+_.has	vendor/assets/javascripts/underscore.js	/^  _.has = function(obj, key) {$/;"	f
+_.identity	vendor/assets/javascripts/underscore.js	/^  _.identity = function(value) {$/;"	f
+_.indexOf	vendor/assets/javascripts/underscore.js	/^  _.indexOf = function(array, item, isSorted) {$/;"	f
+_.initial	vendor/assets/javascripts/underscore.js	/^  _.initial = function(array, n, guard) {$/;"	f
+_.intersection	vendor/assets/javascripts/underscore.js	/^  _.intersection = function(array) {$/;"	f
+_.invert	vendor/assets/javascripts/underscore.js	/^  _.invert = function(obj) {$/;"	f
+_.invoke	vendor/assets/javascripts/underscore.js	/^  _.invoke = function(obj, method) {$/;"	f
+_.isArguments	vendor/assets/javascripts/underscore.js	/^    _.isArguments = function(obj) {$/;"	f
+_.isBoolean	vendor/assets/javascripts/underscore.js	/^  _.isBoolean = function(obj) {$/;"	f
+_.isElement	vendor/assets/javascripts/underscore.js	/^  _.isElement = function(obj) {$/;"	f
+_.isEmpty	vendor/assets/javascripts/underscore.js	/^  _.isEmpty = function(obj) {$/;"	f
+_.isEqual	vendor/assets/javascripts/underscore.js	/^  _.isEqual = function(a, b) {$/;"	f
+_.isFinite	vendor/assets/javascripts/underscore.js	/^  _.isFinite = function(obj) {$/;"	f
+_.isFunction	vendor/assets/javascripts/underscore.js	/^    _.isFunction = function(obj) {$/;"	f
+_.isNaN	vendor/assets/javascripts/underscore.js	/^  _.isNaN = function(obj) {$/;"	f
+_.isNull	vendor/assets/javascripts/underscore.js	/^  _.isNull = function(obj) {$/;"	f
+_.isObject	vendor/assets/javascripts/underscore.js	/^  _.isObject = function(obj) {$/;"	f
+_.isUndefined	vendor/assets/javascripts/underscore.js	/^  _.isUndefined = function(obj) {$/;"	f
+_.last	vendor/assets/javascripts/underscore.js	/^  _.last = function(array, n, guard) {$/;"	f
+_.lastIndexOf	vendor/assets/javascripts/underscore.js	/^  _.lastIndexOf = function(array, item, from) {$/;"	f
+_.max	vendor/assets/javascripts/underscore.js	/^  _.max = function(obj, iterator, context) {$/;"	f
+_.memoize	vendor/assets/javascripts/underscore.js	/^  _.memoize = function(func, hasher) {$/;"	f
+_.min	vendor/assets/javascripts/underscore.js	/^  _.min = function(obj, iterator, context) {$/;"	f
+_.mixin	vendor/assets/javascripts/underscore.js	/^  _.mixin = function(obj) {$/;"	f
+_.noConflict	vendor/assets/javascripts/underscore.js	/^  _.noConflict = function() {$/;"	f
+_.omit	vendor/assets/javascripts/underscore.js	/^  _.omit = function(obj) {$/;"	f
+_.once	vendor/assets/javascripts/underscore.js	/^  _.once = function(func) {$/;"	f
+_.pairs	vendor/assets/javascripts/underscore.js	/^  _.pairs = function(obj) {$/;"	f
+_.pick	vendor/assets/javascripts/underscore.js	/^  _.pick = function(obj) {$/;"	f
+_.pluck	vendor/assets/javascripts/underscore.js	/^  _.pluck = function(obj, key) {$/;"	f
+_.random	vendor/assets/javascripts/underscore.js	/^  _.random = function(min, max) {$/;"	f
+_.range	vendor/assets/javascripts/underscore.js	/^  _.range = function(start, stop, step) {$/;"	f
+_.reject	vendor/assets/javascripts/underscore.js	/^  _.reject = function(obj, iterator, context) {$/;"	f
+_.result	vendor/assets/javascripts/underscore.js	/^  _.result = function(object, property) {$/;"	f
+_.shuffle	vendor/assets/javascripts/underscore.js	/^  _.shuffle = function(obj) {$/;"	f
+_.size	vendor/assets/javascripts/underscore.js	/^  _.size = function(obj) {$/;"	f
+_.sortBy	vendor/assets/javascripts/underscore.js	/^  _.sortBy = function(obj, value, context) {$/;"	f
+_.sortedIndex	vendor/assets/javascripts/underscore.js	/^  _.sortedIndex = function(array, obj, iterator, context) {$/;"	f
+_.tap	vendor/assets/javascripts/underscore.js	/^  _.tap = function(obj, interceptor) {$/;"	f
+_.templateSettings.evaluate	vendor/assets/javascripts/underscore.js	/^    evaluate    : \/<%([\\s\\S]+?)%>\/g,$/;"	p
+_.throttle	vendor/assets/javascripts/underscore.js	/^  _.throttle = function(func, wait) {$/;"	f
+_.throttle.later	vendor/assets/javascripts/underscore.js	/^      var later = function() {$/;"	f
+_.times	vendor/assets/javascripts/underscore.js	/^  _.times = function(n, iterator, context) {$/;"	f
+_.toArray	vendor/assets/javascripts/underscore.js	/^  _.toArray = function(obj) {$/;"	f
+_.union	vendor/assets/javascripts/underscore.js	/^  _.union = function() {$/;"	f
+_.uniqueId	vendor/assets/javascripts/underscore.js	/^  _.uniqueId = function(prefix) {$/;"	f
+_.values	vendor/assets/javascripts/underscore.js	/^  _.values = function(obj) {$/;"	f
+_.where	vendor/assets/javascripts/underscore.js	/^  _.where = function(obj, attrs) {$/;"	f
+_.without	vendor/assets/javascripts/underscore.js	/^  _.without = function(array) {$/;"	f
+_.wrap	vendor/assets/javascripts/underscore.js	/^  _.wrap = function(func, wrapper) {$/;"	f
+_.zip	vendor/assets/javascripts/underscore.js	/^  _.zip = function() {$/;"	f
+bind	vendor/assets/javascripts/underscore.js	/^  _.bind = function bind(func, context) {$/;"	f
+ctor	vendor/assets/javascripts/underscore.js	/^  var ctor = function(){};$/;"	f
+entityMap.escape	vendor/assets/javascripts/underscore.js	/^    escape: {$/;"	p
+entityRegexes.escape	vendor/assets/javascripts/underscore.js	/^    escape:   new RegExp('[' + _.keys(entityMap.escape).join('') + ']', 'g'),$/;"	p
+eq	vendor/assets/javascripts/underscore.js	/^  var eq = function(a, b, aStack, bStack) {$/;"	f
+escapes.'	vendor/assets/javascripts/underscore.js	/^    "'":      "'",$/;"	p
+escapes.\	vendor/assets/javascripts/underscore.js	/^    '\\\\':     '\\\\',$/;"	p
+escapes.n	vendor/assets/javascripts/underscore.js	/^    '\\n':     'n',$/;"	p
+escapes.r	vendor/assets/javascripts/underscore.js	/^    '\\r':     'r',$/;"	p
+escapes.t	vendor/assets/javascripts/underscore.js	/^    '\\t':     't',$/;"	p
+escapes.u2028	vendor/assets/javascripts/underscore.js	/^    '\\u2028': 'u2028',$/;"	p
+escapes.u2029	vendor/assets/javascripts/underscore.js	/^    '\\u2029': 'u2029'$/;"	p
+flatten	vendor/assets/javascripts/underscore.js	/^  var flatten = function(input, shallow, output) {$/;"	f
+group	vendor/assets/javascripts/underscore.js	/^  var group = function(obj, value, context, behavior) {$/;"	f
+idCounter	vendor/assets/javascripts/underscore.js	/^  var idCounter = 0;$/;"	v
+lookupIterator	vendor/assets/javascripts/underscore.js	/^  var lookupIterator = function(value) {$/;"	f
+nativeForEach	vendor/assets/javascripts/underscore.js	/^    nativeForEach      = ArrayProto.forEach,$/;"	v
+noMatch	vendor/assets/javascripts/underscore.js	/^  var noMatch = \/(.)^\/;$/;"	v
+previousUnderscore	vendor/assets/javascripts/underscore.js	/^  var previousUnderscore = root._;$/;"	v
+push	vendor/assets/javascripts/underscore.js	/^  var push             = ArrayProto.push,$/;"	v
+result	vendor/assets/javascripts/underscore.js	/^  var result = function(obj) {$/;"	f
+result.computed	vendor/assets/javascripts/underscore.js	/^    var result = {computed : -Infinity};$/;"	p
+result.computed	vendor/assets/javascripts/underscore.js	/^    var result = {computed : Infinity};$/;"	p
+return	vendor/assets/javascripts/underscore.js	/^    return bound = function() {$/;"	f
+size	vendor/assets/javascripts/underscore.js	/^    var size = 0, result = true;$/;"	v
+template	vendor/assets/javascripts/underscore.js	/^    var template = function(data) {$/;"	f
