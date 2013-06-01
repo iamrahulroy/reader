@@ -47,13 +47,13 @@ class UsersController < ApplicationController
       @user.save!
       sign_in_and_redirect @user, :event => :authentication
     else
-      @user.email               = email
       @user.name                = name
       @user.singly_access_token = access_token
       @user.singly_account_id   = account
       @user.password = @user.password_confirmation = rand(36**7..36**16).to_s(36)
 
-      if @user.email.present?
+      if email
+        @user.email = email
         if @user.save
           sign_in_and_redirect @user, :event => :authentication
         else
