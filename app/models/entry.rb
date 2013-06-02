@@ -46,9 +46,54 @@ class Entry < ActiveRecord::Base
     self.content.gsub! /\n/, repl
   end
 
+  RedditContent = Struct.new(:content) do
+    def formatted_content
+      return unless self.source
+      feed_url = self.source.try(:feed_url)
+
+
+      if feed_url && feed_url =~ /reddit\.com/
+        content = self.content
+        url = self.content.match /<a href="([^"]*)">\[link\]/
+
+        imgmatch = url[1].match(/\.(gif|jpg|png|jpeg)(\?|#)*/i) unless url.nil?
+        unless imgmatch.nil?
+          unless url[1].nil?
+            img = "<img src=\"#{url[1]}\" style=\"max-width: 95%\"><br/>"
+            content = img + self.content
+            @embedded = true
+          end
+        end
+
+        self.content = content
+
+        if url && url.length > 1
+          link = url[1]
+          if link =~ /\/imgur\.com/
+            inline_imgur link
+          end
+
+          if link =~ /\/qkme\.me/
+            inline_quickmeme link
+          end
+
+          if link =~ /\/quickmeme\.com/
+            inline_quickmeme link
+          end
+        end
+      end
+    end
+  end
+
   def inline_reddit
+    #if is_reddit?
+    #  content = RedditContent.new(content).formatted_content
+    #end
+
     return unless self.source
     feed_url = self.source.try(:feed_url)
+
+
     if feed_url && feed_url =~ /reddit\.com/
       content = self.content
       url = self.content.match /<a href="([^"]*)">\[link\]/
@@ -56,7 +101,7 @@ class Entry < ActiveRecord::Base
       imgmatch = url[1].match(/\.(gif|jpg|png|jpeg)(\?|#)*/i) unless url.nil?
       unless imgmatch.nil?
         unless url[1].nil?
-          img = "<img src=\"#{url[1]}\" style=\"max-width:95%\"><br/>"
+          img = "<img src=\"#{url[1]}\" style=\"max-width: 95%\"><br/>"
           content = img + self.content
           @embedded = true
         end
@@ -78,8 +123,6 @@ class Entry < ActiveRecord::Base
           inline_quickmeme link
         end
       end
-
-
     end
   end
 
@@ -96,18 +139,25 @@ class Entry < ActiveRecord::Base
   end
 
   def inline_imgur(link)
-    body = Typhoeus.get(link).body
+    body = http_client.get(link).body
     doc = Nokogiri::HTML(body)
     images = doc.css(".image img")
     chunk = ""
     images.each do |node|
       node.remove_attribute('class')
+      node.remove_attribute('alt')
+      node.set_attribute('style', 'max-width: 95%')
       chunk += node.to_s.gsub('data-src', 'src')
+      chunk += '<br/>'
       @embedded = true
     end
     self.content = chunk + self.content
   rescue OpenURI::HTTPError => e
 
+  end
+
+  def http_client
+    Typhoeus
   end
 
   def inline_quickmeme(link)

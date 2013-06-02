@@ -20,7 +20,7 @@ STRIPE_SECRET_KEY: "qY1lWyNurv8rEOD2WMto5MJ5G0YTAELB"
 
 
 development:
-  DATABASE_URL: "postgres://reader@localhost/reader_development"
+  DATABASE_URL: "postgres://reader:password@localhost/reader_development"
 
 test:
-  DATABASE_URL: "postgres://reader@localhost/reader_test"
+  DATABASE_URL: "postgres://reader:password@localhost/reader_test"
