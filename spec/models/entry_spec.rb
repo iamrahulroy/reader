@@ -1,9 +1,9 @@
-require 'spec_helper'
 describe Entry do
   let(:entry)                { Entry.new guid: "123", url: "http://www.example.com/", source_id: feed.id, source_type: 'Feed',
                                              published_at: Date.current }
   let(:feed)                 { Feed.create! name: "Feed 1", feed_url: "http://boingboing.net/foo.rss",
                                             site_url: "http://boingboing.net/" }
+require "spec_helper"
 
 
   describe "#sanitize_content" do
