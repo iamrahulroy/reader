@@ -8,14 +8,14 @@ Setup
 
 **Requirements**
 
-  1. Ruby 1.9+ (MRI)
+  1. Ruby 2.0.0 (MRI)
   2. Bundler (gem install bundler)
   3. PostgreSQL 9+
 
 To setup the app just type (ignore the `$`):
 
 ``` bash
-$ ./script/setup
+$ script/setup
 ```
 
 ## This sucks. How can I make it better?
