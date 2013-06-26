@@ -1,9 +1,16 @@
 require "spec_helper"
 
+class UserNull
+  attr_accessor :name, :shared_feed
+end
 
 describe Entry do
 
-
+  describe ".share(user, title, body)" do
+    user = UserNull.new
+    title = "foo"
+    body = "bar"
+    entry = Entry.share(user, title, body)
   end
   # let :entry do
   #   attributes = {
